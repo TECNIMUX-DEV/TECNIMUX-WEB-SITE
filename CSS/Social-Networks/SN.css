@@ -1,0 +1,82 @@
+* {
+  cursor: url("/CURSOR/cursor.png"), auto;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: "BF";
+  src: url(/FUENTES/Black\ Future.otf);
+}
+body {
+  background-image: url(/Social-networks-icons/TX-BK08-GRAY-60O.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+}
+header {
+  text-align: center;
+  color: #fff;
+  font-family: BF;
+  margin: 25px;
+  font-size: 1.5rem;
+  letter-spacing: 5px;
+}
+
+p {
+  color: #fff;
+}
+span {
+  color: #634092;
+}
+
+.Icons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.Icons img {
+  margin-top: 10px;
+  width: 100px;
+}
+.Buttons {
+  position: absolute;
+  right: 650px;
+  margin-top: -100px;
+  justify-content: space-between;
+  display: block;
+}
+button {
+  background-color: #ffffff2c;
+  color: #ffffff52;
+  border: none;
+  border-radius: 1px;
+  font-family: BF;
+  margin-top: 10px;
+  width: 100px;
+  height: 40px;
+  cursor: pointer;
+}
+button:hover {
+  color: #fff;
+}
+
+@media screen and (max-width: 830px) {
+  header {
+    font-size: 0.8rem;
+  }
+
+  .Icons img {
+    margin-top: 10px;
+    width: 85px;
+  }
+  .Buttons {
+    position: absolute;
+    right: 20px;
+    margin-top: -100px;
+    justify-content: space-between;
+    display: block;
+  }
+}

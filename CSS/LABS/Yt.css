@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: url(/BACKGROUND-PAGES/Yt.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@font-face {
+  font-family: batman;
+  src: url(/FUENTES/batmfa_.ttf);
+}
+header {
+  z-index: -2;
+  background-color: #3b3b3b;
+}
+header h2 {
+  color: #fff;
+  margin-left: 10px;
+  font-family: batman;
+  top: 0;
+  margin-top: 20px;
+  position: absolute;
+}
+/* Logo Tecnimux */
+.Logo {
+  text-align: end;
+  margin-right: 15px;
+  padding-top: 5px;
+}
+.Logo-TX {
+  max-width: 1.5rem;
+  background-color: transparent;
+  cursor: pointer;
+  cursor: url("/CURSOR/cursor02.png"), auto;
+}
+
+.Logo-Tx:hover {
+  filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.1));
+}
+
+iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.C_YT {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-90%, -50%);
+  background-color: #4caf50;
+  padding: 5px 2px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: rem;
+}
+
+.C_YT a {
+  text-decoration: none;
+}
+
+.C_YT a:hover {
+  text-decoration: underline;
+}
+
+.Lab {
+  position: absolute;
+  margin: 20px;
+  border: 0;
+  padding: 0;
+  background-color: #634092;
+  width: 50px;
+  height: 25px;
+  right: 0;
+  bottom: 0;
+}
+.Lab a {
+  text-decoration: none;
+  color: #ffffff;
+}
+.Recursos {
+  font-family: batman;
+  color: rgb(247, 20, 20);
+  margin: 20px;
+}

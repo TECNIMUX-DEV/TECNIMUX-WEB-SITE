@@ -1,0 +1,48 @@
+* {
+    cursor: url("/CURSOR/cursor.png"), auto;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: batman,sans-serif;
+    background-color: crimson;
+    background-size: cover;
+    background-repeat: no-repeat;
+    }
+   
+    @font-face {
+        font-family: batman;
+        src: url(/FUENTES/batmfa_.ttf)
+    }
+    header {
+background-color: black;
+height: 80px;
+margin: 0;
+    }
+.Title {
+    color: #fff ;
+    text-align: center;
+}
+/*Logo tecnimux*/  
+.LOGO {
+position: relative;
+justify-content: end;
+align-items: end;
+display: flex;
+margin: 10px;
+    }
+    .Logo-TX{
+        position: absolute;
+        max-width: 1.5rem;
+        right: 5px;
+        top: -35px;
+    }
+    .Logo-TX:hover:hover {
+        filter: brightness(1.2);
+    }
+
+    .Title-02{
+        text-align: center;
+        color: #fff;
+    }

@@ -1,0 +1,221 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: batman, sans-serif;
+  background-image: url(/P3.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  background-color: #1e1e1e;
+}
+@font-face {
+  font-family: batman;
+  src: url(/FUENTES/batmfa_.ttf);
+}
+
+header {
+  border-bottom: 0.5px solid #ffffff41;
+  box-shadow: 1px 1px 3px black;
+  z-index: -3;
+  opacity: 0.2;
+}
+
+/* Barra de scroll */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(68, 68, 68);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(255, 255, 255);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #634092;
+}
+
+/* Selección */
+::selection {
+  background-color: #64409285;
+}
+::-moz-selection {
+  background-color: #64409285;
+}
+.header-video {
+  position: relative;
+  height: 10vh;
+  overflow: hidden;
+  color: #fff;
+  z-index: -2;
+  border-top: 1px solid #ffffff41;
+}
+
+.video-fondo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -3;
+}
+
+video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.G {
+  z-index: 1;
+  color: #c7c6c6;
+  position: relative;
+  top: -80px;
+  margin: 0;
+  padding: 10px;
+  padding-left: 40px;
+  border: 0;
+  font-size: 2rem;
+  letter-spacing: 20px;
+  cursor: default;
+}
+ul {
+  position: relative;
+  top: -95px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  overflow: hidden;
+  list-style-type: none;
+  background-color: transparent;
+  font-size: 0.6rem;
+  margin: 0;
+  padding: 0;
+  letter-spacing: 3px;
+}
+
+@media screen and (max-width: 830px) {
+  ul {
+    position: relative;
+    justify-content: start;
+    align-items: start;
+    display: flex;
+    top: -69px;
+    overflow: hidden;
+    list-style-type: none;
+    background-color: transparent;
+    font-size: 0.6rem;
+    margin: 0;
+    padding: 0;
+    letter-spacing: 3px;
+    height: 30px;
+  }
+  .G {
+    z-index: 1;
+    color: #c7c6c6;
+    position: relative;
+    top: -80px;
+    margin: 0;
+    padding: 10px;
+    padding-left: 40px;
+    border: 0;
+    font-size: 1.2rem;
+    letter-spacing: 20px;
+    cursor: default;
+  }
+}
+
+li {
+  float: left;
+}
+li a:hover {
+  color: white;
+  background-color: rgba(63, 40, 92, 0.658);
+}
+li a {
+  border: 1px solid #16161641;
+  text-align: center;
+  text-decoration: none;
+  color: #634092;
+  display: block;
+  padding: 15px;
+  background-color: #29292956;
+  cursor: pointer;
+  cursor: url("/CURSOR/cursor02.png"), auto;
+}
+
+/* Logo Tecnimux */
+.Logo-Tx {
+  z-index: 2;
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  max-width: 1.5rem;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  cursor: pointer;
+  cursor: url("/CURSOR/cursor02.png"), auto;
+}
+.LOGO:hover {
+  box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
+}
+.Logo-Tx:hover {
+  filter: brightness(120%);
+}
+
+/* Galeria */
+img {
+  z-index: 1;
+  width: 100%;
+}
+
+.container-img {
+  display: flex;
+  padding: 1rem;
+  flex-wrap: wrap;
+}
+
+.column {
+  flex: 25%;
+  padding: 5px;
+}
+
+.column img {
+  margin-top: 5px;
+}
+
+.column img {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.8s ease-in-out;
+  cursor: pointer;
+}
+.column:hover img {
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+}
+
+@media screen and (max-width: 1000px) {
+  .column {
+    flex: 30%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .column {
+    flex: 50%;
+  }
+}
+
+.Folders {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

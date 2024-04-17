@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    top: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+
+body {
+    font-family:'Arial Narrow Bold';
+    background-image: url(/BgYT.jpg);
+}
+/* Logo Tecnimux */  
+.Logo-Tx {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    max-width:2rem;
+    background-color:transparent;
+    cursor: pointer;
+    cursor: url("/CURSOR/cursor02.png"),auto;
+}
+
+    .Logo-Tx:hover {
+        filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.1));
+        }
+
+
+    
+
+
+
+.form-login {
+    letter-spacing: 2px;
+    width: 400px;
+    height: 340px;
+    background :rgba(37, 32, 32, 0.89);
+    margin: auto;
+    margin-top: 180px;
+    box-shadow: 7px 13px 37px #000;
+    padding: 20px 30px;
+    border-top:4px solid rgb(109, 28, 163);
+    color: white;
+}
+
+.form-login h5 {
+    margin:0 ;
+    text-align: center;
+    height:40px;
+    margin-bottom:30px;
+    border-bottom:1px solid;
+    font-size: 20px;
+}
+
+.controls {
+    width: 100%;
+    border: 1px solid #5eff00;
+    margin-bottom: 15px;
+    padding: 11px 10px;
+    background: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.buttons {
+    width: 100%;
+    height: 40px;
+    background: #ff0000;
+    border: none;
+    color: rgb(255, 140, 0);
+    margin-bottom:16px;
+}
+.form-login p {
+    height:40px;
+    text-align: center;
+    border-bottom: 1px solid;
+}
+
+.form-login a {
+color: #ffffff;
+text-decoration: none;
+font-size: 14px;
+}
+
+.form-login a:hover {
+    text-decoration: underline;
+}
+

@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Space+Grotesk';
+}
+
+/* Logo Tecnimux */
+.Logo-Tx {
+    z-index: 1;
+    justify-content: end;
+    align-items: end;
+    display: flex;
+  }
+  .Logo-Tx img {
+    z-index: 1;
+    margin: 5px;
+    margin-right: 20px;
+    max-width: 1.5rem;
+    background-color: transparent;
+    cursor: pointer;
+    cursor: url("/CURSOR/cursor02.png"), auto;
+  }
+  
+  .Logo-Tx img:hover {
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.1));
+  }
+
+.Now {
+    align-items: center;
+    text-align: center;
+    margin: 20px;
+    color: #56f756;
+}
+.Now:hover {
+    background-color: #45ec4550;
+}
