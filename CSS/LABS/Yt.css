@@ -12,7 +12,7 @@ body {
 
 @font-face {
   font-family: batman;
-  src: url(/FUENTES/batmfa_.ttf);
+  src: url(/fonts/batmfa_.ttf);
 }
 header {
   z-index: -2;
@@ -36,7 +36,7 @@ header h2 {
   max-width: 1.5rem;
   background-color: transparent;
   cursor: pointer;
-  cursor: url("/CURSOR/cursor02.png"), auto;
+  cursor: url("/cursor/cursor02.png"), auto;
 }
 
 .Logo-Tx:hover {

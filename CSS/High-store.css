@@ -6,16 +6,16 @@
 
 @font-face {
   font-family: "L";
-  src: url(/FUENTES/LibreBarcode39Text-Regular.ttf);
+  src: url(/fonts/LibreBarcode39Text-Regular.ttf);
 }
 @font-face {
   font-family: "N";
-  src: url(/FUENTES/FontsFree-Net-n1.ttf);
+  src: url(/fonts/FontsFree-Net-n1.ttf);
 }
 
 @font-face {
   font-family: "Batman";
-  src: url(/FUENTES/batmfa_.ttf);
+  src: url(/fonts/batmfa_.ttf);
 }
 
 body {
@@ -139,7 +139,7 @@ h3 {
   max-width: 1.5rem;
   background-color: transparent;
   cursor: pointer;
-  cursor: url("/CURSOR/cursor02.png"), auto;
+  cursor: url("/cursor/cursor02.png"), auto;
 }
 
 .Logo-Tx img:hover {

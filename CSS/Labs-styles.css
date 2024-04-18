@@ -5,16 +5,16 @@
 }
 @font-face {
     font-family: 'Batman';
-    src: url(/FUENTES/batmfa_.ttf);
+    src: url(/fonts/batmfa_.ttf);
 }
 
 @font-face{
   font-family: 'Two';
-  src: url(/FUENTES/Neospace-Expanded.ttf);
+  src: url(/fonts/Neospace-Expanded.ttf);
 }
 body {
   cursor: pointer;
-  cursor: url("/CURSOR/cursor.png"), auto;
+  cursor: url("/cursor/cursor.png"), auto;
   color: whitesmoke;
   background: url("/IMG-SECTIONS/Labs/LAB.webp") no-repeat center; 
   background-size: 100% 100%;
@@ -24,7 +24,7 @@ body {
 a {
   text-decoration: none;
   cursor: pointer;
-  cursor: url("/CURSOR/cursor02.png"), auto;
+  cursor: url("/cursor/cursor02.png"), auto;
 }
 h1:hover{
   color: #84f584;
@@ -80,7 +80,7 @@ background: rgb(68, 68, 68);
   margin-right: 15px;
   max-width: 1.5rem;
   cursor: pointer;
-  cursor: url("/CURSOR/cursor02.png"), auto;
+  cursor: url("/cursor/cursor02.png"), auto;
 }
 .Logo:hover {
   filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.3));
@@ -158,7 +158,7 @@ p {
   height: auto;
   transition: 2s;
   cursor: pointer;
-  cursor: url("/CURSOR/cursor02.png"), auto;
+  cursor: url("/cursor/cursor02.png"), auto;
   transition: transform 1s ease;
 }
 .P:hover {
@@ -187,7 +187,7 @@ p {
   height: auto;
   transition: 2s;
   cursor: pointer;
-  cursor: url("/CURSOR/cursor02.png"), auto;
+  cursor: url("/cursor/cursor02.png"), auto;
   transition: transform 1s ease;
 }
 .O:hover {

@@ -7,7 +7,9 @@
 
 body {
     font-family:'Arial Narrow Bold';
-    background-image: url(/BgYT.jpg);
+    /*
+    background-image: url(/);
+    */
 }
 /* Logo Tecnimux */  
 .Logo-Tx {
@@ -17,7 +19,7 @@ body {
     max-width:2rem;
     background-color:transparent;
     cursor: pointer;
-    cursor: url("/CURSOR/cursor02.png"),auto;
+    cursor: url("/cursor/cursor02.png"),auto;
 }
 
     .Logo-Tx:hover {

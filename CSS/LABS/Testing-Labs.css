@@ -19,7 +19,7 @@
     max-width: 1.5rem;
     background-color: transparent;
     cursor: pointer;
-    cursor: url("/CURSOR/cursor02.png"), auto;
+    cursor: url("/cursor/cursor02.png"), auto;
   }
   
   .Logo-Tx img:hover {

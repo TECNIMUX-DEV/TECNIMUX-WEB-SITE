@@ -1,5 +1,5 @@
 * {
-    cursor: url("/CURSOR/cursor.png"), auto;
+    cursor: url("/cursor/cursor.png"), auto;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -13,7 +13,7 @@
    
     @font-face {
         font-family: batman;
-        src: url(/FUENTES/batmfa_.ttf)
+        src: url(/fonts/batmfa_.ttf)
     }
     header {
 background-color: black;

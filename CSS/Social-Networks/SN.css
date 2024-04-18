@@ -1,15 +1,15 @@
 * {
-  cursor: url("/CURSOR/cursor.png"), auto;
+  cursor: url("/cursor/cursor.png"), auto;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 @font-face {
   font-family: "BF";
-  src: url(/FUENTES/Black\ Future.otf);
+  src: url(/fonts/Black\ Future.otf);
 }
 body {
-  background-image: url(/Social-networks-icons/TX-BK08-GRAY-60O.webp);
+  background-image: url(/social-networks-icons/TX-BK08-GRAY-60O.webp);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
