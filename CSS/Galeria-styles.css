@@ -98,7 +98,25 @@ ul {
   padding: 0;
   letter-spacing: 3px;
 }
+li {
+  float: left;
+}
+li a:hover {
+  color: #634092;
+  background-color: #29292956;
 
+}
+li a {
+  border: 1px solid #16161641;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  padding: 15px;
+  background-color: rgba(63, 40, 92, 0.658);
+  cursor: pointer;
+  cursor: url("/cursor/cursor02.png"), auto;
+}
 @media screen and (max-width: 830px) {
   ul {
     position: relative;
@@ -129,26 +147,6 @@ ul {
     cursor: default;
   }
 }
-
-li {
-  float: left;
-}
-li a:hover {
-  color: white;
-  background-color: rgba(63, 40, 92, 0.658);
-}
-li a {
-  border: 1px solid #16161641;
-  text-align: center;
-  text-decoration: none;
-  color: #634092;
-  display: block;
-  padding: 15px;
-  background-color: #29292956;
-  cursor: pointer;
-  cursor: url("/cursor/cursor02.png"), auto;
-}
-
 /* Logo Tecnimux */
 .Logo-Tx {
   z-index: 2;
