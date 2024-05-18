@@ -1,48 +1,110 @@
 * {
-    cursor: url("/cursor/cursor.png"), auto;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  body {
-    font-family: batman,sans-serif;
-    background-color: crimson;
-    background-size: cover;
-    background-repeat: no-repeat;
-    }
-   
-    @font-face {
-        font-family: batman;
-        src: url(/fonts/batmfa_.ttf)
-    }
-    header {
-background-color: black;
-height: 80px;
-margin: 0;
-    }
-.Title {
-    color: #fff ;
-    text-align: center;
+  cursor: url("/cursor/cursor.png"), auto;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-/*Logo tecnimux*/  
-.LOGO {
-position: relative;
-justify-content: end;
-align-items: end;
+body {
+  font-family: batman, sans-serif;
+  background-color: rgb(201, 30, 72);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@font-face {
+  font-family: batman;
+  src: url(/fonts/batmfa_.ttf);
+}
+
+a {
+  cursor: pointer;
+  cursor: url("/cursor/cursor02.png"), auto;
+}
+
+header {
+  background-color: rgb(0, 14, 1);
+  height: 160px;
+  margin: 0;
+}
+
+.title {
+    padding-top: 60px;
+}
+.title h1{
+  color: #fff;
+  text-align: center;
+  font-size: 4.5rem;
+}
+
+/*Logo tecnimux*/
+.logo-TECNIMUX {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 30px;
+  }
+  .logo-TECNIMUX img{
+    width: 40px;
+  }
+.logo-TECNIMUX:hover {
+  filter: brightness(1.2);
+}
+
+.navegation {
 display: flex;
-margin: 10px;
+justify-content: center;
+}
+.navegation ul{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    text-decoration: none;
+list-style: none;
+padding: 35px;
     }
-    .Logo-TX{
-        position: absolute;
-        max-width: 1.5rem;
-        right: 5px;
-        top: -35px;
-    }
-    .Logo-TX:hover:hover {
-        filter: brightness(1.2);
+    .navegation li a{
+        text-decoration: none;
+        color: #fff;
+        padding: 5px;
+        background-color: rgb(19, 19, 19);
     }
 
-    .Title-02{
-        text-align: center;
-        color: #fff;
-    }
+    .navegation li a:active {
+        background-color: #634092;
+          }
+
+
+
+
+.title-s01 {
+  text-align: center;
+  margin: 80px;
+}
+.title-s01 h1{
+    color: #000;
+    font-size: 4rem;
+  }
+
+
+  .i-all {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    background-color: rgb(153, 245, 32);
+    flex-wrap: wrap;
+  }
+  .wX-box {
+    height: 400px;
+    width: 300px;
+    background-color: orangered;
+    border: 1px solid #fff;
+    text-align: center;
+  }
+  .wX-box img {
+    width: 250px;
+    height: auto;
+  }
+  .wX-box h2 {
+color: #fff;
+  }

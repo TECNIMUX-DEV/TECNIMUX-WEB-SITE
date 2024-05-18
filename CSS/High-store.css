@@ -18,6 +18,11 @@
   src: url(/fonts/batmfa_.ttf);
 }
 
+a {
+  cursor: pointer;
+  cursor: url("/cursor/cursor02.png"), auto;
+}
+
 body {
   margin: 0;
   padding: 0;
