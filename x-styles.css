@@ -344,6 +344,7 @@ footer {
   scroll-snap-type: y mandatory; /* Habilitar scroll-snap vertical */
   overflow-y: scroll; /* Permitir desplazamiento vertical */
   height: 100vh; /* Altura de la ventana de visualización */
+  scroll-behavior: smooth;
 }
 
 section {
