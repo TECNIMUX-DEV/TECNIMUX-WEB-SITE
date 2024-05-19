@@ -576,11 +576,11 @@ position: absolute;
   opacity: 15%;
   font-family: "I";
 }
-@media screen and (max-width: 830px) {
+/* @media screen and (max-width: 830px) {
   .Inicio {
     text-align: center;
   }
-}
+} */
 #sec-01 {
   display: flex;
   flex-direction: column;
@@ -626,7 +626,7 @@ position: absolute;
   align-items: center;
   background-color: orange;
   width: 900px;
-  padding-left: 130px;
+  padding-left: 50px;
 }
 .galeria p {
   font-size: 2rem;
@@ -650,10 +650,10 @@ position: absolute;
   background-color: red;
 }
 
-@media screen and (max-width: 830px) {
-  /* #Sec01 {
+/*@media screen and (max-width: 830px) {
+ #Sec01 {
     height: 890px;
-  } */
+  } 
   #Sec01 img {
     position: absolute;
     width: 280px;
@@ -672,7 +672,7 @@ position: absolute;
     left: 0;
   }
 }
-
+*/
 #sec-02 {
   display: flex;
   flex-direction: column;
@@ -683,29 +683,9 @@ position: absolute;
   box-shadow: 10px 10px 20px #634092;
 }
 
-#sec02 img {
-  width: 30%;
-  height: auto;
-  margin: 240px 250px 250px 200px;
-  padding: 0;
-  border: 0;
-  position: absolute;
-  transition: all 1.2s ease;
-  box-shadow: 1px 1px 15px black;
-  border-radius: 2px;
-}
-#sec02 img:hover {
-  transform: translateY(10px);
-}
 
-#sec02 p {
-  color: rgb(0, 0, 0);
-  font-size: 1.2rem;
-  position: absolute;
-  display: block;
-  margin: 80px 80px 80px 20px;
-  bottom: 350px;
-  left: 60%;
+#sec-02 img:hover {
+  transform: translateY(10px);
 }
 
 #sec-02 h2 {
@@ -716,11 +696,11 @@ position: absolute;
   margin: 0;
   text-align: center;
 }
-@media screen and (max-width: 830px) {
-  /* #Sec02 {
+  /* @media screen and (max-width: 830px) {
+ #Sec02 {
     height: 890px;
-  } */
-  #Sec02 img {
+  } 
+  /* #Sec02 img {
     position: absolute;
     width: 300px;
     height: auto;
@@ -748,8 +728,8 @@ position: absolute;
     align-items: end;
     display: flex;
   }
-}
-#Sec03 {
+} */
+#sec-03 {
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -758,46 +738,21 @@ position: absolute;
   background-image: url(/IMG-SECTIONS/N-02/02.png);
   box-shadow: 10px 10px 20px #634092;
 }
-#Sec03 img {
-  width: 30%;
-  height: auto;
-  margin: 240px 250px 250px 200px;
-  padding: 0;
-  border: 0;
-  position: absolute;
-  transition: all 1.2s ease;
-  box-shadow: 1px 1px 15px gray;
-  border-radius: 2px;
-}
-#Sec03 img:hover {
+#sec-03 img:hover {
   transform: translateY(10px);
 }
-
-#Sec03 p {
-  color: rgb(255, 255, 255);
-  font-size: 1.2rem;
-  position: absolute;
-  display: block;
-  margin: 80px 80px 80px 20px;
-  bottom: 350px;
-  left: 60%;
-}
-.Title-Tx-Labs {
+#sec-03 h2 {
   font-family: "F";
-  font-size: 2.5rem;
   color: #84f584;
-  border: 0;
-  padding: 50px;
-  padding-top: 70px;
+  font-size: 6rem;
+  padding-top: 30px;
   margin: 0;
-  justify-content: end;
-  align-items: end;
-  display: flex;
+  text-align: center;
 }
-@media screen and (max-width: 830px) {
-  /* #Sec03 {
+/* @media screen and (max-width: 830px) {
+   #Sec03 {
     height: 890px;
-  } */
+  } 
   #Sec03 img {
     position: absolute;
     width: 320px;
@@ -825,9 +780,9 @@ position: absolute;
     align-items: end;
     display: flex;
   }
-}
+} */
 
-#Sec04 {
+#sec-04 {
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -837,49 +792,21 @@ position: absolute;
   box-shadow: 10px 10px 20px #634092;
   background-size: contain;
 }
-
-#Sec04 img {
-  height: auto;
-  margin: 240px 700px;
-  position: absolute;
-  width: 320px;
-  margin-left: 40vw;
-  padding: 0;
-  margin-top: 15vh;
-  left: 0;
-  transition: all 1.2s ease;
-  box-shadow: 1px 1px 15px gray;
-  border-radius: 2px;
-}
-#Sec04 img:hover {
+#sec-04 img:hover {
   transform: translateY(10px);
 }
-
-#Sec04 p {
-  color: rgb(255, 255, 255);
-  font-size: 1.2rem;
-  position: absolute;
-  display: block;
-  margin: 50px 50px 20px 20px;
-  bottom: 150px;
-  left: 27%;
-}
-
-.Title-TX-Team {
+#sec-04 h2 {
   font-family: "I";
-  width: 100%;
-  font-size: 5rem;
   color: #634092;
-  border: 0;
-  padding: 80px;
+  font-size: 6rem;
+  padding-top: 30px;
   margin: 0;
   text-align: center;
-  text-transform: uppercase;
 }
-@media screen and (max-width: 830px) {
-  /* #Sec04 {
+/* @media screen and (max-width: 830px) {
+  #Sec04 {
     height: 890px;
-  } */
+  } 
   #Sec04 img {
     position: absolute;
     width: 300px;
@@ -909,7 +836,7 @@ position: absolute;
     text-align: center;
     text-transform: uppercase;
   }
-}
+} */
 
 /* Links-Sections */
 ul {

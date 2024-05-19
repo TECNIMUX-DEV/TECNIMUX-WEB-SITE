@@ -16,9 +16,7 @@ if (typeof window !== 'undefined') {
   value = window.localStorage.getItem('key')
 }
 
-// Scroll animation
-// Scrolling down
-// Scrolling up
+/* Scroll animation Scrolling down Scrolling up */
 document.addEventListener('DOMContentLoaded', () => {
     let sections = document.querySelectorAll('section');
 
