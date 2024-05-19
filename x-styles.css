@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 @font-face {
   font-family: "T";
@@ -171,14 +172,16 @@ footer {
   transform: scale(1.00000001);
 }
 /* Logo Tecnimux */
-.Logo-Tx {
+.logo-TECNIMUX{
   z-index: 1;
   margin-left: 4px;
   max-width: 3rem;
   background-color: transparent;
   pointer-events: none;
   user-select: none;
-  -webkit-user-drag: none;
+ -webkit-user-drag: none;
+ cursor: pointer;
+ cursor: url("/cursor/cursor02.png")"/";
 }
 
 .Nav-Bar {
@@ -328,12 +331,23 @@ footer {
     right: 0;
   }
 }
+
 /* Sections */
-#Sec0 {
-  position: relative;
-  width: 100%;
-  height: 100%;
+.section-hidden {
+  transform: translateY(-100%);
 }
+#containerSections {
+  scroll-snap-type: y mandatory; /* Habilitar scroll-snap vertical */
+  overflow-y: scroll; /* Permitir desplazamiento vertical */
+  height: 100vh; /* Altura de la ventana de visualización */
+}
+
+section {
+  height: 100vh; /* Altura de cada sección */
+  scroll-snap-align: start; /* Alinear secciones al inicio */
+  transition: transform 0.5s ease-in-out; /* Transición suave */
+}
+
 /* Video de fondo */
 #BG {
   min-height: 80vh;
@@ -557,13 +571,8 @@ video {
   }
 }
 #Sec01 {
-  position: relative;
-  width: 100%;
   height: 100vh;
-  margin: 0;
-  border: none;
-  padding: 0;
-  display: block;
+
   background-image: url(/IMG-SECTIONS/N-02/02.png);
 }
 #Sec01 img {
@@ -641,13 +650,8 @@ video {
 }
 
 #Sec02 {
-  position: relative;
-  width: 100%;
   height: 100vh;
   margin: 0;
-  border: none;
-  padding: 0;
-  display: block;
   background-image: url(/IMG-SECTIONS/N-02/04.png);
   box-shadow: 10px 10px 20px #634092;
   z-index: 1;
@@ -724,13 +728,7 @@ video {
   }
 }
 #Sec03 {
-  position: relative;
-  width: 100%;
   height: 100vh;
-  margin: 0;
-  border: none;
-  padding: 0;
-  display: block;
   background-image: url(/IMG-SECTIONS/N-02/02.png);
   box-shadow: 10px 10px 20px #634092;
 }
@@ -804,13 +802,9 @@ video {
 }
 
 #Sec04 {
-  position: relative;
-  width: 100%;
+
   height: 100vh;
   margin: 0;
-  border: none;
-  padding: 0;
-  display: block;
   background-image: url(social-networks-icons/TX-BK08-GRAY-60O.webp);
   box-shadow: 10px 10px 20px #634092;
   z-index: 1;

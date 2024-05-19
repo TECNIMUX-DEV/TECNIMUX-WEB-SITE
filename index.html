@@ -27,14 +27,16 @@
 
 <body>
 <header id="header-01">
-
     <!--Logo Tecnimux-->
-<img class="Logo-Tx" draggable="false" src="/logo-tx/Logo_Tx.png" alt="BACKGROUND"/>
+    <a href="/index.html">
+<img class="logo-TECNIMUX" draggable="false" src="/logo-tx/Logo_Tx.png" alt="BACKGROUND"/>
+</a>
 
 <!-- Menu -->
 <button id="Opened" class="Open"><i class="bi bi-list Crr"></i></button>
 <nav class="Nav_List" id="Nav_List">
     <button id="Closed" class="Close"><i class="bi bi-x-lg Crr02"></i></button>
+    <!-- Navigation -->
 <ul class="Nav-Bar">
  <li translate="no"><a href="html/Galeria.html">Galeria</a></li>
  <li translate="no"><a href="html/High-store.html">HigH Store</a></li>
@@ -48,20 +50,9 @@
 <script src="/main.js"></script>
 </header>
 
-  <!-- Navegación 
-  <nav>
-    <ul>
-        <li><a href="#sec0">Sección 0 | HOME</a></li>
-        <li><a href="#Sec01">Sección 1 | GALERIA</a></li>
-        <li><a href="#Sec02">Sección 2 | HIGH STORE</a></li>
-        <li><a href="#sec03">Sección 3 | TX LABS</a></li>
-        <li><a href="#sec04">Sección 4 | QUIENES SOMOS</a></li>
-    </ul>
-</nav>
--->
-<!-- Section 0 -->
-<section id="Sec0">
-    <div>
+<div id="containerSections">
+<!-- Section 00 -->
+<section id="Sec0" class="s-00">
         <main id="BG">
             <video src="/video-bg/B-02.mp4" autoplay="true" muted="true" loop="true"></video>
             <div class="Capa"></div>
@@ -161,8 +152,32 @@
         </div>
     </div>
 </section>
-<!-- Quienes somos :) -->
-<section id="Sec04">
+
+
+ <!-- Section 01-Galeria -->
+ <section id="Sec01" class="s-01">
+    <h2 class="Title-Gallery">Galeria</h2>
+    <img src="https://res.cloudinary.com/dxwfpc5fu/image/upload/v1716009098/HOME%20IMAGES/Gallery_zlk1y3.jpg" alt="Galeria" class="Img-S01">
+    <p>Tecnimux <span class="Galeria"><a href="/html/Galeria.html">Gallery</a></span> Es un apartado donde están todas las creaciones relacionadas a la edición digital.</p>
+</section>
+<!-- Section 02-HIGH Store -->
+<section id="Sec02" class="s-02">
+    <h2 translate="no" class="Title-HStore">HIGH Store</h2>
+    <img src="https://res.cloudinary.com/dxwfpc5fu/image/upload/v1716009112/HOME%20IMAGES/Market-02_zx3zz1.jpg" alt="HigH-Store">
+       <P>La <strong> HigH Store </strong> 
+        Es un market virtual de hardware (simulado)
+        Donde va está el hardware más Top. </P>
+</section>
+<!-- Section 03-Tx-Labs -->
+<section id="Sec03" class="s-03">
+
+    <h2 translate="no" class="Title-Tx-Labs">Tx Labs</h2>
+    <img src="https://res.cloudinary.com/dxwfpc5fu/image/upload/v1716009114/HOME%20IMAGES/Labs_vfuyyf.jpg" alt="Labs">
+    <p>Tecnimux Labs fue creado con el propósito de experimentar con diferentes proyectos, (testing). Para posteriormente definir su lugar en la WWW. </p>
+</section>
+
+<!-- Section 04 Quienes somos :) -->
+<section id="Sec04" class="s-04">
     <h2 translate="no" class="Title-TX-Team">TECNIMUX y su Equipo</h2>
     <img src="https://res.cloudinary.com/dxwfpc5fu/image/upload/v1716009107/HOME%20IMAGES/Company_v3ab8g.jpg" alt="Company-Team">
     <p>En Tecnimux, nos esforzamos por ofrecer información y recursos tecnológicos al alcanze de todos, mejorando la experiencia del usuario con su PC y aumentando la productividad de nuestros seguidores.</p> 
@@ -175,34 +190,7 @@
         <P>Coder !!!!</P> 
     <p>Dater 2024 !!!</p> -->
 </section>
-
- <!-- Section 1-Galeria -->
- <section id="Sec01">
-    <h2 class="Title-Gallery">Galeria</h2>
-    </div>
-    <img src="https://res.cloudinary.com/dxwfpc5fu/image/upload/v1716009098/HOME%20IMAGES/Gallery_zlk1y3.jpg" alt="Galeria" class="Img-S01">
-    <p>Tecnimux <span class="Galeria"><a href="/html/Galeria.html">Gallery</a></span> Es un
-         apartado donde están 
-        todas las creaciones relacionadas 
-        a la edición digital.</p>
-</section>
-
-<!-- Section 2-HIGH Store -->
-<section id="Sec02">
-    <h2 translate="no" class="Title-HStore">HIGH Store</h2>
-    <img src="https://res.cloudinary.com/dxwfpc5fu/image/upload/v1716009112/HOME%20IMAGES/Market-02_zx3zz1.jpg" alt="HigH-Store">
-       <P>La <strong> HigH Store </strong> 
-        Es un market virtual de hardware (simulado)
-        Donde va está el hardware más Top. </P>
-</section>
-
-<!-- Section 3 Tx-Labs -->
-<section id="Sec03">
-    <h2 translate="no" class="Title-Tx-Labs">Tx Labs</h2>
-    <img src="https://res.cloudinary.com/dxwfpc5fu/image/upload/v1716009114/HOME%20IMAGES/Labs_vfuyyf.jpg" alt="Labs">
-    <p>Tecnimux Labs fue creado con el propósito de experimentar con diferentes proyectos, (testing). Para posteriormente definir su lugar en la WWW. </p>
-</section>
-
+</div>
 
 
 
@@ -220,7 +208,7 @@
    -->
 
 <!-- Footer -->
-<footer>
+<footer id="sec-05">
  <div class="footer-content">
  <div class="Sombrero">
     <img src="/footer/Sombrero.png" alt="Sombrero">
