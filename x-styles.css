@@ -916,10 +916,11 @@ a:hover {
 */
 
 /* Ventana Modal */
-.Vm {
+.vm {
   font-family: F;
-  font-size: 3rem;
-  color: #000000;
+  font-size: 5rem;
+  filter:drop-shadow(0 0 0.5rem #634092);
+  color:#000;
 }
 .social-n-icons {
   display: flex;
@@ -942,9 +943,7 @@ a:hover {
 .TX {
   font-size: 50px;
   font-family: 'I';
-}
-.TX:hover {
-  color: #634092;
+  animation: blink 1s infinite;
 }
 .pop-up {
   z-index: 3;
@@ -982,7 +981,7 @@ a:hover {
   align-items: center;
   justify-content: center;
   position: relative;
-  background-image: url("/IMG-SECTIONS/FONDO-POP-UP.png");
+  background-image: url("https://res.cloudinary.com/dxwfpc5fu/image/upload/f_auto,q_auto/v1/HOME%20IMAGES/POP-UP/m62fy0ciej7tcvnr08qh");
   background-size: 165%;
   background-position: center;
   background-repeat: no-repeat;
@@ -1055,7 +1054,7 @@ a:hover {
 }
 .sub-content h2 {
   font-weight: 500;
-  font-size: 2rem;
+  font-size: 3rem;
   color: #1b1b1b;
   margin-bottom: 15px;
 }
@@ -1077,24 +1076,21 @@ a:hover {
 
 .subs-send {
   z-index: 2;
-  width: 100%;
-  padding: 15px;
+  width: 70%;
+  padding: 10px;
   border: none;
   border-radius: 1px;
-  background: #272727dc;
-  color: #ffffff;
-  font-size: 18px;
+  background: #27272756;
+  color: #000000;
+  font-size: 1rem;
   cursor: pointer;
   margin-bottom: 20px;
   transition: 0.25s ease background;
-  justify-content: center;
-  align-items: center;
-  display: flex;
+  align-items: end;
 }
 
 .subs-send:hover {
-  color: #1b1b1b;
-  background-color: #644092;
+  background-color: rgb(99, 64, 146, 0.5);
 }
 
 .line {
@@ -1124,6 +1120,15 @@ a:hover {
   opacity: 1;
 }
 
+/* Animation blink */
+@keyframes blink {
+  0% {
+    color: #000;
+  }
+  100% {
+    color: #634092;
+  }
+}
 @media only screen and (max-width: 980px) {
   .pop-up-tittle {
     display: none;
@@ -1137,7 +1142,7 @@ a:hover {
 
 /* ToolTip */
 
-.portfolio {
+/* .portfolio {
   margin: 5px;
   top: 770px;
-}
+} */
