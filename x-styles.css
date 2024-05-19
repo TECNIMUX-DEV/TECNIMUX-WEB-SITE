@@ -17,10 +17,7 @@
   src: url(/fonts/batmfa_.ttf);
 }
 
-a {
-  cursor: pointer;
-  cursor: url("/cursor/cursor02.png"), auto;
-}
+
 
 body {
   margin: 0;
@@ -924,15 +921,27 @@ a:hover {
   font-size: 3rem;
   color: #000000;
 }
-.S-N img {
+.social-n-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.social-n-icons a{
+  text-align: center;
+  margin: 10px;
+}
+.social-n-icons img{
+  cursor: pointer;
+  cursor: url(/cursor/cursor02.png), auto;
+}
+.s-n-icons {
   width: 25px;
   height: auto;
-  z-index: 1;
-  cursor: pointer;
 }
+
 .TX {
   font-size: 50px;
-  font-family: I;
+  font-family: 'I';
 }
 .TX:hover {
   color: #634092;
@@ -950,7 +959,11 @@ a:hover {
   align-items: center;
   visibility: hidden;
 }
-
+.pop-up a{
+  text-decoration: none;
+  cursor: pointer;
+  cursor: url("/cursor/cursor02.png"), auto;
+}
 .pop-up-wrap {
   display: flex;
   align-items: center;
