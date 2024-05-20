@@ -149,7 +149,8 @@ display: block;
   z-index: 8;
   width: 100vw;
   height: 90px;
-  background-color: rgb(41, 41, 41);
+  background: radial-gradient(#272727, #111111);
+  /* background-color: rgb(41, 41, 41); */
   padding-right:25px ;
 }
 #socialNetworks-icons {
