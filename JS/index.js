@@ -41,14 +41,24 @@ return !(rect.bottom < 0 || rect.top - windowHeight >= percentVisible * el.clien
 // Top header
 document.addEventListener("DOMContentLoaded", function() {
     var resizableDiv = document.getElementById("socialNetworks-icons");
+    var images = resizableDiv.querySelectorAll("img");
 
     window.addEventListener("scroll", function() {
         var maxHeight = 90; // Altura inicial en px
-        var minHeight = 40;  // Altura mínima en px
+        var minHeight = 70;  // Altura mínima en px
+        var maxImageHeight = 30; // Altura inicial de las imágenes en px
+        var minImageHeight = 20; // Altura mínima de las imágenes en px
+        var scrollHeight = 20; // Ajuste proporcional de la altura
         var scrollY = window.scrollY;
 
-        var newHeight = maxHeight - (scrollY / 300) * (maxHeight - minHeight); // Ajuste proporcional
+        var newHeight = maxHeight - (scrollY / scrollHeight) * (maxHeight - minHeight);
         if (newHeight < minHeight) newHeight = minHeight;
         resizableDiv.style.height = newHeight + "px";
+
+        var newImageHeight = maxImageHeight - (scrollY / scrollHeight) * (maxImageHeight - minImageHeight);
+        if (newImageHeight < minImageHeight) newImageHeight = minImageHeight;
+        images.forEach(function(image) {
+            image.style.height = newImageHeight + "px";
+        });
     });
 });
