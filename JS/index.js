@@ -1,5 +1,5 @@
- // document.addEventListener('DOMContentLoaded', Function ()}): 
-/* Cambio de color bottom header 
+ /* Cambio de color bottom header 
+ document.addEventListener('DOMContentLoaded', Function ()}): 
  window.addEventListener('scroll', function() {
     var header = document.getElementById('header-01');
     var scrollPosition = window.scrollY;
@@ -16,6 +16,7 @@ if (typeof window !== 'undefined') {
   value = window.localStorage.getItem('key')
 }
 */
+
 /* Scroll animation Scrolling down Scrolling up
 document.addEventListener('DOMContentLoaded', () => {
     let sections = document.querySelectorAll('section');
