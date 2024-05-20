@@ -1,5 +1,5 @@
  // document.addEventListener('DOMContentLoaded', Function ()}): 
-//  Cambio de color bottom header 
+/* Cambio de color bottom header 
  window.addEventListener('scroll', function() {
     var header = document.getElementById('header-01');
     var scrollPosition = window.scrollY;
@@ -15,8 +15,8 @@ let value
 if (typeof window !== 'undefined') {
   value = window.localStorage.getItem('key')
 }
-
-/* Scroll animation Scrolling down Scrolling up */
+*/
+/* Scroll animation Scrolling down Scrolling up
 document.addEventListener('DOMContentLoaded', () => {
     let sections = document.querySelectorAll('section');
 
@@ -35,4 +35,20 @@ let rect = el.getBoundingClientRect();
 let windowHeight = window.innerHeight || document.documentElement,clientHeight;
 return !(rect.bottom < 0 || rect.top - windowHeight >= percentVisible * el.clientHeight);
 } 
+});
+ */
+
+// Top header
+document.addEventListener("DOMContentLoaded", function() {
+    var resizableDiv = document.getElementById("socialNetworks-icons");
+
+    window.addEventListener("scroll", function() {
+        var maxHeight = 90; // Altura inicial en px
+        var minHeight = 40;  // Altura mínima en px
+        var scrollY = window.scrollY;
+
+        var newHeight = maxHeight - (scrollY / 300) * (maxHeight - minHeight); // Ajuste proporcional
+        if (newHeight < minHeight) newHeight = minHeight;
+        resizableDiv.style.height = newHeight + "px";
+    });
 });
