@@ -62,9 +62,6 @@ position: sticky;
 position: -webkit-sticky;
 padding: 10px;
 }
-#header-01::after {
-  background-color: red;
-}
 
 .imgs-cat {
   display: none;
@@ -83,6 +80,8 @@ padding: 10px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-weight: 300;
   padding: 10px;
+  cursor: pointer;
+  cursor: url("/cursor/cursor02.png"), auto;
 }
  li:hover .imgs-cat {
 display: block;
@@ -94,6 +93,11 @@ display: block;
   display: block;
   margin: 0 auto 0.5rem;
   cursor: pointer;
+  cursor: url("/cursor/cursor02.png"), auto;
+}
+.imgs-cat p{
+  cursor: pointer;
+  cursor: url("/cursor/cursor02.png"), auto;
 }
 .title-TECNIMUX {
   background-color: #000;
@@ -165,9 +169,13 @@ display: block;
 }
 .list-icons li {
   background-color: rgb(46, 46, 46);
+  padding: 15px;
   cursor: pointer;
   cursor: url(/cursor/cursor02.png), auto;
-  padding: 15px;
+}
+.list-icons li:active {
+  background-color: #634092;
+  color: #000;
 }
 
 .list-icons img{
@@ -333,11 +341,12 @@ footer {
   display: inline-block;
   margin: 0.1rem;
   padding: 0.5rem 1rem;
-  background-color: #4CAF50;
+  background-color: #634092;
   color: #fff;
   cursor: pointer;
   transition: background-color 0.3s ease;
   text-align: center;
+  text-wight:200;
 } 
 .nav-bar li a {
   unicode-bidi: isolate-override;
