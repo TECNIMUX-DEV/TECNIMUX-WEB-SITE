@@ -343,9 +343,18 @@ footer {
   padding: 0.5rem 1rem;
   background-color: #634092;
   color: #fff;
-  cursor: pointer;
   transition: background-color 0.3s ease;
   text-align: center;
+  cursor: pointer;
+  cursor: url(/cursor/cursor02.png), auto;
+} 
+.nav-bar li:hover {
+  background-color: #ffffff;
+  color: #000;
+} 
+.nav-bar li:active {
+  background-color: rgb(255, 255, 255, 0.5);
+  color: #000;
 } 
 .nav-bar li a {
   unicode-bidi: isolate-override;
