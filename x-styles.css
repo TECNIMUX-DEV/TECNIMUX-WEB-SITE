@@ -5,6 +5,11 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
+
+html {
+  font-size: 1rem;
+}
+
 a {
   cursor: pointer;
   cursor: url("/cursor/cursor02.png"), auto;
@@ -23,36 +28,95 @@ a {
 }
 
 body {
+  display: flex;
+  flex-direction: column;
   margin: 0;
   padding: 0;
-  border: none;
+  min-height: 100vh;
+  width: 100vw;
   font-family: "Work Sans", sans-serif;
 }
 
 #header-01 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   position: sticky;
   position: -webkit-sticky;
   top: 0;
   font-family: "I", "sans-serif";
-  right: 0;
   z-index: 2;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 5px;
-  background-color: rgba(46, 46, 46);
-  box-shadow: 2px 2px 10px #64409286;
+  padding: 0 25px;
+  box-shadow: inset (0 0 0.5rem #634092);
   font-size: 0.8rem;
   letter-spacing: 0.2rem;
+  height: 18vh;
   width: 100%;
 }
+.title-TECNIMUX {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.title-TECNIMUX h1 {
+  color: #fff;
+  text-decoration: none;
+  list-style: none;
+  font-size: 7rem;
+  font-family: 'I';
+}
+
+#socialNetworks-icons {
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  z-index: 8;
+  width: 100%;
+  height: 90px;
+  background-color: rgba(5, 5, 5, 0.856);
+  padding-right:25px ;
+}
+
+#socialNetworks-icons {
+  padding-top: 20px;
+}
+#socialNetworks-icons img{
+  z-index: 8;
+  width: 100%;
+  height: 30px;
+
+}
+
+.list-icons {
+  display: flex;
+  top: 0;
+  gap: 1px;
+  padding-bottom: 5px;
+}
+.list-icons li {
+  background-color: rgb(46, 46, 46);
+  cursor: pointer;
+  cursor: url(/cursor/cursor02.png), auto;
+  padding: 15px;
+}
+
+.list-icons img{
+  filter: drop-shadow(1px 1px 15px rgba(255, 255, 255, 0.5));
+  cursor: pointer;
+  cursor: url(/cursor/cursor02.png), auto;
+}
+.list-icons li:hover {
+  filter: drop-shadow(1px 1px 5px #634092);
+}
+
+
 /* Barra de scroll */
 ::-webkit-scrollbar {
   width: 15px;
 }
 
 ::-webkit-scrollbar-track {
-  background: rgb(68, 68, 68);
+  background: rgb(150, 150, 150);
 }
 
 ::-webkit-scrollbar-thumb {
@@ -177,7 +241,7 @@ footer {
 .logo-TECNIMUX {
   z-index: 1;
   margin-left: 4px;
-  max-width: 3rem;
+  max-width: 5rem;
   background-color: transparent;
   pointer-events: none;
   user-select: none;
@@ -267,7 +331,7 @@ footer {
     top: 0;
     right: 0;
     bottom: 0;
-    background-color: #2e2e2ea8;
+    /* background-color: #2e2e2ea8; */
     padding: 8rem;
     box-shadow: 0 0 0 100vmax rgb(46, 46, 46);
   }
@@ -345,41 +409,55 @@ footer {
   overflow-y: scroll; /* Permitir desplazamiento vertical */
   height: 100vh; /* Altura de la ventana de visualización */
   scroll-behavior: smooth;
+  background-color: #000000;
 }
 
 section {
   height: 100vh; /* Altura de cada sección */
+  width: 100vw;
   scroll-snap-align: start; /* Alinear secciones al inicio */
   transition: transform 0.5s ease-in-out; /* Transición suave */
 }
 
 /* Video de fondo */
-#BG {
-  min-height: 80vh;
+.video-bg-sec-00 {
   position: relative;
+  height: 100%;
+  width: 100%;
 }
 video {
-  object-fit: contain;
-  position: relative;
-  top: 0px;
-  left: 0;
-  width: 100%;
-  height: 94vh;
+  height: 100vh;
+  width: 100vw;
+  align-items: center;
   object-fit: cover;
 }
+.container-capa {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+}
+ .capa {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  background-color: #3b3b3b;
+  opacity: 0.7;
+  filter: blur(1px);
+  mix-blend-mode: overlay;
+  z-index: 1;
+} 
 .e-video {
   display: flex;
   justify-content: center;
-  position: relative;
-  width: 100%;
-  text-align: center;
+  height: 100vh;
+  width: 100vw;
 
   opacity: 65%;
   text-decoration: none;
   color: #fffcfc63;
 
 }
-.e-v-text {
+/* .e-v-text {
   top: 450px;
 position: absolute;
 }
@@ -389,7 +467,7 @@ position: absolute;
   color: #fff;
   font-size: 6rem;
   letter-spacing: 8px;
-}
+} */
 /* Responsive video Background */
 @media screen and (max-width: 830px) {
   #BG {
@@ -411,19 +489,7 @@ position: absolute;
   }
 }
 
-.Capa {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #3b3b3b;
-  opacity: 0.7;
-  filter: blur(1px);
-  mix-blend-mode: overlay;
-}
-
-/* Header and Sections Sizes */
+/* Header and Sections Sizes
 @media screen and (max-width: 830px) {
   header-01 {
     letter-spacing: 0.2rem;
@@ -435,143 +501,35 @@ position: absolute;
     height: 100%;
   }
 }
-
-/* Social Networks Responsive*/
-@media screen and (max-width: 830px) {
-  .Social-Networks {
-    position: absolute;
-    bottom: 50px;
-    margin: 0;
-    right: 0;
-  }
-}
-/* Social Networks */
-.S1 img {
-  max-width: 2.2rem;
-  height: auto;
-  cursor: pointer;
-  cursor: url("/cursor/cursor02.png"), auto;
-}
-/* Estilo inicial del elemento */
-.S1 {
-  background-color: rgba(0, 0, 0, 0);
-  color: #ffffff;
-  position: absolute;
-  width: 25px;
-  right: 45px;
-  bottom: 155px;
-  transition: transform 0.3s ease;
-}
-
-.SN {
-  filter: drop-shadow(1px 1px 15px #ffffff);
-}
-.SN:hover {
-  filter: drop-shadow(1px 1px 5px #634092);
-}
-/* Efecto hover */
-.S1:hover {
-  transform: scale(1) rotate(180deg);
-}
-
-.S2 img {
-  max-width: 1.8rem;
-  height: auto;
-  cursor: pointer;
-  cursor: url("/cursor/cursor02.png"), auto;
-}
-.S2 {
-  background-color: rgba(0, 0, 0, 0);
-  color: #ffffff;
-  position: absolute;
-  width: 25px;
-  right: 48px;
-  bottom: 120px;
-  transition: transform 0.5s ease;
-}
-/* Efecto hover */
-.S2:hover {
-  transform: scale(1) rotate(360deg);
-}
-
-.S3 img {
-  max-width: 2.2rem;
-  height: auto;
-  cursor: pointer;
-  cursor: url("/cursor/cursor02.png"), auto;
-}
-.S3 {
-  background-color: rgba(0, 0, 0, 0);
-  color: #ffffff;
-  position: absolute;
-  width: 25px;
-  right: 45px;
-  bottom: 90px;
-  transition: transform 0.5s ease;
-}
-/* Efecto hover */
-.S3:hover {
-  transform: scale(1) rotate(360deg);
-}
-
-.S4 img {
-  max-width: 2.2rem;
-  height: auto;
-  cursor: pointer;
-  cursor: url("/cursor/cursor02.png"), auto;
-}
-.S4 {
-  background-color: rgba(0, 0, 0, 0);
-  color: #ffffff;
-  position: absolute;
-  width: 25px;
-  right: 44px;
-  bottom: 60px;
-  transition: transform 0.5s ease;
-}
-/* Efecto hover */
-.S4:hover {
-  transform: scale(1) rotate(360deg);
-}
-
-.S5 img {
-  max-width: 1.2rem;
-  height: auto;
-  cursor: pointer;
-  cursor: url("/cursor/cursor02.png"), auto;
-}
-.S5 {
-  background-color: rgba(0, 0, 0, 0);
-  color: #ffffff;
-  position: absolute;
-  width: 25px;
-  right: 42px;
-  bottom: 30px;
-  transition: transform 0.5s ease;
-}
-/* Efecto hover */
-.S5:hover {
-  transform: scale(1) rotate(360deg);
-}
-
-.Inicio {
+ */
+/* Social Networks Responsive */
+.inicio {
+  z-index: 1;
+  position: relative;
+  display: flex;
   text-align: center;
-  width: 100%;
-  position: absolute;
-  top: 5px;
+  justify-content: center;
+  width: 100vw;
+background-color: rgb(255, 3, 45);
 }
-.Inicio-Text a {
+.inicio-text {
+  position: absolute;
+  width: 100vw;
+  padding-top: 5px;
+  z-index: 5;
+}
+.inicio-text a {
   text-decoration: none;
   color: #fffcfc63;
   cursor: pointer;
   cursor: url("/cursor/cursor02.png"), auto;
   transition: color 0.3s ease;
 }
-.Inicio-Text a:hover {
+.inicio-text a:hover {
   color: #634092;
 }
 
-.Inicio h4 {
+.inicio-text h4 {
   font-size: 14px;
   letter-spacing: 8px;
   opacity: 15%;
@@ -582,12 +540,20 @@ position: absolute;
     text-align: center;
   }
 } */
-#sec-01 {
+#sec-00 {
   display: flex;
   flex-direction: column;
   flex: 1;
   margin-top: auto;
   height: 100vh;
+  width: 100vw;
+  }
+
+
+
+
+
+#sec-01 {
   background-image: url(/IMG-SECTIONS/N-02/02.png);
 }
 #sec-01 h2 {
@@ -681,7 +647,7 @@ position: absolute;
   margin-top: auto;
   height: 100vh;
   background-image: url(/IMG-SECTIONS/N-02/04.png);
-  box-shadow: 10px 10px 20px #634092;
+  /* box-shadow: 10px 10px 20px #634092; */
 }
 
 
@@ -737,7 +703,6 @@ position: absolute;
   margin-top: auto;
   height: 100vh;
   background-image: url(/IMG-SECTIONS/N-02/02.png);
-  box-shadow: 10px 10px 20px #634092;
 }
 #sec-03 img:hover {
   transform: translateY(10px);
@@ -790,7 +755,6 @@ position: absolute;
   margin-top: auto;
   height: 100vh;
   background-image: url(social-networks-icons/TX-BK08-GRAY-60O.webp);
-  box-shadow: 10px 10px 20px #634092;
   background-size: contain;
 }
 #sec-04 img:hover {
