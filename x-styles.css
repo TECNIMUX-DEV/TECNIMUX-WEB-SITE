@@ -161,6 +161,35 @@ display: block;
   user-select: none;
   -webkit-user-drag: none;
 }
+
+.search {
+  background-color: transparent;
+  border: 0.2px solid #634092;
+  width:350px;
+  height: 35px;
+  text-align: center;
+  font-size: 1.2rem;
+}
+.search:focus {
+  border: 2px solid #634092;
+}
+.btn-search {
+  background-color: transparent;
+  border: 0.2px solid #634092;
+  width:75px;
+  height: 35px;
+  text-align: center;
+  font-size: 1.2rem;
+  margin: 10px;
+}
+.btn-search:hover {
+  box-shadow: inset 0 0 0.5rem #634092;
+}
+.search:hover {
+  box-shadow: inset 0 0 0.5rem #634092;
+  border: 2px solid #634092;
+  color: black;
+}
 #socialNetworks-icons {
   position: fixed; /* Fijado en la parte superior */
   top: 0; /* Fijado en la parte superior */
