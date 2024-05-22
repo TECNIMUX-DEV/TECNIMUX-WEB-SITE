@@ -63,3 +63,25 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
+
+
+
+// Show icon
+// document.addEventListener (".search-i").addEventListener("click", funtion () {
+
+// var icon = document.getElementById("arrow-right");
+// if (icon.childElementCount === 0) {
+//     var aggIcon = document.createElement("i");
+//     aggIcon.className = "bi bi-arrow-90deg-right";
+//     iconContainer.appendchild(aggICon);
+// }
+// else {
+//     alert('ok');
+// }
+// });
+
+
+
+
+
+
