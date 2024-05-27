@@ -43,6 +43,7 @@ body {
 #header-01 {
   /* position: sticky;
   position: -webkit-sticky; */
+  z-index: 10;
   position: fixed;
   top: 50px;
   display: flex;
@@ -126,6 +127,7 @@ display: block;
   }
 }
 .title-TECNIMUX h1 {
+  z-index: 10;
   color: #fff;
   text-decoration: none;
   list-style: none;
@@ -244,11 +246,11 @@ padding-right: 5px;
   box-shadow: inset 0 0 0.5rem #634092;
 } */
 #socialNetworks-icons {
-  position: fixed; /* Fijado en la parte superior */
-  top: 0; /* Fijado en la parte superior */
-  left: 0; /* Fijado en la parte izquierda */
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 10;
   transition: height 0.3s ease;
-  /* z-index: 1000; */
   display: flex;
   justify-content: end;
   align-items: end;
@@ -260,12 +262,12 @@ padding-right: 5px;
   padding-right:25px ;
 }
 #socialNetworks-icons {
-  padding-top: 20px;
+  padding-top: 65px;
 }
 #socialNetworks-icons img{
   z-index: 8;
   width: 100%;
-  height: 30px;
+  height: 25px;
 }
 
 .list-icons {
@@ -278,7 +280,6 @@ padding-right: 5px;
   background-color: rgb(46, 46, 46);
   padding: 15px;
   cursor: pointer;
-  cursor: url(/cursor/cursor02.png), auto;
 }
 .list-icons li:active {
   background-color: #634092;
@@ -288,7 +289,7 @@ padding-right: 5px;
 .list-icons img{
   filter: drop-shadow(1px 1px 15px rgba(255, 255, 255, 0.5));
   cursor: pointer;
-  cursor: url(/cursor/cursor02.png), auto;
+
 }
 .list-icons li:hover {
   filter: drop-shadow(1px 1px 5px #634092);
@@ -608,8 +609,8 @@ color: #fff;
 }
 /* Video de fondo */
 #sec-00 {
-  height: 100%;
-  width: 100%;
+  height: 100vh;
+  width: 100vw;
   background-image:url(/social-networks-icons/TX-BK08-GRAY-60O.webp);
 }
 

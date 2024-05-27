@@ -46,10 +46,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
     window.addEventListener("scroll", function() {
         var maxHeight = 90; // Altura inicial en px
-        var minHeight = 70;  // Altura mínima en px
-        var maxImageHeight = 30; // Altura inicial de las imágenes en px
+        var minHeight = 65;  // Altura mínima en px
+        var maxImageHeight = 22; // Altura inicial de las imágenes en px
         var minImageHeight = 20; // Altura mínima de las imágenes en px
-        var scrollHeight = 20; // Ajuste proporcional de la altura
+        var scrollHeight = 30; // Ajuste proporcional de la altura
         var scrollY = window.scrollY;
 
         var newHeight = maxHeight - (scrollY / scrollHeight) * (maxHeight - minHeight);
