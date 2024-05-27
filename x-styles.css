@@ -44,28 +44,20 @@ body {
   /* position: sticky;
   position: -webkit-sticky; */
   z-index: 10;
-  position: fixed;
-  top: 50px;
+  position: relative;
+  top: 15px;
   display: flex;
   align-items: center;
   justify-content: space-around;
-  position: sticky;
-  position: -webkit-sticky;
   font-family: "I", "sans-serif";
   z-index: 2;
-  padding: 0 25px;
-  padding-top: 10px;
-  /* box-shadow: inset (0 0 0.5rem #634092); */
-  font-size: 0.8rem;
+  padding: 30px 25px 10px 25px;
   letter-spacing: 0.2rem;
   width: 100%;
   background-color: #000;
-  padding-top: 30px;
 }
 #header-01 ul {
-position: sticky;
-position: -webkit-sticky;
-padding: 10px;
+padding: 5px;
 }
 
 .imgs-cat {
@@ -74,7 +66,7 @@ padding: 10px;
   top: 100%; /* Posición debajo del li */
   left: 50%;
   transform: translateX(-50%);
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(5, 5, 5, 0.8);
   color: white;
   padding: 0.5rem;
   border-radius: 0.5rem;
@@ -167,13 +159,14 @@ display: block;
 }
 .logo-TECNIMUX {
   position: absolute;
+  margin: 10px;
   top: 0;
   left: 0;
-  padding: 5px 10px;
+  padding: 0px 10px;
 }
 .lg img {
-  min-width: 4rem;
-  min-height: 4rem;
+  min-width: 3rem;
+  min-height: 3rem;
 }
 .lg {
   z-index: 8;
@@ -400,10 +393,10 @@ padding: 2px;
 }
 */
 .nav-bar {
+  width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
   list-style: none;
   -webkit-user-drag: none;
   gap: 10px;
@@ -415,7 +408,7 @@ padding: 2px;
   margin: 0.1rem;
   padding: 0.5rem 1.5rem;
   /* background: radial-gradient(rgba(100, 64, 146, 0), rgb(99, 64, 146, 0.9)); */
-  background: linear-gradient(to left, #00000086, rgb(99, 64, 146, 0.8));
+  /* background: linear-gradient(to left, rgba(255, 255, 255, 0.125), rgb(99, 64, 146, 0.5)); */
   background-size: 200% 100%;
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px; 
@@ -424,6 +417,7 @@ padding: 2px;
   transition: 0.3s ease;
   text-align: center;
   animation: left-to-right 0.5s linear 1;
+  box-shadow: rgba(255, 255, 255, 0.05) 0px 6px 24px 0px, rgba(255, 255, 255, 0.08) 0px 0px 0px 1px;
 } 
 
 @keyframes left-to-right {
@@ -436,7 +430,7 @@ padding: 2px;
     }
   }
 .nav-bar li:hover {
-  background:radial-gradient(rgb(255, 255, 255,0.8), rgb(255, 255, 255,0.8) ) ;
+  background:radial-gradient(rgb(255, 255, 255,0.1), rgb(255, 255, 255,0.1) ) ;
   color: #000;
 } 
 .nav-bar li:active {
