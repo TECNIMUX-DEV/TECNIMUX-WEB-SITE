@@ -5,18 +5,15 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
-
 html {
   font-size: 1rem;
 }
 
 a {
   cursor: pointer;
-  cursor: url("/cursor/cursor02.png"), auto;
 }
 button {
   cursor: pointer;
-  cursor: url("/cursor/cursor02.png"), auto;
 }
 
 @font-face {
@@ -893,15 +890,22 @@ background-color: rgb(255, 3, 45);
   text-transform:  uppercase;
   color: #fff;
   background-color: #634092;
-  padding: 2px 15px;
-  margin: 5px;
+  cursor: pointer;
+  margin: 0 5px;
+  border-radius: 1px;
+  padding: 0;
 }
 .labs-s a {
   color: #fff;
+  padding: 3px 15px;
+  margin: 0px;
+
 }
-.labs-s span:hover {
-  background-color: red;
+.labs-s a:hover {
+  color: #000;
+  background-color: #fff;
 }
+
 /* @media screen and (max-width: 830px) {
    #Sec03 {
     height: 890px;
