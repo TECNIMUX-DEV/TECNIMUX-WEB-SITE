@@ -853,13 +853,13 @@ background-color: rgb(255, 3, 45);
   align-items: center;
   background-color: rgba(216, 216, 216, 0.055);
   /* box-shadow:0 5px 5rem rgb(255, 255, 255, 0.4) inset; */
-  /* box-shadow:0 20px 1rem rgb(255, 255, 255, 0.1) inset ; */
-  border-top: #fff solid 5px 0.5;
+  box-shadow:0 20px 5rem rgb(255, 255, 255, 0.2) inset ;
+  border-top: #fff solid 3px;
   padding: 0 20px;
     }
     .img-s03 img {
       width: 500px;
-      box-shadow: 0 30px .5rem rgb(58, 58, 58) ;
+      box-shadow: 0 30px .5rem rgb(0, 0, 0, 0.6) ;
     }
 
 #sec-03 h2 {
@@ -869,6 +869,38 @@ background-color: rgb(255, 3, 45);
   font-size: 5rem;
   margin: 0;
   text-align: center;
+}
+.labs-s {
+  display: flex;
+  height: auto;
+  align-items: center;
+  margin: 265px 0;
+  background: conic-gradient(rgba(36, 36, 36, 0.479), #0000007e) ;
+  width: 1000px;
+  padding: 10px;
+  padding-left: 50px;
+  border-top:#fff solid 3px;
+  box-shadow: inset 0px  -20px 5rem rgb(255, 255, 255, 0.2);
+}
+.labs-s p {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 2rem;
+  color: #fff;
+}
+
+.labs-s span {
+  font-size: 1.5rem;
+  text-transform:  uppercase;
+  color: #fff;
+  background-color: #634092;
+  padding: 2px 15px;
+  margin: 5px;
+}
+.labs-s a {
+  color: #fff;
+}
+.labs-s span:hover {
+  background-color: red;
 }
 /* @media screen and (max-width: 830px) {
    #Sec03 {
