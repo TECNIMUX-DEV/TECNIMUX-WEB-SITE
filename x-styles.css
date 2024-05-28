@@ -301,18 +301,18 @@ padding-right: 5px;
   position: absolute;
   top: 0;
   left: 0;
-  width: 80%;
+  width: 100%;
   height: auto;
   opacity: 0.5;
 }
 
 .curva {
   fill: none;
-  stroke: #ffffff;
-  stroke-width: 0.1;
+  stroke: #634092;
+  stroke-width: 0.2;
   stroke-dasharray: 300;
   stroke-dashoffset: 300;
-  animation: dibujarCurva 5s linear infinite;
+  animation: dibujarCurva 5s linear ;
 }
 
 @keyframes dibujarCurva {
