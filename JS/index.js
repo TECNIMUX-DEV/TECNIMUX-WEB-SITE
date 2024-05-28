@@ -40,29 +40,26 @@ return !(rect.bottom < 0 || rect.top - windowHeight >= percentVisible * el.clien
  */
 
 // Top header
-// document.addEventListener("DOMContentLoaded", function() {
-//     var resizableDiv = document.getElementById("socialNetworks-icons","logo-TECNIMUX");
-//     var images = resizableDiv.querySelectorAll("img");
+document.addEventListener("DOMContentLoaded", function() {
+    var resizableDiv = document.getElementById("header-01");
 
-//     window.addEventListener("scroll", function() {
-//         var maxHeight = 90; // Altura inicial en px
-//         var minHeight = 65;  // Altura mínima en px
-//         var maxImageHeight = 22; // Altura inicial de las imágenes en px
-//         var minImageHeight = 20; // Altura mínima de las imágenes en px
-//         var scrollHeight = 30; // Ajuste proporcional de la altura
-//         var scrollY = window.scrollY;
+    window.addEventListener("scroll", function() {
+        var maxHeight = 90; // Altura inicial en px
+        var minHeight = 75;  // Altura mínima en px
+        var scrollHeight = 30; // Ajuste proporcional de la altura
+        var scrollY = window.scrollY;
 
-//         var newHeight = maxHeight - (scrollY / scrollHeight) * (maxHeight - minHeight);
-//         if (newHeight < minHeight) newHeight = minHeight;
-//         resizableDiv.style.height = newHeight + "px";
+        var newHeight = maxHeight - (scrollY / scrollHeight) * (maxHeight - minHeight);
+        if (newHeight < minHeight) newHeight = minHeight;
+        resizableDiv.style.height = newHeight + "px";
 
-//         var newImageHeight = maxImageHeight - (scrollY / scrollHeight) * (maxImageHeight - minImageHeight);
-//         if (newImageHeight < minImageHeight) newImageHeight = minImageHeight;
-//         images.forEach(function(image) {
-//             image.style.height = newImageHeight + "px";
-//         });
-//     });
-// });
+        var newImageHeight = maxImageHeight - (scrollY / scrollHeight) * (maxImageHeight - minImageHeight);
+        if (newImageHeight < minImageHeight) newImageHeight = minImageHeight;
+        images.forEach(function(image) {
+            image.style.height = newImageHeight + "px";
+        });
+    });
+});
 
 
 
