@@ -308,11 +308,48 @@ padding-right: 5px;
 
 .curva {
   fill: none;
+  /* stroke: #fff; */
   stroke: #634092;
-  stroke-width: 0.2;
+  stroke-width: 0.1;
   stroke-dasharray: 300;
   stroke-dashoffset: 300;
-  animation: dibujarCurva 5s linear ;
+  animation: dibujarCurva 5s linear forwards;
+}
+
+.line-svg-01t {
+  position: absolute;
+  top: 0px;
+  left: 783px;
+}
+.line-svg-01b {
+  position: absolute;
+  top: 680px;
+  left: 560px;
+}
+
+.line-svg-02 {
+  position: absolute;
+  height: 100vh;
+  top: 88px;
+  left: 0px;
+}
+.line-svg-center {
+  position: absolute;
+  top: 116px;
+  left: 550px;
+}
+
+.line-svg-03 {
+  position: absolute;
+  height: 100vh;
+  top: 88px;
+  right: 0px;
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
 }
 
 @keyframes dibujarCurva {
@@ -373,10 +410,10 @@ padding-right: 5px;
 
 /* Selección */
 ::selection {
-  background-color: #64409285;
+  background-color: rgba(100, 64, 146, 0.2);
 }
 ::-moz-selection {
-  background-color: #64409285;
+  background-color:  rgba(100, 64, 146, 0.2);
 }
 
 /* Bandera y Sombrero */
@@ -643,6 +680,18 @@ section {
   width: 100vw;
   background-image:url(/social-networks-icons/TX-BK08-GRAY-60O.webp);
 }
+#sec-00:hover {
+  .line {
+    stroke-dasharray: 200;
+    stroke-dashoffset: 200;
+    animation: draw 1.5s linear(0 0%, 0 1.8%, 0.01 3.6%, 0.03 6.35%, 0.07 9.1%, 0.13 11.4%, 0.19 13.4%, 0.27 15%, 0.34 16.1%, 0.54 18.35%, 0.66 20.6%, 0.72 22.4%, 0.77 24.6%, 0.81 27.3%, 0.85 30.4%, 0.88 35.1%, 0.92 40.6%, 0.94 47.2%, 0.96 55%, 0.98 64%, 0.99 74.4%, 1 86.4%, 1 100%) forwards ;
+  }
+  .line-02 {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: draw 1.5s linear(0 0%, 0 1.8%, 0.01 3.6%, 0.03 6.35%, 0.07 9.1%, 0.13 11.4%, 0.19 13.4%, 0.27 15%, 0.34 16.1%, 0.54 18.35%, 0.66 20.6%, 0.72 22.4%, 0.77 24.6%, 0.81 27.3%, 0.85 30.4%, 0.88 35.1%, 0.92 40.6%, 0.94 47.2%, 0.96 55%, 0.98 64%, 0.99 74.4%, 1 86.4%, 1 100%) forwards ;
+  }
+}
 
 /* Social Networks Responsive */
 .inicio {
@@ -683,6 +732,8 @@ background-color: rgb(255, 3, 45);
   }
 } */
 #sec-00 {
+  position: sticky;
+  position: -webkit-sticky;
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -692,6 +743,8 @@ background-color: rgb(255, 3, 45);
   }
 
 #sec-01 {
+  position: sticky;
+  position: -webkit-sticky;
   background:linear-gradient(rgb(7, 7, 7), rgb(99, 64, 146, 0.8));
 }
 #sec-01 h2 {
@@ -777,6 +830,8 @@ background-color: rgb(255, 3, 45);
 }
 */
 #sec-02 {
+  position: sticky;
+  position: -webkit-sticky;
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -787,6 +842,8 @@ background-color: rgb(255, 3, 45);
 }
 
 #sec-02 h2 {
+  position: sticky;
+  position: -webkit-sticky;
   font-family: "I";
   background-color: #000;
   color: rgb(255, 255, 255);
@@ -828,6 +885,8 @@ background-color: rgb(255, 3, 45);
   }
 } */
 #sec-03 {
+  position: sticky;
+  position: -webkit-sticky;
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -863,6 +922,8 @@ background-color: rgb(255, 3, 45);
     }
 
 #sec-03 h2 {
+  position: sticky;
+  position: -webkit-sticky;
   font-family: "F";
   background-color: #000;
   color: #ffffff;
@@ -953,6 +1014,8 @@ background-color: rgb(255, 3, 45);
   background-size: contain;
 }
 #sec-04 h2 {
+  position: sticky;
+  position: -webkit-sticky;
   background-color: #000000f1;
   font-family: "I";
   color: #ffffff;
