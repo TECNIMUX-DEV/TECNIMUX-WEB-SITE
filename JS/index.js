@@ -89,6 +89,13 @@ window.addEventListener('scroll',function() {
         });
 
 
+  
+
+function modesTwo(){
+    const body = document.body;
+    body.classList.toggle("clear-mode");
+}
+
 
 
 
