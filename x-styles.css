@@ -327,14 +327,14 @@ padding-right: 5px;
   height: 50vh;
   width: 100vw;
 }
+
 .line-svg-01t {
   position: absolute;
   top: 0px;
-  left: 783px;
+  right: 763px;
 }
 .line-svg-01tR {
   position: absolute;
-  height: 69vh;
   top: 0;
   right: 0;
 }
@@ -345,13 +345,11 @@ padding-right: 5px;
 }
 .line-svg-01tL {
   position: absolute;
-  height: 82vh;
-  top: 543px;
-  left: 0;
+  top: 410px;
+  left: 170px;
 }
 .line-svg-02 {
   position: absolute;
-  height: 100vh;
   top: 88px;
   left: 0px;
 }
@@ -700,7 +698,9 @@ section {
 #sec-00 {
   height: 100vh;
   width: 100vw;
-  /* background-image:url(/social-networks-icons/TX-BK08-GRAY-60O.webp); */
+  /* background-image:url(/social-networks-icons/TX-BK08-GRAY-60O.webp);
+  background-repeat: no-repeat;
+  background-size:cover; */
   background-color: #000;
 }
 #sec-00:hover {
@@ -708,7 +708,7 @@ section {
     stroke-dasharray: 200;
     stroke-dashoffset: 200;
     animation: draw 0.5s linear  (0 0%, 0 1.8%, 0.01 3.6%, 0.03 6.35%, 0.07 9.1%, 0.13 11.4%, 0.19 13.4%, 0.27 15%, 0.34 16.1%, 0.54 18.35%, 0.66 20.6%, 0.72 22.4%, 0.77 24.6%, 0.81 27.3%, 0.85 30.4%, 0.88 35.1%, 0.92 40.6%, 0.94 47.2%, 0.96 55%, 0.98 64%, 0.99 74.4%, 1 86.4%, 1 100%) forwards ;
-    transition: 4s ease;
+    transition: 3s ease;
   }
   .line-02 {
     stroke-dasharray: 1000;
