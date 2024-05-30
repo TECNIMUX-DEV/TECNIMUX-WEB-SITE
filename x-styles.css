@@ -701,7 +701,7 @@ section {
   /* background-image:url(/social-networks-icons/TX-BK08-GRAY-60O.webp);
   background-repeat: no-repeat;
   background-size:cover; */
-  background-color: #000;
+  background:linear-gradient(180deg, #0e0e0e,rgb(0, 0, 0)) ;
 }
 #sec-00:hover {
   .line {
