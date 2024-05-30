@@ -77,6 +77,20 @@ document.addEventListener("DOMContentLoaded", function() {
 // }
 // });
 
+// Bottom header color
+window.addEventListener('scroll',function() {
+    let bottomWhite = document.getElementsByClassName('bottomWhite');
+    let header01 = document.getElementById('header01');
+    if (window.scrollY > 0) {
+        header01.classList.add('bottomWhite');
+    } else{
+        header01.classList.remove('bottomWhite');
+        }
+        });
+
+
+
+
 
 
 
