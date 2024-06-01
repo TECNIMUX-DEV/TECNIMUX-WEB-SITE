@@ -105,8 +105,7 @@ padding: 5px;
   top: 100%; /* Posición debajo del li */
   left: 50%;
   transform: translateX(-50%);
-  background-color: rgba(5, 5, 5, 0.8);
-  color: white;
+  background-color: rgba(255, 255, 255);
   padding: 0.5rem;
   border-radius: 0.5rem;
   text-align: center;
@@ -119,6 +118,9 @@ padding: 5px;
  li:hover .imgs-cat {
 display: block;
  }
+.categories-unit a{
+  cursor: default;
+}
 .imgs-cat img{
   max-width: 100%;
   padding: 15px;
@@ -128,6 +130,7 @@ display: block;
   cursor: pointer;
 }
 .imgs-cat p{
+  color: #000;
   cursor: pointer;
 }
 .title-TECNIMUX {
@@ -541,18 +544,25 @@ padding: 2px;
   padding: 0.5rem 1rem;
   background-size: 200% 100%;
   border-radius: 0.5px;
-  color: #fff;
   text-align: center;
   animation: left-to-right 0.5s linear 1;
   transition: 0.3s ease;
 } 
-/* .nav-bar li:hover {
-  box-shadow: rgba(255, 255, 255, 0.05) 0px 6px 24px 0px, rgba(255, 255, 255, 0.08) 0px 0px 0px 1px;
-} */
 .nav-bar li a {
   font-family: 'Urbanist Variable';
   font-weight: 100;
   font-size: 0.8rem;
+}
+.imgs-cat p {
+  font-family: 'Urbanist Variable';
+  font-weight: 500;
+  font-size: 0.8rem;
+}
+/* .nav-bar li:hover {
+  box-shadow: rgba(255, 255, 255, 0.05) 0px 6px 24px 0px, rgba(255, 255, 255, 0.08) 0px 0px 0px 1px;
+} */
+.nav-bar ul a {
+  cursor: default;
 }
 
 @keyframes left-to-right {
@@ -566,11 +576,11 @@ padding: 2px;
   }
 .nav-bar li:hover {
   /* box-shadow: rgba(255, 255, 255, 0.25) 5px 5px 5px -12px inset, rgba(255, 255, 255, 0.3) 5px 5px 5px -12px inset; */
-  background: radial-gradient(rgba(0, 0, 0, 0.1), rgba(255, 255, 255, 0.1));
+  /* background: radial-gradient(rgba(0, 0, 0, 0.1), rgba(255, 255, 255, 0.1)); */
   border-top: #634092 1px solid;
 } 
 .nav-bar li:active {
-  background-color: rgb(255, 255, 255, 0.5);
+  background-color: rgb(255, 255, 255, 0.9);
   color: #000;
 } 
 .nav-bar li a {
