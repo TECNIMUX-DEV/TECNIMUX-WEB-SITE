@@ -1,10 +1,12 @@
+:root p, h1, h2, h3{
+  color: #fff;
+}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
-
 body {
   /* background-image: url(/BACKGROUND-PAGES/BRUTAL.png); */
   background-color: #000;
@@ -13,6 +15,11 @@ body {
   position: center;
   background-attachment: fixed;
   font-family: "F";
+  color: #fff;
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
 }
 
 @font-face {
@@ -24,6 +31,11 @@ body {
   font-family: 'F';
   src: url(/fonts/FontsFree-Net-n1.ttf);
 }
+@font-face {
+  font-family: 'N';
+  src: url(/fonts/FontsFree-Net-n1.ttf);
+}
+
 header {
   position: sticky;
   position: -webkit-sticky;
@@ -65,16 +77,10 @@ header {
   height: 100%;
 }
 
-/* texto */
-P {
-  color: floralwhite;
-}
-
-h4 {
-  color: white;
-}
-
 h3 {
+  font-size: 1.5rem;
+  font-family: 'N';
+  font-weight: 100;
   color: goldenrod;
 }
 .clv {
@@ -154,206 +160,55 @@ h3 {
   padding: 40px;
 }
 .app-content {
-  display: flex;
+display: flex;
 width: 400px;
 height: 400px;
 background-color: rgb(37, 37, 37);
 border: 1px solid #ffffff18;
+/* background-image: url(/icons/AutoCad.svg); */
+backdrop-filter: blur(20px);
 text-align: center;
 align-items: center;
 justify-content: center;
+animation: changeColor  0.5s  ease-in-out;
+transition: 0.3s ease-in-out;
+}
+@keyframes changeColor {
+  0% {
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+  100%{
+    background-color: rgb(37, 37, 37);
+  }
+}
+.app-content:hover {
+  box-shadow: inset 0 0 100rem rgba(255, 255, 255, 0.25);
 }
 .app-content img{
   width: 100px;
+  padding: 20px;
   }
-/* Iconos */
-.A-P-P img {
-  z-index: 1;
-  width: 60px;
-  height: auto;
-  left: 400px;
-  filter: grayscale(50%);
+  .info-app {
+    display: inline-block;
+  }
+.link-01 {
+  display: inline-flex;
+  margin: 20px;
+  padding: 5px;
+  border-radius: 3px;
+  color: #000;
+  background-color: rgb(0, 132, 255);
 }
-.A-P-P a {
-  text-decoration: none;
-  cursor: pointer;
+/* .link-01::before {
+  content: '';
+  background-color: rgb(0, 132, 255);
+  width: 50px;
 }
-
-.A-P-P {
-    margin: 30px;
-}
-
-.A-P-P p:hover {
-  text-decoration: underline;
-}
-
-.A-P img {
-  z-index: 1;
-  width: 60px;
-  height: auto;
-  left: 40px;
-  filter: grayscale(5%);
-}
-.A-P a {
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.A-P {
-    margin: 30px;
-}
-
-.A-P p:hover {
-  text-decoration: underline;
-}
-
-.A-I img {
-  z-index: 1;
-  width: 60px;
-  height: auto;
-  left: 40px;
-  filter: grayscale(5%);
-}
-
-.A-I a {
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.A-I {
-  margin: 30px;
-}
-
-.A-I p:hover {
-  text-decoration: underline;
-}
-
-.A-A-E img {
-  z-index: 1;
-  width: 60px;
-  height: auto;
-  left: 40px;
-  filter: grayscale(5%);
-}
-
-.A-A-E a {
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.A-A-E {
-  margin: 30px;
-}
-
-.A-A-E p:hover {
-  text-decoration: underline;
-}
-
-.VM-WARE img {
-  z-index: 1;
-  width: 60px;
-  height: auto;
-  left: 40px;
-  filter: grayscale(5%);
-}
-
-.VM-WARE a {
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.VM-WARE {
-  margin: 30px;
-}
-
-.VM-WARE p:hover {
-  text-decoration: underline;
-}
-
-.KMS-PICO img {
-  z-index: 1;
-  width: 6%;
-  height: auto;
-  left: 40px;
-  filter: grayscale(5%);
-}
-
-.KMS-PICO a {
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.KMS-PICO {
-  margin: 30px;
-}
-
-.KMS-PICO p:hover {
-  text-decoration: underline;
-}
-
-.S-OFFICE img {
-  z-index: 1;
-  width: 20%;
-  height: auto;
-  left: 40px;
-  filter: grayscale(5%);
-}
-
-.S-OFFICE a {
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.S-OFFICE {
-  margin: 30px;
-}
-
-.S-OFFICE p:hover {
-  text-decoration: underline;
-}
-
-.W-RAR img {
-  z-index: 1;
-  width: 6%;
-  height: auto;
-  left: 40px;
-  filter: grayscale(5%);
-}
-
-.W-RAR a {
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.W-RAR {
-  margin: 30px;
-}
-
-.W-RAR p:hover {
-  text-decoration: underline;
-}
-
-.A-Cad img {
-  z-index: 1;
-  width: 15%;
-  height: auto;
-  left: 40px;
-  filter: grayscale(5%);
-}
-
-.A-Cad a {
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.A-Cad {
-  margin: 30px;
-}
-
-.A-Cad p:hover {
-  text-decoration: underline;
-}
-
+.link-01::after {
+  content: '';
+  background-color: rgb(255, 255, 255);
+  width: 100px;
+} */
 
 
 footer {
@@ -367,4 +222,5 @@ footer {
   margin: 0;
   bottom: 0;
   width: 100%;
+  padding-bottom: 15px;
 }
