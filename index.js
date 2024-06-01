@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", function() {
 // }
 // });
 
-// Bottom header color
+// Bottom header color Nav
 window.addEventListener('scroll',function() {
     let bottomWhite = document.getElementsByClassName('bottomWhite');
     let header01 = document.getElementById('header01');
@@ -88,9 +88,7 @@ window.addEventListener('scroll',function() {
         }
         });
 
-
-  
-
+// Dual mode color
 function modesTwo(){
     const body = document.body;
     body.classList.toggle("clear-mode");
