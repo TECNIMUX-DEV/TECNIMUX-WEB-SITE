@@ -26,7 +26,7 @@ a {
 body {
   margin: 0;
   padding: 0;
-  background-color: #fff;
+  background-color: #000;
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
@@ -92,8 +92,10 @@ background: rgb(68, 68, 68);
 .Products-PC{
 margin-top: 150px;
 }
-#Sec-01 {
-  width: 100%;
+#sec-01 {
+  width: 80%;
+  background-color: rgb(255, 255, 255);
+  margin: 0 auto;
 }
 #Sec-02{
   width: 100%;
@@ -244,7 +246,7 @@ P{
 }
 
 
-#Sec-01 h1 {
+#sec-01 h1 {
     font-size: 3rem;
     position: sticky;
     position: -webkit-sticky;
@@ -340,15 +342,16 @@ right: 150;
   left: -200px;
 }
 footer {
+  position: absolute;
   text-align: center;
   word-spacing: 15px;
   letter-spacing: 15px;
   font-family: Batman;
   color: #e61717;
   background-color: #2b2a2a;
-  height: 170px;
   width: 100%;
   font-size: 1rem;
+  bottom: 0;
 }
 }
 
@@ -573,13 +576,14 @@ div .Box-01-SSD :hover {
 }
 
 footer {
+  position: fixed;
   text-align: center;
   word-spacing: 15px;
   letter-spacing: 15px;
   font-family: Batman;
   color: #fff;
   background-color: #2b2a2a;
-  height: 170px;
   width: 100%;
   font-size: 2rem;
+  height: 80px;
 }
