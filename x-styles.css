@@ -545,8 +545,10 @@ padding: 2px;
   text-align: center;
   animation: left-to-right 0.5s linear 1;
   transition: 0.3s ease;
-  box-shadow: rgba(255, 255, 255, 0.05) 0px 6px 24px 0px, rgba(255, 255, 255, 0.08) 0px 0px 0px 1px;
 } 
+/* .nav-bar li:hover {
+  box-shadow: rgba(255, 255, 255, 0.05) 0px 6px 24px 0px, rgba(255, 255, 255, 0.08) 0px 0px 0px 1px;
+} */
 .nav-bar li a {
   font-family: 'Urbanist Variable';
   font-weight: 100;
