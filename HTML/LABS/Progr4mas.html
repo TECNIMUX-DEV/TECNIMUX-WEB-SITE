@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <title>P R O G R 4 M AS</title>
+    <title>PR0GR4MA5</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="icon" href="/" type="image/png">
     <link href="/css/LABS/Progr4mas.css" rel="stylesheet">
@@ -12,6 +12,7 @@ function copiar() {
 let texto = document.getElementById('texto');
 texto.select();
 texto.setSelectionRange(0,999);
+alert("copiado :)");
 document.execCommand('copy');
 }
 </script>
@@ -19,23 +20,27 @@ document.execCommand('copy');
 
 <body>
 <header>
-    <!--Logo Tecnimux-->
+<div class="header">
+    <!-- Logo Tecnimux -->
+    <div id="logo-TECNIMUX">
+        <div class="lg">
 <a href="/index.html">
-    <img class="Logo-Tx" src="/logo-tx/Logo-Individual.png" alt="BACKGROUND" >
-    </a>
-    
-    <!-- Copy and paste -->
-<div class="Copy-paste">
-<label>Password:</label>
-<input type="text" value="TECNIMUX" id="texto" readonly>
-<button onclick="copiar();"class="btn"></button>
+<img src="/logo-tx/white/with-out.png" alt="BACKGROUND" loading="lazy" draggable="false"/>
+</a>
+</div>
+        <!-- Copy and paste -->
+        <div>
+    <input type="text" value="TECNIMUX" id="texto" readonly class="clv">
+    <button onclick="copiar()" class="btn"></button>
+</div>
 </div>
 <script src="/JS/Progr4mas.js"></script>
 </header>
 
+<section id="apps">
 <!-- Links Software -->
-<div class="Links-Software">
-    <div class="A-P-P">
+<div class="container-apps">
+    <div class="app-content">
         <a href="https://www.mediafire.com/file/1wz8x1s84a93j28/ADOBE_PREMIERE_PRO_Tx.zip/file" target="_blank">
      <img src="/icons/A_P_P_icono.svg" alt="LOGO A_PREMIERE">
      <h3>Adobe Premiere pro 2022</h3>
@@ -44,7 +49,7 @@ document.execCommand('copy');
     </div>
 
 
-        <div class="A-P">
+    <div class="app-content">
             <a href="https://www.mediafire.com/file/6vxd2f0g7irdg0o/ADOBE_PHOTOSHOP_-_2021_Tx.zip/file" target="_blank">
                 <img src="/icons/A_P_S_icono.svg" alt="LOGO_A_PHOTOSHOP">
          <h3>Adobe Photoshop 2021</h3>
@@ -53,7 +58,7 @@ document.execCommand('copy');
         </div>
 
   
-        <div class="A-I">
+        <div class="app-content">
             <a href="https://www.mediafire.com/file/uqh5gs3mcwku742/ADOBE_ILLUSTRATOR_Tx.zip/file" target="_blank">
                 <img src="/icons/A_I_icono.svg" alt="LOGO_A_ILLUSTRATOR">
          <h3>Adobe Illustrator 2021</h3>
@@ -63,8 +68,7 @@ document.execCommand('copy');
 
 
 
-
-  <div class="A-A-E">
+    <div class="app-content">
     <a href="https://www.mediafire.com/file/lupnyvytotswopt/ADOBE_AFTER_EFFECTS_Tx.rar/file" target="_blank">
         <img src="/icons/A_A_E_icono.svg" alt="LOGO_A_AFTER_EFFECTS">
    <h3>Adobe After Effects 2022</h3>
@@ -73,7 +77,7 @@ document.execCommand('copy');
   </div>
 
 <!-- Faltan links -->
-<div class="VM-WARE">
+<div class="app-content">
     <a href="https://www.mediafire.com/file/vgrd7i55zg1rx43/VMW4#3.zip/file" target="_blank">
     <img src="https://upload.wikimedia.org/wikipedia/commons/5/5a/Vmware_workstation_16_icon.svg" alt="LOGO_VM_WARE">
     <h3>Vmware V17</h3>
@@ -83,7 +87,7 @@ document.execCommand('copy');
 
 
 
-<div class="KMS-PICO">
+<div class="app-content">
     <a href="https://www.mediafire.com/file/u34ogri01q504wq/KM5P1K0_O7VKTDR4.zip/file" target="_blank">
         <img src="/icons/KMSPICO_icono.png" alt="LOGO_KMSPICO">
         <h3>KMS Pico</h3>
@@ -92,7 +96,7 @@ document.execCommand('copy');
     </div>
 
     
-    <div class="S-OFFICE">
+    <div class="app-content">
         <a href="https://www.mediafire.com/file/9wcw3diivr7wdj4/SUITE_OFFICE_-_TX.rar/file" target="_blank">
             <img src="/icons/Microsoft_Office_icono.svg" alt="LOGO_S_OFFICE">
             <h3>Suite Office </h3>
@@ -100,11 +104,7 @@ document.execCommand('copy');
             </a>
         </div>
 
-
-
-
-
-<div class="W-RAR">
+        <div class="app-content">
     <a href="https://www.mediafire.com/file/i23on8a089x8bwq/rarreg.key/file" target="_blank">
     <img src="/icons/WinRAR_Logo_2018.webp" alt="LOGO_W-RAR">
     <h3>Crack WinRAR</h3>
@@ -112,7 +112,7 @@ document.execCommand('copy');
     </a>
 </div>
 
-<div class="A-Cad">
+<div class="app-content">
     <a href="https://www.mediafire.com/file/i23on8a089x8bwq/rarreg.key/file" target="_blank">
     <img src="/icons/AutoCad.svg" alt="LOGO_A-Cad">
     <h3>Autocad</h3>
@@ -120,9 +120,7 @@ document.execCommand('copy');
     </a>
 </div>
 </div>
-
-
-
+</section>
 <footer>
 <h2>TX Labs</h2>
 </footer>
