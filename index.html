@@ -73,15 +73,6 @@
 <header id="header01">
     <div class="bottomWhite"></div>
     <!-- Bar search -->
-<form action="/index.html" class="container-search" metod="get">
-    <div class="container-sh">
-        <div class="sh-i">
-         <i class="bi bi-search search-i"></i> <!--<i id="arrow-right" class="bi bi-arrow-90deg-right arrow-right"></i> -->
-    </div>
-    <input type="search" name="want" class="search" placeholder="Buscar" aria-label="Buscar">
-    <!-- <button type="submit" class="btn-search">Enviar</button> -->
-</div>
-</form>
 
     <!-- Logo Tecnimux -->
     <div id="logo-TECNIMUX">
@@ -94,15 +85,15 @@
 <img src="/logo-TX/white/letters.png" class="letters-TX" alt="letter-TX" loading="lazy">
 </div>
 
+<!-- Dual mode -->
+<div class="modes2">
+    <button onclick="modesTwo()"><img src="/icons/dark-clear mode/dark_mode_night_moon_icon.png"></button>
+    </div>
+
 <!-- Menu -->
-<button id="Opened" class="Open"><i class="bi bi-list Crr"></i></button>
+<button id="Opened" class="Open"><i class="bi bi-list"></i></button>
 <nav class="nav-list" id="navList">
     <button id="Closed" class="Close"><i class="bi bi-x-lg Crr02"></i></button>
-
-    <div class="modes2">
-        <button onclick="modesTwo()"><img src="/icons/dark-clear mode/dark_mode_night_moon_icon.png"></button>
-        </div>
-
     <!-- Navigation -->
 <ul class="nav-bar">
     <a href="#sec-01">
@@ -159,6 +150,15 @@ Galeria</a>
                 </a>
                </div>
                </li>
+               <form action="/index.html" class="container-search" metod="get">
+                <div class="container-sh">
+                    <div class="sh-i">
+                     <i class="bi bi-search search-i"></i> <!--<i id="arrow-right" class="bi bi-arrow-90deg-right arrow-right"></i> -->
+                </div>
+                <input type="search" name="want" class="search" placeholder="Buscar" aria-label="Buscar">
+                <!-- <button type="submit" class="btn-search">Enviar</button> -->
+            </div>
+            </form>
  <!-- <li><a href="/HTML/Facts.html">Facts</a></li> -->
 </ul>
 </nav>
@@ -167,7 +167,7 @@ Galeria</a>
 </header>
 <section id="sec-00" class="secZero">
     <!-- SVGs -->
-    <div class="svgs">
+    <!-- <div class="svgs">
         <div class="svgs-lines">
     <div class="line-svg-01t">
     <svg width="490" height="490" viewBox="0 0 100 200" xmlns="http://www.w3.org/2000/svg">
@@ -205,7 +205,7 @@ Galeria</a>
               </svg>
             </div>
         </div>
-        </div>
+        </div> -->
 
         <!-- <div class="e-video">
             <div class="e-v-text">
@@ -307,9 +307,11 @@ Galeria</a>
         <div class="img-s01">
             <img src="https://res.cloudinary.com/dxwfpc5fu/image/upload/v1716009098/HOME%20IMAGES/Gallery_zlk1y3.jpg" alt="Galeria" loading="lazy">
         </div>
-    <div class="galeria">
-    <p>TECNIMUX <span><a href="/html/Galeria.html">Gallery</a></span> Es un apartado donde están todas las creaciones relacionadas a la edición digital.</p>
-</div>
+            <div class="galeria">
+    <p>TECNIMUX <span><a href="/html/Galeria.html">Gallery </a></span>Es un apartado donde están 
+        todas las creaciones relacionadas a la edición digital.</p>
+            </div>
+
 </div>
 </section>
 
@@ -317,12 +319,12 @@ Galeria</a>
 <section id="sec-02" class="s-02">
     <h2 translate="no">HIGH Store</h2>
     <div class="container-s-01">
-        <div class="img-s01">
             <div class="galeria">
                 <p>La <span><a href="/html/High-store.html">HIGH Store</a></span>
                 Es un market virtual de hardware (simulado)
                 Donde está el hardware más Top.</p>
                 </div>
+                <div class="img-s02">
     <img src="https://res.cloudinary.com/dxwfpc5fu/image/upload/v1716009112/HOME%20IMAGES/Market-02_zx3zz1.jpg" alt="HigH-Store">
         </div>
     </div>
