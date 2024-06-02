@@ -425,31 +425,35 @@ bottom: 200px;
   z-index: 1;
   width: 100%;
   height: 20px;
+  
 }
 
 .list-icons {
+  z-index: 2;
   display: flex;
   top: 0;
   gap: 1px;
   padding: 1px 0 3px 0;
+  box-shadow: inset   0 0 1.5rem rgba(255, 255, 255, 0.1);
 }
 .list-icons li {
-  background-color: #634092;
   padding: 7px;
   cursor: pointer;
+  box-shadow: inset   0 0 1.5rem rgba(255, 255, 255, 0.1);
 
 }
 .list-icons li:active {
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: #634092; 
   color: #000;
 }
 
-.list-icons img{
+.list-icons img {
+  /* opacity: 0.5; */
   cursor: pointer;
-  filter: drop-shadow(  1px 1px 1px rgba(214, 214, 214, 0.5));
+  filter: drop-shadow(  1px 1px 1px #000);
 }
 .list-icons li:hover {
-  box-shadow: inset   0 0 1.5rem rgba(255, 255, 255, 0.1);
+  box-shadow: inset   0 0 1.5rem rgba(255, 255, 255, 0.2);
   /* filter: drop-shadow( 0 0 5px rgba(0, 0, 0, 0.2)); */
 }
 
@@ -825,10 +829,13 @@ color: #000;
   align-items: center;
   /* background-color: rgba(216, 216, 216, 0.055); */
   position: relative;
-  padding: 50px;
+  padding: 100px;
     }
     .img-s01 img {
-      width: 300px;
+      height: 500px;
+      width: auto;
+      padding: 20px;
+      border: 4px solid #fff;
     }
 .galeria {
   display: flex;
