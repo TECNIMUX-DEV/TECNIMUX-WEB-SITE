@@ -501,30 +501,36 @@ bottom: 200px;
   padding: 0;
 }
 
-.Send-Email {
+.send-email {
   display: flex;
   align-items: center;
+  bottom: 0;
+  cursor: pointer;
 }
-.Send-Email button, a {
+.send-email button {
   background-color: transparent;
   text-decoration: none;
-  color: #634092;
-  font-size: 1.2rem;
+  font-size: 1rem;
   border-style: none;
+  background-color: #fff;
+  color: #000;
+  padding: 5px;
+  height: 7rem;
 }
-.Send-Email button:hover {
-  text-decoration: underline;
-  text-decoration-color: #fff;
-}
+
+.send-email button:hover {
+  border-top: 3px solid #634092;
+  }
+
 footer {
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
   gap: 20px;
-  /* background-color: #0e0e0e; */
-  color: #fff;
   width: 100%;
   height: 40vh;
   padding-left: 50px;
+  font-weight: 100;
 }
 
 .imgs-footer {
@@ -538,10 +544,17 @@ width: 20px;
 bottom: 0;
 padding: 2px;
 }
-.rights {
-  padding: 15px 20px 0;
-  /* background-color: #000; */
+
+.content-footer {
+  display: flex;
+  justify-content: space-between;
 }
+.rights {
+  padding: 1rem 2rem;
+  text-align: center;
+}
+
+
 .nav-bar {
   width: 100vw;
   display: flex;
@@ -1133,6 +1146,7 @@ to {
 }
 .title-center h1 {
   font-size: 15rem;
+  text-align: center;
   font-family: 'i';
   color: transparent;
   background-size: cover;
@@ -1141,6 +1155,7 @@ to {
   filter: drop-shadow(0 0 0.01rem #634092);
   background-image: url(https://cdna.artstation.com/p/assets/images/images/058/138/272/4k/terraform-studios-52422-moonray-og-iltar-more-views-3.jpg?1673466867);
   animation: swipe-top 3s ease forwards; 
+  width: 100%;
 }
 @keyframes swipe-top {
   0% {
