@@ -787,6 +787,7 @@ color: #000;
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 20px;
   }
   #sec-00:hover {
     .line {
@@ -806,7 +807,7 @@ color: #000;
   }
 
   .data-01-home {
-    font-family: 'Urbanist Variable';
+    font-family: 'Urbanist Variable'; 
   }
 
 
