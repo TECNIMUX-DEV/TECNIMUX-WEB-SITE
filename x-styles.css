@@ -3,7 +3,7 @@
   --color-text:#fff;
 }
 .clear-mode {
-  --color-bg:#2e2e2e;
+  --color-bg:rgba(255, 255, 255, 0.534);
   --color-text:#000;
 }
 * {
@@ -772,7 +772,7 @@ section {
 .secZero {
   background-color: #000;
   color: #fff;
-  transition: 0.3s ease, color 0.3s ease; 
+  transition: 0.3s ease, color 0.3s ease;
 }
 .secMode  .secZero{
 background-color: #fff;
@@ -788,13 +788,16 @@ color: #000;
   margin-top: auto;
   font-family: 'Urbanist Variable';
   margin-top: auto;
-  background-color: #fff;
   color: #000;
   margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 20px;
+  animation: plot 3s ease 1 forwards;
+  background-color: #fff;
+  padding: 5px;
+  row-gap: 20px;
   }
   #sec-00:hover {
     .line {
@@ -804,6 +807,7 @@ color: #000;
       transition: transform 3s ease;
       animation-iteration-count: 1;
     }
+
     .line-02 {
       stroke-dasharray: 1000;
       stroke-dashoffset: 1000;
@@ -813,10 +817,18 @@ color: #000;
     }
   }
 
+  @keyframes plot {
+    from {
+      opacity: 0.1;
+    }
+    to {
+      opacity: 1;
+    }
+        }
+
   .data-01-home {
     font-family: 'Urbanist Variable'; 
   }
-
 
 #sec-01 {
   margin-top: auto;
@@ -824,11 +836,8 @@ color: #000;
   height: auto;
   width: 100%;
   flex: 1;
-  /* background:linear-gradient(rgb(7, 7, 7), rgb(99, 64, 146, 0.8)); */
-  font-family: 'Urbanist Variable';
 }
 #sec-01 h2 {
-
   width: 60%;
   right: 0;
   font-family: 'Urbanist Variable';
