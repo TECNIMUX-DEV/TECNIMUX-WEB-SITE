@@ -337,7 +337,7 @@ background-color: transparent;
   height: 50px;
 }
 
-.svgs {
+/* .svgs {
   position: relative;
   height: 80vh;
   width: 100%;
@@ -383,7 +383,7 @@ bottom: 200px;
   height: 100vh;
   top: 88px;
   right: 0px;
-}
+} */
 
 @keyframes draw {
   to {
