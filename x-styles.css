@@ -53,7 +53,14 @@ button {
   font-family: "O";
   src: url(/fonts/OneSidedSans.otf);
 }
-
+@font-face {
+  font-family: 'P';
+  src: url(fonts/02/Acmatic-Personal.otf);
+}
+@font-face {
+  font-family: 'Ñ';
+  src: url(fonts/02/Acmatic-ThinPersonal.otf);
+}
 body {
   display: flex;
   flex-direction: column;
@@ -336,65 +343,7 @@ li:hover .imgs-cat {
   width: 100%;
   height: 50px;
 }
-.line {
-  height: 3px;
-  width: 800px;
-  background-color: #ff0000;
-}
-.line-svg-01t {
-  position: absolute;
-  right: 0;
-  transform: rotate(90deg);
-}
-.line-svg-01tL {
-  position: absolute;
-  left: 0;
-  transform: rotate(90deg);
-}
 
-/* .svgs {
-  position: relative;
-  height: 80vh;
-  width: 100%;
-bottom: 200px;
-}
-.svgs-lines {
-  position: relative;
-}
-
-
-.line-svg-01tR {
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-.line-svg-01b {
-  position: absolute;
-  top: 680px;
-  left: 560px;
-}
-.line-svg-01tL {
-  position: absolute;
-  top: 410px;
-  left: 170px;
-}
-.line-svg-02 {
-  position: absolute;
-  top: 88px;
-  left: 0px;
-}
-.line-svg-center {
-  position: absolute;
-  top: 116px;
-  left: 550px;
-}
-
-.line-svg-03 {
-  position: absolute;
-  height: 100vh;
-  top: 88px;
-  right: 0px;
-} */
 
 @keyframes draw {
   to {
@@ -542,6 +491,10 @@ footer {
 .rights {
   padding: 1rem 2rem;
   text-align: center;
+}
+.text-type {
+  font-family: 'Ñ';
+  letter-spacing: 0.2px;
 }
 
 .nav-bar {
@@ -785,106 +738,170 @@ section {
 }
 
 #sec-00 {
+  z-index: 1;
   height: calc(100vh - 100px);
-  width: 70%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   flex: 1;
   margin-top: auto;
   font-family: "Urbanist Variable";
   margin-top: auto;
+  margin: 0 auto;
+  border-radius: 20px;
+  animation: plot 3s ease 1 forwards;
+  background-color: transparent;
+  padding: 5px;
+  row-gap: 20px;
+}
+#sec-00:hover .linea {
+animation: lines 3s ease forwards;
+animation-iteration-count: 1;
+}
+.home-data {
+  z-index: 1;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin-top: auto;
   color: #000;
   margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   border-radius: 20px;
   animation: plot 3s ease 1 forwards;
   background-color: #fff;
   padding: 5px;
   row-gap: 20px;
 }
-#sec-00:hover {
-  .line {
-    stroke-dasharray: 200;
-    stroke-dashoffset: 200;
-    animation: draw 0.5s linear
-      (
-        0 0%,
-        0 1.8%,
-        0.01 3.6%,
-        0.03 6.35%,
-        0.07 9.1%,
-        0.13 11.4%,
-        0.19 13.4%,
-        0.27 15%,
-        0.34 16.1%,
-        0.54 18.35%,
-        0.66 20.6%,
-        0.72 22.4%,
-        0.77 24.6%,
-        0.81 27.3%,
-        0.85 30.4%,
-        0.88 35.1%,
-        0.92 40.6%,
-        0.94 47.2%,
-        0.96 55%,
-        0.98 64%,
-        0.99 74.4%,
-        1 86.4%,
-        1 100%
-      )
-      forwards;
-    transition: transform 3s ease;
-    animation-iteration-count: 1;
+/* #sec-00:hover {
+  }*/
+  .container-lineas {
+    position: relative;
   }
 
-  .line-02 {
-    stroke-dasharray: 1000;
-    stroke-dashoffset: 1000;
-    animation: draw 0.5s linear infinite
-      (
-        0 0%,
-        0 1.8%,
-        0.01 3.6%,
-        0.03 6.35%,
-        0.07 9.1%,
-        0.13 11.4%,
-        0.19 13.4%,
-        0.27 15%,
-        0.34 16.1%,
-        0.54 18.35%,
-        0.66 20.6%,
-        0.72 22.4%,
-        0.77 24.6%,
-        0.81 27.3%,
-        0.85 30.4%,
-        0.88 35.1%,
-        0.92 40.6%,
-        0.94 47.2%,
-        0.96 55%,
-        0.98 64%,
-        0.99 74.4%,
-        1 86.4%,
-        1 100%
-      )
-      forwards;
-    transition: 2s ease;
-    animation-iteration-count: 1;
+.linea {
+  position: absolute;
+  height: 0.1px;
+  background-color: #fff;
+  opacity: 0;
+}
+  .line-01tR {
+    top: 400px;
+    right: -225px;
+    width: 850px;
+    transform: rotate(90deg);
+  }
+  /* .line-svg-01t {
+    position: absolute;
+    height: 1px;
+    background-color: yellow;
+    top: 400px;
+    width: 900px;
+  } */
+  .line-01tL {
+    top: 400px;
+    left: -225px;
+    width: 850px;
+    transform: rotate(90deg);
+  }
+  
+  /* .svgs {
+    position: relative;
+    height: 80vh;
+    width: 100%;
+  bottom: 200px;
+  }
+  .svgs-lines {
+    position: relative;
+  }
+  .line-svg-01b {
+    position: absolute;
+    top: 680px;
+    left: 560px;
+  }
+  .line-svg-01tL {
+    position: absolute;
+    top: 410px;
+    left: 170px;
+  }
+  .line-svg-02 {
+    position: absolute;
+    top: 88px;
+    left: 0px;
+  }
+  .line-svg-center {
+    position: absolute;
+    top: 116px;
+    left: 550px;
+  }
+  
+  .line-svg-03 {
+    position: absolute;
+    height: 100vh;
+    top: 88px;
+    right: 0px;
+  } */
+@keyframes lines {
+  from {
+opacity: 0;
+transform: translateY(50px);
+  }
+  to {
+opacity: 0.1;
   }
 }
 
 @keyframes plot {
   from {
+
     opacity: 0.1;
   }
   to {
+
     opacity: 1;
   }
 }
 
 .data-01-home {
   font-family: "Urbanist Variable";
+}
+
+.slider {
+  position: relative;
+  max-width: 600px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.slide {
+  display: none;
+}
+
+.active {
+  display: block;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
 }
 
 /* #sec-001 {
@@ -946,7 +963,7 @@ width: calc(100% /3);
 #sec-01 h2 {
   width: 60%;
   right: 0;
-  font-family: "Urbanist Variable";
+  font-family: 'P';
   font-size: 5rem;
   margin: 0;
   text-align: center;
@@ -1052,7 +1069,7 @@ width: calc(100% /3);
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: "F";
+  font-family: 'P';
   color: #000;
   font-size: 5rem;
   margin: 0;
@@ -1113,7 +1130,7 @@ width: calc(100% /3);
   view-timeline-axis: block;
   animation-timeline: --image;
   animation-name: rotate;
-  animation-range: entry 25% cover 50%;
+  animation-range: entry 10% cover 50%;
   animation-fill-mode: both;
 }
 
@@ -1133,7 +1150,7 @@ width: calc(100% /3);
 #sec-03 h2 {
   position: sticky;
   position: -webkit-sticky;
-  font-family: "F";
+  font-family: 'P';
   background-color: #000;
   color: #ffffff;
   font-size: 2.5rem;
@@ -1253,7 +1270,6 @@ width: calc(100% /3);
   view-timeline-axis: block;
   animation-timeline: --image;
   animation-name: swipe-top;
-  animation-range: entry 25% cover 50%;
   animation-fill-mode: both;
 }
 @keyframes swipe-top {
@@ -1275,9 +1291,10 @@ width: calc(100% /3);
 }
 #sec-04 h2 {
   z-index: 1;
-  font-family: "O";
+  font-family: 'P';
+  font-weight: 100;
   color: #ffffff;
-  font-size: 2.5rem;
+  font-size: 3rem;
   margin: 0;
   text-align: center;
 }
