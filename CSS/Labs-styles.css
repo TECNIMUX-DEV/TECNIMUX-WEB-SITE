@@ -39,12 +39,17 @@ a {
   text-decoration: none;
   color: #fff;
 }
-
+.logo-TECNIMUX {
+  margin-left: 4px;
+}
+.logo-TECNIMUX img{
+  height:58px;
+  width:auto ;
+}
 .labs-icon img{
     max-width: 4rem;
 }
 #sect-01 {
-  height: calc( 90vh - 70px );
   display: flex;
   justify-content: center;
   align-items: center;
@@ -59,13 +64,23 @@ a {
   background-color: #0c0c0c;
   text-align: center;
 }
+.text-home p {
+  opacity: 0.5;
+}
+@media screen and (max-width: 1000px) {
+  .text-home {
+height: auto;
+  }
+}
 .links {
   display: flex;
+  flex: 1;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   text-align: center;
   gap: 5px;
+  margin: 20px;
 }
 .items h1{
   font-weight: 100;
@@ -83,6 +98,9 @@ a {
   display: flex;
   text-align: center;
   margin: 5rem;
+}
+.testing h1{
+  font-weight: 100;
 }
 .testing img {
   max-width: 5rem;
