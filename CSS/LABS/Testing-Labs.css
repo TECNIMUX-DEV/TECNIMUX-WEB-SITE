@@ -2,36 +2,85 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family:'Space+Grotesk';
+}
+a {
+  cursor: pointer;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 10vh;
+  padding: 0 10px;
+  background-color: #fff;
 }
 
 /* Logo Tecnimux */
-.Logo-Tx {
-    z-index: 1;
-    justify-content: end;
-    align-items: end;
-    display: flex;
+.logo-tx {
+  padding: 10px;
+  filter: drop-shadow( 0 0 0.1rem #000);
   }
-  .Logo-Tx img {
-    z-index: 1;
-    margin: 5px;
-    margin-right: 20px;
+  .logo-tx img {
+    margin: 5px 20px;
     max-width: 1.5rem;
-    background-color: transparent;
-    cursor: pointer;
-    cursor: url("/cursor/cursor02.png"), auto;
   }
-  
   .Logo-Tx img:hover {
     filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.1));
   }
 
-.Now {
-    align-items: center;
-    text-align: center;
-    margin: 20px;
-    color: #56f756;
+.now h1 {
+  color: #56f756;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
-.Now:hover {
-    background-color: #45ec4550;
+.text-lab h1{
+  color: #000;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body{
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: firebrick;
+  margin: 0;
+}
+
+.container-carrusel {
+position: relative;
+height: 300px;
+width: 500px;
+background-color: red;
+padding: 20px;
+}
+
+.carrusel-images {
+width: 300%;
+height: 100%;
+display: flex;
+}
+
+.slider-section {
+height: 100%;
+width: calc(100% /3);
+}
+.slider-section img {
+width: 500px;
+height: 100%;
+object-fit: cover;
+}
+.btn-left,
+.btn-right {
+display: flex;
+position: absolute;
+top: 50%;
+font-size: 2rem;
+background-color: transparent;
+font-weight: 400;
+padding: 5px;
+cursor: pointer;
+transform: translate(0, -50%);
+transition: .4s ease-in-out;
+user-select: none;
 }

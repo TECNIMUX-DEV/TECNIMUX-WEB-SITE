@@ -762,8 +762,9 @@ border: transparent;
 } */
 
 section {
-  /* height: 100vh; 
-  width: 100%; */
+  height: 100vh; 
+  width: 100%; 
+  scroll-behavior: smooth;
   scroll-snap-align: start; /* Alinear secciones al inicio */
   transition: transform 0.5s ease-in-out; /* Transición suave */
 }
@@ -829,18 +830,23 @@ color: #000;
     font-family: 'Urbanist Variable'; 
   }
 
-  .sec-001 {
+  /* #sec-001 {
     width: 100%;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 15px;
+    background-color: firebrick;
+    margin: 0;
   }
 
 .container-carrusel {
+  position: relative;
   height: 300px;
   width: 500px;
+  background-color: red;
+  padding: 20px;
 }
   
 .carrusel-images {
@@ -850,6 +856,7 @@ display: flex;
 }
 
 .slider-section {
+  height: 100%;
 width: calc(100% /3);
 }
 .slider-section img {
@@ -857,6 +864,23 @@ width: calc(100% /3);
   height: 100%;
   object-fit: cover;
 }
+.btn-left,
+ .btn-right {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  font-size: 2rem;
+  background-color: transparent;
+  font-weight: 400;
+  padding: 5px;
+  cursor: pointer;
+  transform: translate(0, -50%);
+  transition: .4s ease-in-out;
+  user-select: none;
+ } */
+
+
+
 #sec-01 {
   margin-top: auto;
   z-index: 1;
