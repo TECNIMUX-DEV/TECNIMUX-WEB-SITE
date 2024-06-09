@@ -11,9 +11,18 @@
     
     <header class="header-video">
         <div class="video-fondo">
-            <video autoplay muted loop>
+            <video id="bg-video-header" autoplay muted loop>
                 <source src="/video-bg/Nt02.mp4" type="video/mp4">
             </video>
+            <script>
+                const video = document.getElementById('bg-video-header');
+                video.addEventListener('timeupdate', function() {
+                    if (video.currentTime >= video.duration - 0.1) {
+                        video.currentTime = 0;
+                        video.play();
+                    }
+                });
+            </script>
 </header>
 
         <!-- Logo Tecnimux -->

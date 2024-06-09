@@ -1,10 +1,10 @@
 :root {
-  --color-bg:#000;
-  --color-text:#fff;
+  --color-bg: #000;
+  --color-text: #fff;
 }
 .clear-mode {
-  --color-bg:rgb(197, 197, 197);
-  --color-text:#000;
+  --color-bg: rgb(197, 197, 197);
+  --color-text: #000;
 }
 * {
   margin: 0;
@@ -13,7 +13,7 @@
   scroll-behavior: smooth;
 }
 html {
-  font-family: 'Urbanist Variable';
+  font-family: "Urbanist Variable";
   font-size: 1rem;
 }
 
@@ -24,15 +24,17 @@ button {
   cursor: pointer;
 }
 
-
 /* urbanist-latin-wght-normal */
 @font-face {
-  font-family: 'Urbanist Variable';
+  font-family: "Urbanist Variable";
   font-style: normal;
   font-display: swap;
   font-weight: 100 900;
-  src: url(https://cdn.jsdelivr.net/fontsource/fonts/urbanist:vf@latest/latin-wght-normal.woff2) format('woff2-variations');
-  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+  src: url(https://cdn.jsdelivr.net/fontsource/fonts/urbanist:vf@latest/latin-wght-normal.woff2)
+    format("woff2-variations");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191,
+    U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
 @font-face {
@@ -59,15 +61,15 @@ body {
   padding: 0;
   height: 100vh;
   width: 100%;
-  font-family: 'Urbanist Variable';
+  font-family: "Urbanist Variable";
   /* overflow-x: hidden; */
   background-color: var(--color-bg);
-  color: var(--color-text); 
+  color: var(--color-text);
   font-size: 0.9rem;
 }
 .clear-mode body {
   background-color: var(--color-bg);
-  color: var(--color-text); 
+  color: var(--color-text);
 }
 
 #header01 {
@@ -80,7 +82,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-family: 'Urbanist Variable';
+  font-family: "Urbanist Variable";
   z-index: 2;
   letter-spacing: 0.2rem;
   background-color: #000;
@@ -89,7 +91,7 @@ body {
   box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.2); /* 1px de sombra debajo del elemento */
 }
 #header01 ul {
-padding: 5px;
+  padding: 5px;
 }
 
 .bottomWhite {
@@ -115,20 +117,20 @@ padding: 5px;
   padding: 10px;
   cursor: pointer;
 }
- li:hover .imgs-cat {
-display: block;
- }
-.categories-unit a{
+li:hover .imgs-cat {
+  display: block;
+}
+.categories-unit a {
   cursor: default;
 }
 .t-lab:active {
-color: #02ff63;
+  color: #02ff63;
 }
 .t-lab:hover {
   color: #02ff63;
-  }
+}
 
-.imgs-cat img{
+.imgs-cat img {
   max-width: 100%;
   padding: 15px;
   height: auto;
@@ -136,7 +138,7 @@ color: #02ff63;
   margin: 0 auto 0.5rem;
   cursor: pointer;
 }
-.imgs-cat p{
+.imgs-cat p {
   color: #000;
   cursor: pointer;
 }
@@ -151,7 +153,6 @@ color: #02ff63;
 @keyframes top-0 {
   0% {
     height: 100vh;
-
   }
   50% {
     animation-delay: 2s;
@@ -166,8 +167,8 @@ color: #02ff63;
     left: 50%;
     width: 0;
   }
- 100% {
-  left: 0;
+  100% {
+    left: 0;
     width: 100%;
   }
 }
@@ -181,8 +182,8 @@ color: #02ff63;
 }
 .lg img {
   position: absolute;
-  height:48px;
-  width:auto ;
+  height: 48px;
+  width: auto;
 }
 .lg {
   z-index: 8;
@@ -198,79 +199,79 @@ color: #02ff63;
 .sh-i {
   display: inline-block;
   height: 100%;
-  }
+}
 #search-nav {
-  position: absolute;  
-  margin: 0  400px;
-  padding: 0 ;
+  position: absolute;
+  margin: 0 400px;
+  padding: 0;
   border-style: none;
   right: 0;
-  }
-  #search-nav:hover {
-background-color: transparent;
-    }
+}
+#search-nav:hover {
+  background-color: transparent;
+}
 
-    .search {
-      border-style: none;
-      background: transparent;
-      height: 30px;
-      outline: none;
-      cursor: text;
-      border-style: none;
-    }
-    
-    .search:focus {
-      padding-left: 10px;
-      color: #ffffff70;
-      opacity: 0.5;
-      border-color: transparent;
-    }
+.search {
+  border-style: none;
+  background: transparent;
+  height: 30px;
+  outline: none;
+  cursor: text;
+  border-style: none;
+}
 
-@media screen and (max-width:1000px) {
+.search:focus {
+  padding-left: 10px;
+  color: #ffffff70;
+  opacity: 0.5;
+  border-color: transparent;
+}
+
+@media screen and (max-width: 1000px) {
   #search-nav {
     position: relative;
     margin: 0;
     padding: 0;
-    }
-    
-    .container-search {
-      position: absolute;
-      right: 0;
-      padding: 150px 30px;
-    }
-    .container-sh {
-      border-right: 1px solid #634092;
-    }
-    .sh-i {
+  }
+
+  .container-search {
+    position: absolute;
+    right: 0;
+    padding: 150px 30px;
+  }
+  .container-sh {
+    border-right: 1px solid #634092;
+  }
+  .sh-i {
     display: inline-block;
     height: 100%;
-    }
-    .arrow-right {
-      color: #fff;
-    }
-    .i-search {
-      color: #fff;
-      display: block;
-    }
-    .search-i {
-      color: #fff;
-    }
-    .search {
-      background-color: transparent;
-      width: 10px;
-      height: 20px;
-      font-size: 1rem;
-      outline: none;
-      cursor: text;
-      border-style: none;
-      animation: transition 2s ease-in;
-    }
-    .search:focus {
-      padding-left: 10px;
-      color: #ffffff70;
-      width:50vw;
-      opacity: 0.5;
-    }
+  }
+  .arrow-right {
+    color: #fff;
+  }
+  .i-search {
+    color: #fff;
+    display: block;
+  }
+  .search-i {
+    color: #fff;
+  }
+  .search {
+    background-color: transparent;
+    width: 10px;
+    height: 20px;
+    font-size: 1rem;
+    outline: none;
+    cursor: text;
+    border-style: none;
+    animation: transition 2s ease-in;
+  }
+  .search:focus {
+    padding-left: 10px;
+    color: #ffffff70;
+    width: 50vw;
+    opacity: 0.5;
+  }
 }
 
 /* .btn-search {
@@ -298,7 +299,7 @@ background-color: transparent;
   transition: height 0.3s ease;
   width: 100%;
   height: 50px;
-  padding-right:5rem;
+  padding-right: 5rem;
 }
 
 .recorrido {
@@ -324,7 +325,6 @@ background-color: transparent;
   left: 0;
   opacity: 0.5;
   width: 100%;
-
 }
 .curva {
   fill: none;
@@ -335,6 +335,21 @@ background-color: transparent;
   animation: dibujarCurva 5s linear forwards;
   width: 100%;
   height: 50px;
+}
+.line {
+  height: 3px;
+  width: 800px;
+  background-color: #ff0000;
+}
+.line-svg-01t {
+  position: absolute;
+  right: 0;
+  transform: rotate(90deg);
+}
+.line-svg-01tL {
+  position: absolute;
+  left: 0;
+  transform: rotate(90deg);
 }
 
 /* .svgs {
@@ -347,11 +362,7 @@ bottom: 200px;
   position: relative;
 }
 
-.line-svg-01t {
-  position: absolute;
-  top: 0px;
-  right: 763px;
-}
+
 .line-svg-01tR {
   position: absolute;
   top: 0;
@@ -393,16 +404,14 @@ bottom: 200px;
 
 @keyframes dibujarCurva {
   to {
-      stroke-dashoffset: 0;
+    stroke-dashoffset: 0;
   }
-  }
+}
 
-
-#socialNetworks-icons img{
+#socialNetworks-icons img {
   z-index: 1;
   width: 100%;
   height: 20px;
-  
 }
 
 .list-icons {
@@ -411,29 +420,27 @@ bottom: 200px;
   top: 0;
   gap: 1px;
   padding: 1px 0 3px 0;
-  box-shadow: inset   0 0 1.5rem rgba(255, 255, 255, 0.1);
+  box-shadow: inset 0 0 1.5rem rgba(255, 255, 255, 0.1);
 }
 .list-icons li {
   padding: 7px;
   cursor: pointer;
-  box-shadow: inset   0 0 1.5rem rgba(255, 255, 255, 0.1);
-
+  box-shadow: inset 0 0 1.5rem rgba(255, 255, 255, 0.1);
 }
 .list-icons li:active {
-  background-color: #634092; 
+  background-color: #634092;
   color: #000;
 }
 
 .list-icons img {
   /* opacity: 0.5; */
   cursor: pointer;
-  filter: drop-shadow(  1px 1px 1px #000);
+  filter: drop-shadow(1px 1px 1px #000);
 }
 .list-icons li:hover {
-  box-shadow: inset   0 0 1.5rem rgba(255, 255, 255, 0.2);
+  box-shadow: inset 0 0 1.5rem rgba(255, 255, 255, 0.2);
   /* filter: drop-shadow( 0 0 5px rgba(0, 0, 0, 0.2)); */
 }
-
 
 /* Barra de scroll
 ::-webkit-scrollbar {
@@ -457,8 +464,8 @@ bottom: 200px;
   background-color: rgba(100, 64, 146, 0.2);
 }
 ::-moz-selection {
-  background-color:  rgba(100, 64, 146, 0.2);
-} 
+  background-color: rgba(100, 64, 146, 0.2);
+}
 
 /* Bandera y Sombrero */
 .Bandera img {
@@ -495,11 +502,11 @@ bottom: 200px;
   width: 80px;
 }
 
-  .send-email button:hover {
-    border-top: 1px solid #634092;
-    background-color: rgba(255, 255, 255, 0.3);
-    -webkit-backdrop-filter: blur(20px);
-    backdrop-filter: blur(20px);
+.send-email button:hover {
+  border-top: 1px solid #634092;
+  background-color: rgba(255, 255, 255, 0.3);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
 }
 
 footer {
@@ -515,17 +522,17 @@ footer {
 
 .imgs-footer {
   display: inline-flex;
-background-color: #634092;
-/* background-image: url(https://images.pexels.com/photos/3137078/pexels-photo-3137078.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1); */
-gap: 3px;
-padding: 3px; 
-backdrop-filter: blur(20px);
-  }
-.imgs-footer img{
-display: block;
-width: 15px;
-height: auto;
-bottom: 0;
+  background-color: #634092;
+  /* background-image: url(https://images.pexels.com/photos/3137078/pexels-photo-3137078.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1); */
+  gap: 3px;
+  padding: 3px;
+  backdrop-filter: blur(20px);
+}
+.imgs-footer img {
+  display: block;
+  width: 15px;
+  height: auto;
+  bottom: 0;
 }
 
 .content-footer {
@@ -537,7 +544,6 @@ bottom: 0;
   text-align: center;
 }
 
-
 .nav-bar {
   width: 100vw;
   display: flex;
@@ -545,11 +551,10 @@ bottom: 0;
   align-items: center;
   list-style: none;
   -webkit-user-drag: none;
-  gap: 3px red ;
+  gap: 3px red;
   flex-wrap: wrap;
-
 }
- .nav-bar li {
+.nav-bar li {
   position: relative;
   display: inline-block;
   margin: 0.1rem;
@@ -559,14 +564,14 @@ bottom: 0;
   text-align: center;
   animation: left-to-right 0.5s linear 1;
   transition: 0.3s ease;
-} 
+}
 .nav-bar li a {
-  font-family: 'Urbanist Variable';
+  font-family: "Urbanist Variable";
   font-weight: 100;
   font-size: 0.8rem;
 }
 .imgs-cat p {
-  font-family: 'Urbanist Variable';
+  font-family: "Urbanist Variable";
   font-weight: 500;
   font-size: 0.8rem;
 }
@@ -581,20 +586,20 @@ bottom: 0;
   0% {
     background-position: 100% 50%;
     filter: drop-shadow(0 0 1rem #634092);
-    }
-    100% {
-      background-position: 280% 50%;
-    }
   }
+  100% {
+    background-position: 280% 50%;
+  }
+}
 .nav-bar li:hover {
   /* box-shadow: rgba(255, 255, 255, 0.25) 5px 5px 5px -12px inset, rgba(255, 255, 255, 0.3) 5px 5px 5px -12px inset; */
   /* background: radial-gradient(rgba(0, 0, 0, 0.1), rgba(255, 255, 255, 0.1)); */
   border-top: #634092 1px solid;
-} 
+}
 .nav-bar li:active {
   background-color: rgb(255, 255, 255, 0.9);
   color: #000;
-} 
+}
 .nav-bar li a {
   unicode-bidi: isolate-override;
   text-decoration: none;
@@ -625,10 +630,10 @@ bottom: 0;
   height: auto;
 }
 .modes2 button {
-padding: 7px;
-margin: 0;
-background-color: transparent;
-border: transparent;
+  padding: 7px;
+  margin: 0;
+  background-color: transparent;
+  border: transparent;
 }
 
 @media screen and (max-width: 830px) {
@@ -678,7 +683,7 @@ border: transparent;
     bottom: 0;
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
-    padding: 20rem  0.3rem;
+    padding: 20rem 0.3rem;
     box-shadow: 0 0 0 100vmax rgb(255, 0, 0);
   }
 
@@ -762,8 +767,8 @@ border: transparent;
 } */
 
 section {
-  height: 100vh; 
-  width: 100%; 
+  height: 100vh;
+  width: 100%;
   scroll-behavior: smooth;
   scroll-snap-align: start; /* Alinear secciones al inicio */
   transition: transform 0.5s ease-in-out; /* Transición suave */
@@ -774,9 +779,9 @@ section {
   color: #fff;
   transition: 0.3s ease, color 0.3s ease;
 }
-.secMode  .secZero{
-background-color: #fff;
-color: #000;
+.secMode .secZero {
+  background-color: #fff;
+  color: #000;
 }
 
 #sec-00 {
@@ -786,7 +791,7 @@ color: #000;
   flex-direction: column;
   flex: 1;
   margin-top: auto;
-  font-family: 'Urbanist Variable';
+  font-family: "Urbanist Variable";
   margin-top: auto;
   color: #000;
   margin: 0 auto;
@@ -798,39 +803,91 @@ color: #000;
   background-color: #fff;
   padding: 5px;
   row-gap: 20px;
+}
+#sec-00:hover {
+  .line {
+    stroke-dasharray: 200;
+    stroke-dashoffset: 200;
+    animation: draw 0.5s linear
+      (
+        0 0%,
+        0 1.8%,
+        0.01 3.6%,
+        0.03 6.35%,
+        0.07 9.1%,
+        0.13 11.4%,
+        0.19 13.4%,
+        0.27 15%,
+        0.34 16.1%,
+        0.54 18.35%,
+        0.66 20.6%,
+        0.72 22.4%,
+        0.77 24.6%,
+        0.81 27.3%,
+        0.85 30.4%,
+        0.88 35.1%,
+        0.92 40.6%,
+        0.94 47.2%,
+        0.96 55%,
+        0.98 64%,
+        0.99 74.4%,
+        1 86.4%,
+        1 100%
+      )
+      forwards;
+    transition: transform 3s ease;
+    animation-iteration-count: 1;
   }
-  #sec-00:hover {
-    .line {
-      stroke-dasharray: 200;
-      stroke-dashoffset: 200;
-      animation: draw 0.5s linear  (0 0%, 0 1.8%, 0.01 3.6%, 0.03 6.35%, 0.07 9.1%, 0.13 11.4%, 0.19 13.4%, 0.27 15%, 0.34 16.1%, 0.54 18.35%, 0.66 20.6%, 0.72 22.4%, 0.77 24.6%, 0.81 27.3%, 0.85 30.4%, 0.88 35.1%, 0.92 40.6%, 0.94 47.2%, 0.96 55%, 0.98 64%, 0.99 74.4%, 1 86.4%, 1 100%) forwards ;
-      transition: transform 3s ease;
-      animation-iteration-count: 1;
-    }
 
-    .line-02 {
-      stroke-dasharray: 1000;
-      stroke-dashoffset: 1000;
-      animation: draw 0.5s linear infinite (0 0%, 0 1.8%, 0.01 3.6%, 0.03 6.35%, 0.07 9.1%, 0.13 11.4%, 0.19 13.4%, 0.27 15%, 0.34 16.1%, 0.54 18.35%, 0.66 20.6%, 0.72 22.4%, 0.77 24.6%, 0.81 27.3%, 0.85 30.4%, 0.88 35.1%, 0.92 40.6%, 0.94 47.2%, 0.96 55%, 0.98 64%, 0.99 74.4%, 1 86.4%, 1 100%) forwards ;
-      transition: 2s ease;
-      animation-iteration-count: 1;
-    }
+  .line-02 {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: draw 0.5s linear infinite
+      (
+        0 0%,
+        0 1.8%,
+        0.01 3.6%,
+        0.03 6.35%,
+        0.07 9.1%,
+        0.13 11.4%,
+        0.19 13.4%,
+        0.27 15%,
+        0.34 16.1%,
+        0.54 18.35%,
+        0.66 20.6%,
+        0.72 22.4%,
+        0.77 24.6%,
+        0.81 27.3%,
+        0.85 30.4%,
+        0.88 35.1%,
+        0.92 40.6%,
+        0.94 47.2%,
+        0.96 55%,
+        0.98 64%,
+        0.99 74.4%,
+        1 86.4%,
+        1 100%
+      )
+      forwards;
+    transition: 2s ease;
+    animation-iteration-count: 1;
   }
+}
 
-  @keyframes plot {
-    from {
-      opacity: 0.1;
-    }
-    to {
-      opacity: 1;
-    }
-        }
-
-  .data-01-home {
-    font-family: 'Urbanist Variable'; 
+@keyframes plot {
+  from {
+    opacity: 0.1;
   }
+  to {
+    opacity: 1;
+  }
+}
 
-  /* #sec-001 {
+.data-01-home {
+  font-family: "Urbanist Variable";
+}
+
+/* #sec-001 {
     width: 100%;
     height: 100vh;
     display: flex;
@@ -879,8 +936,6 @@ width: calc(100% /3);
   user-select: none;
  } */
 
-
-
 #sec-01 {
   margin-top: auto;
   z-index: 1;
@@ -891,7 +946,7 @@ width: calc(100% /3);
 #sec-01 h2 {
   width: 60%;
   right: 0;
-  font-family: 'Urbanist Variable';
+  font-family: "Urbanist Variable";
   font-size: 5rem;
   margin: 0;
   text-align: center;
@@ -906,47 +961,45 @@ width: calc(100% /3);
 .img-s01 {
   display: flex;
   align-items: start;
-    }
-    .img-s01 img {
-      height: 100%;
-      width: 500px;
-      padding-right:5px;
-      border-right: 1px solid #fff;
-      view-timeline-name: --image;
-      view-timeline-axis: block;
-      animation-timeline: --image;
-      animation-name: show;
-      animation-range:  entry 25% cover 50%;
-      animation-fill-mode: both;
-    }
-
-    @keyframes show {
-      from {
-        opacity: 0;
-        scale: 25%;
-
-      }
-      to {
-        opacity: 1;
-        scale: 100%;
-      }
-    }
-    @keyframes swipe-images {
-      from {
-        border-right: 1px solid #1a1a1a;
-      }
-to {
-  border-right: 1px solid #fff;
 }
-    }
-@media screen and (max-width:1000px ){
+.img-s01 img {
+  height: 100%;
+  width: 500px;
+  padding-right: 5px;
+  border-right: 1px solid #fff;
+  view-timeline-name: --image;
+  view-timeline-axis: block;
+  animation-timeline: --image;
+  animation-name: show;
+  animation-range: entry 25% cover 50%;
+  animation-fill-mode: both;
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+    scale: 25%;
+  }
+  to {
+    opacity: 1;
+    scale: 100%;
+  }
+}
+@keyframes swipe-images {
+  from {
+    border-right: 1px solid #1a1a1a;
+  }
+  to {
+    border-right: 1px solid #fff;
+  }
+}
+@media screen and (max-width: 1000px) {
   .img-s01 img {
     height: 100%;
     width: 250px;
-    padding-right:2.5px;
+    padding-right: 2.5px;
   }
 }
-
 
 .galeria {
   display: flex;
@@ -957,7 +1010,7 @@ to {
   padding-left: 50px;
 }
 .galeria p {
-  font-family: 'Urbanist Variable';
+  font-family: "Urbanist Variable";
   font-size: 1rem;
   font-weight: 200;
   color: #fff;
@@ -968,10 +1021,10 @@ to {
   color: #fff;
 }
 .galeria span {
-  font-family: 'Urbanist Variable';
+  font-family: "Urbanist Variable";
   font-weight: 400;
   font-size: 1.5rem;
-  text-transform:  uppercase;
+  text-transform: uppercase;
   color: #fff;
   background-color: rgb(99, 64, 146);
   padding: 5px;
@@ -991,7 +1044,7 @@ to {
   align-items: center;
   justify-content: center;
   margin-top: auto;
-  font-family: 'Urbanist Variable';
+  font-family: "Urbanist Variable";
   background-image: url(https://images.pexels.com/photos/17483868/pexels-photo-17483868/free-photo-of-abstracto-resumen-tecnologia-investigacion.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
 }
 
@@ -1001,7 +1054,7 @@ to {
   align-items: center;
   font-family: "F";
   color: #000;
-  font-size:5rem;
+  font-size: 5rem;
   margin: 0;
   text-align: center;
   height: auto;
@@ -1009,16 +1062,15 @@ to {
 #sec-02 p {
   padding: 5px;
   color: #000;
-  font-size:1rem;
+  font-size: 1rem;
 }
 #sec-02 span a {
-  padding:10px;
+  padding: 10px;
   color: #000;
-  font-size:1rem;
+  font-size: 1rem;
   background-color: #fff;
   filter: drop-shadow(0 0 1rem #000);
   text-decoration: none;
-  
 }
 
 #sec-03 {
@@ -1030,7 +1082,7 @@ to {
   margin-top: auto;
   background-image: url(https://res.cloudinary.com/dxwfpc5fu/image/upload/f_auto,q_auto/v1/HOME%20IMAGES/k3p0kv1hxngpelqar0vg);
   background-size: contain;
-  font-family: 'Urbanist Variable';
+  font-family: "Urbanist Variable";
 }
 .container-s-03 {
   display: flex;
@@ -1040,44 +1092,43 @@ to {
   justify-content: space-around;
   flex-wrap: wrap;
   background-color: rgba(29, 29, 29, 0.966);
-
 }
 .img-s03 {
   display: flex;
   align-items: center;
   /* background-color: rgba(216, 216, 216, 0.055); */
   /* box-shadow:0 5px 5rem rgb(255, 255, 255, 0.4) inset; */
-  box-shadow:0 20px 5rem rgb(255, 255, 255, 0.2) inset ;
+  box-shadow: 0 20px 5rem rgb(255, 255, 255, 0.2) inset;
   border-top: #fff solid 3px;
   padding: 0 20px;
   width: 500px;
-    }
-    .img-s03 img {
-      position: absolute;
-      width: 600px;
-      /* box-shadow: 0 30px .5rem rgb(0, 0, 0, 0.6) ; */
-      /* animation: rotate 2.5s ease forwards; */
-      animation-delay: 0.5s;
-      view-timeline-name: --image;
-      view-timeline-axis: block;
-      animation-timeline: --image;
-      animation-name: rotate;
-      animation-range:  entry 25% cover 50%;
-      animation-fill-mode: both;
-    }
+}
+.img-s03 img {
+  position: absolute;
+  width: 600px;
+  /* box-shadow: 0 30px .5rem rgb(0, 0, 0, 0.6) ; */
+  /* animation: rotate 2.5s ease forwards; */
+  animation-delay: 0.5s;
+  view-timeline-name: --image;
+  view-timeline-axis: block;
+  animation-timeline: --image;
+  animation-name: rotate;
+  animation-range: entry 25% cover 50%;
+  animation-fill-mode: both;
+}
 
-    @keyframes rotate {
-      0% {
-        transform: rotateY(0deg);
-        filter: drop-shadow(0 0 0.5rem #fff);
-      }
-      50% {
-        transform: rotateY(180deg);
-      }
-      /* 100% {
+@keyframes rotate {
+  0% {
+    transform: rotateY(0deg);
+    filter: drop-shadow(0 0 0.5rem #fff);
+  }
+  50% {
+    transform: rotateY(180deg);
+  }
+  /* 100% {
         transform: rotateY(300deg);
       } */
-    }
+}
 
 #sec-03 h2 {
   position: sticky;
@@ -1094,15 +1145,15 @@ to {
   height: auto;
   align-items: center;
   margin: 265px 0;
-  background: conic-gradient(rgba(36, 36, 36, 0.479), #0000007e) ;
+  background: conic-gradient(rgba(36, 36, 36, 0.479), #0000007e);
   width: 1000px;
   padding: 10px;
   padding-left: 50px;
-  border-top:#fff solid 3px;
-  box-shadow: inset 0px  -20px 5rem rgb(255, 255, 255, 0.2);
+  border-top: #fff solid 3px;
+  box-shadow: inset 0px -20px 5rem rgb(255, 255, 255, 0.2);
 }
 .labs-s p {
-  font-family: 'Urbanist Variable';
+  font-family: "Urbanist Variable";
   font-weight: 200;
   font-size: 2rem;
   font-weight: 100;
@@ -1110,10 +1161,10 @@ to {
 }
 
 .labs-s span {
-  font-family: 'Urbanist Variable';
+  font-family: "Urbanist Variable";
   font-size: 1.5rem;
   font-weight: 400;
-  text-transform:  uppercase;
+  text-transform: uppercase;
   color: #fff;
   background-color: #634092;
   cursor: pointer;
@@ -1125,7 +1176,6 @@ to {
   color: #fff;
   padding: 3px 15px;
   margin: 0px;
-
 }
 .labs-s a:hover {
   color: #000;
@@ -1174,7 +1224,7 @@ to {
   margin-top: auto;
   background-image: url(https://res.cloudinary.com/dxwfpc5fu/image/upload/v1716009107/HOME%20IMAGES/Company_v3ab8g.jpg);
   background-size: contain;
-  font-family: 'Urbanist Variable';
+  font-family: "Urbanist Variable";
 }
 .title-center {
   position: absolute;
@@ -1189,7 +1239,7 @@ to {
 .title-center h1 {
   font-size: 15rem;
   text-align: center;
-  font-family: 'i';
+  font-family: "i";
   color: transparent;
   background-size: cover;
   background-clip: text;
@@ -1202,8 +1252,8 @@ to {
   view-timeline-name: --image;
   view-timeline-axis: block;
   animation-timeline: --image;
-  animation-name: swipe-top ;
-  animation-range:  entry 25% cover 50%;
+  animation-name: swipe-top;
+  animation-range: entry 25% cover 50%;
   animation-fill-mode: both;
 }
 @keyframes swipe-top {
@@ -1225,7 +1275,7 @@ to {
 }
 #sec-04 h2 {
   z-index: 1;
-  font-family: 'O';
+  font-family: "O";
   color: #ffffff;
   font-size: 2.5rem;
   margin: 0;
@@ -1233,15 +1283,15 @@ to {
 }
 
 /* Responsive temp */
-@media  screen and (max-width: 1000px) {
+@media screen and (max-width: 1000px) {
   .title-center h1 {
     font-size: 3rem;
   }
   .img-s03 img {
-    padding-top:250px;
+    padding-top: 250px;
     width: 300px;
     align-items: center;
-}
+  }
 }
 /* Links-Sections */
 ul {
