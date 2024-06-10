@@ -146,6 +146,32 @@ li:hover .imgs-cat {
   margin: 0 auto 0.5rem;
   cursor: pointer;
 }
+@media screen and (max-width: 800px){
+  .imgs-cat {
+    display: none;
+    position: absolute;
+    top: 10%; /* Posición debajo del li */
+    left: 0;
+    transform: translateX(-125%);
+    background-color: rgba(255, 255, 255);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    width: 140px;
+    height: 170px;
+    z-index: 1000;
+    padding: 10px;
+    cursor: pointer;
+  }
+  .imgs-cat img {
+    max-width: 80%;
+    padding: 5px;
+    height: auto;
+    display: block;
+    margin: 0 auto 0.5rem;
+    cursor: pointer;
+  }
+}
 .imgs-cat p {
   color: #000;
   cursor: pointer;
@@ -874,6 +900,9 @@ display: block;
 justify-content: center;
 padding: 15px 0;
   }
+  .title-facts {
+    letter-spacing: 2px;
+  }
   .container-home-02 {
     padding: 10px 0;
   }
@@ -978,7 +1007,7 @@ margin-top: auto;
 }
 .slider {
   position: relative;
-  height: 70vh;
+  height: 80vh;
   margin: 0 auto;
   overflow: hidden;
 }
