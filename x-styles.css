@@ -908,6 +908,17 @@ opacity: 0.1;
   font-size: 24px;
 }
 
+#forwards {
+height: 400px;
+width: 40px;
+padding: 5px;
+}
+#forwards:hover {
+  filter: drop-shadow(0 0 0.1px #000);
+  background-color: #ffffff15;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  }
 .prev {
   left: 10px;
 }
@@ -915,6 +926,7 @@ opacity: 0.1;
 .next {
   right: 10px;
 }
+
 
 /* #sec-001 {
     width: 100%;
@@ -969,41 +981,64 @@ width: calc(100% /3);
   margin-top: auto;
   z-index: 1;
   height: auto;
+  height: 80vh;
   width: 100%;
   flex: 1;
+  background-image: url(https://cdn.pixabay.com/photo/2020/05/09/21/23/flower-5151491_1280.jpg);
+  background-repeat: repeat-x;
+  background-size: contain;
 }
 #sec-01 h2 {
-  width: 60%;
   right: 0;
   font-family: 'P';
   font-size: 5rem;
   margin: 0;
   text-align: center;
+  padding: 3rem;
+  letter-spacing: 0.5rem;
 }
 .container-s-01 {
   display: flex;
   flex: 1;
+  height: 100%;
   margin-top: auto;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
 }
 .img-s01 {
   display: flex;
   align-items: start;
 }
-.img-s01 img {
-  height: 100%;
-  width: 500px;
-  padding-right: 5px;
-  border-right: 1px solid #fff;
-  view-timeline-name: --image;
-  view-timeline-axis: block;
-  animation-timeline: --image;
-  animation-name: show;
-  animation-range: entry 25% cover 50%;
-  animation-fill-mode: both;
+.content-galeria  {
+  font-family: "Urbanist Variable";
+  font-size: 1rem;
+  font-weight: 200;
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
 }
 
+.content-galeria a {
+  text-decoration: none;
+  color: #000;
+}
+.content-galeria span {
+  font-family: 'P';
+  font-weight: 400;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  background-color: rgba(255, 255, 255, 0.212);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  padding: 15px;
+  margin: 20px;
+}
+.content-galeria span:hover {
+  background-color: rgba(255, 255, 255, 0.312);
+  animation: plot .3s ease-in-out both;
+}
 @keyframes show {
   from {
     opacity: 0;
@@ -1028,40 +1063,6 @@ width: calc(100% /3);
     width: 250px;
     padding-right: 2.5px;
   }
-}
-
-.galeria {
-  display: flex;
-  height: auto;
-  align-items: center;
-  /* background: conic-gradient(rgba(36, 36, 36, 0.479), #0000007e); */
-  width: 900px;
-  padding-left: 50px;
-}
-.galeria p {
-  font-family: "Urbanist Variable";
-  font-size: 1rem;
-  font-weight: 200;
-  color: #fff;
-}
-
-.galeria a {
-  text-decoration: none;
-  color: #fff;
-}
-.galeria span {
-  font-family: "Urbanist Variable";
-  font-weight: 400;
-  font-size: 1.5rem;
-  text-transform: uppercase;
-  color: #fff;
-  background-color: rgb(99, 64, 146);
-  padding: 5px;
-  margin: 5px;
-}
-.galeria span:hover {
-  transform: scale(1.8px);
-  background-color: red;
 }
 
 #sec-02 {
