@@ -912,13 +912,13 @@ opacity: 0.1;
 height: 400px;
 width: 40px;
 padding: 5px;
+background-color: #ffffff15;
+backdrop-filter: blur(10px);
+-webkit-backdrop-filter: blur(10px);
 }
-#forwards:hover {
-  filter: drop-shadow(0 0 0.1px #000);
-  background-color: #ffffff15;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  }
+/* #forwards:hover {
+
+  } */
 .prev {
   left: 10px;
 }
@@ -1028,7 +1028,6 @@ width: calc(100% /3);
   font-family: 'P';
   font-weight: 400;
   font-size: 1.5rem;
-  text-transform: uppercase;
   background-color: rgba(255, 255, 255, 0.212);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
@@ -1136,15 +1135,13 @@ width: calc(100% /3);
 .img-s03 img {
   position: absolute;
   width: 600px;
-  /* box-shadow: 0 30px .5rem rgb(0, 0, 0, 0.6) ; */
-  /* animation: rotate 2.5s ease forwards; */
-  animation-delay: 0.5s;
+  /* animation-delay: 0.5s;
   view-timeline-name: --image;
   view-timeline-axis: block;
-  animation-timeline: --image;
-  animation-name: rotate;
-  animation-range: entry 10% cover 50%;
-  animation-fill-mode: both;
+  animation-timeline: --image; */
+  animation: rotate 2s ease-in-out forwards;
+  /* animation-range: entry 10% cover 50%;
+  animation-fill-mode: both; */
 }
 
 @keyframes rotate {
@@ -1161,14 +1158,22 @@ width: calc(100% /3);
 }
 
 #sec-03 h2 {
-  position: sticky;
-  position: -webkit-sticky;
   font-family: 'P';
-  background-color: #000;
-  color: #ffffff;
-  font-size: 2.5rem;
+  font-size: 5rem;
   margin: 0;
   text-align: center;
+  letter-spacing: 0.2rem;
+  animation: spin 0.4s ease-in-out;
+  backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(50px);
+}
+@keyframes spin {
+  from {
+    background-color: greenyellow;
+  }
+  to {
+    transform: rotateX(180deg);
+  }
 }
 .labs-s {
   display: flex;
@@ -1185,31 +1190,30 @@ width: calc(100% /3);
 .labs-s p {
   font-family: "Urbanist Variable";
   font-weight: 200;
-  font-size: 2rem;
-  font-weight: 100;
-  color: #fff;
 }
 
 .labs-s span {
-  font-family: "Urbanist Variable";
-  font-size: 1.5rem;
-  font-weight: 400;
-  text-transform: uppercase;
-  color: #fff;
-  background-color: #634092;
-  cursor: pointer;
-  margin: 0 5px;
-  border-radius: 1px;
   padding: 0;
+  color: #000;
+  font-family: 'P';
+  font-weight: 400;
+  font-size: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.212);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  padding: 15px 30px;
+  margin: 20px;
+
 }
 .labs-s a {
-  color: #fff;
+  text-decoration: none;
   padding: 3px 15px;
   margin: 0px;
+
 }
-.labs-s a:hover {
-  color: #000;
-  background-color: #fff;
+.labs-s span:hover {
+  background-color: rgba(255, 255, 255, 0.312);
+  animation: plot .3s ease-in-out both;
 }
 
 /* @media screen and (max-width: 830px) {
