@@ -154,6 +154,7 @@ li:hover .imgs-cat {
     left: 0;
     transform: translateX(-125%);
     background-color: rgba(255, 255, 255);
+    opacity: 0.3;
     padding: 0.5rem;
     border-radius: 0.5rem;
     text-align: center;
@@ -162,6 +163,9 @@ li:hover .imgs-cat {
     z-index: 1000;
     padding: 10px;
     cursor: pointer;
+  }
+  .imgs-cat:hover {
+    opacity: 1;
   }
   .imgs-cat img {
     max-width: 80%;
