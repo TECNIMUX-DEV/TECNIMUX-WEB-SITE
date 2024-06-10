@@ -122,6 +122,25 @@ function showSlide(n) {
     slides[slideIndex - 1].style.display = "block";
 }
 
+// Animation once
+// scripts.js
+document.addEventListener('DOMContentLoaded', () => {
+    const section = document.getElementById('sec-00');
+
+    const handleMouseOver = () => {
+        if (!section.classList.contains('animated')) {
+            section.classList.add('animated');
+            section.addEventListener('animationend', () => {
+                section.classList.remove('animated');
+                section.classList.add('animation-done');
+                // section.style.transform = 'opacity(1)'; 
+                section.removeEventListener('mouseover', handleMouseOver);
+            }, { once: true });
+        }
+    };
+
+    section.addEventListener('mouseover', handleMouseOver);
+});
 
 
 

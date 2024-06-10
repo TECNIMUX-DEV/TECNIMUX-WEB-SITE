@@ -758,6 +758,10 @@ section {
 animation: lines 3s ease forwards;
 animation-iteration-count: 1;
 }
+#sec-00:hover.animated {
+animation: lines 3s ease forwards;
+}
+
 .home-data {
   z-index: 1;
   width: 70%;
@@ -765,11 +769,14 @@ animation-iteration-count: 1;
   flex-direction: column;
   flex: 1;
   margin-top: auto;
-  color: #000;
+
   margin: 0 auto;
   border-radius: 20px;
   animation: plot 3s ease 1 forwards;
-  background-color: #fff;
+  /* background: linear-gradient(to bottom, rgb(32, 32, 32), rgb(236, 236, 236)); */
+   background-color: rgba(255, 255, 255, 0.034);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px); */
   padding: 5px;
   row-gap: 20px;
 }
@@ -777,6 +784,14 @@ animation-iteration-count: 1;
   }*/
   .container-lineas {
     position: relative;
+  }
+
+  .data-01-home {
+    font-family: "Urbanist Variable";
+    line-height: 1;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.3);
   }
 
 .linea {
@@ -844,7 +859,6 @@ animation-iteration-count: 1;
 @keyframes lines {
   from {
 opacity: 0;
-transform: translateY(50px);
   }
   to {
 opacity: 0.1;
@@ -862,19 +876,17 @@ opacity: 0.1;
   }
 }
 
-.data-01-home {
-  font-family: "Urbanist Variable";
-}
-
 .slider {
   position: relative;
-  max-width: 600px;
+  height: 100vh;
   margin: auto;
   overflow: hidden;
 }
 
 .slide {
   display: none;
+  animation: plot 1s;
+  animation-iteration-count: 1;
 }
 
 .active {
