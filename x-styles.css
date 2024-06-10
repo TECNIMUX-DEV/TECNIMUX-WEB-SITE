@@ -566,7 +566,7 @@ footer {
 }
 .modes2 {
   position: absolute;
-  background-color: #ffffff;
+  background-color: rgba(255, 255, 255);
   right: 0;
   margin-right: 260px;
   top: 35px;
@@ -574,9 +574,13 @@ footer {
   width: 30px;
   height: 30px;
   border-radius: 0.5px;
+  transition:  0.1s ease-in-out;
 }
 .modes2:hover {
   filter: drop-shadow(0 0 1rem rgb(255, 255, 255, 0.2));
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
 }
 .modes2 img {
   width: 20px;
@@ -587,6 +591,10 @@ footer {
   margin: 0;
   background-color: transparent;
   border: transparent;
+}
+
+.iconDulaMode-02 {
+visibility: visible;
 }
 
 @media screen and (max-width: 830px) {

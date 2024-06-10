@@ -1,44 +1,3 @@
- /* Cambio de color bottom header 
- document.addEventListener('DOMContentLoaded', Function ()}): 
- window.addEventListener('scroll', function() {
-    var header = document.getElementById('header-01');
-    var scrollPosition = window.scrollY;
-
-    if (scrollPosition > 850) {
-        header.style.boxShadow = '2px 2px 10px #64409286';
-    } else {
-        header.style.boxShadow = '2px 2px 10px #ffffff86';
-    }
-}); 
-
-let value
-if (typeof window !== 'undefined') {
-  value = window.localStorage.getItem('key')
-}
-*/
-
-/* Scroll animation Scrolling down Scrolling up
-document.addEventListener('DOMContentLoaded', () => {
-    let sections = document.querySelectorAll('section');
-
-    window.addEventListener('scroll', () => {
-        sections.forEach((section, index) => {
-            if(isElementInView(section, 0.5)) {
-            section.classList.remove('section-hidden');
-        } else {
-            section.classList.add('section-hidden');
-        }
-        });
-    });
-    
-function  isElementInView(el, percentVisible) {
-let rect = el.getBoundingClientRect();
-let windowHeight = window.innerHeight || document.documentElement,clientHeight;
-return !(rect.bottom < 0 || rect.top - windowHeight >= percentVisible * el.clientHeight);
-} 
-});
- */
-
 // Top header
 document.addEventListener("DOMContentLoaded", function() {
     var resizableDiv = document.getElementById("header-01");
@@ -123,7 +82,6 @@ function showSlide(n) {
 }
 
 // Animation once
-// scripts.js
 document.addEventListener('DOMContentLoaded', () => {
     const section = document.getElementById('sec-00');
 
@@ -140,6 +98,21 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     section.addEventListener('mouseover', handleMouseOver);
+});
+
+// Change icon dual mode
+// scripts.js
+document.addEventListener('DOMContentLoaded', () => {
+    const image = document.getElementById('iconDualMode-01');
+    // const imageTwo = document.getElementById('iconDualMode-02');
+
+    image.addEventListener('click', () => {
+        if (image.src.includes('/icons/dark-clear-mode/dark_mode_night_moon_icon.png')) {
+            image.src = '/icons/dark-clear-mode/icons8-summer-50.png';
+        } else {
+            image.src = '/icons/dark-clear-mode/dark_mode_night_moon_icon.png';
+        }
+    });
 });
 
 
