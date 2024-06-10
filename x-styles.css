@@ -806,6 +806,19 @@ animation: lines 3s ease forwards;
     grid-template-columns: 3;
     grid-column: 3;
   } */
+   .services {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    flex-wrap: wrap;
+    gap: 30px;
+   }
+   .services-title {
+    text-align: center;
+font-size: 3rem;
+display: block;
+width: 100%;
+   }
   .servs {
 display: block;
 justify-content: center;

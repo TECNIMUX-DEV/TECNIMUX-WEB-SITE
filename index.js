@@ -82,23 +82,23 @@ function showSlide(n) {
 }
 
 // Animation once
-document.addEventListener('DOMContentLoaded', () => {
-    const section = document.getElementById('sec-00');
+// document.addEventListener('DOMContentLoaded', () => {
+//     const section = document.getElementById('sec-00');
 
-    const handleMouseOver = () => {
-        if (!section.classList.contains('animated')) {
-            section.classList.add('animated');
-            section.addEventListener('animationend', () => {
-                section.classList.remove('animated');
-                section.classList.add('animation-done');
-                // section.style.transform = 'opacity(1)'; 
-                section.removeEventListener('mouseover', handleMouseOver);
-            }, { once: true });
-        }
-    };
+//     const handleMouseOver = () => {
+//         if (!section.classList.contains('animated')) {
+//             section.classList.add('animated');
+//             section.addEventListener('animationend', () => {
+//                 section.classList.remove('animated');
+//                 section.classList.add('animation-done');
+//                 // section.style.transform = 'opacity(1)'; 
+//                 section.removeEventListener('mouseover', handleMouseOver);
+//             }, { once: true });
+//         }
+//     };
 
-    section.addEventListener('mouseover', handleMouseOver);
-});
+//     section.addEventListener('mouseover', handleMouseOver);
+// });
 
 // Change icon dual mode
 // scripts.js
