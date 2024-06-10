@@ -747,7 +747,7 @@ section {
 
 #sec-00 {
   z-index: 1;
-  height: calc(100vh - 100px);
+  height: 100vh;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -773,18 +773,18 @@ animation: lines 3s ease forwards;
 .home-data {
   z-index: 1;
   width: 80%;
+  height: auto;
   display: flex;
   flex-direction: column;
   flex: 1;
   margin-top: auto;
-
   margin: 0 auto;
   border-radius: 20px;
   animation: plot 3s ease 1 forwards;
   /* background: linear-gradient(to bottom, rgb(32, 32, 32), rgb(236, 236, 236)); */
    /* background-color: rgba(255, 255, 255, 0.034); */
-  -webkit-backdrop-filter: blur(20px);
-  backdrop-filter: blur(20px); 
+  /* -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);  */
   padding: 5px;
   row-gap: 20px;
 }
@@ -795,11 +795,25 @@ animation: lines 3s ease forwards;
   }
 
   .data-01-home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
     font-family: "Urbanist Variable";
     line-height: 1;
-    -webkit-backdrop-filter: blur(10px);
+    flex: 1;
+    /* -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0.3); */
+    margin: 60px 0;
+  }
+  .data-01-home img {
+width: 500px;
+height: auto;
+    /* -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.3); */
   }
   /* .servs {
     display: grid;
@@ -807,6 +821,16 @@ animation: lines 3s ease forwards;
     grid-column: 3;
   } */
    .services {
+    width: 85%;
+    height: auto;
+    margin-top: auto;
+    margin: 0 auto;
+    animation: plot 3s ease 1 forwards;
+    /* background: linear-gradient(to bottom, rgb(32, 32, 32), rgb(236, 236, 236)); */
+     /* background-color: rgba(255, 255, 255, 0.034); */
+    /* -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);  */
+
     display: flex;
     justify-content: center;
     flex: 1;
