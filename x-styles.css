@@ -600,26 +600,22 @@ footer {
   position: absolute;
   right: 0;
   margin-right: 260px;
-  top: 35px;
+  top: 45px;
   display: inline-flex;
   width: 30px;
   height: 30px;
   border-radius: 0.5px;
   transition:  0.1s ease-in-out;
   padding: 6px;
+  background-color: #ff0000;
 }
-.modes2 img:hover {
-  filter: drop-shadow(0 0 1rem rgb(255, 255, 255, 0.2));
-  background-color: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-}
+
 .modes2 img {
   bottom: 20px;
   left: 20px;
   width: 30px;
   height: auto;
-  background-color: #fff;
+
 }
 .modes2 button {
   margin: 0;
@@ -627,8 +623,14 @@ footer {
   border: transparent;
 }
 
-.iconDulaMode-02 {
-visibility: visible;
+.iconDualMode-02 {
+visibility: hidden;
+}
+.modes2 img:hover {
+  filter: drop-shadow(0 0 1rem rgb(255, 255, 255, 0.2));
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
 }
 
 @media screen and (max-width: 830px) {
@@ -706,7 +708,6 @@ visibility: visible;
 
   .modes2 {
     position: absolute;
-    background-color: #ffffff;
     right: 0;
     margin-right: 100px;
     top: 35px;
