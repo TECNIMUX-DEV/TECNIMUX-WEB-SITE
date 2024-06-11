@@ -598,16 +598,16 @@ footer {
 }
 .modes2 {
   position: absolute;
-  right: 0;
   margin-right: 260px;
-  top: 45px;
+  top: 30px;
   display: inline-flex;
   width: 30px;
   height: 30px;
   border-radius: 0.5px;
   transition:  0.1s ease-in-out;
-  padding: 6px;
-  background-color: #ff0000;
+  margin: 6px 0;
+  right: 255px;
+  background-color: #fff;
 }
 
 .modes2 img {
@@ -615,7 +615,7 @@ footer {
   left: 20px;
   width: 30px;
   height: auto;
-
+  padding: 3px;
 }
 .modes2 button {
   margin: 0;
@@ -623,10 +623,7 @@ footer {
   border: transparent;
 }
 
-.iconDualMode-02 {
-visibility: hidden;
-}
-.modes2 img:hover {
+.modes2:hover {
   filter: drop-shadow(0 0 1rem rgb(255, 255, 255, 0.2));
   background-color: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(20px);
@@ -906,6 +903,15 @@ display: block;
 justify-content: center;
 padding: 15px 0;
   }
+  .proximamente {
+    background-color: rgb(12, 12, 12);
+    opacity: 0.5;
+    padding: 5px;
+  }
+  .services a {
+text-decoration: none;
+color: #fff;
+  }
   .title-facts {
     letter-spacing: 2px;
   }
@@ -1057,7 +1063,13 @@ width: 40px;
 padding: 5px;
 background-color: #ffffff15;
 backdrop-filter: blur(10px);
--webkit-backdrop-filter: blur(10px);
+}
+@media screen and (max-width: 800px ){
+  #forwards {
+    height: 200px;
+    width: 40px;
+    padding: 5px;
+    }
 }
 /* #forwards:hover {
 
