@@ -84,7 +84,6 @@ body {
   height: 100px;
   width: 100%;
   position: sticky;
-  position: -webkit-sticky;
   z-index: 10;
   top: 0;
   display: flex;
@@ -265,7 +264,7 @@ li:hover .imgs-cat {
   border-color: transparent;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 850px) {
   #search-nav {
     position: relative;
     margin: 0;
@@ -599,7 +598,6 @@ footer {
 }
 .modes2 {
   position: absolute;
-  background-color: rgba(255, 255, 255);
   right: 0;
   margin-right: 260px;
   top: 35px;
@@ -608,19 +606,22 @@ footer {
   height: 30px;
   border-radius: 0.5px;
   transition:  0.1s ease-in-out;
+  padding: 6px;
 }
-.modes2:hover {
+.modes2 img:hover {
   filter: drop-shadow(0 0 1rem rgb(255, 255, 255, 0.2));
   background-color: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
 }
 .modes2 img {
-  width: 20px;
+  bottom: 20px;
+  left: 20px;
+  width: 30px;
   height: auto;
+  background-color: #fff;
 }
 .modes2 button {
-  padding: 7px;
   margin: 0;
   background-color: transparent;
   border: transparent;
