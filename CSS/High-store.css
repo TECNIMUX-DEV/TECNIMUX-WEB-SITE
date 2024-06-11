@@ -98,9 +98,44 @@ h3 {
 }
 .container-grid {
   display: grid;
-  
+grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem) , 1fr));
+gap: 10px;
+grid-auto-rows: 20rem;
+grid-auto-flow: dense;
+justify-content: center;
+margin: 20px;
+justify-items: center;
+align-items: center;
 }
-
+.componentes {
+  /* height: 300px;
+  width: 300px; */
+  background-color: rgb(255, 0, 0);
+  padding: 10px;
+  grid-column: span 1;
+justify-items: center;
+align-items: center;
+;
+}
+.componentes img{
+max-width: 200px;
+height: auto;
+}
+.type-sect {
+  align-items: end;
+  justify-items: end;
+  display: inline-flex;
+  top: 0;
+  right: 0;
+  text-align: end;
+  background-color: #fff;
+  margin: 0;
+  padding: 10px;
+  color: #000;
+}
+.name-item {
+  font-family: 'O';
+}
 
 
 
