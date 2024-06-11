@@ -11,7 +11,7 @@
 }
 
 @font-face {
-  font-family: "Batman";
+  font-family: "B";
   src: url(/fonts/batmfa_.ttf);
 }
 @font-face {
@@ -30,14 +30,14 @@ body {
   width: 100%;
   margin: 0;
   padding: 0;
-  background-color: #ff3300a4;
+  background-color: #fff;
   background-attachment: fixed;
-  font-family: 'W', sans-serif;
+  font-family: "W", sans-serif;
   color: #fff;
 }
 header {
-display: flex;
-justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
   background-color: #fff;
   height: 65px;
   width: 100%;
@@ -49,11 +49,11 @@ justify-content: space-between;
 }
 
 ::-webkit-scrollbar-track {
-background: rgb(68, 68, 68);
+  background: rgb(68, 68, 68);
 }
 
 ::-webkit-scrollbar-thumb {
-  background:rgb(255, 255, 255)
+  background: rgb(255, 255, 255);
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -64,81 +64,78 @@ background: rgb(68, 68, 68);
   background-color: #64409285;
 }
 ::-moz-selection {
-  background-color:#64409285 ;
+  background-color: #64409285;
 }
-.Products-PC{
-margin-top: 150px;
+.Products-PC {
+  margin-top: 150px;
 }
 
-h1 {
-  font-family: Batman;
-  color: red;
-  letter-spacing:2px;
-  text-align: center;
-}
-h2 {
-  text-align: center;
-  color: #eb1212;
-  margin: 20px;
-  font-size: 3rem;
-}
 h3 {
-  color:#634092;
+  color: #634092;
 }
 
 #pI {
   margin-top: auto;
   background-color: transparent;
   filter: blur(0.1px);
-  margin:  auto;
+  margin: auto;
 }
 #sec-01 {
   width: 100%;
   height: auto;
   padding: 50px 0;
   background-color: rgb(255, 255, 255);
+  color: #000;
 }
 .container-grid {
   display: grid;
-grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem) , 1fr));
-gap: 10px;
-grid-auto-rows: 20rem;
-grid-auto-flow: dense;
-justify-content: center;
-margin:50px;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+  gap: 10px;
+  grid-auto-rows: 20rem;
+  grid-auto-flow: dense;
+  justify-content: center;
+  margin: 50px;
 }
 .componentes {
   /* height: 300px; */
   display: grid;
   /* width: 320px;  */
-  background-color: rgb(255, 0, 0);
+  background-color: rgb(228, 228, 228);
   padding: 0 10px 10px 10px;
   grid-column: span 1;
-justify-items: center;
-align-items: center;
-padding: 0 20px;
+  justify-items: center;
+  align-items: center;
+  padding: 0 20px;
+  transition: 0.1s ease;
 }
-.componentes img{
-max-width: 200px;
-height: auto;
+.componentes:hover, :focus {
+  background-color: #18181859;
+}
+.componentes img {
+  max-width: 200px;
+  height: auto;
 }
 .type-sect {
- background-color: red;
-width: 100%;
+  background-color: red;
+  width: 100%;
   color: #000;
   background-color: #fff;
+  border: 0.1px solid #00000010;
 }
 .type-sect h6 {
   display: inline-block;
-display: grid;
-justify-items: flex-end;
-align-items: flex-end;
-text-align: end;
-padding: 7px 10px;
-
+  display: grid;
+  justify-items: flex-end;
+  align-items: flex-end;
+  text-align: end;
+  padding: 7px 10px;
+}
+.type-sect:hover {
+  background-color: #222222;
+  color: #fff;
 }
 .name-item h3 {
-  font-family: 'Work Sans';
+  font-family: "Work Sans";
   color: #000;
   text-align: center;
   font-size: 2.5rem;
@@ -146,13 +143,12 @@ padding: 7px 10px;
   font-weight: 100;
 }
 .name-item span {
-  color: #fff;
+  color: rgb(26, 26, 26);
   font-size: 1.5rem;
   font-weight: 500;
-
 }
 
-#Sec-02{
+#Sec-02 {
   width: 100%;
 }
 
@@ -162,16 +158,15 @@ padding: 7px 10px;
   height: 30px;
   width: auto;
   margin: 15px 5px;
-
 }
-.fr{
-  color:#634092;
+.fr {
+  color: #634092;
   font-size: 1.5rem;
 }
 
 .title {
   display: inline-flex;
-margin: 10px 0 0 40px;
+  margin: 10px 0 0 40px;
 }
 
 .title p {
@@ -185,13 +180,13 @@ margin: 10px 0 0 40px;
 /* Logo Tecnimux */
 .logo-Tx {
   z-index: 1;
-  padding: 3px 20px;
+  padding: 10px 20px;
   margin: 0;
   filter: drop-shadow(0 0 0.1rem #000);
 }
-.logo-Tx img{
-  height:58px;
-  width:auto;
+.logo-Tx img {
+  height: 58px;
+  width: auto;
 }
 
 #welcome {
@@ -202,40 +197,47 @@ margin: 10px 0 0 40px;
   width: 100%;
   background-color: rgb(48, 48, 48);
   margin-top: 25px;
-  }
-  .welcome {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    flex: 1;
-    gap: 20px;
-  }
-  .home {
-    display: flex;
-    width: 200px;
-    align-items: center;
-    justify-content: center;
-  }
-  .data-updates {
-    z-index: 1;
-    height: 200px;
-    width: 200px;
-    margin: 20px;
-    border-radius: 0.5px;
-  }
+}
+.welcome {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex: 1;
+  gap: 20px;
+}
+.home {
+  display: flex;
+  width: 200px;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Work Sans';
+}
+.home p{
+  font-family: 'Work Sans';
+  font-size: 0.8rem;
+}
+.data-updates {
+  z-index: 1;
+  height: 200px;
+  width: 200px;
+  margin: 20px;
+  border-radius: 0.5px;
+}
 /* Updates */
 .updates {
   text-align: center;
   align-items: center;
   display: flex;
-text-align: center;
-justify-content: center;
-height: 100%;
-margin: 0 auto;
-transition: 0.1s ease-in-out;
-color: #fff;
-background-color: #000;
+  text-align: center;
+  justify-content: center;
+  height: 100%;
+  margin: 0 auto;
+  transition: 0.1s ease-in-out;
+  color: #fff;
+  background:linear-gradient(90deg, rgb(255, 0, 0), #bebebeb6);
+  border-radius: 2px;
+backdrop-filter: blur(10px);
 }
 .updates:hover {
   background-color: #0a0a0a;
@@ -265,22 +267,22 @@ background-color: #000;
 }
 
 .credit-card img {
-  animation: totar 1s linear forwards ;
+  animation: totar 1s linear forwards;
   animation-iteration-count: 1;
   animation-delay: 2s;
 }
 
 #sec-01 h1 {
-    font-size: 3rem;
-    position: sticky;
-    position: -webkit-sticky;
-    margin-top: 110px;
-    top: 50px;
-    right: 50px;
-    text-align:end;
-  }
+  font-size: 3rem;
+  position: sticky;
+  position: -webkit-sticky;
+  margin-top: 110px;
+  top: 50px;
+  right: 50px;
+  text-align: end;
+}
 
-.desktop-p{
+.desktop-p {
   color: black;
   text-align: center;
   margin: 10px;
@@ -291,15 +293,15 @@ background-color: #000;
   position: -webkit-sticky;
   top: 80px;
   right: 50px;
-  text-align:end;
+  text-align: end;
 }
 
 .options {
   width: 100%;
   text-align: center;
 }
-.Options  p{
-color: #634092;
+.Options p {
+  color: #634092;
 }
 
 .PC {
@@ -313,107 +315,24 @@ color: #634092;
 .icons {
   width: 100px;
   height: auto;
-  border-bottom:1px solid rgb(0, 0, 0) ;
+  border-bottom: 1px solid rgb(0, 0, 0);
   background-color: rgba(255, 255, 255, 0.842);
   opacity: 0.5;
   margin: 20px 0;
-padding: 5px;
-border-radius: 2px;
+  padding: 5px;
+  border-radius: 2px;
 }
 .icons:hover {
-opacity: 1;
+  opacity: 1;
 }
 
-/* Productos */
-.Box-01 {
-  margin: 50px;
-  position: relative;
-  background-color: rgb(216, 212, 212);
-  border-radius: 5px;
-  width: 300px;
-  height: 500px;
-  cursor: pointer;
-  transition: all 1s ease;
-  box-shadow: 1px 1px 10px #634092;
-}
-
-/*
-.Box-01-SSD{
-  margin: 50px;
-  position: relative;
-  background-color: rgb(241, 241, 241);
-  border-radius: 5px;
-  width: 850px;
-  height: 350px;
-  cursor: pointer;
-  transition: all 1s ease;
-  box-shadow: 1px 1px 10px #634092;
-}
-.Box-01-SSD p{
-color: #000000;  
-margin-left: 40px;
-bottom: 25px;
-}
-.caracteristicas P{
-  z-index: -2;
-  top: 0;
-  text-align: end;
-margin-right: 20px;
-}
-
-.Box-01-SSD h4{
-  color: #000000;
-  margin: 10px;
-  margin-top: -210px;
-  right: 25px;
-  position: relative;
-  text-align: end;
-  font-size: 1.2rem;
-}
-.Box-01-SSD h3 {
-  position: relative;
-  margin: 60px;
-  top: 20px;
-  text-align: center;
-  font-size: 2rem;
-  color: rgb(0, 0, 0);
-}
-.Box-01-SSD span {
+/* .Box-01-SSD span {
   font-size: 2rem;
   color: #6eac00;
-}
-.name{
-  position: absolute;
-  margin-top: 40px;
 }
 .precio{
 margin-top: 20px;
-}
-/*
-div .Box-01-SSD :hover {
-  filter: blur(0.5px);
-
-}
-*/
-.Box-01:hover {
-  filter: blur(0.5px);
-  height: 600px;
-}
-.Box-01 h3 {
-  position: relative;
-  margin: 50px;
-  text-align: center;
-  font-size: 2rem;
-
-}
-.Box-01 span {
-  font-size: 2rem;
-  color: #6eac00;
-}
-
-.B-01 {
-  z-index: -3;
-  }
+} */
 
 .compont {
   display: flex;
@@ -438,75 +357,6 @@ div .Box-01-SSD :hover {
  color: #f0a300; 
 }
 */
-
-.RAM{
-  position: relative;
-  margin:  20px 50px;
-  bottom: 30px;
-  width: 200px;
-  cursor: pointer;
-  transition: all 1s ease;
-}
-.RAM:hover {
-  transform: scale(1.2);
-}
-
-/* SSD
-.ALMACENAMIENTO{
-  position: relative;
-  margin:  20px 50px;
-  bottom: 30px;
-  width: 200px;
-  cursor: pointer;
-  transition: all 1s ease;
-}
-.ALMACENAMIENTO:hover{
-  transform: scale(1.2);
-}
-*/
-.GPU {
-  position: relative;
-  margin:  20px 50px;
-  bottom: 30px;
-  width: 200px;
-  cursor: pointer;
-  transition: all 1s ease;
-}
-.GPU:hover {
-  transform: scale(1.2);
-}
-
-.MOBO{
-  position: relative;
-  margin:  20px 50px;
-  bottom: 30px;
-  width: 200px;
-  cursor: pointer;
-  transition: all 1s ease;
-}
-.MOBO:hover{
-  transform: scale(1.2);
-}
-.PSU{
-  position: relative;
-  margin:  20px 50px;
-  bottom: 30px;
-  width: 200px;
-  cursor: pointer;
-  transition: all 1s ease;
-}
-.PSU:hover{
-  transform: scale(1.2);
-}
-
-.Box-01 h4{
-  z-index: -2;
-  color: #1e1e1e;
-  margin-top: -50px;
-  position: relative;
-  text-align: center;
-}
-
 
 /* footer {
   position: fixed;
