@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 @font-face {
@@ -93,7 +94,8 @@ h3 {
 }
 #sec-01 {
   width: 100%;
-  height: 100vh;
+  height: auto;
+  padding: 50px 0;
   background-color: rgb(255, 255, 255);
 }
 .container-grid {
@@ -103,44 +105,52 @@ gap: 10px;
 grid-auto-rows: 20rem;
 grid-auto-flow: dense;
 justify-content: center;
-margin: 20px;
-justify-items: center;
-align-items: center;
+margin:50px;
 }
 .componentes {
-  /* height: 300px;
-  width: 300px; */
+  /* height: 300px; */
+  display: grid;
+  /* width: 320px;  */
   background-color: rgb(255, 0, 0);
-  padding: 10px;
+  padding: 0 10px 10px 10px;
   grid-column: span 1;
 justify-items: center;
 align-items: center;
-;
+padding: 0 20px;
 }
 .componentes img{
 max-width: 200px;
 height: auto;
 }
 .type-sect {
-  align-items: end;
-  justify-items: end;
-  display: inline-flex;
-  top: 0;
-  right: 0;
-  text-align: end;
-  background-color: #fff;
-  margin: 0;
-  padding: 10px;
+ background-color: red;
+width: 100%;
   color: #000;
+  background-color: #fff;
 }
-.name-item {
-  font-family: 'O';
+.type-sect h6 {
+  display: inline-block;
+display: grid;
+justify-items: flex-end;
+align-items: flex-end;
+text-align: end;
+padding: 7px 10px;
+
 }
+.name-item h3 {
+  font-family: 'Work Sans';
+  color: #000;
+  text-align: center;
+  font-size: 2.5rem;
+  padding: 0 10px;
+  font-weight: 100;
+}
+.name-item span {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 500;
 
-
-
-
-
+}
 
 #Sec-02{
   width: 100%;
@@ -186,6 +196,8 @@ margin: 10px 0 0 40px;
 
 #welcome {
   display: flex;
+  justify-content: space-around;
+  align-items: center;
   flex-wrap: wrap;
   width: 100%;
   background-color: rgb(48, 48, 48);
@@ -193,7 +205,7 @@ margin: 10px 0 0 40px;
   }
   .welcome {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     flex: 1;
@@ -421,17 +433,6 @@ div .Box-01-SSD :hover {
   list-style: none;
 }
 
-.CPU {
-  position: relative;
-  margin:  20px 50px;
-  bottom: 30px;
-  width: 200px;
-  cursor: pointer;
-  transition: all 1s ease;
-}
-.CPU:hover{
-  transform: scale(1.2);
-}
 /* Color 2 Word
 .CPU  span{
  color: #f0a300; 
@@ -506,9 +507,6 @@ div .Box-01-SSD :hover {
   text-align: center;
 }
 
-.pre{
-  margin: 10px;
-}
 
 /* footer {
   position: fixed;
