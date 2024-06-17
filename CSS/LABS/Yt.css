@@ -9,6 +9,9 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
+a {
+  cursor: pointer;
+}
 
 @font-face {
   font-family: batman;

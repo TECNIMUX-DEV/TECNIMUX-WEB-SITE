@@ -219,8 +219,8 @@ h3 {
 }
 .data-updates {
   z-index: 1;
-  height: 200px;
-  width: 200px;
+  height: 150px;
+  width: 150px;
   margin: 20px;
   border-radius: 0.5px;
 }
@@ -235,7 +235,7 @@ h3 {
   margin: 0 auto;
   transition: 0.1s ease-in-out;
   color: #fff;
-  background:linear-gradient(90deg, rgb(255, 0, 0), #bebebeb6);
+  background:linear-gradient(120deg, #000, #fff);
   border-radius: 2px;
 backdrop-filter: blur(10px);
 }
@@ -308,17 +308,22 @@ backdrop-filter: blur(10px);
   max-width: 120px;
   height: auto;
 }
+.PC a {
+  text-decoration: none;
+  color: #000;
+  
+}
 .Laptop {
   width: 120px;
   height: auto;
 }
 .icons {
-  width: 100px;
+  width: 4rem;
   height: auto;
   border-bottom: 1px solid rgb(0, 0, 0);
   background-color: rgba(255, 255, 255, 0.842);
   opacity: 0.5;
-  margin: 20px 0;
+  margin: 5px 0;
   padding: 5px;
   border-radius: 2px;
 }
@@ -338,12 +343,18 @@ margin-top: 20px;
   display: flex;
   justify-content: space-around;
   overflow: auto;
-  width: 90%;
+  width: 80%;
   margin: 0 auto;
-  cursor: grab;
+  cursor: pointer;
   background-color: #1b1b1b;
   padding: 0 10px;
   border-radius: 1px;
+  gap: 5px;
+}
+@media screen and (max-width: 548px){
+  .compont {
+    cursor: grab;
+  } 
 }
 .compont::-webkit-scrollbar {
   width: 0;
