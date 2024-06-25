@@ -211,7 +211,6 @@ li:hover .imgs-cat {
 #logo-TECNIMUX {
   display: inline-flex;
   position: absolute;
-  z-index: 10;
   margin: 0;
   left: 0;
   padding: 0 40px;
@@ -1052,16 +1051,33 @@ section {
   font-size: 24px;
 }
 
-#forwards {
-  height: 400px;
-  width: 40px;
-  padding: 5px;
-  background-color: #ffffff15;
-  backdrop-filter: blur(10px);
+#forward-l {
+  height: 100px;
+  width: 30px;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(20px);
+  border-radius: 3px;
+  box-shadow: 0 0 10rem #fff;
+}
+#forward-r {
+  height: 100px;
+  width: 30px;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(20px);
+  border-radius: 3px;
+  box-shadow: 0 0 10rem #fff;
+}
+#forward-l:active {
+  box-shadow: 0 0 10rem #fff;
+}
+#forward-r:active {
+  box-shadow: 0 0 10rem #fff;
 }
 @media screen and (max-width: 800px) {
   #forwards {
-    height: 200px;
+    height: 80px;
     width: 40px;
     padding: 5px;
   }
@@ -1070,11 +1086,11 @@ section {
 
   } */
 .prev {
-  left: 10px;
+  left: 25px;
 }
 
 .next {
-  right: 10px;
+  right: 25px;
 }
 
 /* #sec-001 {
@@ -1511,7 +1527,6 @@ ul {
 }
 .social-n-icons img {
   cursor: pointer;
-  cursor: url(/cursor/cursor02.png), auto;
 }
 .s-n-icons {
   width: 25px;
@@ -1686,7 +1701,6 @@ ul {
   font-size: 25px;
   color: rgba(0, 0, 0, 0.918);
   cursor: pointer;
-  cursor: url("/cursor/cursor02.png"), auto;
 }
 
 .pop-up.show {

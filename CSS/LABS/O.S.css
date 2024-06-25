@@ -6,7 +6,7 @@
 }
 body {
   font-family: batman, sans-serif;
-  background-color: rgb(255, 255, 255);
+  background-color: #0e0e0e36;
 }
 a {
   cursor: pointer;
@@ -30,7 +30,7 @@ header {
 .title h1{
   color: #fff;
   text-align: center;
-  font-size: 4.5rem;
+  font-size: 2rem;
 }
 
 /*Logo tecnimux*/
@@ -38,11 +38,12 @@ header {
     position: absolute;
     top: 0;
     right: 0;
-    padding: 30px;
+    margin: 50px;
   }
   .logo-TECNIMUX img{
     height: 3rem;
     width: auto;
+    cursor: pointer;
   }
 .logo-TECNIMUX:hover {
   filter: brightness(1.2);
@@ -63,8 +64,9 @@ padding: 35px;
     .navegation li a{
         text-decoration: none;
         color: #fff;
-        padding: 5px;
+        padding: 7px;
         background-color: rgb(19, 19, 19);
+        border-radius: 3px;
     }
 
     .navegation li a:active {
@@ -90,7 +92,7 @@ padding: 35px;
     align-items: center;
     gap: 10px;
     padding: 20px;
-    background:linear-gradient(  #ffffff, rgb(0, 0, 0));
+    background: #fff;
     flex-wrap: wrap;
     flex: 1;
   }

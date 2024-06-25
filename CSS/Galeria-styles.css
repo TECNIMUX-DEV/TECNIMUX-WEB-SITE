@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
   margin: 0;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -11,6 +12,10 @@ body {
   padding: 0;
   background-color: #1e1e1e;
 }
+a {
+  cursor: pointer;
+}
+
 @font-face {
   font-family: batman;
   src: url(/fonts/batmfa_.ttf);
@@ -74,7 +79,7 @@ video {
   transition: .3s ease-in-out;
 }
 .G {
-  z-index: 1;
+  z-index: -1;
   color: #c7c6c6;
   position: relative;
   top: -80px;
@@ -102,21 +107,24 @@ ul {
 }
 li {
   float: left;
+  transform: 1s ease-in-out;
 }
 li a:hover {
+  opacity: 0.8;
+}
+li a:active {
   color: #634092;
-  background-color: #29292956;
-
+  background-color: rgba(63, 40, 92, 0.5);
 }
 li a {
-  border: 1px solid #16161641;
   text-align: center;
   text-decoration: none;
   color: #fff;
   display: block;
   padding: 15px;
   background-color: rgba(63, 40, 92, 0.658);
-  cursor: pointer;
+  border-radius: 3px;
+  margin-left: 3px;
 }
 @media screen and (max-width: 830px) {
   ul {
@@ -135,7 +143,6 @@ li a {
     height: 30px;
   }
   .G {
-    z-index: 1;
     color: #c7c6c6;
     position: relative;
     top: -80px;
@@ -150,7 +157,6 @@ li a {
 }
 /* Logo Tecnimux */
 .Logo-Tx {
-  z-index: 2;
   position: absolute;
   top: 15px;
   right: 25px;
@@ -158,8 +164,6 @@ li a {
   padding: 0;
   margin: 0;
   background-color: transparent;
-  cursor: pointer;
-  cursor: url("/cursor/cursor02.png"), auto;
 }
 .LOGO:hover {
   box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);

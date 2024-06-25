@@ -18,8 +18,21 @@ a {
   src: url(/fonts/batmfa_.ttf);
 }
 header {
-  z-index: -2;
-  background-color: #3b3b3b;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  z-index: -1;
+  background-color: #0000003d;
+  backdrop-filter: blur(20px);
+  height: 150px;
+  box-shadow: 0 0 140px #fff;
+}
+header h1 {
+  font-family: batman;
+  color: rgb(247, 20, 20);
+  margin: 2rem;
+  padding-top: 3rem;
+  font-size: 1.5rem;
 }
 header h2 {
   color: #fff;
@@ -29,17 +42,15 @@ header h2 {
   margin-top: 20px;
   position: absolute;
 }
+
 /* Logo Tecnimux */
-.Logo {
-  text-align: end;
-  margin-right: 15px;
-  padding-top: 5px;
+.logo {
+  position: relative;
+  margin: 2rem;
 }
-.Logo-TX {
-  max-width: 1.5rem;
+.logo-TX img {
+  max-width: 2rem;
   background-color: transparent;
-  cursor: pointer;
-  cursor: url("/cursor/cursor02.png"), auto;
 }
 
 .Logo-Tx:hover {
@@ -87,8 +98,4 @@ iframe {
   text-decoration: none;
   color: #ffffff;
 }
-.Recursos {
-  font-family: batman;
-  color: rgb(247, 20, 20);
-  margin: 20px;
-}
+
