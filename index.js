@@ -1,3 +1,12 @@
+// Show menu responsive
+let hiddenList = document.getElementById('hidden-list');
+let btnOpen = document.getElementById('btn-open').addEventListener('click', () => {
+    hiddenList.style.display = 'block';
+});
+
+
+
+
 // Show icon
 // document.addEventListener (".search-i").addEventListener("click", funtion () {
 

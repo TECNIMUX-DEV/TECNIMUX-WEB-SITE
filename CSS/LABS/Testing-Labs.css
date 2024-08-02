@@ -47,7 +47,7 @@ body{
   margin: 0;
 }
 
-.container-carrusel {
+/* .container-carrusel {
 position: relative;
 height: 300px;
 width: 500px;
@@ -83,4 +83,5 @@ cursor: pointer;
 transform: translate(0, -50%);
 transition: .4s ease-in-out;
 user-select: none;
-}
+} */
+
