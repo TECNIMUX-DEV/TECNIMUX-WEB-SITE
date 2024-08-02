@@ -1,27 +1,3 @@
-// Top header
-document.addEventListener("DOMContentLoaded", function() {
-    var resizableDiv = document.getElementById("header-01");
-
-    window.addEventListener("scroll", function() {
-        var maxHeight = 90; // Altura inicial en px
-        var minHeight = 75;  // Altura mínima en px
-        var scrollHeight = 30; // Ajuste proporcional de la altura
-        var scrollY = window.scrollY;
-
-        var newHeight = maxHeight - (scrollY / scrollHeight) * (maxHeight - minHeight);
-        if (newHeight < minHeight) newHeight = minHeight;
-        resizableDiv.style.height = newHeight + "px";
-
-        var newImageHeight = maxImageHeight - (scrollY / scrollHeight) * (maxImageHeight - minImageHeight);
-        if (newImageHeight < minImageHeight) newImageHeight = minImageHeight;
-        images.forEach(function(image) {
-            image.style.height = newImageHeight + "px";
-        });
-    });
-});
-
-
-
 // Show icon
 // document.addEventListener (".search-i").addEventListener("click", funtion () {
 
