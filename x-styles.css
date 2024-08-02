@@ -779,7 +779,7 @@ section {
   animation: plot 3s ease 1 forwards;
   background-color: rgb(99, 64, 146, 0.04);
   backdrop-filter: blur(20px);
-  padding: 50px;
+  padding-bottom: 50px;
   row-gap: 20px;
 }
 
@@ -893,7 +893,7 @@ section {
   }
   .servs:hover {
     transform: scale(1.05);
-    background-color: #634092;
+    background:linear-gradient(45deg, #634092, rgba(0, 0, 0, 0.965));
     backdrop-filter: blur(25px);
     box-shadow: 0 0 0 #000;
   }
@@ -1068,19 +1068,24 @@ section {
 }
 
 .slider button {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
   background: none;
   border: none;
   cursor: pointer;
   font-size: 24px;
 }
-#forwards {
-  z-index: 1;
+#container-forwards {
   position: absolute;
-  top: 90%;
-  left: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  height: auto;
+  width: 100vw;
+  padding: 0 70px;
+  background-color: rgb(22, 22, 22);
+  bottom: 0;
+}
+.forwards {
+  z-index: 1;
 }
 #forward-l {
   height: 50px;
