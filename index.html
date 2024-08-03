@@ -173,20 +173,21 @@ Galeria</a>
                                     <img src="/icons/dark-clear-mode/icons8-summer-50.png" alt="Day-icon" id="dark">
                                 </div> 
                          </div>
-
-                    <!-- <li id="dark" class="items-mode">Oscuro</li>
-                    <li id="light" class="items-mode">Claro</li> -->
                 </div>
                     </ul>
                     <ul class="list-nav">
                     <a href="/html/Galeria.html"><li>Galeria</li></a>
                     <a href="/html/High-store.html"><li>HIGH Store</li></a>
                     <a href="html/src-yt.html"><li>Recursos</li></a>
-                    <a href="#about"><li>Acerca</li></a>
+                    <a href="#about"><li id="about-item">Acerca</li></a>
                     <br />
                     <a href="/html/Labs.html"><li>Laboratorio</li></a>
                     </ul>
-                    <button id="btn-close">Close</button>
+                    <div id="version">
+                        <h5>TX | WEB SITE</h5>
+                        <p>V-2.3.4</p>
+                    </div>
+                    <span id="btn-close">Cerrar</span>
                     </div>
             </nav>
 </header>
@@ -229,11 +230,11 @@ Galeria</a>
         <a href="/html/Galeria.html">
             <div class="servs">
                 <div class="img-title-serv-home-02">
-                <img src="test-icons/icons8-pincel-100.png" alt="home-img-01" class="home-img">
-                <h4>Galeria</h4> 
+                    <img src="test-icons/icons8-pincel-100.png" alt="home-img-01" class="home-img" id="img-serv-gallery">
+                    <h4>Galeria</h4> 
                 </div>
                 <div class="container-home-02">
-                 <p>Aquí encontraras Iconos, Vectores, Ilustraciones, Imagenes, Animaciones, Logos y demas.</p>
+                    <p>Aquí encontraras Iconos, Vectores, Ilustraciones, Imagenes, Animaciones, Logos y demas.</p>
                 </div>
             </div>    
         </a>
@@ -241,8 +242,8 @@ Galeria</a>
         <a href="/html/High-store.html">
             <div class="servs">
                 <div class="img-title-serv-home-02">
-                <img src="test-icons/icons8-billetera-100.png" alt="home-img-02" class="home-img"> 
-                <h4>Tienda virtual (simulada)</h4>
+                    <img src="test-icons/icons8-billetera-100.png" alt="home-img-02" class="home-img" id="img-serv-high"> 
+                    <h4>Tienda virtual (simulada)</h4>
                 </div>
                 <div class="container-home-02">
                 <p>Haz clic aquí y encontraras lo más Top de la tecnología <span class="year-serv">2024</span>.</p>
@@ -252,13 +253,13 @@ Galeria</a>
 
         <a href="/html/src-yt.html">
             <div class="servs">
-                                <div class="img-title-serv-home-02">
-                                    <img src="test-icons/icons8-youtube-100.png" alt="home-img-03" class="home-img">
-                <h4>Recursos Youtube</h4>
+                <div class="img-title-serv-home-02">
+                        <img src="test-icons/icons8-youtube-100.png" alt="home-img-03" class="home-img" id="img-serv-src">
+                        <h4>Recursos Youtube</h4>
                 </div>
                 <div class="container-home-02">
-                <p>De todo el contenido que se suba a youtube aquí encontraras algo.</p>
-                    </div>
+                    <p>De todo el contenido que se suba a youtube aquí encontraras algo.</p>
+                </div>
             </div>
         </a>
             
@@ -450,7 +451,7 @@ Galeria</a>
 <div class="rights">
     <h1 class="text-type">TECNIMUX</h1>
     <p class="eslogan text-type">Above Future</p>
-    <p translate="no" class="rights-reserve">DEVELOPER TX &copy; 2024 | WEB SITE</p>
+    <p translate="no" class="rights-reserve">DEVELOPER TX &copy; 2024</p>
 </div>
 </div>
 </footer>

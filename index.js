@@ -11,6 +11,12 @@ let btnClose = document.getElementById('btn-close').addEventListener('click', ()
     document.body.style.overflowY = 'auto';
         dual.style.display = 'none';
 });
+
+const aboutItem = document.getElementById('about-item').addEventListener('click', () => {
+    hiddenList.style.display = 'none';
+    document.body.style.overflowY = 'auto';
+    dual.style.display = 'none';
+});
 // let navHidden = document.getElementById('nav-hidden');
 // navHidden.addEventListener('click', () => {
 //     hiddenList.style.display = 'none';
@@ -29,21 +35,28 @@ window.addEventListener('scroll',function() {
         });
 
 // Remove tab of navegation when scrolling
-let containerOpenNav = document.getElementById('container-open-nav');
+let stateScroll = 0;
+const containerOpenNav = document.getElementById('container-open-nav');
 window.addEventListener('scroll', () => {
+    const scrollTop = window.scrollY;
+    const screenWidth = window.innerWidth || document.documentElement.clientWidth;
+    if(screenWidth <= 1000) {
 
-if(window.scrollY > 0) {
+
+if(scrollTop > stateScroll) {
+
     containerOpenNav.style.display = 'none';
     containerOpenNav.classList.add('hidde');
-} else if(window.scrollY < 100) {
-    containerOpenNav.style.display = 'flex';
-    containerOpenNav.classList.add('show-nav-bar');
-}
 
-else{
+} else{
     containerOpenNav.style.display = 'flex';
     containerOpenNav.classList.add('show-nav-bar');
+} 
+} else {
+    containerOpenNav.style.display = 'none';
+    containerOpenNav.classList.add('hidde'); 
 }
+stateScroll = scrollTop <= 0 ? 0: scrollTop; 
 });
 
 
@@ -97,7 +110,7 @@ function showSlide(n) {
 // Dual mode
 let dual = document.getElementById('dual');
 let theme = document.getElementById('theme').addEventListener('click', () => {
-    dual.style.display = 'block'
+    dual.style.display = 'flex'
 });
 let typeMode = document.getElementById('type-mode');
 let dark = document.getElementById('dark');
@@ -115,15 +128,35 @@ stateToggle = !stateToggle;
 function lightt() {
     dark.style.display = 'block';
     light.style.display = 'none';
-    document.body.style.backgroundColor = '#fff';
+    document.documentElement.style.setProperty('--color-bg',' #fff');
+    document.documentElement.style.setProperty('--color-text', '#000');
     typeMode.innerHTML = 'Modo claro';
+    changeImgs()
 };
 function darkk() {
     dark.style.display = 'none';
     light.style.display = 'block';
-    document.body.style.backgroundColor = '#000'; 
+    document.documentElement.style.setProperty('--color-bg', '#000');
+    document.documentElement.style.setProperty('--color-text', '#fff');
     typeMode.innerHTML = 'Modo oscuro';
+    changeImgsOringinals()
 };
+
+
+// Changes images services
+const imgServGallery = document.getElementById('img-serv-gallery');
+const imgServHigh = document.getElementById('img-serv-high');
+const imgServSrc = document.getElementById('img-serv-src');
+function changeImgs() {
+    imgServGallery.src = '/test-icons/black/icons8-pincel-100-b.png';
+    imgServHigh.src = '/test-icons/black/icons8-billetera-100.png';
+    imgServSrc.src = '/test-icons/black/icons8-youtube-100-b.png';
+}
+function changeImgsOringinals() {
+    imgServGallery.src = '/test-icons/icons8-pincel-100.png';
+    imgServHigh.src = '/test-icons/icons8-billetera-100.png';
+    imgServSrc.src = '/test-icons/icons8-youtube-100.png';
+}
 
 
 
