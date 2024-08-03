@@ -1,24 +1,20 @@
-// Show menu responsive
+// Show and hidden menu responsive
 let hiddenList = document.getElementById('hidden-list');
 let btnOpen = document.getElementById('btn-open').addEventListener('click', () => {
     hiddenList.style.display = 'block';
+    document.body.style.overflowY = 'hidden';
+    hiddenList.classList.add('over-flow');
 });
 
-
-
-
-// Show icon
-// document.addEventListener (".search-i").addEventListener("click", funtion () {
-
-// var icon = document.getElementById("arrow-right");
-// if (icon.childElementCount === 0) {
-//     var aggIcon = document.createElement("i");
-//     aggIcon.className = "bi bi-arrow-90deg-right";
-//     iconContainer.appendchild(aggICon);
-// }
-// else {
-//     alert('ok');
-// }
+let btnClose = document.getElementById('btn-close').addEventListener('click', () => {
+    hiddenList.style.display = 'none';
+    document.body.style.overflowY = 'auto';
+        dual.style.display = 'none';
+});
+// let navHidden = document.getElementById('nav-hidden');
+// navHidden.addEventListener('click', () => {
+//     hiddenList.style.display = 'none';
+//     document.body.style.overflowY = 'auto';
 // });
 
 // Bottom header color Nav
@@ -32,11 +28,24 @@ window.addEventListener('scroll',function() {
         }
         });
 
-// Dual mode color
-function modesTwo(){
-    const body = document.body;
-    body.classList.toggle("clear-mode");
+// Remove tab of navegation when scrolling
+let containerOpenNav = document.getElementById('container-open-nav');
+window.addEventListener('scroll', () => {
+
+if(window.scrollY > 0) {
+    containerOpenNav.style.display = 'none';
+    containerOpenNav.classList.add('hidde');
+} else if(window.scrollY < 100) {
+    containerOpenNav.style.display = 'flex';
+    containerOpenNav.classList.add('show-nav-bar');
 }
+
+else{
+    containerOpenNav.style.display = 'flex';
+    containerOpenNav.classList.add('show-nav-bar');
+}
+});
+
 
 // Carrusel 
 let slideIndex = 1;
@@ -85,20 +94,37 @@ function showSlide(n) {
 //     section.addEventListener('mouseover', handleMouseOver);
 // });
 
-// Change icon dual mode
-// scripts.js
-document.addEventListener('DOMContentLoaded', () => {
-    const image = document.getElementById('iconDualMode-01');
-    // const imageTwo = document.getElementById('iconDualMode-02');
-
-    image.addEventListener('click', () => {
-        if (image.src.includes('/icons/dark-clear-mode/dark_mode_night_moon_icon.png')) {
-            image.src = '/icons/dark-clear-mode/icons8-summer-50.png';
-        } else {
-            image.src = '/icons/dark-clear-mode/dark_mode_night_moon_icon.png';
-        }
-    });
+// Dual mode
+let dual = document.getElementById('dual');
+let theme = document.getElementById('theme').addEventListener('click', () => {
+    dual.style.display = 'block'
 });
+let typeMode = document.getElementById('type-mode');
+let dark = document.getElementById('dark');
+let light = document.getElementById('light');
+
+let stateToggle = true;
+document.getElementById('dual-mode').addEventListener('click', () => {
+if(stateToggle) {
+    lightt();
+} else {
+    darkk();
+}
+stateToggle = !stateToggle;
+});
+function lightt() {
+    dark.style.display = 'block';
+    light.style.display = 'none';
+    document.body.style.backgroundColor = '#fff';
+    typeMode.innerHTML = 'Modo claro';
+};
+function darkk() {
+    dark.style.display = 'none';
+    light.style.display = 'block';
+    document.body.style.backgroundColor = '#000'; 
+    typeMode.innerHTML = 'Modo oscuro';
+};
+
 
 
 

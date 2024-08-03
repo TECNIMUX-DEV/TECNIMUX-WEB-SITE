@@ -26,20 +26,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css"/>
 </head>
 <body>
-    <nav id="hidden-list">
-        <ul class="theme"><h2>Tema</h2>
-            <li>Oscuro</li>
-            <li>Claro</li>
-        </ul>
-        <ul>
-            <li>Galeria</li>
-            <li>HIGH Store</li>
-            <li>Recursos</li>
-            <li>Acerca</li>
-            <br />
-            <li>Laboratorio</li>
-        </ul>
-        </nav>
+   
             <div class="recorrido">
                 <!-- Svg -->
                 <svg viewBox="0 0 100 100" class="curva-svg">
@@ -77,7 +64,7 @@
         </a>
         </ul>
     </header>
-    <!-- <div class="eslogan">
+    <!--  <div class="eslogan">
     <p>Above Future</p>
     </div> -->
 
@@ -98,9 +85,8 @@
 
 
 <!-- Menu -->
-<button id="btn-open" class="Open"><img src="icons/Navigation/icons8-menu-50.png" alt="Button Open"></i></button>
 <nav class="nav-list" id="navList">
-    <button id="Closed" class="Close"><img src="icons/Navigation/icons8-eliminar-32.png" alt="Button Close" class="Crr02"></i></button>
+
     <!-- Navigation -->
 <ul class="nav-bar">
     <a href="#sec-01">
@@ -159,11 +145,13 @@ Galeria</a>
                 </a>
                </div>
                </li>
+
+<!-- Search bar -->
                <li id="search-nav">
                <form action="/index.html" class="container-search" metod="get">
                 <div class="container-sh">
                     <div class="sh-i">
-                     <i class="bi bi-search search-i"></i> <!--<i id="arrow-right" class="bi bi-arrow-90deg-right arrow-right"></i> -->
+                     <i class="bi bi-search search-i"></i> <i id="arrow-right" class="bi bi-arrow-90deg-right arrow-right"></i>
                 </div>
                 <input type="search" name="want" id="search" class="search" placeholder="Buscar" aria-label="Buscar">
                 <!-- <button type="submit" class="btn-search">Enviar</button> -->
@@ -173,14 +161,39 @@ Galeria</a>
 </li>
 </ul>
 </nav>
-<!-- Navigation JS -->
-<script src="/js/main.js"></script>
-        <!-- Dual mode -->
-        <div class="modes2">
-            <button onclick="modesTwo()"><img src="/icons/dark-clear-mode/dark_mode_night_moon_icon.png" id="iconDualMode-01"></button>
-            <img src="/icons/dark-clear-mode/icons8-summer-50.png" alt="Day-icon" id="iconDualMode-02">
-            </div>
+        <!-- Dark and light mode -->
+            <nav id="hidden-list">
+                        <div id="nav-hidden">
+                    <ul id="theme"><h2>Tema</h2>
+                        <div id="dual">
+                            <p id="type-mode"></p>
+                            <div id="dual-mode">
+                                <div id="modes">
+                                    <img src="/icons/dark-clear-mode/dark_mode_night_moon_icon.png" id="light">
+                                    <img src="/icons/dark-clear-mode/icons8-summer-50.png" alt="Day-icon" id="dark">
+                                </div> 
+                         </div>
+
+                    <!-- <li id="dark" class="items-mode">Oscuro</li>
+                    <li id="light" class="items-mode">Claro</li> -->
+                </div>
+                    </ul>
+                    <ul class="list-nav">
+                    <a href="/html/Galeria.html"><li>Galeria</li></a>
+                    <a href="/html/High-store.html"><li>HIGH Store</li></a>
+                    <a href="html/src-yt.html"><li>Recursos</li></a>
+                    <a href="#about"><li>Acerca</li></a>
+                    <br />
+                    <a href="/html/Labs.html"><li>Laboratorio</li></a>
+                    </ul>
+                    <button id="btn-close">Close</button>
+                    </div>
+            </nav>
 </header>
+
+
+
+
     <section id="sec-00" class="secZero">
           <!-- SVGs  -->
            <div class="container-lineas">
@@ -395,7 +408,7 @@ Galeria</a>
 
 <!-- Section 04 Quienes somos :) -->
 <main>
-<section id="sec-04" class="s-04">
+<section id="about" class="about">
     <div class="title-center">
     <h1>TECNIMUX</h1>
 </div>
@@ -441,6 +454,9 @@ Galeria</a>
 </div>
 </div>
 </footer>
+<div id="container-open-nav">
+    <button id="btn-open"><img src="icons/Navigation/icons8-menu-50.png" alt="Button Open"></i></button>
+</div>
 
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
