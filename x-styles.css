@@ -23,6 +23,22 @@ a {
 button {
   cursor: pointer;
 }
+/* Para todos los elementos input de tipo search */
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+/* Para todos los elementos input de tipo text */
+input[type="text"]::-ms-clear {
+  display: none;
+  width: 0;
+  height: 0;
+}
+input[type="text"]::-webkit-clear-button {
+  display: none;
+}
+
 
 /* urbanist-latin-wght-normal */
 @font-face {
@@ -260,7 +276,7 @@ body {
 }
 
 #header01 {
-  height: 100px;
+  height: 70px;
   width: 100%;
   position: sticky;
   z-index: 10;
@@ -272,14 +288,8 @@ body {
   z-index: 2;
   letter-spacing: 0.2rem;
   background-color: #000;
-  /* filter: ba(0 0 1.2rem #ffffff1f); */
-  /* box-shadow: 0 0 20px 15px rgb(255, 0, 0, 0.5); */
-  box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.2); /* 1px de sombra debajo del elemento */
+  box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.2);
 }
-#header01 ul {
-  padding: 5px;
-}
-
 .bottomWhite {
   margin: 0;
   padding: 0;
@@ -388,121 +398,109 @@ li:hover .imgs-cat {
   }
 }
 #logo-TECNIMUX {
-  display: inline-flex;
-  position: absolute;
+  position: relative;
   margin: 0;
   left: 0;
   padding: 0 40px;
 }
+.lg-and-letters {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: auto;
+  background-color: transparent;
+  padding-left: 1rem;
+}
 .lg img {
-  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;  
   height: 48px;
   width: auto;
-}
-.lg {
-  z-index: 8;
-  margin-left: 4px;
   user-select: none;
-  -webkit-user-drag: none;
-}
+} 
 .letters-TX {
-  margin: 1.5rem 3rem;
+  margin: 1.5rem 2.5rem;
   width: 5rem;
   height: auto;
 }
-.sh-i {
-  display: inline-block;
-  height: 100%;
-}
-#search-nav {
-  position: absolute;
-  right: 400px;
-  padding: 0;
+ #search-nav {
+  position: relative;
+  width: auto;
+  display: flex;
+  justify-content: end;
   border-style: none;
-  right: 0;
+  background-color:#64409244;
+  box-shadow: -0.5px 0 0 #fff;
+} 
+@media screen and (max-width: 1200px) {
+  #search-nav {
+display: none;
+  } 
+}
+#tab-search {
+  display: none;
+  color: #fff;
 }
 #search-nav:hover {
   background-color: transparent;
 }
 
 .search {
-  border-style: none;
   background: transparent;
   height: 30px;
   outline: none;
   cursor: text;
   border-style: none;
+  width: auto;
+  padding-left: 20px;
+
 }
 
 .search:focus {
   padding-left: 10px;
-  color: #ffffff70;
-  opacity: 0.5;
+  color: #fff;
   border-color: transparent;
+  opacity: 0.6;
 }
 
-@media screen and (max-width: 850px) {
-  #search-nav {
+   .container-search {
     position: relative;
-    margin: 0;
-    padding: 0;
-  }
-
-  .container-search {
-    position: absolute;
-    right: 0;
-    padding: 150px 30px;
-  }
-  .container-sh {
-    border-right: 1px solid #634092;
-  }
-  .sh-i {
-    display: inline-block;
-    height: 100%;
-  }
-  .arrow-right {
-    color: #fff;
-  }
-  .i-search {
-    color: #fff;
-    display: block;
-  }
-  .search-i {
-    color: #fff;
-  }
-  .search {
+    height: auto;
+    width: auto;
+    display: flex;
+    justify-content: space-around;
     background-color: transparent;
-    width: 10px;
-    height: 20px;
-    font-size: 1rem;
-    outline: none;
-    cursor: text;
-    border-style: none;
-    animation: transition 2s ease-in;
+    border-radius: 13px;
   }
-  .search:focus {
-    padding-left: 10px;
-    color: #ffffff70;
-    width: 50vw;
-    opacity: 0.5;
-  }
-}
+.icon-search {
+  height: 100%;
+  background-color: greenyellow;
 
-/* .btn-search {
-  background-color: transparent;
-  /* border: 0.2px solid #634092; 
-  width:75px;
-  height: 35px;
-  text-align: center;
-  font-size: 1.2rem;
-  margin: 10px;
-  outline: none;
-  padding-left: 5px;
-  border-style: none;
 }
-.btn-search:hover {
-  box-shadow: inset 0 0 0.5rem #634092;
-} */
+.search-i {
+  height: 100%;
+  margin: auto;
+}
+.search-i:hover {
+opacity: 0.5;
+}
+ #btn-search {
+  background-color: transparent;
+  color: #fff;
+  width:auto;
+  height: auto;
+  text-align: center;
+  font-size: 1rem;
+  outline: none;
+  padding: 5px;
+  border-style: none;
+  transition: 0.1s ease-in;
+  display: none;
+}
+#btn-search:hover {
+  opacity: 0.5;
+}
 #socialNetworks-icons {
   position: absolute;
   display: flex;
@@ -616,10 +614,10 @@ li:hover .imgs-cat {
 
 /* Selección */
 ::selection {
-  background-color: rgba(100, 64, 146, 0.2);
+  background-color: #634092;
 }
 ::-moz-selection {
-  background-color: rgba(100, 64, 146, 0.2);
+  background-color: #634092;
 }
 
 /* Bandera y Sombrero */
@@ -708,14 +706,15 @@ footer {
 }
 
 .nav-bar {
-  width: 100vw;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   list-style: none;
   -webkit-user-drag: none;
-  gap: 3px;
   flex-wrap: wrap;
+  top: 0;
+  gap: 5px;
 }
 .nav-bar li {
   position: relative;
@@ -770,37 +769,16 @@ footer {
   text-align: center;
 }
 
-  .nav-list {
-    visibility: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.1rem;
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-    padding: 20rem 0.3rem;
-    box-shadow: 0 0 0 100vmax rgb(255, 0, 0);
+@media screen and (max-width: 1000px ){
+  .nav-bar {
+    display: none;
   }
+}
   .nav-list {
-    text-align: end;
     width: 100%;
   }
   .over-flow {
     overflow: hidden;
-  }
-
-  .nav-bar {
-    top: 0;
-    right: 0;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: end;
-    margin-right: 20px;
   }
 
 .Open-Fm {
@@ -957,11 +935,6 @@ section {
   margin-top: auto;
   margin: 0 auto;
   animation: plot 3s ease 1 forwards;
-  /* background: linear-gradient(to bottom, rgb(32, 32, 32), rgb(236, 236, 236)); */
-  /* background-color: rgba(255, 255, 255, 0.034); */
-  /* -webkit-backdrop-filter: blur(20px);
-    backdrop-filter: blur(20px);  */
-
   display: flex;
   justify-content: center;
   flex: 1;
@@ -973,7 +946,7 @@ section {
 }
 .services-title {
   text-align: center;
-  font-size: 3rem;
+  font-size: 2.5em;
   color: var(--color-text);
   width: 100%;
 }
