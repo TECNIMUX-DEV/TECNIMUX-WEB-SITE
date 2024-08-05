@@ -3,80 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galeria</title>
+    <title>Galeria TX</title>
     <link rel="icon" href="/favicons/Gallery.svg">
     <link rel="stylesheet" href="/css/Galeria-styles.css">
 </head>
 <body>
-    
-    <header class="header-video">
+<header>
+ <!-- Logo Tecnimux -->
+            <div class="container-logo">
+                <a href="/index.html">
+                    <img class="Logo-Tx" src="/logo-tx/white/with-out.png" alt="TECNIMUX">
+                    </a>
+                    <h1 class="title">GALERIA</h1>
+                </div>
+
+<!-- Navegation -->  
+                    <ul>
+                <li><a href="#Tech-S">Tech Session</a></li>
+                <li><a href="#TX-Bg">Backgrounds</a></li>
+            </ul>
+<!-- Video header-->
         <div class="video-fondo">
-            <video id="bg-video-header" autoplay muted loop>
+            <video id="bg-video-header" autoplay muted>
                 <source src="/video-bg/Nt02.mp4" type="video/mp4">
             </video>
-            <script>
-                const video = document.getElementById('bg-video-header');
-                video.addEventListener('timeupdate', function() {
-                    if (video.currentTime >= video.duration - 0.1) {
-                        video.currentTime = 0;
-                        video.play();
-                    }
-                });
-            </script>
 </header>
 
-        <!-- Logo Tecnimux -->
-        <div class="LOGO">
-        <a href="/index.html">
-            <img class="Logo-Tx" src="/logo-tx/white/with-out.png" alt="Background" loading="lazy">
-            </a>
-        </div>
 
-        <!-- Sections -->  
-            <h1 class="G">GALERIA</h1>
-                <ul>
-            <li><a href="#Tech-S">Tech Session</a></li>
-            <li><a href="#TX-Bg">Backgrounds</a></li>
-        </ul>
 
       <!-- Tech Sesion -->
       <section id="Tech-S">
 
         <!-- Gallery -->
 <div class="container-img">
-        <div class="column">
+    <div class="column">
     <!-- <img src="/img/LABS.png" alt="G-01 GALERIA">  -->
-  <img src="https://res.cloudinary.com/dxwfpc5fu/image/upload/v1716007923/RESOURCES%20TECNIMUX/a100-02_optimized_ju5cex.png" alt="G-02 GALERIA" loading="lazy">
+        <img src="https://res.cloudinary.com/dxwfpc5fu/image/upload/v1716007923/RESOURCES%20TECNIMUX/a100-02_optimized_ju5cex.png" 
+        alt="G-02 GALERIA" loading="lazy" class="tx-item">
+        <img src="https://res.cloudinary.com/dxwfpc5fu/image/upload/v1716007923/RESOURCES%20TECNIMUX/a100-02_optimized_ju5cex.png" 
+        alt="G-02 GALERIA" loading="lazy" class="tx-item">
   </div>
 
     <div class="column">
-        <img src="https://res.cloudinary.com/dxwfpc5fu/image/upload/f_auto,q_auto/v1/RESOURCES%20TECNIMUX/vmdfair9pftsczs3zxfw" alt="G-03 GALERIA" loading="lazy">
-        <img src="https://res.cloudinary.com/dxwfpc5fu/image/upload/f_auto,q_auto/v1/RESOURCES%20TECNIMUX/oonrug9fo8yh4p0flda4" alt="G-04 GALERIA" loading="lazy">
+        <img src="https://res.cloudinary.com/dxwfpc5fu/image/upload/f_auto,q_auto/v1/RESOURCES%20TECNIMUX/vmdfair9pftsczs3zxfw" 
+        alt="G-03 GALERIA" loading="lazy" class="tx-item">
+        <img src="https://res.cloudinary.com/dxwfpc5fu/image/upload/f_auto,q_auto/v1/RESOURCES%20TECNIMUX/oonrug9fo8yh4p0flda4" 
+        alt="G-04 GALERIA" loading="lazy" class="tx-item">
   </div>
 
     <div class="column">
-        <img src="https://res.cloudinary.com/dxwfpc5fu/image/upload/f_auto,q_auto/v1/RESOURCES%20TECNIMUX/y4uk5xanep01j2nuvolm" alt="G-05 GALERIA" loading="lazy"> 
-        <img src="https://res.cloudinary.com/dxwfpc5fu/image/upload/f_auto,q_auto/v1/RESOURCES%20TECNIMUX/qabga4epzjpoa3zk1tng" alt="G-06 GALERIA" loading="lazy"> 
+        <img src="https://res.cloudinary.com/dxwfpc5fu/image/upload/f_auto,q_auto/v1/RESOURCES%20TECNIMUX/y4uk5xanep01j2nuvolm" 
+        alt="G-05 GALERIA" loading="lazy" class="tx-item"> 
+        <img src="https://res.cloudinary.com/dxwfpc5fu/image/upload/f_auto,q_auto/v1/RESOURCES%20TECNIMUX/qabga4epzjpoa3zk1tng" 
+        alt="G-06 GALERIA" loading="lazy" class="tx-item"> 
     </div>
 
     <div class="column">
         <!--<img src="/IMG/" alt="G-07 GALERIA">-->
-        <img src="https://res.cloudinary.com/dxwfpc5fu/image/upload/f_auto,q_auto/v1/RESOURCES%20TECNIMUX/mbehe0j5pe1jxtqroqrr" alt="G-08 GALERIA" loading="lazy"> 
+        <img src="https://res.cloudinary.com/dxwfpc5fu/image/upload/f_auto,q_auto/v1/RESOURCES%20TECNIMUX/mbehe0j5pe1jxtqroqrr" 
+        alt="G-08 GALERIA" loading="lazy" class="tx-item"> 
+        <img src="https://res.cloudinary.com/dxwfpc5fu/image/upload/f_auto,q_auto/v1/RESOURCES%20TECNIMUX/mbehe0j5pe1jxtqroqrr" 
+        alt="G-08 GALERIA" loading="lazy" class="tx-item"> 
     </div>
 
     <div class="column">
-        <img src="https://res.cloudinary.com/dxwfpc5fu/image/upload/f_auto,q_auto/v1/RESOURCES%20TECNIMUX/qygl814h7my58ck3xo6y" alt="G-09 GALERIA" loading="lazy"> 
-        <img src="https://res.cloudinary.com/dxwfpc5fu/image/upload/f_auto,q_auto/v1/RESOURCES%20TECNIMUX/u6lh9gpeghkmtodbeocl" alt="G-10 GALERIA"> 
+        <img src="https://res.cloudinary.com/dxwfpc5fu/image/upload/f_auto,q_auto/v1/RESOURCES%20TECNIMUX/qygl814h7my58ck3xo6y" 
+        alt="G-09 GALERIA" loading="lazy" class="tx-item"> 
+        <img src="https://res.cloudinary.com/dxwfpc5fu/image/upload/f_auto,q_auto/v1/RESOURCES%20TECNIMUX/u6lh9gpeghkmtodbeocl" 
+        alt="G-10 GALERIA" loading="lazy" class="tx-item"> 
     </div>
 
     <div class="column">
-        <img src="https://res.cloudinary.com/dxwfpc5fu/image/upload/f_auto,q_auto/v1/RESOURCES%20TECNIMUX/kocotcglkam5frk1cjuf" alt="G-11 GALERIA" loading="lazy"> 
-        <img src="https://res.cloudinary.com/dxwfpc5fu/image/upload/f_auto,q_auto/v1/RESOURCES%20TECNIMUX/j5gccyyf56gml3iomiaa" alt="G-12 GALERIA"> 
+        <img src="https://res.cloudinary.com/dxwfpc5fu/image/upload/f_auto,q_auto/v1/RESOURCES%20TECNIMUX/kocotcglkam5frk1cjuf" 
+        alt="G-11 GALERIA" loading="lazy" class="tx-item"> 
+        <img src="https://res.cloudinary.com/dxwfpc5fu/image/upload/f_auto,q_auto/v1/RESOURCES%20TECNIMUX/j5gccyyf56gml3iomiaa" 
+        alt="G-12 GALERIA" loading="lazy"> 
     </div>
 
     <div class="column">
-        <img src="https://res.cloudinary.com/dxwfpc5fu/image/upload/f_auto,q_auto/v1/RESOURCES%20TECNIMUX/hyh7ojiush5fvkrh1i76" alt="G-13 GALERIA" loading="lazy"> 
-        <img src="https://res.cloudinary.com/dxwfpc5fu/image/upload/f_auto,q_auto/v1/RESOURCES%20TECNIMUX/qabga4epzjpoa3zk1tng" alt="G-14 GALERIA" loading="lazy"> 
+        <img src="https://res.cloudinary.com/dxwfpc5fu/image/upload/f_auto,q_auto/v1/RESOURCES%20TECNIMUX/hyh7ojiush5fvkrh1i76" 
+        alt="G-13 GALERIA" loading="lazy" class="tx-item"> 
+        <img src="https://res.cloudinary.com/dxwfpc5fu/image/upload/f_auto,q_auto/v1/RESOURCES%20TECNIMUX/qabga4epzjpoa3zk1tng" 
+        alt="G-14 GALERIA" loading="lazy" class="tx-item"> 
     </div>
 </div>
 </div>
@@ -110,17 +118,6 @@
     </div>
 </section>
 </div>
-
-
-
-
-
-
-
-
-
-
-
 </body>
 </html>
 
