@@ -8,7 +8,41 @@ body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #634092;
+  background: linear-gradient(-90deg, #634092, rgb(31, 31, 31)) ;
+}
+section {
+  margin: 0;
+  padding: 0;
+}
+.navegation {
+  margin: 20px 0;
+}
+.navegation ul {
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  gap: 10px;
+  margin-right: 60px;
+}
+.navegation li {
+  list-style: none;
+  padding-right: 5px;
+  padding-bottom: 5px;
+
+  &  a:hover {
+    opacity: 0.6;
+  }
+}
+
+.navegation li a {
+  text-decoration: none;
+  font-family: monospace, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 0 1px #000;
 }
 a {
   cursor: pointer;
@@ -79,35 +113,6 @@ video {
   letter-spacing: 10px;
   user-select: none;
 }
-ul {
-  position: relative;
-  background-color: transparent;
-  font-size: 0.6rem;
-  margin-right: 20px;
-  letter-spacing: 3px;
-}
-li {
-  display: inline-flex;
-  transform: 1s ease-in-out;
-  list-style: none;
-}
-li a:hover {
-  opacity: 0.5;
-}
-li a:active {
-  color: #634092;
-  background-color: rgba(63, 40, 92, 0.5);
-}
-li a {
-  text-align: center;
-  text-decoration: none;
-  color: #fff;
-  padding: 5px;
-  background-color: rgba(63, 40, 92, 0.658);
-  border-radius: 5px;
-  margin: 3px;
-  filter: drop-shadow(0 0 10px #000);
-}
 
 /* Logo TECNIMUX */
 .container-logo {
@@ -123,48 +128,110 @@ li a {
   width: 25px;
   max-width: 48px;
 }
-.container-logo:hover {
+/* .container-logo:hover {
   box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.7);
-}
+} */
+
 /* Galeria */
-img {
-  z-index: 1;
-  width: 100%;
-}
 
 .container-img {
   display: flex;
-  padding: 1rem;
+  gap: 20px;
   flex-wrap: wrap;
+  padding: 4rem 10rem;
+  
+  & img {
+    height:  200px;
+    width: auto;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  & img:hover {
+    transform: scale(1.1);
+}
 }
 
-.column {
-  flex: 25%;
+.tx-item {
+  background-color: rgba(80, 80, 80, 0.274);
+  backdrop-filter: blur(5px);
   padding: 5px;
 }
 
-.column img {
-  margin-top: 5px;
-}
 
-.column img {
-  -webkit-transform: scale(1);
-  transform: scale(1);
-  -webkit-transition: 0.5s ease-in-out;
-  transition: 0.8s ease-in-out;
-  cursor: pointer;
-}
-.column:hover img {
-  -webkit-transform: scale(1.05);
-  transform: scale(0.5);
-}
-
-@media screen and (max-width: 1000px) {
-  .column {
-    flex: 50%;
-  }
-}
 #TX-Bg {
   background:  linear-gradient(rgba(255, 0, 0, 0.63), rgba(255, 166, 0, 0.562));
   backdrop-filter: blur(7px);
+}
+
+.modal-prev-images {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.contenido-modal {
+  margin: auto;
+  display: block;
+  width: 50%;
+  max-width: 500px;
+}
+
+.close-modal-item {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close-modal-item:hover,
+.close-modal-item:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+.overflow-hidden {
+  overflow-y: hidden;
+}
+@media screen and (max-width: 1000px) {
+  
+  .container-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 3rem 0;
+    
+    & img {
+      height: 40%;
+      width: 40%;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+    & img:hover {
+      transform: scale(1.1);
+  }
+  }
+  
+  .tx-item {
+    background-color: rgba(80, 80, 80, 0.274);
+    backdrop-filter: blur(5px);
+    padding: 5px;
+  }
+  
+  
+  #TX-Bg {
+    background:  linear-gradient(rgba(255, 0, 0, 0.63), rgba(255, 166, 0, 0.562));
+    backdrop-filter: blur(7px);
+  }
 }
