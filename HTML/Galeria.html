@@ -23,8 +23,10 @@
             </video>
 </header>
 <!-- Navegation -->
- <nav class="navegation">  
-<ul>
+ <nav id="navegation">  
+    <svg id="btn-open-filters" xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="#fff"  
+    stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-adjustments-alt"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 8h4v4h-4z" /><path d="M6 4l0 4" /><path d="M6 12l0 8" /><path d="M10 14h4v4h-4z" /><path d="M12 4l0 10" /><path d="M12 18l0 2" /><path d="M16 5h4v4h-4z" /><path d="M18 4l0 1" /><path d="M18 9l0 11" /></svg>
+    <ul id="items-nav" class="hidden-items">
     <li><a href="#Tech-S">Tech Session</a></li>
     <li><a href="#TX-Bg">Backgrounds</a></li>
 </ul>
@@ -169,16 +171,15 @@ modalPrevImages.addEventListener('click', () => {
     document.body.classList.remove('overflow-hidden');
 });
 
+const btnOpenFilters = document.getElementById('btn-open-filters');
+const itemsNav = document.getElementById('items-nav');
 
-// document.addEventListener('DOMcontentLoading', () => {
-// image.addEventListener('click', () => {
-//             modalPrevImages.style.display = 'block';
-//             itemOpen.src = txItem.src;
-//             document.body.classList.add('overflow-hidden');
-//             itemOpen.classList.add('container-images');
-// })
-// });
+const toggleF =  () => {
+itemsNav.classList.toggle('show-items');
+itemsNav.classList.toggle('hidden-items');
+};
 
+btnOpenFilters.addEventListener('click', toggleF);
 </script>
 </body>
 </html>
