@@ -185,17 +185,27 @@ searchNav.addEventListener('click', () => {
 // Show all settings
 const btnSettings = document.getElementById('btn-settings');
 const containerSettings = document.getElementById('container-settings');
+const filterOpenSettings = document.getElementById('filter-open-settings');
 
 let stateSettingsToggle = true;
 btnSettings.addEventListener('click', () => {
     if(stateSettingsToggle) {
-        containerSettings.style.display = 'block';
+        containerSettings.style.display = 'block'
+        filterOpenSettings.style.display = 'block'
+        document.body.style.overflow = 'hidden';
     } else {
         containerSettings.style.display = 'none';
+        filterOpenSettings.style.display = 'none'
+         document.body.style.overflow = 'auto';
     }
     stateSettingsToggle = !stateSettingsToggle;
 });
 
+filterOpenSettings.addEventListener('click', () => {
+    containerSettings.style.display = 'none';
+    filterOpenSettings.style.display = 'none'
+     document.body.style.overflow = 'auto';
+})
 
 
 

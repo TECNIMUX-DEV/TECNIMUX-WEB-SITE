@@ -2,10 +2,6 @@
   --color-bg: #000;
   --color-text: #fff;
 }
-.clear-mode {
-  --color-bg: rgb(197, 197, 197);
-  --color-text: #000;
-}
 * {
   margin: 0;
   padding: 0;
@@ -89,10 +85,7 @@ body {
   background-color: var(--color-bg);
   color: var(--color-text);
   font-size: 0.9rem;
-}
-.clear-mode body {
-  background-color: var(--color-bg);
-  color: var(--color-text);
+  transition: background-color 0.3s, color 0.3s;
 }
 /* #filter-navegation {
   display: block;
@@ -205,6 +198,18 @@ background-color: rgb(255, 0, 43);
 #dark {
   display: none;
 }
+
+.light-theme {
+  --color-bg: #fff;
+  --color-text: #000;
+}
+
+.dark-theme {
+  --color-bg: #000;
+  --color-text: #fff;
+}
+
+
 
 .list-nav a {
   text-decoration: none;
@@ -521,16 +526,27 @@ opacity: 0.5;
   display: block;
 }
 #container-settings {
+  z-index: 2;
   position: absolute;
   top: 0;
   right: 0;
-  width: 60vw;
+  width: 30vw;
   height: 100vh;
   display: flex;
   justify-content: end;
   align-items: center;
-background-color: red;
-display: none;
+  background-color: red;
+  display: none;
+  padding: 10px;
+}
+#filter-open-settings {
+  z-index: 1;
+  position: absolute;
+  height: 200vh;
+  width: 200vw;
+  background-color: rgba(0, 0, 0, 0.849);
+  backdrop-filter: blur(1px);
+  display: none;
 }
 
 #socialNetworks-icons {
@@ -785,12 +801,12 @@ footer {
 }
 .nav-bar li a {
   font-family: "Urbanist Variable";
-  font-weight: 100;
-  font-size: 0.8rem;
+  font-weight: bolder;
+  font-size: 0.9rem;
 }
 .imgs-cat p {
   font-family: "Urbanist Variable";
-  font-weight: 500;
+  font-weight: 600;
   font-size: 0.8rem;
 }
 /* .nav-bar li:hover {
@@ -883,7 +899,6 @@ footer {
   width: 80%;
   height: auto;
   display: flex;
-  flex-direction: column;
   flex: 1;
   margin-top: auto;
   margin: 0 auto;
@@ -902,7 +917,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 25px;
+  gap: 50px;
   flex-wrap: wrap;
   font-family: "Urbanist Variable";
   line-height: 1.5;
@@ -942,7 +957,7 @@ animation:  pulsePulse .5s ease-in-out  infinite;
   color: var(--color-text);
   & h1 {
     background: #634092;
-    background: linear-gradient(to right, #634092 15%, #FFFFFF 50%);
+    background: linear-gradient(to right, #634092 5%, #FFFFFF 12%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
