@@ -173,7 +173,19 @@ searchNav.addEventListener('click', () => {
 //     tabSeach.style.display = 'none';
 // });
 
+// Show all settings
+const btnSettings = document.getElementById('btn-settings');
+const containerSettings = document.getElementById('container-settings');
 
+let stateSettingsToggle = true;
+btnSettings.addEventListener('click', () => {
+    if(stateSettingsToggle) {
+        containerSettings.style.display = 'block';
+    } else {
+        containerSettings.style.display = 'none';
+    }
+    stateSettingsToggle = !stateSettingsToggle;
+});
 
 
 

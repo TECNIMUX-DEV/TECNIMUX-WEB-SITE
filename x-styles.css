@@ -149,6 +149,7 @@ body {
 #theme h2 {
   box-shadow: 0 1px 0 #000;
   padding-left: 5px;
+  cursor: pointer;
 }
 #theme li {
   box-shadow: 0 1px 0 #00ffaa;
@@ -500,6 +501,31 @@ opacity: 0.5;
 #btn-search:hover {
   opacity: 0.5;
 }
+#settings {
+  z-index: 1000;
+  position: absolute;
+  right: 0;
+  margin: 40px;
+}
+.settings-hidden {
+  display: none;
+}
+.settings-show.active {
+  display: block;
+}
+#container-settings {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60vw;
+  height: 100vh;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+background-color: red;
+display: none;
+}
+
 #socialNetworks-icons {
   position: absolute;
   display: flex;
@@ -653,7 +679,6 @@ opacity: 0.5;
   position: relative;
   background-color: transparent;
   text-decoration: none;
-  font-size: 0.6rem;
   border-style: none;
   padding: 5px;
   width: 80px;
@@ -661,36 +686,56 @@ opacity: 0.5;
 }
 
 .send-email button:hover {
-  border-top: 1px solid #634092;
-  background-color: rgba(255, 255, 255, 0.3);
-  -webkit-backdrop-filter: blur(20px);
-  backdrop-filter: blur(20px);
+  opacity: 0.9;
 }
 
 footer {
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+  justify-content: end;
+  align-items: center;
   gap: 20px;
   width: 100%;
-  height: 40vh;
-  padding-left: 50px;
-  font-weight: 100;
+  height: auto;
+  background:linear-gradient(180deg, #ffffff21,  rgba(0, 255, 170, 0.123));
+  backdrop-filter: blur(500px);
+}
+.my-name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 35px;
+  width: 50px;
+  background-color: #222222;
+  padding: 5px;
+  border-radius: 5px;
+  filter: contrast(0.01);
+  transition: 1s ease-in-out;
+
+  & p {
+    font-size: 2rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+  }
+  &:hover {
+    filter: contrast(1);
+  }
 }
 
 .imgs-footer {
+  position: relative;
   display: inline-flex;
-  background-color: #634092;
-  /* background-image: url(https://images.pexels.com/photos/3137078/pexels-photo-3137078.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1); */
-  gap: 3px;
-  padding: 3px;
-  backdrop-filter: blur(20px);
 }
 .imgs-footer img {
-  display: block;
-  width: 15px;
+  filter: contrast(0.1);
   height: auto;
-  bottom: 0;
+  width: 50px;
+  transition: 1s ease-in-out;
+
+  &:hover  {
+  filter: contrast(8);
+}
+
 }
 
 .content-footer {
@@ -935,41 +980,47 @@ animation:  pulsePulse .5s ease-in-out  infinite;
     }
   }
 .servs {
+  position: relative;
   height: 150px;
   width: 350px;
   max-width: 350px;
   padding: 15px;
   box-shadow: 0 0 1.5px  var(--color-text);
   border-radius: 10px;
-  transition: 0.2s ease-in-out;
-  background-color: transparent;
+  background:linear-gradient(45deg, rgba(100, 64, 146, 0.25), #00000000, #ffffff00  );
+  backdrop-filter: blur(25px);
+  background-size: 200% 200%;
+  transition:  background-position 1s ease-in-out;
+
+  & p {
+    color: var(--color-text);
   }
-  .servs:hover {
-    transform: scale(1.05);
-    background:linear-gradient(45deg, #634092, rgba(0, 0, 0, 0.965));
-    backdrop-filter: blur(25px);
+
+  &:hover {
+    /* transform: scale(1.05); */
+    /* transform: translate(4); */
+    background-position: 106% 0%;
     box-shadow: 0 0 0 #000;
   }
-.servs p {
-  color: var(--color-text);
 }
 .proximamente {
   position: relative;
   padding: 0;
-  opacity: 0.3;
+  opacity: 0.2;
 }
 .filter-services-prox {
   position: absolute;
   height: 100%;
   width: 100%;
   border-radius: 10px;
+  background-size: 200% 200%;
   background:linear-gradient(45deg, #634092, rgba(0, 0, 0, 0.965));
   backdrop-filter: blur(2px);
   transition: 0.2s ease-in-out;
 }
 .filter-services-prox:hover {
-  background:linear-gradient(45deg, rgb(99, 64, 146, 0.9), rgba(0, 0, 0, 0.9));
-  background-position: 150% 150%;
+  background:linear-gradient(45deg, #634092, rgba(0, 0, 0, 0.9));
+  background-position: 100% 0%;
 }
 .title-prox {
   z-index: 1;
@@ -1242,6 +1293,31 @@ font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, O
 .text-featured-white {
   color: #fff;
   font-weight: bold;
+}
+
+.container-projects {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding: 30px;
+
+  & h2 {
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+  }
+}
+.project {
+  height: 450px;
+  width: 800px;
+  border-radius: 5px;
+  background-color: rgba(255, 0, 0, 0.164);
+  backdrop-filter: blur(700px);
 }
 .content-galeria {
   font-family: "Urbanist Variable";
