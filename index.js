@@ -1,15 +1,15 @@
 // Show and hidden menu responsive
 let hiddenList = document.getElementById('hidden-list');
-let btnOpen = document.getElementById('btn-open').addEventListener('click', () => {
-    hiddenList.style.display = 'block';
+let btnOpen = document.getElementById('btn-open');
+btnOpen.addEventListener('click', () => {
+    hiddenList.style.display ='block';
     document.body.style.overflowY = 'hidden';
-    hiddenList.classList.add('over-flow');
 });
 
 let btnClose = document.getElementById('btn-close').addEventListener('click', () => {
     hiddenList.style.display = 'none';
-    document.body.style.overflowY = 'auto';
         dual.style.display = 'none';
+        document.body.style.overflowY = 'auto';
 });
 
 const aboutItem = document.getElementById('about-item').addEventListener('click', () => {
@@ -108,10 +108,19 @@ stateScroll = scrollTop <= 0 ? 0: scrollTop;
 // });
 
 // Dual mode
+const btnThemes = document.getElementById('btn-themes');
 let dual = document.getElementById('dual');
-let theme = document.getElementById('theme').addEventListener('click', () => {
-    dual.style.display = 'flex'
+
+let stateModeDualToggle = true; 
+btnThemes.addEventListener('click', () => {
+    if(stateModeDualToggle) {
+        dual.style.display = 'flex';
+    } else {
+        dual.style.display = 'none';
+    }
+    stateModeDualToggle = !stateModeDualToggle;
 });
+
 let typeMode = document.getElementById('type-mode');
 let dark = document.getElementById('dark');
 let light = document.getElementById('light');
