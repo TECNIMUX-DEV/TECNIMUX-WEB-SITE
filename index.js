@@ -126,30 +126,26 @@ let dark = document.getElementById('dark');
 let light = document.getElementById('light');
 
 let stateToggle = true;
-document.getElementById('dual-mode').addEventListener('click', () => {
+let dualMode = document.getElementById('dual-mode');
+dualMode.addEventListener('click', () => {
 if(stateToggle) {
-    lightt();
-} else {
-    darkk();
-}
-stateToggle = !stateToggle;
-});
-function lightt() {
     dark.style.display = 'block';
     light.style.display = 'none';
-    document.documentElement.style.setProperty('--color-bg',' #fff');
+    document.documentElement.style.setProperty('--bg-color', 'linear-gradient(45deg, #eeeeee, #dadada, #000)');
     document.documentElement.style.setProperty('--color-text', '#000');
     typeMode.innerHTML = 'Modo claro';
     changeImgs()
-};
-function darkk() {
+} else {
     dark.style.display = 'none';
     light.style.display = 'block';
-    document.documentElement.style.setProperty('--color-bg', '#000');
+    document.documentElement.style.setProperty('--bg-color', 'linear-gradient(45deg, #6b6b6b, #dadada, #000)');
     document.documentElement.style.setProperty('--color-text', '#fff');
     typeMode.innerHTML = 'Modo oscuro';
     changeImgsOringinals()
-};
+}
+stateToggle = !stateToggle;
+});
+
 
 
 // Changes images services

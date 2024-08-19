@@ -1,5 +1,6 @@
 :root {
-  --color-bg: #000;
+  --bg-color: linear-gradient(45deg, #050505, #141414, #000); 
+  /* --bg-color: linear-gradient(45deg, #6b6b6b, #dadada, #000000);  */
   --color-text: #fff;
 }
 * {
@@ -81,8 +82,7 @@ body {
   height: 100vh;
   width: 100%;
   font-family: "Urbanist Variable";
-  /* overflow-x: hidden; */
-  background-color: var(--color-bg);
+  background: var(--bg-color);
   color: var(--color-text);
   font-size: 0.9rem;
   transition: background-color 0.3s, color 0.3s;
@@ -198,18 +198,6 @@ background-color: rgb(255, 0, 43);
 #dark {
   display: none;
 }
-
-.light-theme {
-  --color-bg: #fff;
-  --color-text: #000;
-}
-
-.dark-theme {
-  --color-bg: #000;
-  --color-text: #fff;
-}
-
-
 
 .list-nav a {
   text-decoration: none;
@@ -891,9 +879,8 @@ footer {
   margin-top: auto;
   margin: 0 auto;
   animation: plot 3s ease 1 forwards;
-  /* background-color: rgb(99, 64, 146, 0.04); */
-  background: linear-gradient(45deg, #050505, #141414, #000);
-  backdrop-filter: blur(20px);
+  /* background: linear-gradient(45deg, #050505, #141414, #000); */
+  background-color: var(--bg-color);
 }
 
 .home-data {
