@@ -101,10 +101,10 @@ body {
 
 
 #hidden-list {
-  z-index: 3;
+  z-index: 21;
   position: fixed;
   width: 100vw;
-  height: calc(100vh - 50px);
+  height: calc(100vh - 60px);
   bottom: 0;
   /* background: rgb(131,58,180);
   background: linear-gradient(90deg, rgb(255, 0, 43) 0%, rgba(29,253,194,1) 50%, rgba(252,176,69,1) 100%); */
@@ -277,7 +277,7 @@ background-color: rgb(255, 0, 43);
 }
 
 #header01 {
-  z-index: 1000;
+  z-index: 20;
   height: 70px;
   width: 100%;
   position: sticky;
@@ -309,7 +309,7 @@ background-color: rgb(255, 0, 43);
   text-align: center;
   width: 200px;
   height: 150px;
-  z-index: 100;
+  z-index: 10;
   padding: 10px;
   cursor: pointer;
 }

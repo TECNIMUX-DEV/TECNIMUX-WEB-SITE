@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galeria TX</title>
+    <title>TX Gallery</title>
     <link rel="icon" href="/favicons/Gallery.svg">
     <link rel="stylesheet" href="/css/Galeria-styles.css">
 </head>
@@ -197,9 +197,11 @@ btnOpenFilters.addEventListener('click', () => {
 
     if(stateToggleFilterAll) {
         filterAll.style.display = 'block';
+        btnOpenFilters.classList.add('change-color-btn-filters');
         // document.body.style.overflowY = 'hidden';
     } else {
         filterAll.style.display = 'none';
+        btnOpenFilters.classList.remove('change-color-btn-filters');
         // document.body.style.overflowY = 'auto';
     }
 })
