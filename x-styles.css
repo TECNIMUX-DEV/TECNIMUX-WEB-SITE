@@ -504,11 +504,20 @@ opacity: 0.5;
   opacity: 0.5;
 }
 #settings {
-  z-index: 100;
+  z-index: 1;
   position: absolute;
   right: 0;
   margin: 40px;
 }
+#btn-settings  {
+  z-index: 1;
+  stroke: #fff;
+
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
 .settings-hidden {
   display: none;
 }
@@ -527,7 +536,14 @@ opacity: 0.5;
   align-items: center;
   background-color: red;
   display: none;
-  padding: 10px;
+  padding: 30px;
+
+  & span {
+    cursor: pointer;
+  }
+}
+#state-mode {
+  cursor: pointer;
 }
 #filter-open-settings {
   z-index: 1;
@@ -537,6 +553,9 @@ opacity: 0.5;
   background-color: rgba(0, 0, 0, 0.849);
   backdrop-filter: blur(1px);
   display: none;
+}
+.about-settings {
+  margin-top: 10px;
 }
 
 #socialNetworks-icons {
