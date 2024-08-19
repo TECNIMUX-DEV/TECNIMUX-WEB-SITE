@@ -131,14 +131,14 @@ dualMode.addEventListener('click', () => {
 if(stateToggle) {
     dark.style.display = 'block';
     light.style.display = 'none';
-    document.documentElement.style.setProperty('--bg-color', 'linear-gradient(45deg, #eeeeee, #dadada, #000)');
+    document.documentElement.style.setProperty('--bg-color', 'linear-gradient(45deg, #6b6b6b, #a5a5a5, #000000)');
     document.documentElement.style.setProperty('--color-text', '#000');
     typeMode.innerHTML = 'Modo claro';
     changeImgs()
 } else {
     dark.style.display = 'none';
     light.style.display = 'block';
-    document.documentElement.style.setProperty('--bg-color', 'linear-gradient(45deg, #6b6b6b, #dadada, #000)');
+    document.documentElement.style.setProperty('--bg-color', 'linear-gradient(45deg, #050505, #141414, #000)');
     document.documentElement.style.setProperty('--color-text', '#fff');
     typeMode.innerHTML = 'Modo oscuro';
     changeImgsOringinals()
