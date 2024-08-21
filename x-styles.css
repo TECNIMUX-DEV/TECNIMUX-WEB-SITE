@@ -345,6 +345,7 @@ background-color: rgb(255, 0, 43);
 }
 li:hover .imgs-cat {
   display: block;
+  box-shadow: inset 0 0 .2rem #000;
 }
 .categories-unit a {
   cursor: default;
