@@ -302,6 +302,7 @@ background-color: rgb(255, 0, 43);
   color: #fff;
   filter: drop-shadow( 0.5px 0 0 #000);
   font-size: 1rem;
+  font-weight: bold;
   cursor: pointer;
 }
 
@@ -563,9 +564,10 @@ opacity: 0.5;
   display: flex;
   justify-content: end;
   align-items: center;
-  background-color: red;
+  background-image: linear-gradient(to top, #000000, #0a0a0a, #121212, #181818, #1d1d1d);
   display: none;
   padding: 30px;
+  color: #fff;
 
   & span {
     cursor: pointer;
@@ -587,7 +589,7 @@ opacity: 0.5;
   margin-top: 10px;
 }
 
-#socialNetworks-icons {
+#social-networks-icons {
   position: absolute;
   display: flex;
   justify-content: end;
@@ -597,9 +599,14 @@ opacity: 0.5;
   transition: height 0.3s ease;
   width: 100%;
   height: 50px;
-  padding-right: 5rem;
+  margin-right: 5rem;
   & ul {
     list-style: none;
+  }
+  & img {
+    z-index: 1;
+    width: 100%;
+    height: 20px;
   }
 }
 
@@ -650,12 +657,6 @@ opacity: 0.5;
   to {
     stroke-dashoffset: 0;
   }
-}
-
-#socialNetworks-icons img {
-  z-index: 1;
-  width: 100%;
-  height: 20px;
 }
 
 .list-icons {
@@ -998,12 +999,15 @@ animation:  pulsePulse .5s ease-in-out  infinite;
     background: linear-gradient(to right, #634092 5%, #FFFFFF 12%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    font-size: 1.8rem;
   }
   & p {
     text-wrap: pretty;
     color: var(--color-text);
   }
 }
+/* .greeting {
+} */
 
 /* .servs {
     display: grid;
@@ -1918,5 +1922,8 @@ height: 100%;
   height: auto;
   width: 
   60vw;
+}
+#social-networks-icons {
+  margin-right: 1rem
 }
 }

@@ -1,101 +1,109 @@
-* {
+*, ::after, ::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-body {
-  background-image: url(/BACKGROUND-PAGES/Yt.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-a {
-  cursor: pointer;
-}
-
 @font-face {
   font-family: batman;
   src: url(/fonts/batmfa_.ttf);
 }
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-image: linear-gradient(to left top, #0f0f0f, #101010, #121212, #131313, #141414, #1a191f, #1f1d29, #252234, #312a4b, #403263, #503a7a, #634092);
+}
+a {
+  cursor: pointer;
+}
 header {
+  position: relative;
   display: flex;
   justify-content: space-between;
-  flex-direction: row-reverse;
-  z-index: -1;
-  background-color: #0000003d;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(20px);
-  height: 150px;
-  box-shadow: 0 0 140px #fff;
+  height: 50px;
+  padding: 0 15px;
+
+  & h1 {
+    font-family: batman;
+    font-size: 1rem;
+    color: #ff0505; background-image: -webkit-radial-gradient(circle, #ff0505 0%, #ffffff 10%); background-clip: text; -webkit-background-clip: text; text-fill-color: transparent; -webkit-text-fill-color: transparent;
+          
+        
 }
-header h1 {
-  font-family: batman;
-  color: rgb(247, 20, 20);
-  margin: 2rem;
-  padding-top: 3rem;
-  font-size: 1.5rem;
-}
-header h2 {
-  color: #fff;
-  margin-left: 10px;
-  font-family: batman;
-  top: 0;
-  margin-top: 20px;
-  position: absolute;
 }
 
 /* Logo Tecnimux */
-.logo {
+.logo-TX {
   position: relative;
-  margin: 2rem;
-}
-.logo-TX img {
-  max-width: 2rem;
-  background-color: transparent;
+
+  & img {
+    height: auto;
+    width: 18px;
+    max-width: 18px;
+  }
 }
 
-.Logo-Tx:hover {
-  filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.1));
+#container-intro {
+  position: relative;
+  height: 40vh;
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  backdrop-filter: blur(60px);
+  padding-right: 2rem;
 }
+#intro {
+  display: flex;
+  justify-content: center;
+}
+ iframe {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background-color: rgb(95, 0, 0);
+  padding: .1rem;
+} 
+.container-srcs {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  flex: 1;
+  padding: 15px;
+  box-shadow: 0  0 5px #fff;
+}
+.src {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  padding: 1.5rem;
+  height: 250px;
+  width: 250px;
+  background-image: linear-gradient(to bottom, #070707, #0b0b0b, #0e0e0e, #111111, #141414);
+  box-shadow: inset 0 0 .1rem #fff;
+  border-radius: .1rem;
 
-iframe {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.C_YT {
-  position: absolute;
-  top: 90%;
-  left: 50%;
-  transform: translate(-90%, -50%);
-  background-color: #4caf50;
-  padding: 5px 2px;
-  border-radius: 10px;
-  cursor: pointer;
-  font-size: rem;
-}
 
-.C_YT a {
-  text-decoration: none;
 }
+.title-src {
+  color: #fff;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  overflow: hidden;
 
-.C_YT a:hover {
-  text-decoration: underline;
-}
+  & h3 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+    padding-bottom: 10px;
+    box-shadow: 0 1px 0 #3f3f3f;
+  }
 
-.Lab {
-  position: absolute;
-  margin: 20px;
-  border: 0;
-  padding: 0;
-  background-color: #634092;
-  width: 50px;
-  height: 25px;
-  right: 0;
-  bottom: 0;
+  & p {
+    padding-top: 5px;
+  }
 }
-.Lab a {
-  text-decoration: none;
-  color: #ffffff;
-}
-
