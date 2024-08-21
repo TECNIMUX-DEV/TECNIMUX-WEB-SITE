@@ -84,12 +84,16 @@
             <div class="filter-nav"></div>
             <!-- Dark and light mode -->
         <ul id="theme">
-            <h2 id="btn-themes">Tema</h2>
+            <h2 id="btn-themes">Cambiar tema <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-eyeglass-2"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M8 4h-2l-3 10v2.5" /><path d="M16 4h2l3 10v2.5" /><path d="M10 16l4 0" /><path d="M17.5 16.5m-3.5 0a3.5 3.5 0 1 0 7 0a3.5 3.5 0 1 0 -7 0" /><path d="M6.5 16.5m-3.5 0a3.5 3.5 0 1 0 7 0a3.5 3.5 0 1 0 -7 0" /></svg></h2>
             <div id="dual">
-                <p id="type-mode">Modo oscuro</p>
+                <p id="type-mode">modo oscuro</p>
                 <div id="dual-mode">
-                        <img src="/icons/dark-clear-mode/dark_mode_night_moon_icon.png" id="light">
-                        <img src="/icons/dark-clear-mode/icons8-summer-50.png" alt="Day-icon" id="dark">
+                    <div class="mode-icon">
+                        <img src="/icons/dark-clear-mode/dark_mode_night_moon_icon.png" alt="Dark" id="light">
+                    </div>
+                    <div class="mode-icon">
+                        <img src="/icons/dark-clear-mode/icons8-summer-50.png" alt="Light" id="dark">
+                    </div>
                 </div>
             </div>
         </ul>
@@ -496,7 +500,11 @@
 </div>
 </footer>
 <div id="container-open-nav">
-    <button id="btn-open"><img src="icons/Navigation/icons8-menu-50.png" alt="Button Open"></i></button>
+    <button id="btn-open">
+        <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  
+        stroke-width="1.25"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-menu-3">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 6h10" /><path d="M4 12h16" /><path d="M7 12h13" /><path d="M4 18h10" /></svg>
+</button>
 </div>
 
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
