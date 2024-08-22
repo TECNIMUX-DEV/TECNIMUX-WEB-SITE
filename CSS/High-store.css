@@ -24,26 +24,6 @@ h3 {
   color: #634092;
 }
 
-#header-name {
-  z-index: 2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0 15px;
-  /* background-color: #0c0c0c; */
-  height: auto;
-  width: 100%;
-
-  & h1 {
-    display: inline-flex;
-    font-family: "L";
-    font-size: 3rem;
-    font-weight: 100;
-    margin-top: 10px ;
-    color: #fff;
-  }
-}
-
 #header-data {
   z-index: 1;
   position: fixed;

@@ -121,7 +121,7 @@ body {
     flex-direction: column;
     gap: 10px;
     padding: 5px;
-    margin-top: 5px;
+    margin-top: 4rem;
   }
   & ul a {
 text-decoration: none;
@@ -283,10 +283,10 @@ background-color: rgb(255, 0, 43);
   background-color: transparent;
   cursor: pointer;
   padding-right: 5px;
-}
-#btn-open img {
-  height: auto;
-  width: 30px;
+
+  & svg {
+    stroke: var(--color-text);;
+  }
 }
 #btn-close {
   position: absolute;
@@ -534,14 +534,14 @@ opacity: 0.5;
   opacity: 0.5;
 }
 #settings {
-  z-index: 1;
   position: absolute;
   right: 0;
   margin: 40px;
+  stroke: #fff;
 }
 #btn-settings  {
-  z-index: 1;
-  stroke: #fff;
+  display: inline-block;
+  pointer-events: auto;
 
   &:hover {
     opacity: 0.5;
@@ -554,29 +554,32 @@ opacity: 0.5;
 .settings-show {
   display: block;
 }
-#container-settings {
+.container-settings {
   z-index: 2;
   position: fixed;
   top: 0;
   right: 0;
   width: 30vw;
-  height: 100vh;
-  display: flex;
-  justify-content: end;
-  align-items: center;
+  height: 100%;
   background-image: linear-gradient(to top, #000000, #0a0a0a, #121212, #181818, #1d1d1d);
-  display: none;
   padding: 30px;
   color: #fff;
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
 
   & span {
     cursor: pointer;
   }
 }
+.container-settings.open-settings {
+  transform: translateX(0);
+}
+
+
 #state-mode {
   cursor: pointer;
 }
-#filter-open-settings {
+.filter-open-settings {
   z-index: 1;
   position: absolute;
   height: 200vh;
@@ -584,6 +587,10 @@ opacity: 0.5;
   background-color: rgba(0, 0, 0, 0.849);
   backdrop-filter: blur(1px);
   display: none;
+
+}
+.close-filter-open-settings {
+display: none;
 }
 .about-settings {
   margin-top: 10px;
