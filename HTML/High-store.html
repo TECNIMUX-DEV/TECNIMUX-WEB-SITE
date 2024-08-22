@@ -15,13 +15,14 @@
 </head>
 <body>
     <header id="header-name">
-        <div class="title">
-            <h1>HIGH STORE</h1>
-            <!-- Cart -->
+        <!--<div class="title">
+            
+             Cart -
              <span id="cart">    
                 <img src="/img-high-store/Icons/Cart.svg" alt="Cart/svg"/>
             </span>
         </div>
+        ->
 
 <!-- Logo Tecnimux
 <div class="logo-Tx">
@@ -36,7 +37,7 @@
         <div class="updates">
             <div class="updates-icon">
             <svg  xmlns="http://www.w3.org/2000/svg" id="btn-updates" width="24"  height="24"  viewBox="0 0 24 24"  
-            fill="currentColor"  class="icon icon-tabler icons-tabler-filled icon-tabler-bell"><path 
+            fill="#fff"  class="icon icon-tabler icons-tabler-filled icon-tabler-bell"><path 
             stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14.235 19c.865 0 1.322 1.024 .745 
             1.668a3.992 3.992 0 0 1 -2.98 1.332a3.992 3.992 0 0 1 -2.98 -1.332c-.552 -.616 -.158 -1.579 
             .634 -1.661l.11 -.006h4.471z" /><path d="M12 2c1.358 0 2.506 .903 2.875 2.141l.046 .171l.008 
@@ -54,7 +55,7 @@
             <path d="M14 17l.5 4" /></svg>
         </a>
         <div class="updates-icon">
-        <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor" 
+        <svg  xmlns="http://www.w3.org/2000/svg" id="icon-visa"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="#fff" 
          stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline 
          icon-tabler-brand-visa"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M21 15l-1 -6l-2.5 6" /><path d="M9 15l1 -6" />
          <path d="M3 9h1v6h.5l2.5 -6" /><path d="M16 9.5a.5 .5 0 0 0 -.5 -.5h-.75c-.721 0 -1.337 .521 -1.455 1.233l-.09 .534a1.059 1.059 0 
@@ -68,17 +69,31 @@
     </div>
     </div>
 </header>
+<!-- Stars-->
+<div class="starfield">
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star meteoro"></div>
+    <div class="star meteoro"></div>
+  </div>
+
 
 <!-- Inicio -->
 <section id="welcome">
+
     <div class="welcome">
-
-
-<div class="home">
+        
+    <div class="home">
+        <svg  xmlns="http://www.w3.org/2000/svg" id="piramid" width="240"  height="240"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1.25"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-prisma"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4.186 16.202l3.615 5.313c.265 .39 .754 .57 1.215 .447l10.166 -2.718a1.086 1.086 0 0 0 .713 -1.511l-7.505 -15.483a.448 .448 0 0 0 -.787 -.033l-7.453 12.838a1.07 1.07 0 0 0 .037 1.147z" /><path d="M8.5 22l3.5 -20" /></svg>
     <!-- <p>En TECNIMUX recopilamos el hardware gama alta recien salido del horno.<br/>
         Considerando los cambios bruscos y actualizaciones en el mercado.</p> -->
 
-        <p><span class="text-destacado-b text-welcome">Bienvenidos</span> a la <span class="text-destacado-a">High Store</span> un lugar donde el <span class="text-destacado-c">vhs</span>, <span class="text-destacado-c">atari</span> y <span class="text-destacado-c">internet explorer</span> se esfumaron 😭👩‍🚀</p>
+        <p><span class="text-destacado-b text-welcome">Bienvenidos</span> este es
+             un lugar donde el <span class="text-destacado-c">vhs</span>, <span class="text-destacado-c">atari</span> y 
+             <span class="text-destacado-c">internet explorer</span> se esfumaron 😭👩‍🚀</p>
 </div>
 
 <!-- Credit Card 
@@ -86,6 +101,14 @@
     <img src="/IMG-SECTIONS/High-store/Credit-card-Tx.png" alt="Credit-Card-Tx/png">
 </div>
 -->
+<div id="guia">
+    <div class="container-info-inst">
+    <div id="number-message"><span id="number-message-state">1/2</span></div>
+</div>
+    <p id="msg-one" class="msg">Usa la barra lateral para navegar.</p>
+    <p id="msg-two" class="msg">Recuerda que no puedes entrar a la tienda sin tu tarjeta,
+        para obtenerla ve a "VISA".</p>
+</div>
 </div>
 
 </section>
@@ -608,6 +631,7 @@ A620 , X670E , X670 , B650E , B650
 </div>
 </footer> --> 
 <script>
+// Show categories of componentes
    const btnCategories = document.getElementById('btn-categories');
    const categories =  document.getElementById('categories');
 
@@ -621,6 +645,7 @@ if(stateToggleCategories) {
 stateToggleCategories = !stateToggleCategories;
 });
 
+// Show popup updates
 const btnUpdates = document.getElementById('btn-updates');
 const dataUpdate = document.getElementById('data-update');
 
@@ -631,6 +656,33 @@ dataUpdate.style.display = 'flex';
 btnUpdates.addEventListener('mouseleave', () => {
 dataUpdate.style.display = 'none';
 })
+
+// Instrucciones home
+const guia = document.getElementById('guia');
+const msgOne = document.getElementById('msg-one');
+const msgTwo = document.getElementById('msg-two');
+const numberMessageState = document.getElementById('number-message-state');
+msgOne.addEventListener('click', () => {
+    msgOne.style.display = 'none';
+    msgTwo.style.display = 'block';
+    numberMessageState.innerHTML = '2/2';
+
+}, { once: true});
+
+const iconVisa = document.getElementById('icon-visa');
+iconVisa.addEventListener('click', () => {
+   guia.style.display = 'none';
+
+}, { once: true});
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const piramid = document.getElementById('piramid');
+    console.log('cargado');
+    piramid.classList.add('rotate-piramid');
+})
+
 </script>
 </body>
 </html>
