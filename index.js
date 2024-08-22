@@ -144,16 +144,16 @@ function changeImgsOringinals() {
 }
 
 // Add tab for search
-const btnSearch = document.getElementById('btn-search');
-const tabSeach = document.getElementById('tab-search');
-const searchNav = document.getElementById('search-nav');
-const iconSearch = document.getElementById('icon-search');
-searchNav.addEventListener('click', () => {
-    tabSeach.style.display = 'inline-flex';
-    btnSearch.style.display = 'inline-flex';
-    iconSearch.style.display = 'none';
-    tabSeach.focus();
-});
+// const btnSearch = document.getElementById('btn-search');
+// const tabSeach = document.getElementById('tab-search');
+// const searchNav = document.getElementById('search-nav');
+// const iconSearch = document.getElementById('icon-search');
+// searchNav.addEventListener('click', () => {
+//     tabSeach.style.display = 'inline-flex';
+//     btnSearch.style.display = 'inline-flex';
+//     iconSearch.style.display = 'none';
+//     tabSeach.focus();
+// });
 // iconSearch.addEventListener('mouseleave', () => {
 //     tabSeach.style.display = 'none';
 // });

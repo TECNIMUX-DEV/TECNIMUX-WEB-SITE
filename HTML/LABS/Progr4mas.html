@@ -2,12 +2,13 @@
 <html lang="es">
 <head>
     <title>PR0GR4MA5</title>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="icon" href="/favicons/apps.png" type="image/png">
     <link href="/css/LABS/Progr4mas.css" rel="stylesheet">
 
     <!-- JS-Copy and Paste -->
-<script>
+<script defer>
 function copiar() {
 let texto = document.getElementById('texto');
 texto.select();
@@ -23,20 +24,11 @@ document.execCommand('copy');
 <div class="header">
     <!-- Logo Tecnimux -->
     <div id="logo-TECNIMUX">
-        <div class="lg">
 <a href="/index.html">
-<img src="/logo-tx/white/with-out.png" alt="BACKGROUND" loading="lazy" draggable="false"/>
+<img src="/logo-tx/white/with-out.png" alt="BACKGROUND" />
 </a>
 </div>
-        <!-- Copy and paste -->
-        <div>
-    <input type="text" value="TECNIMUX" id="texto" readonly class="clv">
-    <button onclick="copiar()" class="btn"></button>
-</div>
-</div>
-<script src="/JS/Progr4mas.js"></script>
 </header>
-
 <section id="apps">
 <!-- Links Software -->
 <div class="container-apps">
@@ -79,7 +71,7 @@ document.execCommand('copy');
     <p class="link-01">MEDIAFIRE</p> 
   </div>
         </div>
-                        </a>
+        </a>
 
 <!-- Faltan links -->
 <a href="https://www.mediafire.com/file/vgrd7i55zg1rx43/VMW4#3.zip/file" target="_blank">
@@ -103,7 +95,7 @@ document.execCommand('copy');
             </div>
                             </a>
 
-            <a href="https://www.mediafire.com/file/9wcw3diivr7wdj4/SUITE_OFFICE_-_TX.rar/file" target="_blank"></a>
+            <a href="https://www.mediafire.com/file/9wcw3diivr7wdj4/SUITE_OFFICE_-_TX.rar/file" target="_blank">
     <div class="app-content">
         <div class="link-boxp">
             <img src="/icons/Microsoft_Office_icono.svg" alt="LOGO_S_OFFICE">
@@ -132,12 +124,16 @@ document.execCommand('copy');
     <!-- <div class="info-app"> -->
     </div>
 </div>
-</div>
 </a>
+</div>
 </section>
+
 <footer>
-<h2>TX Labs</h2>
+    <!-- Copy and paste -->
+    <div class="container-pass">
+        <input type="text" value="TECNIMUX" id="texto" readonly class="clv">
+        <button onclick="copiar()" class="btn"></button>
+    </div>
 </footer>
-</section>
 </body>
 </html>
