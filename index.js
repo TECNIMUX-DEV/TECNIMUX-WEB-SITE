@@ -103,6 +103,22 @@ const putModeLight = document.getElementById('put-mode-light');
 const iconsThemeBigger = document.getElementById('icons-theme-bigger');
 const stateMode = document.getElementById('state-mode');
 const stateModeImg = document.getElementById('state-mode-img');
+const desplegarDualMode = document.getElementById('desplegar-dual-mode');
+const btnDesplegar = document.getElementById('btn-desplegar');
+
+let stateToggleBtnDesplegar = true;
+desplegarDualMode.addEventListener('click', () => {
+    if(stateToggleBtnDesplegar) {
+        putModeLight.style.display = 'block';
+        btnDesplegar.classList.toggle('rotate-desplegar');
+    } else {
+        putModeLight.style.display = 'none';
+        btnDesplegar.classList.toggle('rotate-desplegar');
+
+    }
+    stateToggleBtnDesplegar = !stateToggleBtnDesplegar;
+});
+
     let stateToggleTwo = true;
 putModeLight.addEventListener('click', () => {
 if(stateToggleTwo) {

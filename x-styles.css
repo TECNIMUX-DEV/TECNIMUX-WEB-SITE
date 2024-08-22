@@ -560,26 +560,86 @@ opacity: 0.5;
 .container-settings {
   z-index: 2;
   position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
   top: 0;
   right: 0;
   width: 30vw;
   height: 100%;
   background-image: linear-gradient(to top, #000000, #0a0a0a, #121212, #181818, #1d1d1d);
-  padding: 30px;
+  padding: 30px 0;
   color: #fff;
   transform: translateX(100%);
   transition: transform 0.3s ease;
 
-  & span {
+   & p {
+    padding: 0 1rem;
+   }
+
+   & span {
     cursor: pointer;
-  }
+   }
 }
 .container-settings.open-settings {
   transform: translateX(0);
 }
+.container-dual-mode {
+  width: 100%;
+  position: absolute;
+  bottom: 7rem;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-direction: column;
+  background-color: #ff0000;
+  backdrop-filter: blur(20px);
+
+}
+.desplegar-dual-mode {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+#btn-desplegar.rotate-desplegar{
+margin-left: 10px;
+transition: 0.3s ease;
+
+  &:hover {
+    opacity: 0.5;
+  }
+}
+.display-block {
+display: block;
+}
+.rotate-desplegar {
+  transform: rotateX(180deg);
+  margin-left: 10px;
+}
+#put-mode-light {
+  display: none;
+  }
+
+.version {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  padding: 10px;
+  background-color: #000;
+}
 
 
 #state-mode {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  padding: 10px;
   cursor: pointer;
 }
 .filter-open-settings {
