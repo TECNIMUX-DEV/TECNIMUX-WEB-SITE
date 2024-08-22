@@ -2,5 +2,7 @@
     "editor.guides.bracketPairs": true,
     "liveServer.settings.port": 5501,
     "workbench.iconTheme": "material-icon-theme",
-    "CodeGPT.apiKey": "CodeGPT Plus Beta"
+    "CodeGPT.apiKey": "CodeGPT Plus Beta",
+    "powermode.enabled": true,
+    "powermode.presets": "particles"
 }
