@@ -83,14 +83,14 @@ dualMode.addEventListener('click', () => {
 if(stateToggle) {
     dark.style.display = 'block';
     light.style.display = 'none';
-    document.documentElement.style.setProperty('--bg-color', 'linear-gradient(45deg, #6b6b6b, #a5a5a5, #000000)');
+    document.documentElement.style.setProperty('--bg-color', 'background-image: linear-gradient(to top, #ffffff, #cccccc;');
     document.documentElement.style.setProperty('--color-text', '#000');
     typeMode.innerHTML = 'Modo claro';
     changeImgs()
 } else {
     dark.style.display = 'none';
     light.style.display = 'block';
-    document.documentElement.style.setProperty('--bg-color', 'linear-gradient(45deg, #050505, #141414, #000)');
+    document.documentElement.style.setProperty('--bg-color', 'linear-gradient(45deg, #050505, #141414)');
     document.documentElement.style.setProperty('--color-text', '#fff');
     typeMode.innerHTML = 'Modo oscuro';
     changeImgsOringinals()
@@ -128,7 +128,7 @@ if(stateToggleTwo) {
     stateMode.innerHTML = 'Gafas puestas';
     // containerSettings.innerHTML = 'Modo Claro';
     stateModeImg.innerHTML = '<svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-sun"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" /><path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7" /></svg>';
-    changeImgs()
+    // changeImgs()
 } else {
     document.documentElement.style.setProperty('--bg-color', 'linear-gradient(45deg, #050505, #141414, #000)');
     document.documentElement.style.setProperty('--color-text', '#fff');
@@ -136,7 +136,7 @@ if(stateToggleTwo) {
     stateMode.innerHTML = 'Gafas retiradas';
     // containerSettings.innerHTML = '<svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-sun"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" /><path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7" /></svg>';
     stateModeImg.innerHTML = '<svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-moon"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" /></svg>';
-    changeImgsOringinals()
+    // changeImgsOringinals()
 }
 stateToggleTwo = !stateToggleTwo;
 });
@@ -145,19 +145,19 @@ stateToggleTwo = !stateToggleTwo;
 
 
 // Changes images services
-const imgServGallery = document.getElementById('img-serv-gallery');
-const imgServHigh = document.getElementById('img-serv-high');
-const imgServSrc = document.getElementById('img-serv-src');
-function changeImgs() {
-    imgServGallery.src = '/test-icons/black/icons8-pincel-100-b.png';
-    imgServHigh.src = '/test-icons/black/icons8-billetera-100.png';
-    imgServSrc.src = '/test-icons/black/icons8-youtube-100-b.png';
-}
-function changeImgsOringinals() {
-    imgServGallery.src = '/test-icons/icons8-pincel-100.png';
-    imgServHigh.src = '/test-icons/icons8-billetera-100.png';
-    imgServSrc.src = '/test-icons/icons8-youtube-100.png';
-}
+// const imgServGallery = document.getElementById('img-serv-gallery');
+// const imgServHigh = document.getElementById('img-serv-high');
+// const imgServSrc = document.getElementById('img-serv-src');
+// function changeImgs() {
+//     imgServGallery.src = '/test-icons/black/icons8-pincel-100-b.png';
+//     imgServHigh.src = '/test-icons/black/icons8-billetera-100.png';
+//     imgServSrc.src = '/test-icons/black/icons8-youtube-100-b.png';
+// }
+// function changeImgsOringinals() {
+//     imgServGallery.src = '/test-icons/icons8-pincel-100.png';
+//     imgServHigh.src = '/test-icons/icons8-billetera-100.png';
+//     imgServSrc.src = '/test-icons/icons8-youtube-100.png';
+// }
 
 // Add tab for search
 // const btnSearch = document.getElementById('btn-search');
@@ -191,6 +191,15 @@ filterOpenSettings.addEventListener('click', () => {
     document.body.style.overflow = 'auto';
 })
 
+// loading
+const loading = document.getElementById('loading');
+document.addEventListener('DOMContentLoaded', () => {
+document.body.style.overflow = 'hidden';
+    setTimeout(() => {
+        loading.style.display = 'none';
+        document.body.style.overflow = 'auto';
+    }, 1000);
+});
 
 
 
