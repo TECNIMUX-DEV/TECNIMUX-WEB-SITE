@@ -3,7 +3,7 @@ let hiddenList = document.getElementById('hidden-list');
 let btnOpen = document.getElementById('btn-open');
 btnOpen.addEventListener('click', () => {
     hiddenList.style.display ='block';
-    document.body.style.overflowY = 'hidden';
+    hiddenList.style.overflowY = 'hidden';
 });
 
 let btnClose = document.getElementById('btn-close').addEventListener('click', () => {
@@ -22,6 +22,15 @@ const aboutItem = document.getElementById('about-item').addEventListener('click'
 //     hiddenList.style.display = 'none';
 //     document.body.style.overflowY = 'auto';
 // });
+
+// Submenus
+const btnShowSubmenusResponsive = document.querySelector('.btn-show-submenus-responsive');
+const containerSubmenuResponsive = document.querySelectorAll('.container-submenu-responsive')
+btnShowSubmenusResponsive.addEventListener('click', () => {
+    containerSubmenuResponsive.forEach(element => {
+        element.classList.toggle('display-block');
+    });
+});
 
 // Bottom header color Nav
 window.addEventListener('scroll',function() {
