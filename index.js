@@ -59,44 +59,30 @@ if(scrollTop > stateScroll) {
 stateScroll = scrollTop <= 0 ? 0: scrollTop; 
 });
 
-// Dual mode
-const btnThemes = document.getElementById('btn-themes');
-let dual = document.getElementById('dual');
+// Dual mode responsive
+// let dark = document.getElementById('dark');
+// let light = document.getElementById('light');
 
-let stateModeDualToggle = true; 
-btnThemes.addEventListener('click', () => {
-    if(stateModeDualToggle) {
-        dual.style.display = 'flex';
-    } else {
-        dual.style.display = 'none';
-    }
-    stateModeDualToggle = !stateModeDualToggle;
-});
-
-let typeMode = document.getElementById('type-mode');
-let dark = document.getElementById('dark');
-let light = document.getElementById('light');
-
-let stateToggle = true;
-let dualMode = document.getElementById('dual-mode');
-dualMode.addEventListener('click', () => {
-if(stateToggle) {
-    dark.style.display = 'block';
-    light.style.display = 'none';
-    document.documentElement.style.setProperty('--bg-color', 'background-image: linear-gradient(to top, #ffffff, #cccccc;');
-    document.documentElement.style.setProperty('--color-text', '#000');
-    typeMode.innerHTML = 'Modo claro';
-    changeImgs()
-} else {
-    dark.style.display = 'none';
-    light.style.display = 'block';
-    document.documentElement.style.setProperty('--bg-color', 'linear-gradient(45deg, #050505, #141414)');
-    document.documentElement.style.setProperty('--color-text', '#fff');
-    typeMode.innerHTML = 'Modo oscuro';
-    changeImgsOringinals()
-}
-stateToggle = !stateToggle;
-});
+// let stateToggle = true;
+// let dualMode = document.getElementById('dual-mode');
+// dualMode.addEventListener('click', () => {
+// if(stateToggle) {
+//     dark.style.display = 'block';
+//     light.style.display = 'none';
+//     document.documentElement.style.setProperty('--bg-color', 'background-image: linear-gradient(to top, #ffffff, #cccccc;');
+//     document.documentElement.style.setProperty('--color-text', '#000');
+//     typeMode.innerHTML = 'Modo claro';
+//     changeImgs()
+// } else {
+//     dark.style.display = 'none';
+//     light.style.display = 'block';
+//     document.documentElement.style.setProperty('--bg-color', 'linear-gradient(45deg, #050505, #141414)');
+//     document.documentElement.style.setProperty('--color-text', '#fff');
+//     typeMode.innerHTML = 'Modo oscuro';
+//     changeImgsOringinals()
+// }
+// stateToggle = !stateToggle;
+// });
 
 // Active dual mode settings bigger
 const putModeLight = document.getElementById('put-mode-light');
