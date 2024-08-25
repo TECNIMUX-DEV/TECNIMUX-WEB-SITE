@@ -8,8 +8,8 @@ btnOpen.addEventListener('click', () => {
 
 let btnClose = document.getElementById('btn-close').addEventListener('click', () => {
     hiddenList.style.display = 'none';
-        dual.style.display = 'none';
-        document.body.style.overflowY = 'auto';
+    dual.style.display = 'none';
+    document.body.style.overflowY = 'auto';
 });
 
 const aboutItem = document.getElementById('about-item').addEventListener('click', () => {
@@ -33,15 +33,15 @@ btnShowSubmenusResponsive.addEventListener('click', () => {
 });
 
 // Bottom header color Nav
-window.addEventListener('scroll',function() {
-    let bottomWhite = document.getElementsByClassName('bottomWhite');
-    let header01 = document.getElementById('header01');
-    if (window.scrollY > 0) {
-        header01.classList.add('bottomWhite');
-    } else{
-        header01.classList.remove('bottomWhite');
-        }
-        });
+// window.addEventListener('scroll',function() {
+//     let bottomWhite = document.getElementsByClassName('bottomWhite');
+//     let header01 = document.getElementById('header01');
+//     if (window.scrollY > 0) {
+//         header01.classList.add('bottomWhite');
+//     } else{
+//         header01.classList.remove('bottomWhite');
+//         }
+//         });
 
 // Remove tab of navegation when scrolling
 let stateScroll = 0;
