@@ -51,9 +51,7 @@ window.addEventListener('scroll', () => {
     const screenWidth = window.innerWidth || document.documentElement.clientWidth;
     if(screenWidth <= 1000) {
 
-
 if(scrollTop > stateScroll) {
-
     containerOpenNav.style.display = 'none';
     containerOpenNav.classList.add('hidde');
 
@@ -93,7 +91,7 @@ stateScroll = scrollTop <= 0 ? 0: scrollTop;
 // stateToggle = !stateToggle;
 // });
 
-// Active dual mode settings bigger
+// Active dual mode settings NoResponsive
 const putModeLight = document.getElementById('put-mode-light');
 const iconsThemeBigger = document.getElementById('icons-theme-bigger');
 const stateMode = document.getElementById('state-mode');
@@ -117,13 +115,12 @@ desplegarDualMode.addEventListener('click', () => {
     let stateToggleTwo = true;
 putModeLight.addEventListener('click', () => {
 if(stateToggleTwo) {
-    document.documentElement.style.setProperty('--bg-color', 'linear-gradient(45deg, #6b6b6b, #a5a5a5, #000000)');
-    document.documentElement.style.setProperty('--color-text', '#000');
     iconsThemeBigger.innerHTML = '<svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-eyeglass-2"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M8 4h-2l-3 10v2.5" /><path d="M16 4h2l3 10v2.5" /><path d="M10 16l4 0" /><path d="M17.5 16.5m-3.5 0a3.5 3.5 0 1 0 7 0a3.5 3.5 0 1 0 -7 0" /><path d="M6.5 16.5m-3.5 0a3.5 3.5 0 1 0 7 0a3.5 3.5 0 1 0 -7 0" /></svg>';
     stateMode.innerHTML = 'Gafas puestas';
     // containerSettings.innerHTML = 'Modo Claro';
     stateModeImg.innerHTML = '<svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-sun"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" /><path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7" /></svg>';
     // changeImgs()
+    modeLight();
 } else {
     document.documentElement.style.setProperty('--bg-color', 'linear-gradient(45deg, #050505, #141414, #000)');
     document.documentElement.style.setProperty('--color-text', '#fff');
@@ -132,12 +129,40 @@ if(stateToggleTwo) {
     // containerSettings.innerHTML = '<svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-sun"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" /><path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7" /></svg>';
     stateModeImg.innerHTML = '<svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-moon"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" /></svg>';
     // changeImgsOringinals()
+    modeDark();
 }
 stateToggleTwo = !stateToggleTwo;
 });
+function modeLight() {
+    document.documentElement.style.setProperty('--bg-color', 'background-image: linear-gradient(to left bottom, #ffffff, #ffffff, #ffffff, #ffffff, #ffffff, #e7e7e7, #d0d0d0, #b9b9b9, #878787, #585858, #2e2e2e, #000000)');
+    document.documentElement.style.setProperty('--color-text', '#000');
+}
+function modeDark() {
+    document.documentElement.style.setProperty('--bg-color', 'linear-gradient(45deg, #050505, #141414, #000)');
+    document.documentElement.style.setProperty('--color-text', '#fff');
+}
 
 
+// Modes ui
+const toggleDarkLight = document.getElementById('toggle-dark-light');
+const darkIconResponsive = document.getElementById('dark-icon-responsive');
+const lightIconResponsive = document.getElementById('light-icon-responsive');
 
+let stateToggleDarkLightResponsive = true;
+toggleDarkLight.addEventListener('click', () => {
+    if(stateToggleDarkLightResponsive) {
+    toggleDarkLight.classList.add('opacity-1');
+    darkIconResponsive.style.display = 'none';
+    lightIconResponsive.style.display = 'flex';
+    modeLight()
+    } else {
+    toggleDarkLight.classList.add('active-dark');
+    lightIconResponsive.style.display = 'none';
+    darkIconResponsive.style.display = 'flex';
+    modeDark()
+    }
+    stateToggleDarkLightResponsive = !stateToggleDarkLightResponsive;
+});
 
 // Changes images services
 // const imgServGallery = document.getElementById('img-serv-gallery');
@@ -186,7 +211,7 @@ filterOpenSettings.addEventListener('click', () => {
     document.body.style.overflow = 'auto';
 })
 
-// loading
+// loader
 const loading = document.getElementById('loading');
 document.addEventListener('DOMContentLoaded', () => {
 document.body.style.overflow = 'hidden';

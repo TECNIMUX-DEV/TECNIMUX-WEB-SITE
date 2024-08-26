@@ -16,11 +16,18 @@ header {
   height: 50px;
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: end;
+  flex-direction: row-reverse;
   align-items: center;
   padding: 1rem;
   color: #000;
-  background-color: greenyellow;
+  background-color: rgb(173, 255, 47, .4);
+  backdrop-filter: blur(40px);
+
+  & p {
+    color: #fff;
+    padding-right: 1rem;
+  }
 }
 header img{
   height: auto;
@@ -51,45 +58,78 @@ a {
   flex-direction: column;
   background-color: transparent;
 }
-.text-home {
+.warning {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 5px 15px;
+  padding:15px;
+
+  & p {
+    color: #9c9c9c;
+  }
 }
-.text-home p {
-  color: #9c9c9c;
+.container-experiments {
+  position: relative;
+  width: 95%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  margin: 1rem;
+  padding: 3rem 1rem 1rem 1rem;
+  border-radius: 14px;
+  background-image: linear-gradient(to left bottom, #1d1d1d, #191919, #151515, #101010, #0a0a0a, #070707, #030303, #000000, #000000, #000000, #000000, #000000);
+
+  & h1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 15px;
+    width: 100%;
+    font-size: 1.5rem;
+
+  }
 }
-.links {
+.slider {
   width: 100%;
   display: flex;
   flex: 1;
   justify-content: center;
   align-items: center;
-  gap: 45px;
-  flex-wrap: wrap;
+  gap: 10px;
+  overflow: auto;
+  padding: 1rem;
 }
 
 .items {
-  background-image: linear-gradient(to top, #090909, #0b0b0b, #0d0d0d, #0e0e0e, #101010, #16181e, #16202c, #0c2939, #003e4d, #00544b, #006633, #507400);
-padding: 25px;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+height: 240px;
+width: 240px;
+background-image: linear-gradient(to top, #090909, #0b0b0b, #0d0d0d, #0e0e0e, #101010, #16181e, #16202c, #0c2939, #003e4d, #00544b, #006633, #507400);
+padding: 5px;
 border-radius: 15px;
 background-size: 110% 110%;
 transition: .5s ease-in-out;
 
-  & h1{
-    text-align: center;
-  font-weight: 400;
+  & h4 {
+  text-align: center;
+  font-weight: 100;
   box-shadow: 0 -.5px 0 #fff;
   font-size: .9rem;
   padding: 10px;
+  color: #cecece;
   }
+
     & img {
     height: auto;
-    width: 200px;
+    width: 150px;
     animation: 3s ease-in-out;
   }
+  
   &:hover {
     background-position: 20% 150%;
     }
@@ -106,4 +146,10 @@ transition: .5s ease-in-out;
 }
 .testing img {
   max-width: 5rem;
+}
+@media screen and (max-width: 1000px) {
+.slider {
+  padding-left: 15rem;
+  
+}
 }
