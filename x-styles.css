@@ -332,6 +332,7 @@ animation: show-nav-bar .01s ease-out;
   align-items: center;
   flex-direction: column;
   border-radius: 10px;
+  display: none;
 
   & p {
     color: #fff;
@@ -1236,6 +1237,7 @@ animation:  pulsePulse .5s ease-in-out  infinite;
     height: 100%;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.8);
+    display: none;
   } 
 
   .grid-item {
@@ -2163,4 +2165,12 @@ display: none;
   grid-template-columns: repeat(3, 1fr); /* 5 columnas de igual tamaño */
   grid-template-rows: repeat(7, 1fr); /* 5 filas de igual tamaño */
 }
+#guia {
+  display: block;
 }
+#filter-general {
+  display: block;
+}
+}
+
+
