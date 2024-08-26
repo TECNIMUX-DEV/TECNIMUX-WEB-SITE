@@ -4,18 +4,18 @@ let btnOpen = document.getElementById('btn-open');
 btnOpen.addEventListener('click', () => {
     hiddenList.style.display ='block';
     hiddenList.style.overflowY = 'hidden';
+    guia.style.display = 'none';
+    filterGeneral.style.display = 'none';
 });
 
 let btnClose = document.getElementById('btn-close').addEventListener('click', () => {
     hiddenList.style.display = 'none';
-    dual.style.display = 'none';
     document.body.style.overflowY = 'auto';
 });
 
 const aboutItem = document.getElementById('about-item').addEventListener('click', () => {
     hiddenList.style.display = 'none';
     document.body.style.overflowY = 'auto';
-    dual.style.display = 'none';
 });
 // let navHidden = document.getElementById('nav-hidden');
 // navHidden.addEventListener('click', () => {
@@ -43,9 +43,9 @@ btnShowSubmenusResponsive.addEventListener('click', () => {
 //         }
 //         });
 
-// Remove tab of navegation when scrolling
-let stateScroll = 0;
+// Remove nav bar when scrolling
 const containerOpenNav = document.getElementById('container-open-nav');
+let stateScroll = 0;
 window.addEventListener('scroll', () => {
     const scrollTop = window.scrollY;
     const screenWidth = window.innerWidth || document.documentElement.clientWidth;
@@ -53,43 +53,38 @@ window.addEventListener('scroll', () => {
 
 if(scrollTop > stateScroll) {
     containerOpenNav.style.display = 'none';
+
     containerOpenNav.classList.add('hidde');
 
-} else{
+} else {
     containerOpenNav.style.display = 'flex';
     containerOpenNav.classList.add('show-nav-bar');
 } 
 } else {
     containerOpenNav.style.display = 'none';
     containerOpenNav.classList.add('hidde'); 
+
 }
 stateScroll = scrollTop <= 0 ? 0: scrollTop; 
 });
 
-// Dual mode responsive
-// let dark = document.getElementById('dark');
-// let light = document.getElementById('light');
+// Remove guia nav bar when scrolling
+const guia = document.getElementById('guia');
+const filterGeneral = document.getElementById('filter-general');
+function hiddenGuia() {
+let stateScrolll = 0;
+window.addEventListener('scroll', () => {
+    const scrollTopp = window.scrollY;
+        if(scrollTopp > stateScrolll) {
+            guia.style.display = 'none';
+            filterGeneral.style.display = 'none'; 
+        } 
+}, { once: true});
+};
+hiddenGuia();
 
-// let stateToggle = true;
-// let dualMode = document.getElementById('dual-mode');
-// dualMode.addEventListener('click', () => {
-// if(stateToggle) {
-//     dark.style.display = 'block';
-//     light.style.display = 'none';
-//     document.documentElement.style.setProperty('--bg-color', 'background-image: linear-gradient(to top, #ffffff, #cccccc;');
-//     document.documentElement.style.setProperty('--color-text', '#000');
-//     typeMode.innerHTML = 'Modo claro';
-//     changeImgs()
-// } else {
-//     dark.style.display = 'none';
-//     light.style.display = 'block';
-//     document.documentElement.style.setProperty('--bg-color', 'linear-gradient(45deg, #050505, #141414)');
-//     document.documentElement.style.setProperty('--color-text', '#fff');
-//     typeMode.innerHTML = 'Modo oscuro';
-//     changeImgsOringinals()
-// }
-// stateToggle = !stateToggle;
-// });
+
+
 
 // Active dual mode settings NoResponsive
 const putModeLight = document.getElementById('put-mode-light');
