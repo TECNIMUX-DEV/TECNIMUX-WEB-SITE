@@ -2114,35 +2114,99 @@ width: 100%;
 }
 */
 #networking {
+  z-index: 2;
   position: relative;
   height: 100vh;
   width: 100%;
   display: flex;
   /* flex-direction: column; */
-  background-color: #585858;
+  background-color: #000000;
   padding: 1rem;
   overflow: hidden;
 
-  h3 {
-    font-size: 100dvh;
-    left: 1000px;
-    text-transform: uppercase;
-    animation: move 10s ease-in-out infinite;
-  }
-
-  .red {
-    height: 200px;
-    width: 200px;
-    background-color: red;
-  }
+  h2 {
+    display: inline-block;
+    width: 20vw;
+    font-size: 3rem;
+    font-weight: bolder;
+    padding: 1rem;
 
   }
+
+  .container-slide {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background-color: rgba(65, 65, 65, 0.075);
+    }
+    .slidee {
+      z-index: -1;
+      position: relative;
+      height: 100%;
+      width: 120%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      animation: move 10s ease-in-out infinite; 
+      }
+
+      h3 {
+        font-size: 60dvh;
+        text-transform: uppercase;
+        /* color: #111111; */
+        color: rgba(255, 255, 255, 0.067);
+        filter: drop-shadow(0 5rem #ffffff04);
+
+        /* animation: move 10s ease-in-out infinite; */
+      }
+
+      .container-redes {
+        z-index: 1;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        flex-wrap: wrap;
+        background-color: greenyellow;
+
+
+        .red {
+          height: 200px;
+          width: 200px;
+          background-color: rgba(255, 0, 0, 0.521);
+          border-radius: 2px;
+          transition: all .6s;
+
+          & svg {
+            height: auto;
+            width: 100%;
+          }
+
+
+          &:hover {
+            z-index: 1;
+            background-color: transparent;
+          backdrop-filter: blur(20px);
+          transform: scale(1.5) translate(40px);
+          background: 40deg, transparent #fff transparent;
+
+          }
+      }
+         
+      }
+
+  }
+
+  
   @keyframes move {
     0% {
-      transform: translateX(0);
+      transform: translateX(100%);
     }
     100% {
-      transform: translateX(100%);
+      transform: translateX(-110%);
     }
   }
 /* ToolTip */

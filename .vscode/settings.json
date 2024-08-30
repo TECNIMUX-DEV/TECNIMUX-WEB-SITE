@@ -4,5 +4,6 @@
     "workbench.iconTheme": "material-icon-theme",
     "CodeGPT.apiKey": "CodeGPT Plus Beta",
     "powermode.enabled": true,
-    "powermode.presets": "particles"
+    "powermode.presets": "particles",
+    "editor.fontLigatures": true
 }
