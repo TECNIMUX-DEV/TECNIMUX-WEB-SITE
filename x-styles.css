@@ -423,8 +423,8 @@ animation: show-nav-bar .01s ease-out;
 }
 
 #header01 {
+  z-index: 10;
   position: relative;
-  z-index: 20;
   height: 55px;
   width: 100%;
   position: sticky;
@@ -671,99 +671,15 @@ opacity: 0.5;
 
   } */
 }
-#settings {
-  display: inline-flex;
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 10px;
-  padding: .1rem .3rem;
-  stroke: #fff;
-}
-#btn-settings  {
-  display: inline-block;
-  pointer-events: auto;
-
-  &:hover {
-    opacity: 0.5;
-  }
-}
-
-.settings-hidden {
-  display: none;
-}
-.settings-show {
-  display: block;
-}
-.container-settings {
-  z-index: 2;
-  position: fixed;
-  display: flex;
-  justify-content: center;
-  align-items: start;
-  flex-direction: column;
-  top: 0;
-  right: 0;
-  width: 30vw;
-  height: 100%;
-  background-image: linear-gradient(to top, #000000, #0a0a0a, #121212, #181818, #1d1d1d);
-  padding: 30px 0;
-  color: #fff;
-  transform: translateX(100%);
-  transition: transform 0.3s ease;
-
-   & p {
-    padding: 0 1rem;
-   }
-
-   & span {
-    cursor: pointer;
-   }
-}
-.container-settings.open-settings {
-  transform: translateX(0);
-}
-.container-dual-mode {
-  width: 100%;
+#filter-login {
+  z-index: 1;
   position: absolute;
-  bottom: 7rem;
-  display: flex;
-  justify-content: start;
-  align-items: start;
-  flex-direction: column;
-  background-color: #ff0000;
-  backdrop-filter: blur(20px);
-
-}
-.desplegar-dual-mode {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-}
-
-#btn-desplegar.rotate-desplegar{
-margin-left: 10px;
-transition: 0.3s ease;
-
-  &:hover {
-    opacity: 0.5;
-  }
-}
-.display-block {
-display: block;
-}
-.display-flex {
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(61, 61, 61, 0.349);
+  backdrop-filter: blur(2px);
   display: none;
 }
-.rotate-desplegar {
-  transform: rotateX(180deg);
-  margin-left: 10px;
-}
-#put-mode-light {
-  display: none;
-  }
-
 .version {
   position: absolute;
   bottom: 0;
@@ -775,31 +691,6 @@ display: block;
   opacity: 0.5;
 }
 
-
-#state-mode {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  padding: 10px;
-  cursor: pointer;
-}
-.filter-open-settings {
-  z-index: 1;
-  position: absolute;
-  height: 200vh;
-  width: 200vw;
-  background-color: rgba(0, 0, 0, 0.849);
-  backdrop-filter: blur(1px);
-  display: none;
-
-}
-.close-filter-open-settings {
-display: none;
-}
-.about-settings {
-  margin-top: 10px;
-}
 
 #social-networks-icons {
   position: absolute;
@@ -1052,8 +943,16 @@ footer {
     overflow: hidden;
   }
 
+#login-home {
+  z-index: 3;
+  position: fixed;
+  height: 100%;
+  width: 100%;
 
-.form {
+  display: none;
+}
+#form {
+  z-index: 4;
   position: fixed;
   height: 50%;
   width: 40%;
@@ -1072,7 +971,9 @@ footer {
 		linear-gradient(-45deg,#0000  48%,#ffffff05 0 52%,#0000 0) #000000;
 	background-size: calc(2*34px) 34px, 34px 34px;
   border-radius: 10px;
-  overflow: hidden;
+  overflow-y: auto;
+
+
 
   & svg:hover{
     opacity: 0.8;
@@ -1106,19 +1007,12 @@ footer {
   }
 }
 @media screen and (max-width: 1000px) {
-  .form {
+  #form {
     width: 80%;
   }
   
 }
-.filter-login {
-  z-index: -1;
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(1px);
-}
+
 form {
   display: flex;
   flex-direction: column;
@@ -1144,11 +1038,16 @@ form {
   }
 
   & button {
-    display: inline-block;
     border: none;
     background-color: transparent;
     margin: .5rem;
     padding: .5rem;
+    color: #c9c9c9;
+    transition: 0.5 ease-in-out;
+
+    &:hover {
+      opacity: 0.8;
+    }
 }
 .btn-login {
   display: inline-flex;
@@ -1157,6 +1056,7 @@ form {
   padding-right: 1rem;
 }
 }
+
 
 #home {
   position: relative;

@@ -85,51 +85,6 @@ hiddenGuia();
 
 
 
-
-// Active dual mode settings NoResponsive
-// const putModeLight = document.getElementById('put-mode-light');
-// const iconsThemeBigger = document.getElementById('icons-theme-bigger');
-// const stateMode = document.getElementById('state-mode');
-// const stateModeImg = document.getElementById('state-mode-img');
-// const desplegarDualMode = document.getElementById('desplegar-dual-mode');
-// const btnDesplegar = document.getElementById('btn-desplegar');
-
-// let stateToggleBtnDesplegar = true;
-// desplegarDualMode.addEventListener('click', () => {
-//     if(stateToggleBtnDesplegar) {
-//         putModeLight.style.display = 'block';
-//         btnDesplegar.classList.toggle('rotate-desplegar');
-//     } else {
-//         putModeLight.style.display = 'none';
-//         btnDesplegar.classList.toggle('rotate-desplegar');
-
-//     }
-//     stateToggleBtnDesplegar = !stateToggleBtnDesplegar;
-// });
-
-// let stateToggleTwo = true;
-// putModeLight.addEventListener('click', () => {
-// if(stateToggleTwo) {
-//     iconsThemeBigger.innerHTML = '<svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-eyeglass-2"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M8 4h-2l-3 10v2.5" /><path d="M16 4h2l3 10v2.5" /><path d="M10 16l4 0" /><path d="M17.5 16.5m-3.5 0a3.5 3.5 0 1 0 7 0a3.5 3.5 0 1 0 -7 0" /><path d="M6.5 16.5m-3.5 0a3.5 3.5 0 1 0 7 0a3.5 3.5 0 1 0 -7 0" /></svg>';
-//     stateMode.innerHTML = 'Gafas puestas';
-//     // containerSettings.innerHTML = 'Modo Claro';
-//     stateModeImg.innerHTML = '<svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-sun"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" /><path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7" /></svg>';
-//     // changeImgs()
-//     modeLight();
-// } else {
-//     document.documentElement.style.setProperty('--bg-color', 'linear-gradient(45deg, #050505, #141414, #000)');
-//     document.documentElement.style.setProperty('--color-text', '#fff');
-//     iconsThemeBigger.innerHTML = '<svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-eyeglass-off"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5.536 5.546l-2.536 8.454" /><path d="M16 4h2l3 10" /><path d="M10 16h4" /><path d="M19.426 19.423a3.5 3.5 0 0 1 -5.426 -2.923v-2.5m4 0h3v2.5c0 .157 -.01 .312 -.03 .463" /><path d="M10 16.5a3.5 3.5 0 0 1 -7 0v-2.5h7v2.5" /><path d="M3 3l18 18" /></svg>';
-//     stateMode.innerHTML = 'Gafas retiradas';
-//     // containerSettings.innerHTML = '<svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-sun"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" /><path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7" /></svg>';
-//     stateModeImg.innerHTML = '<svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-moon"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" /></svg>';
-//     // changeImgsOringinals()
-//     modeDark();
-// }
-// stateToggleTwo = !stateToggleTwo;
-// });
-
-
 // Modes ui
 const toggleDarkLight = document.getElementById('toggle-dark-light');
 const toggleDarkLightFooter = document.getElementById('toggle-dark-light-footer'); /*TEMP*/
@@ -204,21 +159,22 @@ toggleDarkLight.addEventListener('click', () => {
 // });
 
 // Show all settings
-const btnSettings = document.getElementById('btn-settings');
-const containerSettings = document.getElementById('container-settings');
-const filterOpenSettings = document.getElementById('filter-open-settings');
+// const btnSettings = document.getElementById('btn-settings');
+// const containerSettings = document.getElementById('container-settings');
+// const filterOpenSettings = document.getElementById('filter-open-settings');
 
-btnSettings.addEventListener('click', () => {
-    containerSettings.classList.toggle('open-settings');
-    filterOpenSettings.style.display = 'block';
-    document.body.style.overflow = 'hidden';
-});
+// btnSettings.addEventListener('click', () => {
+//     // containerSettings.classList.toggle('open-settings');
+//     form.style.display = 'block';
+//     filterOpenSettings.style.display = 'block';
+//     document.body.style.overflow = 'hidden';
+// });
 
-filterOpenSettings.addEventListener('click', () => {
-    containerSettings.classList.toggle('open-settings');
-    filterOpenSettings.style.display = 'none'
-    document.body.style.overflow = 'auto';
-})
+// filterOpenSettings.addEventListener('click', () => {
+//     containerSettings.classList.toggle('open-settings');
+//     filterOpenSettings.style.display = 'none'
+//     document.body.style.overflow = 'auto';
+// })
 
 // loader
 const loading = document.getElementById('loading');
@@ -230,5 +186,29 @@ document.body.style.overflow = 'hidden';
     }, 1000);
 });
 
+// Form
+const form = document.getElementById('form');
+const btnCloseLogin = document.querySelector('.btn-close-login');
+const btnOpenForm = document.getElementById('btn-open-form');
+const filterLogin = document.getElementById('filter-login');
+const loginHome = document.getElementById('login-home');
 
+btnCloseLogin.addEventListener('click', () => {
+    loginHome.style.display = 'none';
+    form.style.display = 'none';
+    filterLogin.style.display = 'none';
+    document.body.style.overflow = 'auto';
+});
 
+btnOpenForm.addEventListener('click', () => {
+    loginHome.style.display = 'flex';
+    filterLogin.style.display = 'block';
+    document.body.style.overflow = 'hidden';
+    form.style.display = 'flex';
+});
+filterLogin.addEventListener('click', () => {
+    loginHome.style.display = 'none';
+    filterLogin.style.display = 'none';
+    document.body.style.overflow = 'auto';
+    form.style.display = 'none';
+});

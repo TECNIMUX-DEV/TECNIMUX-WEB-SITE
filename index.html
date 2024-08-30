@@ -3,9 +3,8 @@
 <head>
     <title>TECNIMUX</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <script defer src="/index.js"></script>
-    <script src="/js/jquery-3.7.1.min.js"></script>
-    <script src="/js/Testing.js"></script>
+    <!-- <script src="/js/jquery-3.7.1.min.js"></script> -->
+    <!-- <script src="/js/Testing.js"></script> -->
     <script src="https://kit.fontawesome.com/2d87d5626b.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -289,7 +288,7 @@
         </ul>
         <div class="container-login">
             <div id="settings"> 
-                <svg  xmlns="http://www.w3.org/2000/svg"  id="btn-settings" width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"
+                <svg  xmlns="http://www.w3.org/2000/svg"  id="btn-open-form" width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"
                   stroke-width="1"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline 
                   icon-tabler-login-2"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 8v-2a2 2 0 0 1 2 -2h7a2 2 0 0 1 
                   2 2v12a2 2 0 0 1 -2 2h-7a2 2 0 0 1 -2 -2v-2" /><path d="M3 12h13l-3 -3" /><path d="M13 15l3 -3" /></svg>
@@ -302,58 +301,33 @@
             </div>
             </div>
     </nav> 
-<div class="form">
-    <div class="filter-login"></div>
-    <form>
-        <h2>Iniciar Sesión</h2>
-        <div class="login">
-        <input type="email" placeholder="Correo electronico" class="input-email">
-        <input type="password" placeholder="Contraseña" class="input-password"></div>
-        <button class="btn-login"><strong>Ingresar</strong></button>
-        <div class="btn-close-login">
-            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24" viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1"
-              stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-x"><path stroke="none" d="M0 0h24v24H0z"
-               fill="none"/><path d="M18 6l-12 12" /><path d="M6 6l12 12" /></svg>
-        </div>
-            <div class="login-alternatives ">
-                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100"  viewBox="0 0 48 48">
-                 <path fill="#4caf50" d="M45,16.2l-5,2.75l-5,4.75L35,40h7c1.657,0,3-1.343,3-3V16.2z"></path><path fill="#1e88e5" d="M3,16.2l3.614,1.71L13,23.7V40H6c-1.657,0-3-1.343-3-3V16.2z"></path><polygon fill="#e53935" points="35,11.2 24,19.45 13,11.2 12,17 13,23.7 24,31.95 35,23.7 36,17"></polygon><path fill="#c62828" d="M3,12.298V16.2l10,7.5V11.2L9.876,8.859C9.132,8.301,8.228,8,7.298,8h0C4.924,8,3,9.924,3,12.298z"></path><path fill="#fbc02d" d="M45,12.298V16.2l-10,7.5V11.2l3.124-2.341C38.868,8.301,39.772,8,40.702,8h0 C43.076,8,45,9.924,45,12.298z"></path>
-                </svg>
-                 <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-devices-pc"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 5h6v14h-6z" /><path d="M12 9h10v7h-10z" /><path d="M14 19h6" /><path d="M17 16v3" /><path d="M6 13v.01" /><path d="M6 16v.01" /></svg>
-            </div>
-            <button><strong>Registrarme</strong></button>
-    </form>
-</div>
-    
-<div id="filter-open-settings" class="filter-open-settings"></div>
-<div id="container-settings" class="container-settings"> 
-    <p>Team TX</p>
-    <p>Comunidad</p>
-    <p>Contacto</p>
-
-    <!-- <div class="container-dual-mode">
-        <p id="desplegar-dual-mode" class="desplegar-dual-mode" >Tema 
-            <svg  xmlns="http://www.w3.org/2000/svg" id="btn-desplegar" class="btn-desplegar" width="24"  height="24"  viewBox="0 0 24 24"  fill="currentColor"  class="icon icon-tabler icons-tabler-filled 
-            icon-tabler-caret-down"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M18 9c.852 0 1.297 .986 .783 1.623l-.076 .084l-6 6a1 1 0 0 1 -1.32 
-            .083l-.094 -.083l-6 -6l-.083 -.094l-.054 -.077l-.054 -.096l-.017 -.036l-.027 -.067l-.032 -.108l-.01 -.053l-.01 -.06l-.004 -.057v-.118l.005 -.058l.009 
-            -.06l.01 -.052l.032 -.108l.027 -.067l.07 -.132l.065 -.09l.073 -.081l.094 -.083l.077 -.054l.096 -.054l.036 -.017l.067 -.027l.108 -.032l.053 -.01l.06 
-            -.01l.057 -.004l12.059 -.002z" /></svg>
-    </p>
-        <div id="put-mode-light" class="put-mode-light">
-            <span id="state-mode">Ponerme Gafas</span><span id="icons-theme-bigger">
-            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  
-            stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-eyeglass-2"><path 
-            stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M8 4h-2l-3 10v2.5" /><path d="M16 4h2l3 10v2.5" /><path d="M10 16l4 0" />
-            <path d="M17.5 16.5m-3.5 0a3.5 3.5 0 1 0 7 0a3.5 3.5 0 1 0 -7 0" /><path d="M6.5 16.5m-3.5 0a3.5 3.5 0 1 0 7 0a3.5 3.5 0 1 0 -7 0" />
-            </svg>
-            </span>
-            <span id="state-mode-img"></span>
-        </div>
-
-</div> 
--->
-  </div> 
 </header>
+
+<section id="login-home">
+    <div id="filter-login"></div>
+    <div id="form">
+        <form>
+            <h2>Iniciar Sesión</h2>
+            <div class="login">
+            <input type="email" placeholder="Correo electronico" class="input-email">
+            <input type="password" placeholder="Contraseña" class="input-password"></div>
+            <button class="btn-login"><strong>Ingresar</strong></button>
+            <div class="btn-close-login">
+                <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24" viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1"
+                  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-x"><path stroke="none" d="M0 0h24v24H0z"
+                   fill="none"/><path d="M18 6l-12 12" /><path d="M6 6l12 12" /></svg>
+            </div>
+                <div class="login-alternatives ">
+                     <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100"  viewBox="0 0 48 48">
+                     <path fill="#4caf50" d="M45,16.2l-5,2.75l-5,4.75L35,40h7c1.657,0,3-1.343,3-3V16.2z"></path><path fill="#1e88e5" d="M3,16.2l3.614,1.71L13,23.7V40H6c-1.657,0-3-1.343-3-3V16.2z"></path><polygon fill="#e53935" points="35,11.2 24,19.45 13,11.2 12,17 13,23.7 24,31.95 35,23.7 36,17"></polygon><path fill="#c62828" d="M3,12.298V16.2l10,7.5V11.2L9.876,8.859C9.132,8.301,8.228,8,7.298,8h0C4.924,8,3,9.924,3,12.298z"></path><path fill="#fbc02d" d="M45,12.298V16.2l-10,7.5V11.2l3.124-2.341C38.868,8.301,39.772,8,40.702,8h0 C43.076,8,45,9.924,45,12.298z"></path>
+                    </svg>
+                     <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-devices-pc"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 5h6v14h-6z" /><path d="M12 9h10v7h-10z" /><path d="M14 19h6" /><path d="M17 16v3" /><path d="M6 13v.01" /><path d="M6 16v.01" /></svg>
+                </div>
+                <button><strong>Registrarme</strong></button>
+        </form>
+    </div>  
+    </section>
+
 <div id="filter-general"></div>
 <section id="home">
     <div class="grid-container">
@@ -587,7 +561,6 @@
 <section id="about">
     <div class="title-center">
     <h2>TEC<br />
-
     NI<br />
     MUX   
  </h2>
@@ -707,5 +680,6 @@
 
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script src="/index.js"></script>
 </body>
 </html>
