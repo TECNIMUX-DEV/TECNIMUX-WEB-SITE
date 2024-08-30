@@ -533,21 +533,21 @@ li:hover .imgs-cat {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  gap: 15px;
+  gap: 10px;
   flex-direction: row;
   padding: 0 1rem;
   padding-left: 1rem;
 
   & img {
     height: auto;
-    width: 18px;
+    width: 25px;
+    padding: 5px;
   }
 
   .imagotipo-name {
     height: auto;
     width: 85px;
-    margin: 0;
-    padding: 0;
+    padding: 3px;
   }
 }
 
@@ -567,6 +567,7 @@ li:hover .imgs-cat {
   & img {
     height: auto;
     width: 13px;
+    opacity: .5;
   }
   .imagotipo-name {
     height: auto;
@@ -2112,6 +2113,38 @@ width: 100%;
   }
 }
 */
+#networking {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  /* flex-direction: column; */
+  background-color: #585858;
+  padding: 1rem;
+  overflow: hidden;
+
+  h3 {
+    font-size: 100dvh;
+    left: 1000px;
+    text-transform: uppercase;
+    animation: move 10s ease-in-out infinite;
+  }
+
+  .red {
+    height: 200px;
+    width: 200px;
+    background-color: red;
+  }
+
+  }
+  @keyframes move {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
 /* ToolTip */
 /* Responsive temp */
 @media screen and (max-width: 1000px) {
