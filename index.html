@@ -293,7 +293,7 @@
                   icon-tabler-login-2"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 8v-2a2 2 0 0 1 2 -2h7a2 2 0 0 1 
                   2 2v12a2 2 0 0 1 -2 2h-7a2 2 0 0 1 -2 -2v-2" /><path d="M3 12h13l-3 -3" /><path d="M13 15l3 -3" /></svg>
                   
-                <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  
+                <svg  xmlns="http://www.w3.org/2000/svg"  id="btn-open-lang" width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  
                 stroke="currentColor"  stroke-width="1"  stroke-linecap="round"  stroke-linejoin="round"  
                 class="icon icon-tabler icons-tabler-outline icon-tabler-language"><path stroke="none" d="M0 0h24v24H0z" 
                 fill="none"/><path d="M4 5h7" /><path d="M9 3v2c0 4.418 -2.239 8 -5 8" /><path d="M5 9c0 2.144 2.952 3.908 6.7 4"
@@ -304,8 +304,9 @@
 </header>
 
 <section id="login-home">
-    <div id="filter-login"></div>
+    <div class="filter-login"></div>
     <div id="form">
+        <div class="filter-form"></div>
         <form>
             <h2>Iniciar Sesión</h2>
             <div class="login">
@@ -326,6 +327,19 @@
                 <button><strong>Registrarme</strong></button>
         </form>
     </div>  
+    </section>
+
+    <section id="languajes">
+        <div class="filter-login"></div>
+        <div class="container-lang">
+            <div class="btn-close-langs">
+                <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24" viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1"
+                  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-x"><path stroke="none" d="M0 0h24v24H0z"
+                   fill="none"/><path d="M18 6l-12 12" /><path d="M6 6l12 12" /></svg>
+            </div>
+            <p>Español <em>latam</em></p>
+            <p>English <em>us</em></p>
+        </div>
     </section>
 
 <div id="filter-general"></div>

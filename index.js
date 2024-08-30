@@ -189,26 +189,54 @@ document.body.style.overflow = 'hidden';
 // Form
 const form = document.getElementById('form');
 const btnCloseLogin = document.querySelector('.btn-close-login');
+const btnCloseLangs = document.querySelector('.btn-close-langs');
 const btnOpenForm = document.getElementById('btn-open-form');
-const filterLogin = document.getElementById('filter-login');
+const btnOpenLang = document.getElementById('btn-open-lang');
 const loginHome = document.getElementById('login-home');
+
+
+
+document.querySelectorAll('.filter-login').forEach(element => {
+    const filterLogin = element;
+    filterLogin.addEventListener('click', () => {
+        loginHome.style.display = 'none';
+        filterLogin.style.display = 'none';
+        languajes.style.display = 'none';
+        form.style.display = 'none';
+        document.body.style.overflow = 'auto';
+
+});
+btnOpenForm.addEventListener('click', () => {
+    loginHome.style.display = 'flex';
+    languajes.style.display = 'none';
+    form.style.display = 'flex';
+    filterLogin.style.display = 'block';
+    document.body.style.overflow = 'hidden';
+});
+
+btnOpenLang.addEventListener('click', () => {
+    loginHome.style.display = 'none';
+    form.style.display = 'none';
+    languajes.style.display = 'flex';
+    filterLogin.style.display = 'block';
+    document.body.style.overflow = 'hidden';
+});
+}); 
+
 
 btnCloseLogin.addEventListener('click', () => {
     loginHome.style.display = 'none';
     form.style.display = 'none';
-    filterLogin.style.display = 'none';
+    languajes.style.display = 'none';
     document.body.style.overflow = 'auto';
 });
 
-btnOpenForm.addEventListener('click', () => {
-    loginHome.style.display = 'flex';
-    filterLogin.style.display = 'block';
-    document.body.style.overflow = 'hidden';
-    form.style.display = 'flex';
-});
-filterLogin.addEventListener('click', () => {
+btnCloseLangs.addEventListener('click', () => {
     loginHome.style.display = 'none';
-    filterLogin.style.display = 'none';
-    document.body.style.overflow = 'auto';
     form.style.display = 'none';
+    languajes.style.display = 'none';
+    document.body.style.overflow = 'auto';
 });
+
+
+
