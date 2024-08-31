@@ -1,16 +1,20 @@
 // Show and hidden menu responsive
 let hiddenList = document.getElementById('hidden-list');
-let btnOpen = document.getElementById('btn-open');
-btnOpen.addEventListener('click', () => {
+let btnOpenNavMain = document.getElementById('btn-open-nav-main');
+btnOpenNavMain.addEventListener('click', () => {
     hiddenList.style.display ='block';
     hiddenList.style.overflowY = 'hidden';
     guia.style.display = 'none';
     filterGeneral.style.display = 'none';
+    containerOpenNav.style.display = 'none';
+    document.body.style.overflowY = 'hidden';
 });
 
-let btnClose = document.getElementById('btn-close').addEventListener('click', () => {
+let btnClose = document.getElementById('btn-close');
+btnClose.addEventListener('click', () => {
     hiddenList.style.display = 'none';
     document.body.style.overflowY = 'auto';
+    containerOpenNav.style.display = 'flex';
 });
 
 const aboutItem = document.getElementById('about-item').addEventListener('click', () => {
@@ -43,7 +47,7 @@ btnShowSubmenusResponsive.addEventListener('click', () => {
 //         }
 //         });
 
-// Remove nav bar when scrolling
+// MAIN <1000 Remove nav bar when scrolling
 const containerOpenNav = document.getElementById('container-open-nav');
 let stateScroll = 0;
 window.addEventListener('scroll', () => {
