@@ -12,8 +12,39 @@ html {
   font-family: "Urbanist Variable";
   font-size: 1rem;
 }
+body {
+  z-index: -30;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  height: auto;
+  width: 100%;
+  max-width: 2300px;
+  margin: auto;
+  font-family: "Urbanist Variable";
+  background: var(--bg-color);
+  color: var(--color-text);
+  font-size: 1rem;
+  transition: background-color 0.3s, color 0.3s;
+  background-image: linear-gradient(#ffffff13 1px, transparent 1px), linear-gradient(to right, #ffffff11 1px, transparent 1px);
+  background-size: 250px 250px;
+  background-color: #000;
+  /* background-attachment: fixed; */
+}
 section {
-  background-color: transparent;
+  z-index: 1;
+  /* backdrop-filter: blur(50px); */
+}
+p {
+  font-size: 1rem;
+  font-weight: 300;
+  color: rgb(218, 218, 218);
+}
+h2 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #fff;
 }
 a {
   cursor: pointer;
@@ -37,7 +68,6 @@ input[type="text"]::-ms-clear {
 input[type="text"]::-webkit-clear-button {
   display: none;
 }
-
 
 /* urbanist-latin-wght-normal */
 @font-face {
@@ -72,19 +102,6 @@ input[type="text"]::-webkit-clear-button {
   font-family: "Ñ";
   src: url(fonts/02/Acmatic-ThinPersonal.otf);
 }
-body {
-  display: flex;
-  flex-direction: column;
-  margin: 0;
-  padding: 0;
-  height: auto;
-  width: 100%;
-  font-family: "Urbanist Variable";
-  background: var(--bg-color);
-  color: var(--color-text);
-  font-size: 1rem;
-  transition: background-color 0.3s, color 0.3s;
-}
 /* Loader */
 .loading {
   z-index: 50;
@@ -99,10 +116,9 @@ body {
 
   & img {
     height: auto;
-    width: 5vw;
+    width: 2vw;
     animation: loading 1s linear infinite;
     /* animation-delay: 0.5s;  */
-
   }
 }
 @keyframes loading {
@@ -436,8 +452,24 @@ animation: show-nav-bar .01s ease-out;
   align-items: center;
   justify-content: space-between;
   font-family: "Urbanist Variable";
-  background-color: #000;
+  /* background-color: #000; */
+  backdrop-filter: blur(5px);
 
+}
+.header-color {
+  /* background-color: rgba(0, 0, 0, 0.8); */
+  /* background-color: #000; */
+  /* background-color: red; */
+  background-color: rgba(0, 0, 0, 0.849);
+  animation: animation-opacity .6s ease-in-out;
+}
+@keyframes animation-opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 .container-items-nav-main {
   display: none;
@@ -662,16 +694,20 @@ opacity: 0.5;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(241, 241, 241, 0.2);
   backdrop-filter: blur(5px);
   margin-right: 1rem;
   border-radius: 5px;
 
-  /* & svg {
-    border-right: 1px solid #ffffff52;
+  & svg {
+    backdrop-filter: blur(5px);
+    border: 1px solid #ffffff1e;
     border-radius: 3px;
+    padding: .2rem;
 
-  } */
+    &:hover {
+      opacity: 0.8;
+    } 
+  }
 }
 .filter-login {
   z-index: 1;
@@ -1243,13 +1279,6 @@ animation:  pulsePulse .5s ease-in-out  infinite;
     & h2 {
     position: relative;
     width: 100%;
-    top: 0;
-    left: 0;
-    padding: 1rem;
-    font-size: 1.7rem;
-    font-weight: lighter;
-    color: #fff;
-
     }
   }
 
@@ -1295,9 +1324,6 @@ animation:  pulsePulse .5s ease-in-out  infinite;
   background-size: 200% 200%;
   transition:  background-position 0.35s ease-in-out;
 
-  & p {
-    color: #fff;
-  }
 
   &:hover {
     /* transform: scale(1.05); */
@@ -1351,9 +1377,7 @@ animation:  pulsePulse .5s ease-in-out  infinite;
 .container-descrip-serv {
 
   & p {
-  color: rgb(240, 240, 240);;
   font-size: 0.8rem;
-  font-weight: 200;
   text-wrap: pretty;
   }
 }
@@ -1552,27 +1576,6 @@ animation:  pulsePulse .5s ease-in-out  infinite;
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-
-#sec-01 {
-  margin-top: auto;
-  z-index: 1;
-  height: auto;
-  height: 80vh;
-  width: 100%;
-  flex: 1;
-  background-image: url(https://cdn.pixabay.com/photo/2020/05/09/21/23/flower-5151491_1280.jpg);
-  background-repeat: repeat-x;
-  background-size: contain;
-}
-#sec-01 h2 {
-  right: 0;
-  font-family: "P";
-  font-size: 5rem;
-  margin: 0;
-  text-align: center;
-  padding: 3rem;
-  letter-spacing: 0.5rem;
-}
 .container-descrip-me {
   display: flex;
   height: 60vh;
@@ -1586,22 +1589,6 @@ animation:  pulsePulse .5s ease-in-out  infinite;
   box-shadow: 0 0 1.5px #fff;
   flex: 1;
   border-radius: 10px;
-
-  & p {
-    font-size: 1rem;
-  }
-}
-.philo {
-  & h5 {
-    background: #634092;
-background: linear-gradient(to right, #634092 50%, #39FF8C 100%);
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
-padding: 10px;
-font-size: 1.4rem;
-font-weight: bolder;
-font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  }
 }
 .text-philo {
   flex: 1 1 20%;
@@ -1609,10 +1596,6 @@ font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, O
   /* background-color: goldenrod; */
   border-radius: 5px;
   filter: drop-shadow(0 0 0.2rem #000);
-  
-  & p {
-    color: rgb(240, 240, 240);
-  }
 }
 .text-featured {
   color: #634092;
@@ -1621,6 +1604,10 @@ font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, O
 .text-featured-white {
   color: #fff;
   font-weight: bold;
+}
+
+#projects {
+  background-color: transparent;
 }
 
 .container-projects {
@@ -1705,6 +1692,8 @@ font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, O
   align-items: center;
   gap: 15px;
   flex-direction: column;
+  background-color: transparent;
+  backdrop-filter: blur(5px);
 
   & img {
     z-index: -1;
@@ -1718,21 +1707,15 @@ font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, O
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     background: #FFFFFF;
     background: #000000;
     background: #000000;
-    background: repeating-linear-gradient(to left, #000000 0%, #ffaaaa 1%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    background: repeating-linear-gradient(to left, #ffffff00 0%, #ff1c1c 1%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: 4rem;
     text-wrap: wrap;
-    margin: 0;
     text-align: center;
     transition: all 0.5s;
   }
@@ -1740,7 +1723,6 @@ font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, O
  & p {
     display: flex;
     justify-content: center;
-    color: #d4d4d4;
     font-size: 1.2rem;
     padding: 2rem;
     text-align: start;
@@ -1815,8 +1797,17 @@ font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, O
   display: flex;
   flex-direction: column;
   font-family: "Urbanist Variable";
-  background: linear-gradient(90deg, #000, #1a1a1a);
+  /* background: linear-gradient(90deg, #000, #1a1a1a); */
+  background-color: transparent;
+
+  & h2 {
+    background: #634092;
+  background: linear-gradient(to right, #634092 -5%, #39FF8C 50%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  }
 }
+
 .title-center {
   width: 100%;
   display: flex;
@@ -1826,7 +1817,7 @@ font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, O
   flex-wrap: wrap;
   padding: 0 50px;
   position: relative;
-  backdrop-filter: blur(15px);
+  /* backdrop-filter: blur(15px); */
   margin: 20px 0;
 
   & img {
@@ -1836,7 +1827,7 @@ font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, O
     filter: drop-shadow(6px 14px 16px #6440925b);
   }
 }
-.title-center h2 {
+.title-center h3 {
   font-size: 10vw;
   text-align: start;
   font-family: "i";
@@ -2111,7 +2102,9 @@ font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, O
   width: 100%;
   display: flex;
   /* flex-direction: column; */
-  background-color: #000000;
+  /* background-color: #000000; */
+  background-color: transparent;
+  backdrop-filter: blur(5px);
   padding: 1.5rem;
   overflow: hidden;
   
@@ -2263,6 +2256,12 @@ display: none;
 .bg-02-high-store {
   width: 80%;
   height: 240px;
+}
+.loading {
+
+  & img {
+    width: 5vw;
+  }
 }
 }
 

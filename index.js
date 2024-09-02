@@ -36,20 +36,22 @@ btnShowSubmenusResponsive.addEventListener('click', () => {
     });
 });
 
-// Bottom header color Nav
-// window.addEventListener('scroll',function() {
-//     let bottomWhite = document.getElementsByClassName('bottomWhite');
-//     let header01 = document.getElementById('header01');
-//     if (window.scrollY > 0) {
-//         header01.classList.add('bottomWhite');
-//     } else{
-//         header01.classList.remove('bottomWhite');
-//         }
-//         });
+// Add header color when scrolling
+document.addEventListener('DOMContentLoaded', () => {
+let header01 = document.querySelector('header');
+ window.addEventListener('scroll', () => {
+     if (window.scrollY > stateScrollTwo) {
+        header01.classList.add('header-color');
+     } else{
+         header01.classList.remove('header-color');
+         }
+         });
+ });
 
 // MAIN <1000 Remove nav bar when scrolling
 const containerOpenNav = document.getElementById('container-open-nav');
 let stateScroll = 0;
+let stateScrollTwo = 20;
 window.addEventListener('scroll', () => {
     const scrollTop = window.scrollY;
     const screenWidth = window.innerWidth || document.documentElement.clientWidth;
@@ -103,7 +105,7 @@ toggleDarkLight.addEventListener('click', () => {
     lightIconResponsive.style.display = 'flex';
     console.log("UI")
     document.documentElement.style.setProperty('--bg-color', 'background-image: linear-gradient(to top, #ffffff, #c0c0c0, #858585, #4e4e4e, #1d1d1d)');
-    document.documentElement.style.setProperty('--color-text', '#000');
+    document.documentElement.style.setProperty('--color-text', 'red');
 
     } else {
     toggleDarkLight.classList.add('active-dark');
@@ -111,7 +113,7 @@ toggleDarkLight.addEventListener('click', () => {
     darkIconResponsive.style.display = 'flex';
     console.log("UX")
     document.documentElement.style.setProperty('--bg-color', 'background-image: linear-gradient(to top, #000, #c0c0c0, #000, #4e4e4e, #1d1d1d)');
-    document.documentElement.style.setProperty('--color-text', '#000');
+    document.documentElement.style.setProperty('--color-text', 'f0f0f0');
     }
     stateToggleDarkLightResponsive = !stateToggleDarkLightResponsive;
 });
