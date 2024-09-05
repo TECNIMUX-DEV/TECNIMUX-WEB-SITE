@@ -30,11 +30,11 @@ const aboutItem = document.getElementById('about-item').addEventListener('click'
 // Submenus
 const btnShowSubmenusResponsive = document.querySelector('.btn-show-submenus-responsive');
 const containerSubmenuResponsive = document.querySelectorAll('.container-submenu-responsive')
-btnShowSubmenusResponsive.addEventListener('click', () => {
-    containerSubmenuResponsive.forEach(element => {
-        element.classList.toggle('display-block');
-    });
-});
+// btnShowSubmenusResponsive.addEventListener('click', () => {
+//     containerSubmenuResponsive.forEach(element => {
+//         element.classList.toggle('display-block');
+//     });
+// });
 
 // Add header color when scrolling
 document.addEventListener('DOMContentLoaded', () => {
@@ -244,5 +244,15 @@ btnCloseLangs.addEventListener('click', () => {
     document.body.style.overflow = 'auto';
 });
 
+// Add List of menu responsive 
+// const list = document.querySelectorAll('.list-nav li');
+// list.forEach(element => {
+//     const listItem = element;
+//     listItem.addEventListener('click', () => {
+//         containerSubmenuResponsive.forEach(element => {
+//             containerSubmenuResponsive.style.display = 'block';
+//         });
+//     });
+// });
 
 

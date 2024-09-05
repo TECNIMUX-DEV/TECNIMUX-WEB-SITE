@@ -336,6 +336,9 @@ input[type="text"]::-webkit-clear-button {
  .container-submenu-responsive {
     display: none;
  }
+ .display-block {
+  display: block;
+}
 
 #container-open-nav {
   z-index: 10;
