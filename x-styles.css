@@ -153,19 +153,36 @@ input[type="text"]::-webkit-clear-button {
     flex-direction: column;
     padding: 5px;
   }
+
   & ul a {
-text-decoration: none;
+    text-decoration: none;
   }
- & li {
-  width: 100%;
-  list-style: none;
-  font-family: monospace;
-  font-size: .8rem;
-  padding: 10px;
-  background-color: #1a1a1a;
-  border-radius: 1px;
+
+  & li {
+    width: 100%;
+    list-style: none;
+    font-family: monospace;
+    font-size: .8rem;
+    padding: 10px;
+    background-color: #1a1a1a;
+    border-radius: 1px;
   }
+
+  &::after {
+    content: "ABOVE FUTURE";
+    z-index: -1;
+    position: absolute;
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    bottom: 50%;
+    right: -210px;
+    color: #757575;
+    opacity: 0.2;
+    font-size: 3rem;
+    transform: rotate(-90deg);
   }
+}
 
   .filter-nav {
     z-index: -1;
@@ -1308,7 +1325,7 @@ animation:  pulsePulse .5s ease-in-out  infinite;
   height: 130px;
   width: 275px;
   max-width: 320px;
-  padding: 10px 0 0 15px;
+  padding: 5px;
   /* box-shadow: 0 0 .5px  #a8a8a8; */
   filter: drop-shadow( 0 0 0 #ffffff80);
   border-radius: 10px;
@@ -1316,6 +1333,10 @@ animation:  pulsePulse .5s ease-in-out  infinite;
   backdrop-filter: blur(25px);
   background-size: 200% 200%;
   transition:  background-position 0.35s ease-in-out;
+
+  P {
+
+  }
 
   & img {
       height: 25px;
@@ -1377,6 +1398,7 @@ animation:  pulsePulse .5s ease-in-out  infinite;
 
   & p {
   font-size: 0.8rem;
+  font-weight: 100;
   text-wrap: pretty;
   }
 }
