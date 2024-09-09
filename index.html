@@ -23,18 +23,20 @@
     <link href="/x-styles.css" rel="stylesheet">
     <meta charset="utf-8"/>
     <meta name="description" content="TECNIMUX Above Future"/>
-    <meta name="theme-color" content="#634092">
+    <meta name="theme-color" content="#000">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-<!--Open Graph-->
-<meta property="og:title" content="Tecnimux"/>
-<meta property="og:description" content="Tecnimux Above Future"/>
-<meta property="og:image" content="/LogoCOMBINADO.png"/>
-<meta property="og:description" content="Tecnimux - Tecnimux Above Future"/>
-<!-- Git Hub -->
-<link rel="canonical" href="https://q4lejandrop.github.io"/>
-<!-- Bootstrap Icons -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css"/>
+    <!--Open Graph-->
+    <meta property="og:title" content="Tecnimux"/>
+    <meta property="og:description" content="Tecnimux Above Future"/>
+    <meta property="og:image" content="/LogoCOMBINADO.png"/>
+    <meta property="og:description" content="Tecnimux - Tecnimux Above Future"/>
+    <!-- Git Hub -->
+    <link rel="canonical" href="https://q4lejandrop.github.io"/>
+    <!--Font Main -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div id="loading" class="loading"><img src="/logo-TX/white/with-out.png" alt="Loading" ></div>
@@ -159,9 +161,8 @@
             <li>tecnimux-bussiness@tecnimux.com</li>
             </div>
         </ul>
-        <div id="version">
-            <h5>TX | WEB SITE</h5>
-            <p>V-2.3.4</p>
+        <div class="vresponsive version">
+            <code>TX | v2.3.4 Pre-Alpha</code>
         </div>
 
         <!-- Dark and light mode -->
@@ -306,9 +307,12 @@
         <form>
             <h2>Iniciar Sesión</h2>
             <div class="login">
-            <input type="email" placeholder="Correo electronico" class="input-email">
-            <input type="password" placeholder="Contraseña" class="input-password"></div>
+                <input type="email" placeholder="Correo electronico" class="input-email">
+                <input type="password" placeholder="Contraseña" class="input-password">
+            </div>
+            <div class="container-btn-login">
             <button class="btn-login"><strong>Ingresar</strong></button>
+            </div>
             <div class="btn-close-login">
                 <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24" viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1"
                   stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-x"><path stroke="none" d="M0 0h24v24H0z"
@@ -320,7 +324,7 @@
                     </svg>
                      <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-devices-pc"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 5h6v14h-6z" /><path d="M12 9h10v7h-10z" /><path d="M14 19h6" /><path d="M17 16v3" /><path d="M6 13v.01" /><path d="M6 16v.01" /></svg>
                 </div>
-                <button><strong>Registrarme</strong></button>
+                <button id="btn-register"><strong>Registrarme</strong></button>
         </form>
     </div>  
     </section>
@@ -578,14 +582,14 @@
 
 <!-- About -->
 <section id="about">
+    <img src="IMG-SECTIONS/Me-without.png" alt="Its Me">
 <h2>TX Philosophy</h2>
-    <div class="title-center">
+    <!-- <div class="title-center">
     <h3>TEC<br />
     NI<br />
     MUX   
  </h3>
- <img src="IMG-SECTIONS/Me.png" alt="Its Me">
-</div>
+</div> -->
 
 <div class="container-descrip-me">
          <div class="text-philo">
@@ -606,6 +610,14 @@
 <section id="projects">
     <div class="container-projects">
         <h2>Nuestros Trabajos</h2>
+        <div class="project">
+            <img src="/img/Images-of-projects/Btwo-tech-home.png" alt="Btwo Tech" loading="lazy">
+            <h3>Btwo Tech</h3>
+        </div>
+        <div class="project">
+            <img src="/img/Images-of-projects/Network-CJBO-section.png" alt="Network CJBO" loading="lazy">
+            <h3>Network CJBO</h3>
+        </div>
         <div class="project">
             <!-- <P>Coder !!!!</P>  -->
         </div>
@@ -682,7 +694,7 @@
     </div>
 </a>
 <div class="version">
-    <p>TECNIMUX | V-2.3.4</p>
+    <code>TX | v2.3.4 Pre-Alpha</code>
 </div>
 </footer>
 
