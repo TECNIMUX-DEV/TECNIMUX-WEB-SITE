@@ -1774,8 +1774,90 @@ animation:  pulsePulse .5s ease-in-out  infinite;
   }
 }
 
-#high-store {
+#details {
+  height: auto;
+  width: 100%;
+  padding: 3rem 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-auto-rows: auto;
+  /* grid-template-columns: repeat(3, 2fr);
+  grid-template-rows: 2fr, 1fr, 1fr, 1fr;
+  place-items: center;
+  row-gap: 20px;
+  column-gap: 5px; */
+  place-content: center;
+  place-items: center;
+  gap: 10px;
+  background-image: linear-gradient(to left bottom, #040404, #283443, #2e6880, #1ba3b3, #40e0d0);
+  box-shadow: 0 15px 2rem #ffffff56;
+}
+.item-with-details {
   position: relative;
+  height: 150px;
+  width: 200px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  gap: 5px;
+  background-color: rgb(87, 87, 87);
+  padding: 1rem;
+  transition: all 0.3s;
+
+  & h3 {
+    font-size: 1.2rem;
+    text-align: center;
+
+    & span {
+      display: block;
+    }
+
+    &:hover {
+      color: rgb(255, 255, 255);
+      text-shadow: 0 0 0.5rem #ffffff;
+      animation: move-text 1s ease-in-out infinite;
+      animation-delay: 1s;
+    }
+  }
+
+  .lastest {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.692);
+    backdrop-filter: blur(5px);
+
+    & p {
+      font-size: .7rem;
+    }
+
+    & p:nth-child(1) {
+      color: rgb(0, 255, 242);
+    }
+
+  }
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 1rem #ffffff;
+  }
+}
+.itemd-01, .itemd-02, .itemd-03, .itemd-04, .itemd-05, .itemd-06 {
+grid-row: span 3;
+background-color: rgb(56, 56, 56);
+height: 300px;
+}
+
+
+/* Style images half */
+  /* position: relative;
   height: auto;
   height: 100vh;
   width: 100%;
@@ -1865,24 +1947,13 @@ animation:  pulsePulse .5s ease-in-out  infinite;
   height: 50%;
   border-radius: 15px;
 }
-.container-descrip-high-store {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  padding: 1rem;
-}
-.container-descrip-high-store:hover h2 {
-  transform: scale(1.5);
-}
 .filter-store {
   z-index: -1;
   position: absolute;
   height: 100%;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.45);
-} 
+}  */
 
 #about {
   width: 100%;
