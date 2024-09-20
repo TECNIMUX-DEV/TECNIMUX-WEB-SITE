@@ -579,7 +579,7 @@ animation: show-nav-bar .01s ease-out;
             position: absolute;
             width: 200%;
             height: 200%;
-            background: radial-gradient(ellipse at center, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
+            background: radial-gradient(ellipse at center, rgba(255,255,255,0.002) 0%, rgba(255,255,255, 0.05) 70%);
             animation: waveAnimation 15s infinite linear;
         }
         .wave:nth-child(2) {
@@ -631,12 +631,13 @@ animation: show-nav-bar .01s ease-out;
   }
 }
 .container-items-nav-main {
+  z-index: 1;
   display: none;
   position: absolute;
   top: 100%; 
   transform: translateX(-50%);
-  box-shadow: inset 0 0 1rem #ffffff0e;
-  background-color: #0000000c;
+  border: 1px inset #ffffff52;
+  background-color: #4444449f;
   backdrop-filter: blur(20px);
   padding: 0.5rem;
   border-radius: 0.5rem;
@@ -650,7 +651,7 @@ animation: show-nav-bar .01s ease-out;
   }
 
   & p {
-    color: rgb(255, 255, 255);
+    color:#000;
     font-weight: 200;
     /* background-color: red; */
     text-align: start;
@@ -658,9 +659,12 @@ animation: show-nav-bar .01s ease-out;
     }
 
   & svg {
+    display: none;
     position: relative;
-    margin: .5rem;
+    height: 30px;
+    width: 30px;
     display: block;
+    opacity: 0;
   }
 
   &:hover {
@@ -669,7 +673,7 @@ animation: show-nav-bar .01s ease-out;
   .items-nav-main {
     height: 60%;
     padding: 1rem;
-    background-color: rgba(0, 0, 0, 0.541);
+    background-color: #fff;
     backdrop-filter:  blur(5px);
     border-radius: 5px;
   }
@@ -1867,32 +1871,6 @@ animation:  pulsePulse .5s ease-in-out  infinite;
     padding: 15px;
   }
 }
-.content-galeria {
-  font-size: 1rem;
-  font-weight: 200;
-  color: #fff;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
-}
-
-.content-galeria a {
-  text-decoration: none;
-  color: #000;
-}
-.content-galeria span {
-  font-weight: 400;
-  font-size: 1.5rem;
-  background-color: rgba(255, 255, 255, 0.212);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  padding: 15px;
-  margin: 20px;
-}
-.content-galeria span:hover {
-  background-color: rgba(255, 255, 255, 0.312);
-  animation: plot 0.3s ease-in-out both;
-}
 @keyframes show {
   from {
     opacity: 0;
@@ -1912,7 +1890,107 @@ animation:  pulsePulse .5s ease-in-out  infinite;
   }
 }
 
+#latest {
+  position: relative;
+  height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  & span {
+    color: #634092;
+    opacity: 0.5;
+  }
+
+  .container-latest {
+    position: relative;
+    height: 700px;
+    width: 670px;
+    padding: 2rem 1rem;
+    border-radius: 7px;
+    background-color: rgba(199, 199, 199, 0.096);
+    backdrop-filter: blur(5px);
+
+    & .type-latest {
+      position: absolute;
+      top: 10%;
+      right: 5%;
+      height: 80px;
+      width: 270px;
+      margin: 0 1rem;
+      padding: 1rem;
+      border-radius: 7px;
+      background-color: red;
+    }
+    
+    & .description-latest {
+      position: absolute;
+      top: 25%;
+      right: 5%;
+      height: 200px;
+      /* height: 300px; */
+      width: 270px;
+      margin: 0 1rem;
+      padding: 1rem;
+      border-radius: 4px;
+      background-color: #634092;
+    }
+
+    & .date {
+      position: relative;
+      height: auto;
+      width: 95%;
+      margin: 1rem  auto;
+      padding: .5rem;
+      background-color: #464646c2;
+      border-radius: 14px;
+    }
+
+    & .img-latest {
+      position: relative;
+      height: 257px;
+      width: 257px;
+      margin: 1rem;
+      padding: 1rem;
+      border-radius: 14px;
+      background-color: rgba(199, 199, 199, 0.2);
+
+      & img {
+        height: auto;
+        width: 100%;
+        border-radius: 7px;
+      }
+      }
+
+      & .plataforma-latest {
+        position: relative;
+        height: 80px;
+        width: 257px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 1rem;
+        border-radius: 7px;
+        background-color: rgb(0, 0, 0);
+
+        & svg {
+          height: auto;
+          width: 35px;
+          margin: 1rem;
+          border-radius: 7px;
+        }
+    }
+  }
+}
+
+
+
+
 #details {
+  position: relative;
   height: auto;
   width: 100%;
   padding: 2rem;
@@ -1924,6 +2002,13 @@ animation:  pulsePulse .5s ease-in-out  infinite;
   gap: 20px 0;
   background-image: linear-gradient(to left bottom, #040404, #283443, #2e6880, #1ba4b37a, #40e0d081);
   box-shadow: 15px 10px 2rem rgba(255, 255, 255, 0.1);
+
+  & svg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 1rem;
+  }
 
   @media screen and (max-width: 1000px) {
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
