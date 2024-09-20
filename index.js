@@ -42,8 +42,10 @@ let header01 = document.querySelector('header');
  window.addEventListener('scroll', () => {
      if (window.scrollY > stateScrollTwo) {
         header01.classList.add('header-color');
+        header01.style.marginTop='0';
      } else{
          header01.classList.remove('header-color');
+         header01.style.marginTop='10px';
          }
          });
  });
@@ -255,4 +257,18 @@ btnCloseLangs.addEventListener('click', () => {
 //     });
 // });
 
+// Create lines
+const linesContainer = document.querySelector('.lines');
+for (let i = 0; i < 8; i++) {
+    const line = document.createElement('div');
+    line.classList.add('line');
+    line.style.left = `${Math.random() * 100}%`;
+    line.style.top = `${Math.random() * 100}%`;
+    line.style.width = `${Math.random() * 30 + 20}%`;
+    line.style.height = `${Math.random() * 1.5 + 0.5}px`;
+    line.style.animationDuration = `${Math.random() * 10 + 15}s`;
+    line.style.animationDelay = `${Math.random() * 10}s`;
+    line.style.opacity = Math.random() * 0.2 + 0.1;
+    linesContainer.appendChild(line);
+}
 

@@ -5,5 +5,10 @@
     "CodeGPT.apiKey": "CodeGPT Plus Beta",
     "powermode.enabled": true,
     "powermode.presets": "particles",
-    "editor.fontLigatures": true
+    "editor.fontLigatures": true,
+    "powermode.combo.location": "off",
+    "powermode.combo.counterEnabled": "hide",
+    "powermode.combo.timerEnabled": "hide",
+    "powermode.combo.counterSize": 0,
+    "powermode.combo.timeout": 0
 }
