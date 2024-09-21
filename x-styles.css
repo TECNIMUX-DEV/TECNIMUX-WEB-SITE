@@ -360,7 +360,7 @@ input[type="text"]::-webkit-clear-button {
   justify-content: end;
   height: 6.5vh;
   width: 100%;
-  background-color: #1a6362;
+  background-color: #fff;
   /* background-color: rgb(99, 64, 146, 0.5); */
   /* background-image: linear-gradient(to top, #141414, #111111, #0e0e0e, #0a0a0a, #060606, #040404, #020202, #000000, #000000, #000000, #000000, #000000); */
   backdrop-filter: blur(5px);
@@ -451,7 +451,7 @@ animation: show-nav-bar .01s ease-out;
   padding: 1px 5px;
 
   & svg {
-    stroke: #fff;
+    stroke: #000;
   }
 }
 #btn-close {
@@ -1899,7 +1899,6 @@ animation:  pulsePulse .5s ease-in-out  infinite;
   align-items: center;
   flex-direction: column;
   flex-wrap: wrap;
-  display: none;
 
   & span {
     color: #634092;
@@ -1908,36 +1907,97 @@ animation:  pulsePulse .5s ease-in-out  infinite;
 
   .container-latest {
     position: relative;
-    height: 700px;
-    width: 670px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* height: 700px; */
+    /* width: 670px; */
     padding: 2rem 1rem;
     border-radius: 7px;
     background-color: rgba(199, 199, 199, 0.096);
     backdrop-filter: blur(5px);
 
-    & .type-latest {
-      position: absolute;
-      top: 10%;
-      right: 5%;
-      height: 80px;
-      width: 270px;
-      margin: 0 1rem;
-      padding: 1rem;
-      border-radius: 7px;
-      background-color: red;
+    & h3 {
+      width: 100%;
+      text-align: end;
     }
+
+    &  .container-details-latest {
+      position: relative;
+      height: 100%;
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      flex-direction: column;
+      border-top-right-radius: 7px;
+      border-bottom-right-radius: 7px;
+      margin: 1rem;
+      background-color: rgb(32, 32, 32)
+    };
+
+    & .container-type {
+      position: relative;
+      height: auto;
+      width: 100%;
+      display: flex;
+      justify-content: end;
+      align-items: center;
+    }
+
+    & .type-latest {
+      display: inline-flex;
+      justify-content: end;
+      align-items: center;
+      gap: 10px;
+      height: auto;
+      border-radius: 7px;
+      background-color: rgb(255, 255, 255);
+      margin: 1rem;
+      padding: .2rem 1rem;
+
+      & h3 {
+        padding: .1rem .2rem ;
+        border-radius: 7px;
+        color: #000;
+        background-color: #00000023;
+      }
+
+      & p {
+        color: #000;
+      }
+  }
     
+    & .container-latest-top {
+      position: relative;
+      height: auto;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      /* border-top-left-radius: 7px;
+      border-bottom-left-radius: 7px; */
+      border-radius: 7px;
+      background-color: rgb(10, 10, 10);
+    }
+
     & .description-latest {
-      position: absolute;
-      top: 25%;
-      right: 5%;
-      height: 200px;
-      /* height: 300px; */
-      width: 270px;
+      height: auto;
       margin: 0 1rem;
+      margin-bottom: 1rem;
       padding: 1rem;
       border-radius: 4px;
-      background-color: #634092;
+      /* background-color: #634092; */
+      background-color: rgba(0, 0, 0, 0.192);
+
+        & h3 {
+          width: 100%;
+          text-align: start;
+        }
     }
 
     & .date {
@@ -1946,13 +2006,18 @@ animation:  pulsePulse .5s ease-in-out  infinite;
       width: 95%;
       margin: 1rem  auto;
       padding: .5rem;
-      background-color: #464646c2;
+      background-color: #634092;
       border-radius: 14px;
+
+      & h3 {
+        width: 100%;
+        text-align: start;
+      }
     }
 
     & .img-latest {
       position: relative;
-      height: 257px;
+      height: 200px;
       width: 257px;
       margin: 1rem;
       padding: 1rem;
@@ -1968,7 +2033,7 @@ animation:  pulsePulse .5s ease-in-out  infinite;
 
       & .plataforma-latest {
         position: relative;
-        height: 80px;
+        height: auto;
         width: 257px;
         display: flex;
         justify-content: space-around;
@@ -1977,10 +2042,14 @@ animation:  pulsePulse .5s ease-in-out  infinite;
         border-radius: 7px;
         background-color: rgb(0, 0, 0);
 
+        & h3 {
+          width: auto;
+        }
+
         & svg {
           height: auto;
           width: 35px;
-          margin: 1rem;
+          margin: .5rem;
           border-radius: 7px;
         }
     }
