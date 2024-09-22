@@ -42,10 +42,12 @@ let header01 = document.querySelector('header');
  window.addEventListener('scroll', () => {
      if (window.scrollY > stateScrollTwo) {
         header01.classList.add('header-color');
-        header01.style.marginTop='0';
+        header01.style.width='90%';
+        header01.style.borderRadius='15px';
      } else{
          header01.classList.remove('header-color');
-         header01.style.marginTop='10px';
+         header01.style.width='100%';
+         header01.style.borderRadius='0';
          }
          });
  });
@@ -53,7 +55,7 @@ let header01 = document.querySelector('header');
 // MAIN <1000 Remove nav bar when scrolling
 const containerOpenNav = document.getElementById('container-open-nav');
 let stateScroll = 0;
-let stateScrollTwo = 20;
+let stateScrollTwo = 250;
 window.addEventListener('scroll', () => {
     const scrollTop = window.scrollY;
     const screenWidth = window.innerWidth || document.documentElement.clientWidth;
@@ -257,7 +259,7 @@ btnCloseLangs.addEventListener('click', () => {
 //     });
 // });
 
-// Create lines
+// Animation Home
 const linesContainer = document.querySelector('.lines');
 for (let i = 0; i < 8; i++) {
     const line = document.createElement('div');
