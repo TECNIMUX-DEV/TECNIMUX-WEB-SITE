@@ -546,7 +546,7 @@ animation: show-nav-bar .01s ease-out;
               padding: 1rem;
               /* background-color: #e600004b; */
               background: linear-gradient(180deg, rgba(155, 155, 155, 0.294), rgba(8, 8, 8, 0.486));
-              background-image: url(/img/Home/215006.png);
+              background-image: url(/img/Home/21.png);
               background-size: cover;
               background-position: 100% 350%;
               backdrop-filter: blur(1px);
@@ -2017,7 +2017,7 @@ animation:  pulsePulse .5s ease-in-out  infinite;
 
     & .description-latest {
       height: auto;
-      margin: 0 1rem;
+
       margin-bottom: 1rem;
       padding: 1rem;
       border-radius: 4px;
