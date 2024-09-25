@@ -567,21 +567,41 @@ animation: show-nav-bar .01s ease-out;
             }
         }
         .text {
+          position: relative;
             z-index: 10;
+            height: 140px;
             width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             /* font-family: font-eslogan, Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
             font-size: 1.2rem;
             font-weight: bold;
             color: #d6d6d6;
             text-transform: uppercase;
             letter-spacing: 0.5vw;
-            position: relative;
+            backdrop-filter: blur(20px);
+            background-color: #ffffff11;
             animation: textReveal 4s ease-out forwards;
             text-align: center;
             line-height: 1.2;
-            margin: 2rem;
             padding: 1rem;
             opacity: 0.5;
+            overflow: hidden;
+        }
+        .auto-slider {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          animation: auto-slider 25s ease-in-out infinite alternate;
+          animation-delay: 5s;
+
+          &:hover {
+            animation-play-state: paused;
+          }
+
+
         }
         .text span {
             display: inline-block;
@@ -615,6 +635,17 @@ animation: show-nav-bar .01s ease-out;
                 opacity: 1;
                 transform: translateY(0);
             }
+        }
+        @keyframes auto-slider {
+          0% {
+            transform: translate(0);
+          }
+          50% {
+            transform: translate(110%);
+          }
+          100% {
+            transform: translate(-110%);
+          }
         }
         .background {
             position: absolute;
@@ -827,7 +858,7 @@ li:hover .container-items-nav-main {
   & img {
     height: auto;
     width: 13px;
-    opacity: .5;
+    opacity: 0.1;
   }
   .imagotipo-name {
     height: auto;
@@ -1171,10 +1202,6 @@ footer {
   flex-direction: row-reverse;
   padding: 1rem;
   transition: all 0.5s;
-
-  & p {
-    opacity: 1;
-  }
 
   & svg {
     margin: 0 .2rem ;
@@ -1592,7 +1619,7 @@ animation:  pulsePulse .5s ease-in-out  infinite;
   padding: 5px;
   filter: drop-shadow( 0 0 0 #ffffff80);
   border-radius: 10px;
-  background:linear-gradient(45deg, rgba(138, 138, 138, 0.25), #7e7e7e17, #9c9c9c0e  );
+  background:linear-gradient(45deg, rgba(138, 138, 138, 0.15), rgba(126, 126, 126, 0.09), rgba(156, 156, 156, 0.055)  );
   backdrop-filter: blur(25px);
   background-size: 200% 200%;
   transition:  background-position 0.35s ease-in-out;
@@ -2111,16 +2138,18 @@ animation:  pulsePulse .5s ease-in-out  infinite;
 #details {
   position: relative;
   height: auto;
-  width: 100%;
+  width: 90%;
+  margin: auto;
   padding: 2rem;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   grid-auto-rows: auto;
   place-content: center;
   place-items: center;
-  gap: 20px 0;
-  background-image: linear-gradient(to left bottom, #040404, #283443, #2e6880, #1ba4b37a, #40e0d081);
-  box-shadow: 15px 10px 2rem rgba(255, 255, 255, 0.1);
+  gap: 10px 2px;
+  /* background-image: linear-gradient(to left bottom, #040404, #283443, #2e6880, #1ba4b37a, #40e0d081);
+  box-shadow: 15px 10px 2rem rgba(255, 255, 255, 0.1); */
+  backdrop-filter: blur(12px);
 
   & svg {
     z-index: 1;
@@ -2314,8 +2343,7 @@ height: 300px;
   background-color: transparent;
 
   & h2 {
-    background: #634092;
-  background: linear-gradient(to right, #634092 -5%, #39FF8C 50%);
+  background: linear-gradient(to right, #39FF8C 5%, #634092 50%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   }
@@ -2351,13 +2379,13 @@ height: 300px;
             position: relative;
             height: auto;
             width: 100%;
-            background: linear-gradient(45deg, #ffffff2c, #ffffff1e);
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
             display: flex;
             justify-content: center;
             align-items: center;
             flex-wrap: wrap;
             padding: 1rem;
-            backdrop-filter: blur(1px);
+            backdrop-filter: blur(15px);
             border-radius: 10px;
 
             & img {
