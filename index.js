@@ -13,18 +13,20 @@ let btnOpenNavPrimaryNav = document.getElementById('btn-open-primary-nav');
 // });
 
 btnOpenNavPrimaryNav.addEventListener('click', () => {
+    btnOpenNavPrimaryNav.style.display = 'none';
     hiddenList.style.display ='block';
     hiddenList.style.overflowY = 'hidden';
     filterGeneral.style.display = 'none';
-    containerOpenNav.style.display = 'none';
+    // containerOpenNav.style.display = 'none';
     document.body.style.overflowY = 'hidden';
 });
 
 let btnCloseSecondNav = document.getElementById('btn-close-second-nav');
 btnCloseSecondNav.addEventListener('click', () => {
+    btnOpenNavPrimaryNav.style.display = 'block';
     hiddenList.style.display = 'none';
     document.body.style.overflowY = 'auto';
-    containerOpenNav.style.display = 'flex';
+    // containerOpenNav.style.display = 'flex';
 });
 
 const aboutItem = document.getElementById('about-item').addEventListener('click', () => {
@@ -62,30 +64,32 @@ let header01 = document.querySelector('header');
          });
 
 // MAIN <1000 Remove nav bar when scrolling
-const containerOpenNav = document.getElementById('container-open-nav');
-let stateScroll = 0;
+// const containerOpenNav = document.getElementById('container-open-nav');
+// let stateScroll = 0;
+// let stateScrollTwo = 250;
+// window.addEventListener('scroll', () => {
+//     const scrollTop = window.scrollY;
+//     const screenWidth = window.innerWidth || document.documentElement.clientWidth;
+//     if(screenWidth <= 1000) {
+
+// if(scrollTop > stateScroll) {
+//     containerOpenNav.style.display = 'none';
+
+//     containerOpenNav.classList.add('hidde');
+
+// } else {
+//     containerOpenNav.style.display = 'flex';
+//     containerOpenNav.classList.add('show-nav-bar');
+// } 
+// } else {
+//     containerOpenNav.style.display = 'none';
+//     containerOpenNav.classList.add('hidde'); 
+
+// }
+// stateScroll = scrollTop <= 0 ? 0: scrollTop; 
+// });
+
 let stateScrollTwo = 250;
-window.addEventListener('scroll', () => {
-    const scrollTop = window.scrollY;
-    const screenWidth = window.innerWidth || document.documentElement.clientWidth;
-    if(screenWidth <= 1000) {
-
-if(scrollTop > stateScroll) {
-    containerOpenNav.style.display = 'none';
-
-    containerOpenNav.classList.add('hidde');
-
-} else {
-    containerOpenNav.style.display = 'flex';
-    containerOpenNav.classList.add('show-nav-bar');
-} 
-} else {
-    containerOpenNav.style.display = 'none';
-    containerOpenNav.classList.add('hidde'); 
-
-}
-stateScroll = scrollTop <= 0 ? 0: scrollTop; 
-});
 
 // Remove guia nav bar when scrolling
 // const guia = document.getElementById('guia');
@@ -102,6 +106,7 @@ stateScroll = scrollTop <= 0 ? 0: scrollTop;
 // };
 // hiddenGuia();
 
+const filterGeneral = document.getElementById('filter-general');
 
 
 // Modes ui
