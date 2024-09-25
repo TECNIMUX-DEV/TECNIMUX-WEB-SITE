@@ -241,9 +241,8 @@ background-color: rgb(255, 255, 255, 0.3);
   }
 }
 
-#TX-bg {
-  background:  linear-gradient(rgba(255, 0, 0, 0.63), rgba(255, 166, 0, 0.562));
-  backdrop-filter: blur(7px);
+#TX-bgs {
+background-color: #000;
 }
 
 .modal-prev-images {
@@ -323,10 +322,4 @@ transition: 0.5s ease;
     padding: 0;
     height: 200px;
    }
-  
-  
-  #TX-bg {
-    background:  linear-gradient(rgba(255, 0, 0, 0.63), rgba(255, 166, 0, 0.562));
-    backdrop-filter: blur(7px);
-  }
 } 

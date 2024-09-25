@@ -1,17 +1,27 @@
+document.addEventListener('DOMContentLoaded', () => {
 // Show and hidden menu responsive
 let hiddenList = document.getElementById('hidden-list');
-let btnOpenNavMain = document.getElementById('btn-open-nav-main');
-btnOpenNavMain.addEventListener('click', () => {
+// let btnOpenNavMain = document.getElementById('btn-open-nav-main');
+let btnOpenNavPrimaryNav = document.getElementById('btn-open-primary-nav');
+// btnOpenNavMain.addEventListener('click', () => {
+//     hiddenList.style.display ='block';
+//     hiddenList.style.overflowY = 'hidden';
+//     guia.style.display = 'none';
+//     filterGeneral.style.display = 'none';
+//     containerOpenNav.style.display = 'none';
+//     document.body.style.overflowY = 'hidden';
+// });
+
+btnOpenNavPrimaryNav.addEventListener('click', () => {
     hiddenList.style.display ='block';
     hiddenList.style.overflowY = 'hidden';
-    guia.style.display = 'none';
     filterGeneral.style.display = 'none';
     containerOpenNav.style.display = 'none';
     document.body.style.overflowY = 'hidden';
 });
 
-let btnClose = document.getElementById('btn-close');
-btnClose.addEventListener('click', () => {
+let btnCloseSecondNav = document.getElementById('btn-close-second-nav');
+btnCloseSecondNav.addEventListener('click', () => {
     hiddenList.style.display = 'none';
     document.body.style.overflowY = 'auto';
     containerOpenNav.style.display = 'flex';
@@ -37,7 +47,7 @@ const containerSubmenuResponsive = document.querySelectorAll('.container-submenu
 // });
 
 // Add header color when scrolling
-document.addEventListener('DOMContentLoaded', () => {
+
 let header01 = document.querySelector('header');
  window.addEventListener('scroll', () => {
      if (window.scrollY > stateScrollTwo) {
@@ -50,7 +60,6 @@ let header01 = document.querySelector('header');
         //  header01.style.borderRadius='0';
          }
          });
- });
 
 // MAIN <1000 Remove nav bar when scrolling
 const containerOpenNav = document.getElementById('container-open-nav');
@@ -79,19 +88,19 @@ stateScroll = scrollTop <= 0 ? 0: scrollTop;
 });
 
 // Remove guia nav bar when scrolling
-const guia = document.getElementById('guia');
-const filterGeneral = document.getElementById('filter-general');
-function hiddenGuia() {
-let stateScrolll = 0;
-window.addEventListener('scroll', () => {
-    const scrollTopp = window.scrollY;
-        if(scrollTopp > stateScrolll) {
-            guia.style.display = 'none';
-            filterGeneral.style.display = 'none'; 
-        } 
-}, { once: true});
-};
-hiddenGuia();
+// const guia = document.getElementById('guia');
+// const filterGeneral = document.getElementById('filter-general');
+// function hiddenGuia() {
+// let stateScrolll = 0;
+// window.addEventListener('scroll', () => {
+//     const scrollTopp = window.scrollY;
+//         if(scrollTopp > stateScrolll) {
+//             guia.style.display = 'none';
+//             filterGeneral.style.display = 'none'; 
+//         } 
+// }, { once: true});
+// };
+// hiddenGuia();
 
 
 
@@ -188,13 +197,12 @@ toggleDarkLight.addEventListener('click', () => {
 
 // loader
 const loading = document.getElementById('loading');
-document.addEventListener('DOMContentLoaded', () => {
 document.body.style.overflow = 'hidden';
     setTimeout(() => {
         loading.style.display = 'none';
         document.body.style.overflow = 'auto';
     }, 1000);
-});
+
 
 // Form
 const form = document.getElementById('form');
@@ -205,17 +213,16 @@ const btnOpenLang = document.getElementById('btn-open-lang');
 const loginHome = document.getElementById('login-home');
 
 
-
 document.querySelectorAll('.filter-login').forEach(element => {
     const filterLogin = element;
-    filterLogin.addEventListener('click', () => {
+        filterLogin.addEventListener('click', () => {
         loginHome.style.display = 'none';
         filterLogin.style.display = 'none';
         languajes.style.display = 'none';
         form.style.display = 'none';
         document.body.style.overflow = 'auto';
-
 });
+
 btnOpenForm.addEventListener('click', () => {
     loginHome.style.display = 'flex';
     languajes.style.display = 'none';
@@ -273,4 +280,4 @@ for (let i = 0; i < 8; i++) {
     line.style.opacity = Math.random() * 0.2 + 0.1;
     linesContainer.appendChild(line);
 }
-
+});
