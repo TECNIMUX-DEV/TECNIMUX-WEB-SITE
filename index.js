@@ -42,12 +42,12 @@ let header01 = document.querySelector('header');
  window.addEventListener('scroll', () => {
      if (window.scrollY > stateScrollTwo) {
         header01.classList.add('header-color');
-        header01.style.width='90%';
-        header01.style.borderRadius='15px';
+        // header01.style.width='90%';
+        // header01.style.borderRadius='15px';
      } else{
          header01.classList.remove('header-color');
-         header01.style.width='100%';
-         header01.style.borderRadius='0';
+        //  header01.style.width='100%';
+        //  header01.style.borderRadius='0';
          }
          });
  });
