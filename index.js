@@ -14,7 +14,7 @@ let btnOpenNavPrimaryNav = document.getElementById('btn-open-primary-nav');
 
 btnOpenNavPrimaryNav.addEventListener('click', () => {
     btnOpenNavPrimaryNav.style.display = 'none';
-    hiddenList.style.display ='block';
+    hiddenList.style.display ='flex';
     hiddenList.style.overflowY = 'hidden';
     filterGeneral.style.display = 'none';
     // containerOpenNav.style.display = 'none';
@@ -29,10 +29,7 @@ btnCloseSecondNav.addEventListener('click', () => {
     // containerOpenNav.style.display = 'flex';
 });
 
-const aboutItem = document.getElementById('about-item').addEventListener('click', () => {
-    hiddenList.style.display = 'none';
-    document.body.style.overflowY = 'auto';
-});
+
 // let navHidden = document.getElementById('nav-hidden');
 // navHidden.addEventListener('click', () => {
 //     hiddenList.style.display = 'none';
@@ -40,13 +37,31 @@ const aboutItem = document.getElementById('about-item').addEventListener('click'
 // });
 
 // Submenus
-const btnShowSubmenusResponsive = document.querySelector('.btn-show-submenus-responsive');
-const containerSubmenuResponsive = document.querySelectorAll('.container-submenu-responsive')
+// const btnShowSubmenusResponsive = document.querySelector('.btn-show-submenus-responsive');
 // btnShowSubmenusResponsive.addEventListener('click', () => {
 //     containerSubmenuResponsive.forEach(element => {
 //         element.classList.toggle('display-block');
 //     });
 // });
+
+// Show Submenus
+const activeMenuResponsive = document.querySelectorAll('.active-menu-responsive')
+activeMenuResponsive.forEach(active => {
+    active.addEventListener('click', () => {
+      // Encuentra los li dentro del div padre de la sección actual
+      const liElements = active.parentElement.querySelectorAll('li');
+      
+      // Alterna la visibilidad de cada li
+      liElements.forEach(li => {
+        if (li.style.display === 'none' || li.style.display === '') {
+          li.style.display = 'block'; // Muestra el li
+        } else {
+          li.style.display = 'none'; // Oculta el li
+        }
+      });
+    });
+  });
+  
 
 // Add header color when scrolling
 
