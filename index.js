@@ -137,16 +137,16 @@ toggleDarkLight.addEventListener('click', () => {
     darkIconResponsive.style.display = 'none';
     lightIconResponsive.style.display = 'flex';
     console.log("UI")
-    document.documentElement.style.setProperty('--bg-color', 'background-image: linear-gradient(to top, #ffffff, #c0c0c0, #858585, #4e4e4e, #1d1d1d)');
-    document.documentElement.style.setProperty('--color-text', 'red');
+    document.documentElement.style.setProperty('--bg-color', '#fff');
+    document.documentElement.style.setProperty('--color-text', '#000');
 
     } else {
     toggleDarkLight.classList.add('active-dark');
     lightIconResponsive.style.display = 'none';
     darkIconResponsive.style.display = 'flex';
     console.log("UX")
-    document.documentElement.style.setProperty('--bg-color', 'background-image: linear-gradient(to top, #000, #c0c0c0, #000, #4e4e4e, #1d1d1d)');
-    document.documentElement.style.setProperty('--color-text', 'f0f0f0');
+    document.documentElement.style.setProperty('--bg-color', '#000');
+    document.documentElement.style.setProperty('--color-text', '#fff');
     }
     stateToggleDarkLightResponsive = !stateToggleDarkLightResponsive;
 });

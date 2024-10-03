@@ -1,8 +1,7 @@
 :root {
   /* --bg-color: linear-gradient(45deg, #050505, #141414, #000);  */
-  background-color: #000;
+  --bg-color: #000;
   --color-text: #fff;
-  --color-0000: #000;
 }
 * {
   margin: 0;
@@ -53,7 +52,7 @@ h2 {
   font-family: "Chakra Petch", sans-serif;
   font-size: 2rem;
   font-weight: 700;
-  color: #fff;
+  color: var(--color-text);
   padding: 20px;
 }
 p {
@@ -537,7 +536,7 @@ animation: show-nav-bar .01s ease-out;
   margin: 0;
   padding: 0;
   width: 100%;
-  background-color: #000;
+  background-color: var(--bg-color);
   font-family: Arial, sans-serif;
   overflow: hidden;
   border: none;
@@ -569,6 +568,7 @@ animation: show-nav-bar .01s ease-out;
               background-repeat: no-repeat;
               background-position: 100% 350%;
               backdrop-filter: blur(1px);
+              color: #fff;
               text-align: center;
               text-shadow: 0 0 0.5rem #00000059;
 
@@ -737,6 +737,7 @@ animation: show-nav-bar .01s ease-out;
   flex-direction: column;
   margin: 0 auto;
   border: none;
+  background-color: var(--bg-color);
 
   @media screen and (max-width: 1000px) {
     max-width: 100%;
@@ -1228,6 +1229,7 @@ footer {
   width: 100%;
   padding: 5rem 1rem;
   background-color: #000000;
+  color: #fff;
   opacity: 1;
   background-image: repeating-radial-gradient( circle at 0 0, transparent 0, #000000 13px ), repeating-linear-gradient( #32323255, #323232 );
 }
@@ -1659,6 +1661,7 @@ animation:  pulsePulse .5s ease-in-out  infinite;
   backdrop-filter: blur(25px);
   background-size: 200% 200%;
   transition:  background-position 0.35s ease-in-out;
+  color: var(--color-text);
 
   & svg {
     position: absolute;
@@ -1724,6 +1727,7 @@ animation:  pulsePulse .5s ease-in-out  infinite;
   font-size: 0.8rem;
   font-weight: 100;
   text-wrap: pretty;
+  color: var(--color-text);
   }
 }
 
@@ -1918,7 +1922,8 @@ animation:  pulsePulse .5s ease-in-out  infinite;
   font-weight: bold;
 }
 .text-featured-white {
-  color: #fff;
+  /* color: #fff; */
+  color: var(--color-text);
   font-weight: bold;
 }
 
@@ -1930,7 +1935,7 @@ animation:  pulsePulse .5s ease-in-out  infinite;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  background-color: transparent;
+  background-color: var(--bg-color);
   color: #aaaaaa;
 
   .project {
@@ -2052,6 +2057,12 @@ animation:  pulsePulse .5s ease-in-out  infinite;
   flex-direction: column;
   flex-wrap: wrap;
   padding: 2rem;
+  background-color: var(--bg-color);
+  color: var(--color-text);
+
+  & h2 {
+    color: var(--color-text);
+  }
 
   & span {
     color: #634092;
@@ -2070,6 +2081,7 @@ animation:  pulsePulse .5s ease-in-out  infinite;
     border-radius: 7px;
     /* background-color: rgba(199, 199, 199, 0.096); */
     backdrop-filter: blur(5px);
+    background-color: rgba(15, 15, 15, 0.089);
 
     & h3 {
       width: 100%;
@@ -2150,6 +2162,10 @@ animation:  pulsePulse .5s ease-in-out  infinite;
           width: 100%;
           text-align: start;
         }
+
+        & p {
+          color: var(--color-text);
+        }
     }
 
     & .date {
@@ -2170,8 +2186,7 @@ animation:  pulsePulse .5s ease-in-out  infinite;
       }
 
       & code {
-                font-size: .8rem;
-        color: #ffffff5e;
+        font-size: .8rem;
         text-align: center;
       }
     }
@@ -2190,7 +2205,7 @@ animation:  pulsePulse .5s ease-in-out  infinite;
         width: 100%;
         border-radius: 7px;
       }
-      }
+    }
 
       & .plataforma-latest {
         position: relative;
@@ -2229,10 +2244,8 @@ animation:  pulsePulse .5s ease-in-out  infinite;
   place-content: center;
   place-items: center;
   gap: 10px 2px;
-  /* background-image: linear-gradient(to left bottom, #040404, #283443, #2e6880, #1ba4b37a, #40e0d081);
-  box-shadow: 15px 10px 2rem rgba(255, 255, 255, 0.1); */
-  /* backdrop-filter: blur(12px); */
-  background-color: #000;
+  background-color: var(--bg-color);
+  /* background-image: linear-gradient(to left bottom, #040404, #283443, #2e6880, #1ba4b37a, #40e0d081);*/
 
   & svg {
     z-index: 1;
@@ -2433,14 +2446,15 @@ height: 300px;
   align-items: center;
   height: auto;
   width: 80%;
+  color: var(--color-text);
   text-align: center;
   margin: 0 auto;
   padding: 1rem;
 
   & p {
     font-size: 1rem;
-    text-align: start;
     color: var(--color-text);
+    text-align: start;
     font-weight: 400;
     text-shadow: 0 0 0.5rem #00000059;
     text-wrap: pretty;
@@ -2792,8 +2806,8 @@ height: 300px;
   display: flex;
   margin: 2rem auto;
   border-radius: 20px;
-  background-color: rgba(65, 65, 65, 0.075);
-  backdrop-filter: blur(5px);
+  /* background-color: rgba(65, 65, 65, 0.075); */
+  background-color: var(--bg-color);
   overflow: hidden;
   
   &:hover .slidee{
@@ -2804,6 +2818,7 @@ height: 300px;
     font-size: 3rem;
     font-weight: bolder;
     margin: 2rem;
+    color: #fff;
   }
 
   .container-slide {
@@ -2842,6 +2857,7 @@ height: 300px;
         flex-wrap: wrap;
         padding: .5rem;
         padding-bottom: 2rem;
+        background-color: #000;
 
         .red {
           position: relative;
