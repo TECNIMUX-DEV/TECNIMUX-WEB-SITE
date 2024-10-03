@@ -37,5 +37,39 @@
             <div class="btn-left"><</div>
             <div class="btn-right">></div>
             </div> -->
+            
+            <!-- <div class="image-container">
+                <img src="https://via.placeholder.com/300x200" alt="Ejemplo de imagen" class="tilt-image">
+              </div> -->
+            
+     
+<!-- <script>
+// Seleccionamos la imagen y el contenedor
+const image = document.querySelector('.tilt-image');
+const container = document.querySelector('.image-container');
 
+// Añadimos un evento de movimiento del mouse al contenedor
+container.addEventListener('mousemove', (e) => {
+  // Obtenemos las dimensiones del contenedor
+  const containerWidth = container.offsetWidth;
+  const containerHeight = container.offsetHeight;
+
+  // Calculamos la posición del mouse relativa al contenedor
+  const mouseX = e.pageX - container.offsetLeft;
+  const mouseY = e.pageY - container.offsetTop;
+
+  // Calculamos la inclinación en los ejes X e Y (invertidos)
+  const rotateY = ((mouseX / containerWidth) * 30) - 15; // De -15 a 15 grados
+  const rotateX = ((mouseY / containerHeight) * 30) - 15; // De -15 a 15 grados
+
+  // Aplicamos la transformación a la imagen
+  image.style.transform = `rotateX(${-rotateX}deg) rotateY(${rotateY}deg)`;
+});
+
+// Cuando el mouse salga del contenedor, la imagen regresa a su estado original
+container.addEventListener('mouseleave', () => {
+  image.style.transform = 'rotateX(0deg) rotateY(0deg)';
+});
+</script> -->
+</body>
 </html>
