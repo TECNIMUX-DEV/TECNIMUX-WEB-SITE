@@ -64,7 +64,6 @@ activeMenuResponsive.forEach(active => {
   
 
 // Add header color when scrolling
-
 let header01 = document.querySelector('header');
  window.addEventListener('scroll', () => {
      if (window.scrollY > stateScrollTwo) {
@@ -125,31 +124,75 @@ const filterGeneral = document.getElementById('filter-general');
 
 
 // Modes ui
-const toggleDarkLight = document.getElementById('toggle-dark-light');
-const toggleDarkLightFooter = document.getElementById('toggle-dark-light-footer'); /*TEMP*/
-const darkIconResponsive = document.getElementById('dark-icon-responsive');
-const lightIconResponsive = document.getElementById('light-icon-responsive');
+// const toggleDarkLight = document.getElementById('toggle-dark-light');
+// const toggleDarkLightFooter = document.getElementById('toggle-dark-light-footer'); /*TEMP*/
+// const darkIconResponsive = document.getElementById('dark-icon-responsive');
+// const lightIconResponsive = document.getElementById('light-icon-responsive');
 
-let stateToggleDarkLightResponsive = true;
-toggleDarkLight.addEventListener('click', () => {
-    if(stateToggleDarkLightResponsive) {
-    toggleDarkLight.classList.add('opacity-1');
-    darkIconResponsive.style.display = 'none';
-    lightIconResponsive.style.display = 'flex';
-    console.log("UI")
-    document.documentElement.style.setProperty('--bg-color', '#fff');
-    document.documentElement.style.setProperty('--color-text', '#000');
+const toggleDarkLight = document.querySelectorAll('.toggle-dark-light');
+const darkIconResponsive = document.querySelectorAll('.dark-icon-responsive');
+const lightIconResponsive = document.querySelectorAll('.light-icon-responsive');
 
+
+function activeDarkMode() {
+    document.body.classList.toggle('dark-mode');
+  }
+  
+  let stateToggleDarkLightResponsive = true;
+  toggleDarkLight.forEach((element) => {  // Cambié 'toggleDarkLight' por 'element' para evitar conflictos de nombres
+  
+    if (stateToggleDarkLightResponsive) {
+      element.addEventListener('click', () => {
+        darkIconResponsive.forEach((darkIcon) => {  // Cambié los paréntesis de la función de flecha
+          darkIcon.classList.toggle('display-block');
+          darkIcon.classList.add('display-none');
+        });
+        activeDarkMode();
+      });
     } else {
-    toggleDarkLight.classList.add('active-dark');
-    lightIconResponsive.style.display = 'none';
-    darkIconResponsive.style.display = 'flex';
-    console.log("UX")
-    document.documentElement.style.setProperty('--bg-color', '#000');
-    document.documentElement.style.setProperty('--color-text', '#fff');
+      element.addEventListener('click', () => {
+        lightIconResponsive.forEach((lightIcon) => {  // Arreglado de la misma forma
+          lightIcon.classList.toggle('display-block');
+          darkIcon.classList.toggle('display-none');
+        });
+  
+        stateToggleDarkLightResponsive = !stateToggleDarkLightResponsive;  // Cambio de estado
+      });
     }
-    stateToggleDarkLightResponsive = !stateToggleDarkLightResponsive;
-});
+  
+  });
+  
+
+
+
+//     if(stateToggleDarkLightResponsive) {
+//     // toggleDarkLight.classList.add('opacity-1');
+//     darkIconResponsive.forEach(darkIconResponsive => {
+//         darkIconResponsive.classList.add('display-none');
+//     });
+//     // darkIconResponsive.style.display = 'none';
+//     // lightIconResponsive.style.display = 'flex';
+//     // console.log("UI")
+
+//     activeDarkMode();
+//     // document.documentElement.style.setProperty('--bg-color', '#fff');
+//     // document.documentElement.style.setProperty('--color-text', '#000');
+
+//     } else {
+//     // toggleDarkLight.classList.add('active-dark');
+//     // lightIconResponsive.style.display = 'none';
+//     // darkIconResponsive.style.display = 'flex';
+//     // console.log("UX")
+//     // document.documentElement.style.setProperty('--bg-color', '#000');
+//     // document.documentElement.style.setProperty('--color-text', '#fff');
+//     lightIconResponsive.forEach(lightIconResponsive => {
+//         lightIconResponsive.classList.add('display-block');
+//     });
+
+//     }
+//     stateToggleDarkLightResponsive = !stateToggleDarkLightResponsive;
+// })
+
 
 
 // let stateToggleDarkLightFooter = true;

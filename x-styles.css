@@ -206,7 +206,7 @@ input[type="text"]::-webkit-clear-button {
     background-color: #000000eb;
 
   }
-#theme {
+.theme {
   position: absolute;
   bottom: 60px;
   margin: 15px;
@@ -216,7 +216,41 @@ input[type="text"]::-webkit-clear-button {
   align-items: end;
   gap: 10px;
 }
-.container-ui-modes-responsove {
+
+.dark-mode {
+  --bg-color: #fff;
+  --color-text: '#000';
+}
+
+.dark-icon-responsive .display-block {
+  display: none;
+}
+.dark-icon-responsive {
+  display: none;
+}
+
+.toggle-dark-light {
+  padding: .1rem;
+  border-radius: 25%;
+
+  &:hover {
+    background-color: #634092;
+  }
+}
+.toggle-dark-light:hover .light-icon-responsive .light-icon-responsive {
+opacity: 1;
+}
+.light-icon-responsive .display-none {
+  display: block;
+}
+
+.display-none {
+  display: none;
+}
+.display-block {
+  display: block;
+}
+.container-ui-modes-responsive {
     display: inline-flex;
     gap: 5px;
     padding: 5px;
@@ -240,13 +274,13 @@ input[type="text"]::-webkit-clear-button {
  }
 }
 
-#toggle-dark-light {
+/* .toggle-dark-light {
 
   &:hover {
     opacity: 0.5;
     transition: 0.5 ease-in-out;
   }
-}
+}  */
 .active-dark {
   opacity: 0.5;
   transition: 0.5 ease-in-out;
@@ -279,6 +313,7 @@ input[type="text"]::-webkit-clear-button {
   left: 0;
 }
 .theme-footer {
+  z-index: 10;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -2066,7 +2101,7 @@ animation:  pulsePulse .5s ease-in-out  infinite;
 
   & span {
     color: #634092;
-    opacity: 0.3;
+    opacity: 0.5;
   }
 
   .container-latest {
@@ -2082,6 +2117,13 @@ animation:  pulsePulse .5s ease-in-out  infinite;
     /* background-color: rgba(199, 199, 199, 0.096); */
     backdrop-filter: blur(5px);
     background-color: rgba(15, 15, 15, 0.089);
+
+    
+    & .tag-new {
+      position: absolute;
+      top: 25px;
+
+      }
 
     & h3 {
       width: 100%;
@@ -2828,6 +2870,7 @@ height: 300px;
     overflow: hidden;
     border-radius: 20px;
     }
+
     .slidee {
       z-index: -1;
       position: relative;
@@ -2857,7 +2900,7 @@ height: 300px;
         flex-wrap: wrap;
         padding: .5rem;
         padding-bottom: 2rem;
-        background-color: #000;
+        background-color: #0000005b;
 
         .red {
           position: relative;
