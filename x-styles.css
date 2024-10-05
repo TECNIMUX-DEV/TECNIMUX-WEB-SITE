@@ -2519,29 +2519,48 @@ height: 300px;
   overflow: hidden;
 
   & .avatar {
+    z-index: 1;
     position: relative;
-    height: 150px;
-    width: 150px;
-    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
-    box-shadow: inset 0 0 2rem #634092;
-    filter: drop-shadow(0 0 1rem #64409273);
-    transform: scale(0.5);
+    height: 50px;
+    width: fit-content;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2rem;
+    flex-direction: row;
+    background-color: rgb(255, 255, 255);
+    border-radius: 12px;
+
+    & .icon-avatar {
+
+      box-shadow: inset 0 0 2rem #634092;
+      filter: drop-shadow(0 0 1rem #64409273);
+      border-radius: 50%;
+      transform: scale(0.4);
+      background-color: #000;
+      overflow: hidden;
+    }
+
+      & .nick-name {
+        font-family: "chakra petch", sans-serif;
+        padding: .3rem;
+        font-size: 1.1rem;
+        color: #000;
+        background-color: #919191;
+        border-radius: 4px;
+        margin-right: 1rem;
+    }
   }
 
   & img {
     z-index: 1;
-    position: absolute;
-    /* top: -100px;
-    left: -300px; */
-    top: -20px;
-    left: -140px;
-    /* top: 50%;
-    right: 50%;
-    transform: translate(-50%, -50%); */
-    height: auto;
-    width: 280%;
+    position: relative;
+    height: 170px;
+    width: 170px;
+    top: 120px;
+    transform: scale(3);
+    zoom: 50%;
     filter: drop-shadow(6px 14px 16px rgba(100, 64, 146, 0.075));
-    transform: scale(1.2);
   }
 }
 
