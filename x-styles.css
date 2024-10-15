@@ -2121,8 +2121,11 @@ animation:  pulsePulse .5s ease-in-out  infinite;
     
     & .tag-new {
       position: absolute;
-      top: 25px;
-
+      top: 27px;
+      right: 15px;
+      font-size: .7rem;
+      color: red;
+      transform: rotate(-5deg);
       }
 
     & h3 {
@@ -2471,12 +2474,28 @@ height: 300px;
   margin-top: 2rem;
   font-family: "Urbanist Variable";
   /* background: linear-gradient(90deg, #000, #1a1a1a); */
-  background-color: transparent;
+  background-image: url(/img/cup_trophy_icon_188030.svg);
+  background-repeat: no-repeat;
 
-  & h2 {
+
+  & h2 em {
+    font-size: 2rem;
+    color: rgb(110, 110, 110);
+    letter-spacing: .3rem;
+    border: 1px solid #2e2e2e;
+    border-radius: 6px;
+  }
+
+  & span {
+  font-size: 3rem;
   background: linear-gradient(to right, #39FF8C 5%, #634092 50%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  }
+
+  & svg {
+    height: auto;
+    width: 150px;
   }
 }
 
@@ -2491,7 +2510,7 @@ height: 300px;
   color: var(--color-text);
   text-align: center;
   margin: 0 auto;
-  padding: 1rem;
+  padding: 1.5rem;
 
   & p {
     font-size: 1rem;
@@ -2501,21 +2520,33 @@ height: 300px;
     text-shadow: 0 0 0.5rem #00000059;
     text-wrap: pretty;
   }
+
+  & span {
+    font-size: 3rem;
+    background: linear-gradient(to right, #0e0e0e 5%, #ffffff 50%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    }
 }
 
+main {
+padding: .5rem;
+}
 
 .container-philosophy {
   position: relative;
   height: auto;
   width: 100%;
-  /* background: radial-gradient(circle, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02)); */
+  max-width: 450px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin: 2rem;
   padding: 1rem;
-  backdrop-filter: blur(15px);
   border-radius: 10px;
+  backdrop-filter: blur(1px);
   overflow: hidden;
 
   & .avatar {
@@ -2524,17 +2555,16 @@ height: 300px;
     height: 50px;
     width: fit-content;
     display: flex;
-    justify-content: space-around;
+    justify-content: end;
     align-items: center;
-    gap: 2rem;
+    gap: 1rem;
     flex-direction: row;
     background-color: rgb(255, 255, 255);
     border-radius: 12px;
 
     & .icon-avatar {
-
-      box-shadow: inset 0 0 2rem #634092;
-      filter: drop-shadow(0 0 1rem #64409273);
+      /* box-shadow: inset 0 0 2rem #634092;
+      filter: drop-shadow(0 0 1rem #64409273); */
       border-radius: 50%;
       transform: scale(0.4);
       background-color: #000;
@@ -2543,11 +2573,9 @@ height: 300px;
 
       & .nick-name {
         font-family: "chakra petch", sans-serif;
-        padding: .3rem;
-        font-size: 1.1rem;
+
+        font-size: .7rem;
         color: #000;
-        background-color: #919191;
-        border-radius: 4px;
         margin-right: 1rem;
     }
   }
