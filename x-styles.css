@@ -883,7 +883,6 @@ li:hover .container-items-nav-main {
   flex-direction: row;
   gap: 5px;
   margin-left: .8rem;
-  border-radius: 10px;
   /* background-color: #202020; */
   /* background-color: #634092; */
 
@@ -1317,6 +1316,13 @@ footer {
 
   & ul a {
   cursor: default;
+  }
+
+  & span {
+    margin:0 1rem 1rem .2rem;
+  }
+  & svg {
+    position: absolute;
   }
 }
 @keyframes left-to-right {
