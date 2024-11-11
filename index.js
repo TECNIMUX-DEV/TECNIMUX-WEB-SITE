@@ -344,3 +344,19 @@ for (let i = 0; i < 8; i++) {
     linesContainer.appendChild(line);
 }
 });
+
+
+// Open social networks
+const btnOpenSocialNetworks = document.getElementById('btn-open-social-networks');
+const socialNetworks = document.getElementById('social-networks');
+
+let isOpen = true;
+btnOpenSocialNetworks.addEventListener('click', () => {
+if (isOpen) {
+  socialNetworks.style.display = 'block';
+} else {
+  socialNetworks.style.display = 'none';
+}
+
+isOpen = !isOpen;
+})
