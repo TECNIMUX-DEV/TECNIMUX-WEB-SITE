@@ -12,44 +12,39 @@ body {
   color: #fff;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
+
 header {
-  height: 50px;
+  position: relative;
+  height: auto;
   width: 100%;
   display: flex;
   justify-content: end;
   flex-direction: row-reverse;
   align-items: center;
-  padding: 1rem;
+  padding: 3rem;
   color: #000;
-  background-color: rgb(173, 255, 47, .4);
-  backdrop-filter: blur(40px);
+  background-color: transparent;
 
-  & p {
-    color: #fff;
-    padding-right: 1rem;
+  & img {
+    width: 25px;
+    padding: .2rem;
+    border: 1px solid #ffffff36;
+    border-radius: 5px;
   }
 }
-header img{
-  height: auto;
-  width: .7rem;
-}
+
 header h1 {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, Calibri, 'Trebuchet MS', sans-serif, 'Arial Narrow', Arial, sans-serif, Haettenschweiler, 'Arial Narrow Bold', sans-serif, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-weight: 100;
   font-size: 100%;
 }
+
 a {
   cursor: pointer;
   text-decoration: none;
   color: #fff;
 }
-.logo-TECNIMUX {
-  margin-left: 4px;
-}
-.logo-TECNIMUX img{
-  height:auto;
-  width: 20px;
-}
+
 #sect-01 {
   height: 100vh;
   display: flex;
@@ -58,6 +53,7 @@ a {
   flex-direction: column;
   background-color: transparent;
 }
+
 .warning {
   width: 100%;
   display: flex;
@@ -69,9 +65,12 @@ a {
     color: #9c9c9c;
   }
 }
+
 .container-experiments {
   position: relative;
-  width: 95%;
+  width: 580px;
+  min-width: 300px;
+  max-width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -79,18 +78,17 @@ a {
   margin: 1rem;
   padding: 3rem 1rem 1rem 1rem;
   border-radius: 14px;
-  background-image: linear-gradient(to left bottom, #1d1d1d, #191919, #151515, #101010, #0a0a0a, #070707, #030303, #000000, #000000, #000000, #000000, #000000);
 
   & h1 {
     position: absolute;
     top: 0;
     left: 0;
-    padding: 15px;
+    padding: 15px 30px;
     width: 100%;
     font-size: 1.5rem;
-
   }
 }
+
 .slider {
   width: 100%;
   display: flex;
@@ -109,7 +107,9 @@ align-items: center;
 flex-direction: column;
 height: 240px;
 width: 240px;
-background-image: linear-gradient(to top, #090909, #0b0b0b, #0d0d0d, #0e0e0e, #101010, #16181e, #16202c, #0c2939, #003e4d, #00544b, #006633, #507400);
+box-shadow: inset 0 0 15px #bdbdbd56;
+background-color: rgba(255, 255, 255, 0.014);
+backdrop-filter: blur(10px);
 padding: 5px;
 border-radius: 15px;
 background-size: 110% 110%;
@@ -141,12 +141,15 @@ transition: .5s ease-in-out;
   text-align: center;
   margin: 5rem;
 }
+
 .testing h1{
   font-weight: 100;
 }
+
 .testing img {
   max-width: 5rem;
 }
+
 @media screen and (max-width: 1000px) {
 .slider {
   padding-left: 15rem;

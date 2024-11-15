@@ -24,9 +24,9 @@ a {
 }
 
 header {
+  position: relative;
   height: 40px;
   width: 100%;
-  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -37,6 +37,7 @@ header {
     font-weight: 100;
   }
 }
+
 #logo-TECNIMUX {
 
     & img {
@@ -44,176 +45,166 @@ header {
       width: 12px;
     }
   }
+
+
+  .container-list-apps {
+    position: relative;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    background-color: #00000075;
+    backdrop-filter: blur(40px);
+    margin: 1rem auto;
+
+    & h2 {
+      padding: .4rem 0;
+    }
+
+
+    & ul {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      list-style: none;
+
+      & li {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        background-color: rgba(255, 255, 255, 0.041);
+        margin-bottom: 1px;
+      
+        & a {
+          text-decoration: none;
+        }
+      }
+    }
+
+    & .app {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      padding: .2rem .6rem;
+
+      & p {
+        font-size: 1.2rem;
+        color: #e7e7e7;
+        font-weight: 100;
+      }
+
+      & img {
+        height: auto;
+        width: 20px;
+      }
+    }
+
+    & .action-app {
+      position: relative;
+      min-width: 45px;
+      padding: .2rem .4rem;
+
+      & .details {
+        position: absolute;
+        top: 50%;
+        right: 100%;
+        width: 200px;
+        transform: translateY(-50%);
+        padding: .2rem;
+        background-color: rgba(255, 255, 255, 0.733);
+        backdrop-filter: blur(20px);
+        border-radius: 5px;
+        font-size: .8rem;
+        display: none;
+
+        & p {
+          color: #000;
+          font-weight: 500;
+          text-align: center;
+          margin: 0;
+        }
+      }
+
+      & svg:first-child:hover + .details {
+        display: block;
+      }
+
+      & a:hover {
+        opacity: .6;
+      }
+    }
+
+    @media  screen and (max-width: 768px) {
+      width: 90%;
+
+      & .action-app {
+        min-width: 65px;
+      }
+    }
+  }
   
   .container-pass {
     position: relative;
-    display: inline-flex;
+    display: flex;
     justify-content: end;
     align-items: center;
+    width: 100%;
     padding: 20px;
+    overflow: hidden;
   }
+
 .clv {
   opacity: 0;
 }
+
 .btn {
-  position:absolute;
-  left: 50%;
+  position: absolute;
+  top: 0;
+  right: -150px;
   transform: translate(-50%);
   background-color: transparent;
   border: none;
   cursor: pointer;
   border-radius: 0.4rem;
-  width: 500px;
-  height: 50px;
-  overflow: hidden;
+  width: 200px;
+  height: 60px;
 }
 
 .btn::before {
   position: absolute;
   font-weight: 200;
-  content: "🔒 COPIAR";
+  content: "CLAVE 🔒";
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 0.8rem;
   background-color: transparent;
-  padding: 5px;
-  border-radius: 2px;
   color: #ffff;
   transition: 0.5s ease;
 }
 
 .btn::after {
   position: absolute;
-  content: "TECNIMUX";
+  content: "COPIAR";
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(0);
   font-size: 1rem;
   background-color: transparent;
-  padding: 5px;
   color: #634092;
   font-weight: 200;
   transition: 0.5s ease;
   opacity: 0;
 }
+
 .btn:hover::before {
   transform: translate(-50%, -50%) scale(1.5);
   opacity: 0;
 }
+
 .btn:hover::after {
   transform: translate(-50%, -50%) scale(1);
   opacity: 1;
-}
-
-#apps {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  height: 100%;
-  width: 100%;
-  margin: auto;
-  padding: 1rem;
-}
-.container-apps {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  flex-wrap: wrap;
-  margin: 0 auto;
-  padding: 5rem;
-}
-.app-content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  width: 275px;
-  height: 250px;
-  background-color: rgba(4, 10, 0, 0.7);
-  backdrop-filter: blur(7px);
-  border-radius: 5px;
-  transition:  0.2s ease;
-
-    & h3 {
-      font-size: 1.5rem;
-      font-weight: 300;
-      text-shadow:  0 0 1px #000;
-      color: #fff;
-      text-align: center;
-      margin: .5rem;
-    }
-
-    & p {
-      position: absolute;
-      bottom: 5px;
-      left: 0;
-      padding: 5px;
-      border-radius: 1px;
-      background-color: rgb(0, 132, 255);
-      color: #000;
-      font-size: .7rem;
-
-    }
-
-    & img {
-      display: flex;
-      justify-content: center;
-      height: auto;
-      width: 100px;
-      margin: 5px;
-      padding: 10px;
-      background-color: #91919133;
-      box-shadow: inset 0 0 1rem #ffffff70;
-      border-radius: 2rem;
-      transition: 0.3s ease;
-      }
-
-      &:hover{
-        transform: scale(1.01);
-        opacity: 0.5;
-      }
-
-      &:active img {
-        transform: scale(1.1);
-        opacity: 0.5;
-      }
-}
-
-.link-boxp {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-
-
-  /* & img:hover {
-    transform: scale(1.1);
-  }*/
-} 
-.compatibility {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  display: flex;
-  justify-content: end;
-  align-items: center;
-  padding-top: .5rem;
-  box-shadow: 0 -3px 1px rgba(255, 255, 255, 0.03);
-
-  & svg {
-    margin: 5px;
-  }
-}
-footer {
-  position: fixed;
-  color: #fff;
-  backdrop-filter: blur(10px);
-  text-align: center;
-  bottom: 0;
-  width: 100%;
 }
