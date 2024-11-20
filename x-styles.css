@@ -307,38 +307,54 @@ opacity: 1;
     transition: 0.5 ease-in-out;
   }
 }  */
+
 .active-dark {
 
   opacity: 0.5;
   transition: 0.5 ease-in-out;
 }
+
 .opacity-1{
   opacity: 1;
   transition: 0.5 ease-in-out;
   }
+
 #light-icon-responsive {
   display: none;
 }
+
 .version {
   position: absolute;
+  display: inline-block;
+  justify-content: end;
   bottom: 0;
   right: 0;
-  padding: 3px 5px;
+  padding: .3rem .5rem .5rem .5rem;
+  background-color: rgb(27, 27, 27);
 
   & code {
     font-size: .8rem;
-    font-family: monospace, system-ui, -apple-system, BlinkMacSystemFell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: #fff;
+
+    & span {
+      margin: 0 0 .5rem .5rem;
+      padding: .2rem;
+      background-color: rgb(255, 0, 55);
+    }
   }
 }
+
 .vresponsive {
   left: 0;
 }
+
 .theme-footer {
   z-index: 10;
   position: absolute;
   bottom: 40px;
   right: 20px;
+  display: none;
 
   @media screen and (max-width: 768px) {
     display: none;
@@ -579,7 +595,7 @@ animation: show-nav-bar .01s ease-out;
 
   & h1 {
     font-size: 1.5rem;
-    font-family: h-03;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     letter-spacing: .1rem;
   }
 
@@ -926,14 +942,14 @@ li:hover .container-items-nav-main {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 1rem 0 .6rem;
   height: auto;
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-direction: row;
   gap: 5px;
-  margin: 1.3rem .8rem .8rem .8rem;
+  margin: .65rem .8rem .8rem .8rem;
+  padding: 0 .6rem;
   border: 1px solid #ffffff28;
   border-radius: 2px;
   /* background-color: #202020; */
@@ -952,7 +968,6 @@ li:hover .container-items-nav-main {
 
   &:hover {
     background-color: var(--primary);
-    
   }
 
   &:hover img {
@@ -960,12 +975,18 @@ li:hover .container-items-nav-main {
   }
 }
 
+.tx-logo {
+  padding: 10rem 0;
+  background-color: red;
+  border: none;
+}
+
 .imagotipo-footer {
   position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
+  gap: .5rem;
   top: 0;
   right: 0;
   margin: 1rem;
@@ -975,9 +996,13 @@ li:hover .container-items-nav-main {
   background-color: #42424244;
   backdrop-filter: blur(10px);
 
+  & p {
+    font-size: .7rem;
+  }
+
   & img {
     height: auto;
-    width: 10px;
+    width: 5px;
   }
 }
  #search-nav {
@@ -990,15 +1015,18 @@ li:hover .container-items-nav-main {
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
 } 
+
 @media screen and (max-width: 1200px) {
   #search-nav {
 display: none;
   } 
 }
+
 #tab-search {
   display: none;
   color: #fff;
 }
+
 #search-nav:hover {
   background-color: transparent;
 }
@@ -1396,24 +1424,27 @@ footer {
   background-image: url(/img/lines-ft.png);
 
   & h3 {
-    font-size: 3rem;
+    font-size: 1.5rem;
   }
 }
+
 .i-from {
   display: flex;
   justify-content: start;
   align-items: center;
   flex-direction: row-reverse;
-  padding: 1rem;
+  padding: 1rem 0;
   transition: all 0.5s;
 
-  & svg {
-    margin: 0 .2rem ;
+  & p {
+    font-size: .7rem;
   }
 
-  /* &:hover p {
-    opacity: 1;
-  } */
+  & svg {
+    height: auto;
+    width: 15px;
+    margin: 0 .4rem;
+  }
 }
 
 .nav-bar {
@@ -1491,7 +1522,7 @@ footer {
 
   & #btn-open-social-networks {
     position: absolute;
-    top: 17px;
+    top: 12.5px;
     right: 30px;
     cursor: pointer;
   }
@@ -1514,7 +1545,7 @@ footer {
     }
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1000px) {
     display: none;
   }
 }
@@ -2259,11 +2290,16 @@ animation:  pulsePulse .5s ease-in-out  infinite;
       border-radius: 7px;
       border: 1px solid #2e2e2e;
       margin: 1rem;
-      padding: .2rem 1rem;
+      padding-right: .3rem;
+
 
       & h3 {
+        font-size: 1rem;
         padding: .1rem .2rem ;
-        border-radius: 7px;
+        border-bottom-left-radius: 4px;
+        border-top-left-radius: 4px;
+        background-color: var(--white);
+        color: var(--black);
       }
 
   }
@@ -2273,16 +2309,26 @@ animation:  pulsePulse .5s ease-in-out  infinite;
       height: auto;
       width: 100%;
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       align-items: center;
       gap: 10px;
       flex-wrap: wrap;
-      /* border-top-left-radius: 7px;
-      border-bottom-left-radius: 7px; */
-      border-radius: 7px;
-      /* background-color: rgb(10, 10, 10); */
       border: 1px solid #ff0000;
+      border-radius: 7px;
       padding: 1rem;
+    }
+
+    & .container-img-plataforma-latest {
+      position: relative;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-radius: 14px;
+      background-color: rgba(221, 221, 221, 0.027);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 0 2px #ffffff2a;
     }
 
     & .description-latest {
@@ -2303,25 +2349,31 @@ animation:  pulsePulse .5s ease-in-out  infinite;
 
     & .date {
       position: relative;
+      top: 0;
+      right: 0;
       display: flex;
-      justify-content: space-around;
+      justify-content: end;
       align-items: center;
       height: auto;
-      width: 60%;
-      margin: 1rem auto;
-      padding: .6rem;
+      width: fit-content;
+      margin: 1.5rem;
+      padding: .1rem .3rem;
       background-color: #ffffffe3;
-      border-radius: 12px;
+      border-radius: 4px;
       color: var(--black);
 
       & h3 {
         width: auto;
         text-align: start;
+        font-size: .9rem;
+        margin-right: .3rem;
       }
 
-      & code {
+      & p {
+        font-weight: 400;
         font-size: .8rem;
         text-align: center;
+        color: var(--black);
       }
     }
 
@@ -2329,38 +2381,55 @@ animation:  pulsePulse .5s ease-in-out  infinite;
       position: relative;
       height: 200px;
       width: 257px;
-      margin: 1rem;
       padding: 1rem;
-      border-radius: 14px;
-      background-color: rgba(255, 255, 255, 0.5);
 
       & img {
         height: auto;
         width: 100%;
-        border-radius: 7px;
       }
     }
 
       & .plataforma-latest {
         position: relative;
         height: auto;
-        width: 257px;
+        width: 100%;
         display: flex;
         justify-content: space-around;
         align-items: center;
-        margin: 1rem;
-        border-radius: 7px;
-        background-color: rgb(0, 0, 0);
+        margin-bottom: 1rem;
 
         & h3 {
           width: auto;
+ 
         }
 
         & svg {
           height: auto;
-          width: 35px;
+          width: 25px;
           margin: .5rem;
+        }
+
+        & svg:last-child  {
+          height: 28px;
+          width: 28px;
+          background-color: rgb(255, 255, 255);
           border-radius: 7px;
+          margin-bottom: -0.04rem;
+
+          & path {
+            stroke: rgba(0, 0, 0, 0.6);
+          }
+
+          &:hover {
+            opacity: .6;
+          }
+        }
+
+        & .platform {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 5px;
         }
     }
   }

@@ -65,13 +65,22 @@ activeMenuResponsive.forEach(active => {
 
 // Add header color when scrolling
 let header01 = document.querySelector('header');
+const imagotipo = document.getElementById('imagotipo');
+const txLogo = document.getElementById('tx-logo');
  window.addEventListener('scroll', () => {
      if (window.scrollY > stateScrollTwo) {
         header01.classList.add('header-color');
+        imagotipo.style.backgroundColor = 'transparent';
+        txLogo.style.display = 'none';
+        imagotipo.style.padding = '.5rem';
+        imagotipo.style.border = 'none';
         // header01.style.width='90%';
         // header01.style.borderRadius='15px';
-     } else{
+     } else {
          header01.classList.remove('header-color');
+         txLogo.style.display = 'block';
+         imagotipo.style.padding = '0 .6rem';
+         imagotipo.style.border = '1px solid #ffffff28';
         //  header01.style.width='100%';
         //  header01.style.borderRadius='0';
          }
@@ -268,55 +277,55 @@ document.body.style.overflow = 'hidden';
 
 
 // Form
-const form = document.getElementById('form');
-const btnCloseLogin = document.querySelector('.btn-close-login');
-const btnCloseLangs = document.querySelector('.btn-close-langs');
-const btnOpenForm = document.getElementById('btn-open-form');
-const btnOpenLang = document.getElementById('btn-open-lang');
-const loginHome = document.getElementById('login-home');
+// const form = document.getElementById('form');
+// const btnCloseLogin = document.querySelector('.btn-close-login');
+// const btnCloseLangs = document.querySelector('.btn-close-langs');
+// const btnOpenForm = document.getElementById('btn-open-form');
+// const btnOpenLang = document.getElementById('btn-open-lang');
+// const loginHome = document.getElementById('login-home');
 
 
-document.querySelectorAll('.filter-login').forEach(element => {
-    const filterLogin = element;
-        filterLogin.addEventListener('click', () => {
-        loginHome.style.display = 'none';
-        filterLogin.style.display = 'none';
-        languajes.style.display = 'none';
-        form.style.display = 'none';
-        document.body.style.overflow = 'auto';
-});
+// document.querySelectorAll('.filter-login').forEach(element => {
+//     const filterLogin = element;
+//         filterLogin.addEventListener('click', () => {
+//         loginHome.style.display = 'none';
+//         filterLogin.style.display = 'none';
+//         languajes.style.display = 'none';
+//         form.style.display = 'none';
+//         document.body.style.overflow = 'auto';
+// });
 
-btnOpenForm.addEventListener('click', () => {
-    loginHome.style.display = 'flex';
-    languajes.style.display = 'none';
-    form.style.display = 'flex';
-    filterLogin.style.display = 'block';
-    document.body.style.overflow = 'hidden';
-});
+// btnOpenForm.addEventListener('click', () => {
+//     loginHome.style.display = 'flex';
+//     languajes.style.display = 'none';
+//     form.style.display = 'flex';
+//     filterLogin.style.display = 'block';
+//     document.body.style.overflow = 'hidden';
+// });
 
-btnOpenLang.addEventListener('click', () => {
-    loginHome.style.display = 'none';
-    form.style.display = 'none';
-    languajes.style.display = 'flex';
-    filterLogin.style.display = 'block';
-    document.body.style.overflow = 'hidden';
-});
-}); 
+// btnOpenLang.addEventListener('click', () => {
+//     loginHome.style.display = 'none';
+//     form.style.display = 'none';
+//     languajes.style.display = 'flex';
+//     filterLogin.style.display = 'block';
+//     document.body.style.overflow = 'hidden';
+// });
+// }); 
 
 
-btnCloseLogin.addEventListener('click', () => {
-    loginHome.style.display = 'none';
-    form.style.display = 'none';
-    languajes.style.display = 'none';
-    document.body.style.overflow = 'auto';
-});
+// btnCloseLogin.addEventListener('click', () => {
+//     loginHome.style.display = 'none';
+//     form.style.display = 'none';
+//     languajes.style.display = 'none';
+//     document.body.style.overflow = 'auto';
+// });
 
-btnCloseLangs.addEventListener('click', () => {
-    loginHome.style.display = 'none';
-    form.style.display = 'none';
-    languajes.style.display = 'none';
-    document.body.style.overflow = 'auto';
-});
+// btnCloseLangs.addEventListener('click', () => {
+//     loginHome.style.display = 'none';
+//     form.style.display = 'none';
+//     languajes.style.display = 'none';
+//     document.body.style.overflow = 'auto';
+// });
 
 // Add List of menu responsive 
 // const list = document.querySelectorAll('.list-nav li');
