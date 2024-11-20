@@ -64,7 +64,7 @@ activeMenuResponsive.forEach(active => {
   
 
 // Add header color when scrolling
-let header01 = document.querySelector('header');
+const header01 = document.getElementById('header-01');
 const imagotipo = document.getElementById('imagotipo');
 const txLogo = document.getElementById('tx-logo');
  window.addEventListener('scroll', () => {
@@ -74,13 +74,14 @@ const txLogo = document.getElementById('tx-logo');
         txLogo.style.display = 'none';
         imagotipo.style.padding = '.5rem';
         imagotipo.style.border = 'none';
-        // header01.style.width='90%';
+        header01.style.backgroundColor = '#151515';
         // header01.style.borderRadius='15px';
      } else {
          header01.classList.remove('header-color');
          txLogo.style.display = 'block';
          imagotipo.style.padding = '0 .6rem';
          imagotipo.style.border = '1px solid #ffffff28';
+         header01.style.backgroundColor = 'transparent';
         //  header01.style.width='100%';
         //  header01.style.borderRadius='0';
          }
@@ -368,4 +369,17 @@ if (isOpen) {
 }
 
 isOpen = !isOpen;
+})
+
+
+// QR-Code
+const qrCode = document.getElementById('qr-social');
+const qrCodeSocial = document.getElementById('qr-code-social');
+qrCode.addEventListener('click', () => {
+  qrCodeSocial.classList.add('translate');
+  qrCodeSocial.style.width = '400px';
+  setTimeout(() => {
+    qrCode.classList.remove('translate');
+    qrCodeSocial.style.width = '40px';
+  }, 10000);
 })
