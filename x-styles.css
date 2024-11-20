@@ -25,7 +25,17 @@ html {
 
 @font-face {
   font-family: 'h-01';
+  src: url(/fonts/Landing/NoseTransport9-BoldDot.otf);
+}
+
+@font-face {
+  font-family: 'h-02';
   src: url(/fonts/Landing/BOXRoundedVF.ttf);
+}
+
+@font-face {
+  font-family: 'h-03';
+  src: url(/fonts/Landing/KUBO.otf);
 }
 
 body {
@@ -481,12 +491,15 @@ animation: show-nav-bar .01s ease-out;
     transform: translateX(-50%);
   }
 }
+
 .hidde {
   animation: hidde .8s ease-out;
 }
+
 .show-nav-bar {
   animation: show-nav-bar .8s ease-out;
 }
+
 @keyframes hidde {
   from {
     opacity: 1;
@@ -495,6 +508,7 @@ animation: show-nav-bar .01s ease-out;
     opacity: 0;
   }
 }
+
 @keyframes show-nav-bar {
   from {
     opacity: 0;
@@ -503,14 +517,17 @@ animation: show-nav-bar .01s ease-out;
     opacity: 1;
   }
 }
+
 @media  screen and (max-width: 1000px) {
   #container-open-nav {
     display: flex;
   }
 }
+
 .nav-list {
   width: 100%
 }
+
 #btn-open-nav-main {
   border: none;
   background-color: transparent;
@@ -549,7 +566,6 @@ animation: show-nav-bar .01s ease-out;
   width: 100%;
   align-items: center;
   justify-content: space-between;
-  padding: 2rem;
   margin: 0 auto;
   /* background-color: #ffffff2d;
   border: 1px inset rgba(216, 191, 216, 0.253); */
@@ -563,7 +579,8 @@ animation: show-nav-bar .01s ease-out;
 
   & h1 {
     font-size: 1.5rem;
-    font-family: h-01;
+    font-family: h-03;
+    letter-spacing: .1rem;
   }
 
   @media screen and (max-width: 768px) {
@@ -596,6 +613,7 @@ animation: show-nav-bar .01s ease-out;
     opacity: 1;
   }
 }
+
 #home-main {
   position: relative;
   height: 100vh;
@@ -680,13 +698,17 @@ animation: show-nav-bar .01s ease-out;
           display: flex;
           justify-content: center;
           align-items: center;
-          animation: auto-slider 100s ease-in-out infinite alternate;
+          animation: auto-slider 40s ease-in-out infinite alternate;
           animation-delay: 5s;
+          animation-play-state: paused;
 
           &:hover {
             animation-play-state: paused;
           }
 
+          @media screen and (max-width: 1000px) {
+            animation-play-state: running;
+          }
 
         }
         .container-auto-slider span {
@@ -788,7 +810,6 @@ animation: show-nav-bar .01s ease-out;
             100% { transform: translateX(100%); }
         }
 
-
 #main {
   position: relative;
   height: auto;
@@ -807,6 +828,7 @@ animation: show-nav-bar .01s ease-out;
     max-width: 100%;
   }
 }
+
 .container-items-nav-main {
   z-index: 1;
   display: none;
@@ -858,7 +880,6 @@ animation: show-nav-bar .01s ease-out;
   }
 }
 
-
 /* .container-items-nav-main::after {
   content: "";
   position: absolute;
@@ -870,6 +891,7 @@ justify-content: center;
   background-color: #ff0000;
   border-radius: 50%;
 } */
+
 li:hover .container-items-nav-main {
   display: block;
   text-transform: none;
@@ -901,25 +923,40 @@ li:hover .container-items-nav-main {
 /* Imagotipo */
 #imagotipo {
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1rem 0 .6rem;
   height: auto;
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-direction: row;
   gap: 5px;
-  margin-left: .8rem;
+  margin: 1.3rem .8rem .8rem .8rem;
+  border: 1px solid #ffffff28;
+  border-radius: 2px;
   /* background-color: #202020; */
   /* background-color: #634092; */
 
   & img  {
     height: auto;
-    width: 15px;
-    margin: .3rem;
+    width: 13px;
+
   }
 
-  .imagotipo-name {
+  /* .imagotipo-name {
     height: auto;
-    width: 95px;
+    width: 90px;
+  } */
+
+  &:hover {
+    background-color: var(--primary);
+    
+  }
+
+  &:hover img {
+    filter: brightness(5);
   }
 }
 
@@ -2582,18 +2619,27 @@ height: 300px;
 }
 
 main {
-padding: .5rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: .5rem;
+  background-color: rgba(0, 0, 0, 0);
+  backdrop-filter: blur(10px);
 
   & h2 {
     font-family: h-01;
-    font-size: 2rem;
+    font-size: .7rem;
     letter-spacing: .3rem;
     text-align: end;
     color: #adadad6c;
+    padding: 1rem;
   }
 
   & span {
-    font-size: 4rem;
+    font-family: h-02;
+    font-size: 3rem;
     filter: drop-shadow(40px 6px 45px #858585);
   }
 }
