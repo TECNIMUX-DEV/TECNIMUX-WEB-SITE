@@ -12,3 +12,20 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+
+// Menu
+const menuManuals = document.getElementById('menu-manuals');
+const btnMenu = document.getElementById('btn-menu');
+
+let  stateToggle = true;
+
+btnMenu.addEventListener('click', () => {
+    if (stateToggle) {
+        menuManuals.style.display = 'flex';
+    } else {
+        menuManuals.style.display = 'none';
+    }
+
+    stateToggle = !stateToggle;
+});

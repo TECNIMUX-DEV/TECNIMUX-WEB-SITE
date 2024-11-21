@@ -124,5 +124,30 @@ footer {
     }
 }
 
+#btn-menu {
+    z-index: 1;
+    position: absolute;
+    height: 35px;
+    width: 35px;
+    padding: .2rem;
+    top: 1rem;
+    right: 1rem;
+    border-radius: 5px;
+}
+
 @media screen and (max-width: 768px) {
+    #menu-manuals {
+        display: none;
+    }
+
+    #visualizador  iframe {
+        height: 85vh;
+        width: 100vw;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    #btn-menu {
+        display: none;
+    }
 }
