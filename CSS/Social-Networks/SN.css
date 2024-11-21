@@ -79,6 +79,7 @@ header {
     box-shadow: 0 0 10px inset rgba(255, 255, 255, 0.103);
     transition: .1s ease-in-out;
     cursor: pointer;
+    overflow: hidden;
     
       & img {
         height: auto;
