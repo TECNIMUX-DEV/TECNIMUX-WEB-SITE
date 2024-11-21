@@ -74,7 +74,7 @@ const txLogo = document.getElementById('tx-logo');
         txLogo.style.display = 'none';
         imagotipo.style.padding = '.5rem';
         imagotipo.style.border = 'none';
-        header01.style.backgroundColor = '#151515';
+        header01.style.backgroundColor = '#000';
         // header01.style.borderRadius='15px';
      } else {
          header01.classList.remove('header-color');
