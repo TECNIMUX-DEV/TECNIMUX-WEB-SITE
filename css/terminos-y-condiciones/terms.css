@@ -45,6 +45,10 @@ body {
     max-width: 800px;
     padding: 1rem;
     overflow-y: auto;
+
+    & span {
+        font-weight: bold;
+    }
 }
 
 p {
