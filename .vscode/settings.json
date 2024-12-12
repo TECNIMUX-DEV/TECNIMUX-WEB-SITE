@@ -3,7 +3,7 @@
     "liveServer.settings.port": 5501,
     "workbench.iconTheme": "material-icon-theme",
     "CodeGPT.apiKey": "CodeGPT Plus Beta",
-    "powermode.enabled": true,
+    "powermode.enabled": false,
     "powermode.presets": "particles",
     "editor.fontLigatures": true,
     "powermode.combo.location": "off",

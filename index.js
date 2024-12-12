@@ -65,23 +65,21 @@ activeMenuResponsive.forEach(active => {
 
 // Add header color when scrolling
 const header01 = document.getElementById('header-01');
-const imagotipo = document.getElementById('imagotipo');
-const txLogo = document.getElementById('tx-logo');
+// const imagotipo = document.getElementById('imagotipo');
+// const txLogo = document.getElementById('tx-logo');
  window.addEventListener('scroll', () => {
      if (window.scrollY > stateScrollTwo) {
         header01.classList.add('header-color');
-        imagotipo.style.backgroundColor = 'transparent';
-        txLogo.style.display = 'none';
-        imagotipo.style.padding = '.5rem';
-        imagotipo.style.border = 'none';
-        header01.style.backgroundColor = '#000';
+        // imagotipo.style.backgroundColor = 'transparent';
+        // imagotipo.style.padding = '.5rem';
+        // imagotipo.style.border = 'none';
+        // header01.style.backgroundColor = '#000';
+        // socialNetworks.style.display = 'none';
         // header01.style.borderRadius='15px';
      } else {
          header01.classList.remove('header-color');
-         txLogo.style.display = 'block';
-         imagotipo.style.padding = '0 .6rem';
-         imagotipo.style.border = '1px solid #ffffff28';
-         header01.style.backgroundColor = 'transparent';
+        //  txLogo.style.display = 'block';
+        //  header01.style.backgroundColor = 'transparent';
         //  header01.style.width='100%';
         //  header01.style.borderRadius='0';
          }
@@ -113,7 +111,7 @@ const txLogo = document.getElementById('tx-logo');
 // stateScroll = scrollTop <= 0 ? 0: scrollTop; 
 // });
 
-let stateScrollTwo = 250;
+let stateScrollTwo = 0;
 
 // Remove guia nav bar when scrolling
 // const guia = document.getElementById('guia');
@@ -359,27 +357,68 @@ for (let i = 0; i < 8; i++) {
 // Open social networks
 const btnOpenSocialNetworks = document.getElementById('btn-open-social-networks');
 const socialNetworks = document.getElementById('social-networks');
-
 let isOpen = true;
-btnOpenSocialNetworks.addEventListener('click', () => {
-if (isOpen) {
+btnOpenSocialNetworks.addEventListener('mouseenter', () => {
   socialNetworks.style.display = 'block';
-} else {
-  socialNetworks.style.display = 'none';
-}
 
-isOpen = !isOpen;
-})
-
+  setTimeout(() => {
+    socialNetworks.style.display = 'none';
+  }, 10000);
+});
 
 // QR-Code
 const qrCode = document.getElementById('qr-social');
 const qrCodeSocial = document.getElementById('qr-code-social');
 qrCode.addEventListener('click', () => {
   qrCodeSocial.classList.add('translate');
+  qrCode.classList.remove('translate-02');
   qrCodeSocial.style.width = '400px';
   setTimeout(() => {
-    qrCode.classList.remove('translate');
+    qrCode.classList.remove('translate-01');
+    qrCode.classList.add('translate-02');
     qrCodeSocial.style.width = '40px';
-  }, 10000);
+  }, 5000);
 })
+
+
+// Btn info Updates
+const infoUpdates = document.getElementById('info-updates');
+const btnInfo = document.getElementById('btn-info');
+const dataUpdates = document.getElementById('data-updates');
+
+
+let stateDataAnimation = true;  // Declaramos la variable fuera del listener
+
+btnInfo.addEventListener('click', () => {
+  // Primero, eliminamos las clases de animación actuales
+  dataUpdates.classList.remove('data');
+  infoUpdates.classList.remove('data-animation');
+  infoUpdates.classList.remove('data-animation-end');
+  
+  // Aplicamos las animaciones de entrada
+  if (stateDataAnimation) {
+    dataUpdates.classList.add('data');
+    infoUpdates.classList.add('data-animation');
+
+    // Después de 5 segundos, aplicamos la animación de salida
+    setTimeout(() => {
+      infoUpdates.classList.add('data-animation-end');
+      dataUpdates.classList.remove('data');
+    }, 5000);  // Duración de la animación de entrada
+
+  } else {
+    // Si no es el primer clic, solo aplicamos la animación de entrada
+    dataUpdates.classList.add('data');
+    infoUpdates.classList.add('data-animation');
+
+    setTimeout(() => {
+      infoUpdates.classList.add('data-animation-end');
+      dataUpdates.classList.remove('data');
+    }, 5000);  
+  }
+
+  // Cambiar el estado de la animación para la próxima vez
+  stateDataAnimation = !stateDataAnimation;
+});
+
+
