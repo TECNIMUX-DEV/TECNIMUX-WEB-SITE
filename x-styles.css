@@ -299,12 +299,16 @@ opacity: 1;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--black);
+  /* background-color: var(--black); */
   padding: 5px;
   border-radius: 10px;
 
   &:hover {
     background-color: var(--black);
+ }
+
+ &:hover svg {
+  stroke: var(--white);
  }
 }
 
@@ -408,13 +412,26 @@ opacity: 1;
 
   & .active-menu-responsive {
     position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
     padding: .6rem;
     border-bottom: 1px solid #8b8b8b0c;
     color: var(--white);
 
+    & svg {
+      display: inline-flex;
+      top: 25px;
+    }
+
     &:hover {
       background-color: var(--white);
       color: var(--black);
+    }
+    
+    &:hover svg {
+      stroke: var(--black);
+      fill: var(--black);
     }
 
   } 
@@ -646,6 +663,7 @@ animation: show-nav-bar .01s ease-out;
   margin: auto;
 
   & #info-updates {
+    z-index: 10;
     position: absolute;
     display: flex;
     justify-content: space-between;
@@ -780,39 +798,45 @@ animation: show-nav-bar .01s ease-out;
               & #eslogan-responsive {
                 display: flex;
               }
+
+              @media  screen and (max-width: 900px) {
+                background-color: #0000006b;
+               }
             }
 
             @media  screen and (max-width: 1000px) {
              justify-content: space-around;
-  
             }
         }
 
 
         .container-auto-slider {
-          position: relative;
-            z-index: 10;
-            height: 140px;
-            width: 120%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            /* font-family: font-eslogan, Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
-            font-size: 1.2rem;
-            font-weight: bold;
-            color: #d6d6d6;
-            text-transform: uppercase;
-            /* letter-spacing: 0.5vw; */
-            backdrop-filter: blur(50px);
-            background-image: url(/img/klipartz.com.png),
-            var(--primary);
-            mix-blend-mode: screen;
-            animation: textReveal 1s ease-out forwards;
-            text-align: center;
-            line-height: 1.2;
-            padding: 1rem;
-            opacity: 0.5;
-            overflow: hidden;
+          z-index: 9;
+          position: absolute;
+          bottom: 0;
+          height: 140px;
+          width: 120%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          /* font-family: font-eslogan, Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
+          font-size: 1.2rem;
+          font-weight: bold;
+          color: #d6d6d6;
+          text-transform: uppercase;
+          /* letter-spacing: 0.5vw; */
+          backdrop-filter: blur(50px);
+          background-color: var(--black);
+          background-image: url(/img/pattern-alter-nav.png);
+          background-position: center;
+          background-size: cover;
+          mix-blend-mode: difference;
+          animation: textReveal 1s ease-out forwards;
+          text-align: center;
+          line-height: 1.2;
+          padding: 1rem;
+          opacity: .7;
+          overflow: hidden;
         }
 
         .auto-slider {
@@ -838,8 +862,8 @@ animation: show-nav-bar .01s ease-out;
             display: inline-block;
             max-height: 70px;
             margin: .5rem;
-            padding: 1rem;
-            border-radius: 20px;
+            padding: .5rem;
+            border-radius: 10px;
             transform: translateY(50px);
             animation: fadeInUp 0.5s ease-out forwards;
             animation-delay: 0.2s;
@@ -853,7 +877,9 @@ animation: show-nav-bar .01s ease-out;
             }
 
             &:hover {
-              border: 1px solid var(--primary);
+              background-color: var(--white);
+              color: var(--black);
+              opacity: 1;
             }
         }
 
@@ -1068,10 +1094,8 @@ li:hover .container-items-nav-main {
   align-items: center;
   flex-direction: row;
   gap: 15px;
-  margin: 1.2rem;
-  padding: 0 .6rem;
-  /* background-color: #202020; */
-  /* background-color: #634092; */
+  margin-left: 1.2rem;
+  padding: 0;
 
   & img  {
     height: auto;
@@ -1081,19 +1105,6 @@ li:hover .container-items-nav-main {
   & h1 {
     font-size: .9rem;
     font-weight: 600;
-  }
-
-  /* .imagotipo-name {
-    height: auto;
-    width: 90px;
-  } */
-
-  &:hover {
-    background-color: var(--primary);
-  }
-
-  &:hover img {
-    filter: brightness(5);
   }
 }
 
@@ -1644,6 +1655,7 @@ footer {
   background-color: rgb(190, 35, 35);
   border-radius: 3px;
   color: var(--white);
+  margin-top: 1.5rem;
 }
 
 .container-social-media {
