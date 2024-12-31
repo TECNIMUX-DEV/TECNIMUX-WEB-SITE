@@ -840,6 +840,10 @@ animation: show-nav-bar .01s ease-out;
 
                     & h2 {
                       font-size: 4rem;
+
+                      @media screen and (max-width: 1000px) {
+                        font-size: 1rem;
+                      }
                     }
                   }
   
@@ -856,6 +860,10 @@ animation: show-nav-bar .01s ease-out;
                     & h2 {
                       filter: brightness(1);
                         font-size: 4rem;
+
+                        @media screen and (max-width: 1000px) {
+                          font-size: 1rem;
+                        }
                     }
                   }
   

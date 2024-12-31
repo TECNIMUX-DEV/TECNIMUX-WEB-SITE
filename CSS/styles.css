@@ -798,6 +798,11 @@ animation: show-nav-bar .01s ease-out;
 .container .ui .container-main-content .item-main-content:nth-child(1) h2 {
   font-size: 4rem;
 }
+@media screen and (max-width: 1000px) {
+  .container .ui .container-main-content .item-main-content:nth-child(1) h2 {
+    font-size: 1rem;
+  }
+}
 .container .ui .container-main-content .item-main-content:nth-child(2) {
   flex: 1 1 calc(50% - 10px);
   width: 40%;
@@ -811,6 +816,11 @@ animation: show-nav-bar .01s ease-out;
 .container .ui .container-main-content .item-main-content:nth-child(2) h2 {
   filter: brightness(1);
   font-size: 4rem;
+}
+@media screen and (max-width: 1000px) {
+  .container .ui .container-main-content .item-main-content:nth-child(2) h2 {
+    font-size: 1rem;
+  }
 }
 .container .ui .container-main-content .item-main-content:nth-child(3) {
   background-color: var(--primary);
