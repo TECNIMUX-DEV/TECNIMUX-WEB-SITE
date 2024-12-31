@@ -73,13 +73,13 @@ const header01 = document.getElementById('header-01');
         // imagotipo.style.backgroundColor = 'transparent';
         // imagotipo.style.padding = '.5rem';
         // imagotipo.style.border = 'none';
-        // header01.style.backgroundColor = '#000';
+        header01.style.backgroundColor = '#000';
         // socialNetworks.style.display = 'none';
         // header01.style.borderRadius='15px';
      } else {
          header01.classList.remove('header-color');
         //  txLogo.style.display = 'block';
-        //  header01.style.backgroundColor = 'transparent';
+        header01.style.backgroundColor = 'transparent';
         //  header01.style.width='100%';
         //  header01.style.borderRadius='0';
          }

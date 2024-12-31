@@ -602,8 +602,6 @@ animation: show-nav-bar .01s ease-out;
   align-items: center;
   justify-content: space-between;
   margin: 0 auto;
-  background-color: var(--black);
-
 
   & a {
     text-decoration: none;
@@ -780,7 +778,8 @@ animation: show-nav-bar .01s ease-out;
               align-items: center;
               flex-direction: column;
               padding: 1rem;
-              background-color: #000000c9;
+              background-color: #000000e5;
+              box-shadow: 0 0 50px #fff;
               /* mix-blend-mode: screen; */
               background-size: cover;
               background-repeat: no-repeat;
@@ -797,6 +796,111 @@ animation: show-nav-bar .01s ease-out;
 
               & #eslogan-responsive {
                 display: flex;
+              }
+
+              & .container-main-content {
+                z-index: 11;
+                position: absolute;
+                width: 80%;
+                top: 25%;
+                left: 50%;
+                transform: translate(-50%, -25%);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+                row-gap: 5px;
+                column-gap: 5px;
+                margin-top: -5rem;
+                padding: 3rem;
+
+
+                & .item-main-content {
+                  position: relative;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  height: 115px;
+                  width: 110px;
+                  border-radius: 6px;
+                  border: 1px solid #ffffff1a;
+                  text-align: center;
+                  background-repeat: no-repeat;
+                  filter: grayscale(1);
+                  
+
+                  &:nth-child(1){
+                    flex: 1 1 calc(30% - 10px);
+                    background-color: rgb(74, 207, 67);
+                    background-image: url(/img/brain.png);
+                    background-position: center;
+                    mix-blend-mode: difference;
+                    background-size: cover;
+                    filter: grayscale(.5);
+
+                    & h2 {
+                      font-size: 4rem;
+                    }
+                  }
+  
+                  &:nth-child(2) {
+                    flex: 1 1 calc(50% - 10px);
+                    width: 40%;
+                    background-color: transparent;
+                    background-image: url(https://t3.ftcdn.net/jpg/09/04/02/06/360_F_904020646_dUvl1pgPysRJZ3KJcUiZmMFI3zjuVbax.jpg);
+                    background-position: center;
+                    background-size: cover;
+                    mix-blend-mode: screen;
+                    filter: grayscale(1) brightness(.5);
+
+                    & h2 {
+                      filter: brightness(1);
+                        font-size: 4rem;
+                    }
+                  }
+  
+                  &:nth-child(3) {
+                    background-color: var(--primary);
+                    background-image: url(/img/mining.png);
+                    background-position: center;
+                    background-size: contain;
+                    mix-blend-mode: screen;
+
+                    & h2 {
+                      font-size: 1.5rem;
+                    }
+  
+                  }
+  
+                  &:nth-child(4) {
+                    background-color: greenyellow;
+                    background-image: url(/img/klipartz.com.png);
+                    background-position: center;
+                    background-size: contain;
+                    mix-blend-mode: screen;
+                    clip-path: polygon(30% 0, 0 100%, 50% 100%, 29% 0, 100% 0, 50% 0, 29% 0, 50% 100%, 100% 100%, 63% 0);
+                    box-shadow: none;
+                    background-repeat: repeat;
+
+                    & h2 {
+                      font-size: 2rem;
+                    }
+                  }
+
+                  &:hover {
+                    opacity: .5;
+                  }
+
+                  & h2 {
+                    font-size: 1rem;
+                    font-weight: bold;
+                    color: var(--black);
+                    word-wrap: break-word;
+                    word-break: break-word;
+                    text-shadow: 0 0 20px #00000080;
+                  }
+                }
+
               }
 
               @media  screen and (max-width: 900px) {
@@ -819,23 +923,22 @@ animation: show-nav-bar .01s ease-out;
           display: flex;
           justify-content: center;
           align-items: center;
-          /* font-family: font-eslogan, Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
           font-size: 1.2rem;
           font-weight: bold;
           color: #d6d6d6;
           text-transform: uppercase;
-          /* letter-spacing: 0.5vw; */
-          backdrop-filter: blur(50px);
-          background-color: var(--black);
+          backdrop-filter: blur(10px);
+          background-color: #000000;
           background-image: url(/img/pattern-alter-nav.png);
           background-position: center;
           background-size: cover;
           mix-blend-mode: difference;
+          box-shadow: inset 0 0 250px #ffffff05;
           animation: textReveal 1s ease-out forwards;
           text-align: center;
           line-height: 1.2;
           padding: 1rem;
-          opacity: .7;
+          opacity: .5;
           overflow: hidden;
         }
 
@@ -989,7 +1092,7 @@ animation: show-nav-bar .01s ease-out;
   }
 }
 
-& .categories-unit {
+.categories-unit {
   z-index: 10;
 }
 
