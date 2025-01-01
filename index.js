@@ -73,7 +73,7 @@ const header01 = document.getElementById('header-01');
         // imagotipo.style.backgroundColor = 'transparent';
         // imagotipo.style.padding = '.5rem';
         // imagotipo.style.border = 'none';
-        header01.style.backgroundColor = '#000';
+        // header01.style.backgroundColor = '#000';
         // socialNetworks.style.display = 'none';
         // header01.style.borderRadius='15px';
      } else {
