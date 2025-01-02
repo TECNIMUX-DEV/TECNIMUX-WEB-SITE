@@ -6,18 +6,21 @@
   --white: #fff;
   --primary: #634092;
 }
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
+
 html {
   font-family: "Chakra Petch", sans-serif;
   font-size: 1rem;
   margin: 0 auto;
   padding: 0;
 }
+
 @font-face {
   font-family: 'font-eslogan';
   src: url(/fonts/New-ui/Rexusdemo-nRqa4.ttf);
@@ -674,10 +677,10 @@ animation: show-nav-bar .01s ease-out;
     padding: .7rem;
     background-color: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(10px);
+    border: 1px solid #ffffff09;
     border-radius: 20px;
     color: #fff;
     text-align: end;
-    text-transform: uppercase;
 
     & #btn-info {
       position: relative;
@@ -706,7 +709,6 @@ animation: show-nav-bar .01s ease-out;
     & code {
       font-size: .6rem;
       font-weight: 400;
-      letter-spacing: 2px;
     }
   }
 }
@@ -1039,38 +1041,58 @@ animation: show-nav-bar .01s ease-out;
         }
 
         .wave {
+          z-index: 2;
             position: absolute;
             top: 50%;
-            left: 101.2%;
-            width: 300px;
-            height: 300px;
+            left: 101%;
+            width: 350px;
+            height: 350px;
             background: radial-gradient(rgb(0, 0, 0) 10%, transparent 0%, rgb(170, 170, 170) 80%);
             border-radius: 20px;
             animation: waveAnimation 5s infinite linear;
-
+            background-image: url(/img/rose.png);
+            background-position: center;
+            background-size: cover;
+            opacity: 1;
         }
 
         .wave:nth-child(2) {
+          z-index: 3;
             animation-duration: 10s;
             animation-direction: reverse;
             animation-delay: -10s;
+            background-image: url(/img/rose.png);
+            background-position: center;
+            background-size: cover;
+            opacity: .6;
         }
 
         .wave:nth-child(3) {
-            animation-duration: 10s;
-            animation-delay: -15s;
-            opacity: .5;
+          z-index: -1;
+          animation-duration: 10s;
+          animation-delay: -15s;
+          background-image: url(/img/part-06-wave.png);
+          background-position: center;
+          background-size: cover;
+          opacity: 1;
         }
         
         .wave:nth-child(4) {
+          z-index: 3;
           animation-duration: 15s;
           animation-delay: -20s;
-      }
+        }
+        
+        .wave:nth-child(5) {
+          z-index: 4;
+          animation-duration: 10s;
+          animation-delay: -25s;
+          background-image: url(/img/part-06-wave.png);
+          background-position: center;
+          background-size: cover;
+          opacity: 1;
+        }
 
-      .wave:nth-child(5) {
-        animation-duration: 10s;
-        animation-delay: -25s;
-      }
 
         @keyframes waveAnimation {
             0% { transform: translate(-50%, -50%) rotate(0deg); }
@@ -1677,11 +1699,11 @@ footer {
   height: auto;
   width: 100%;
   padding: 6rem 1rem;
-  background-color: #000000;
   color: var(--white);
-  border-top: 1px solid #272727;
-  opacity: 1;
-  background-image: url(/img/lines-ft.png);
+  border-top: 1px solid #ffffff0e;
+  background-color: #000000;
+  background-image: url(/img/Grid.png);
+  mix-blend-mode: screen;
 
   & h3 {
     font-size: 1.5rem;
@@ -1722,12 +1744,9 @@ footer {
   position: relative;
   display: inline-block;
   text-align: center;
-  animation: left-to-right 0.5s linear 1;
-  transition: 0.3s ease;
+  animation: left-to-right 0s linear 1;
   font-family: 'chakra petch', sans-serif;
   color: var(--white);
-  /* background-color: rgb(12, 12, 12); */
-  /* border: 1px solid rgba(221, 221, 221, 0.116); */
   border-radius: 3px;
   font-size: .8rem;
   font-weight: 400;
@@ -1802,9 +1821,13 @@ footer {
     right: 30px;
     cursor: pointer;
 
-      &:hover #social-networks {
-        opacity: 1;
-      }
+    &:hover {
+      opacity: .5;
+    }
+
+    &:hover #social-networks {
+      opacity: 1;
+    }
   }
 
  & #social-networks {
@@ -2549,7 +2572,7 @@ animation:  pulsePulse .5s ease-in-out  infinite;
 
 #latest {
   position: relative;
-  height: auto;
+  height: 100vh;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -2595,7 +2618,7 @@ animation:  pulsePulse .5s ease-in-out  infinite;
 
     & .container-details-latest {
       position: relative;
-      height: 100%;
+      height: auto;
       display: flex;
       justify-content: start;
       align-items: center;
@@ -2649,8 +2672,9 @@ animation:  pulsePulse .5s ease-in-out  infinite;
       align-items: center;
       gap: 10px;
       flex-wrap: wrap;
-      border: 1px solid #ffffff50;
-      border-radius: 7px;
+      border: 1px solid #ffffff10;
+      border-radius: 1px;
+      margin-top: 2rem;
       padding: 2rem;
 
       @media screen and (max-width: 768px) {
@@ -3048,6 +3072,19 @@ main {
     hyphens: auto;
   }
 
+  & p {
+    font-size: 2rem;
+
+    @media screen and (max-width: 1000px) {
+      font-size: 1rem;
+    }
+  }
+
+  & p em {
+    color: var(--primary);
+    font-weight: bold;
+  }
+
   & span {
     font-family: h-02;
     font-size: 7rem;
@@ -3071,6 +3108,7 @@ main {
     border: 1px solid var(--white);
     border-radius: 15px;
     color: #fff;
+    margin-top: 1rem;
 
     &:hover {
       background-color: #fff;

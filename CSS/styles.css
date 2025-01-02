@@ -646,10 +646,10 @@ animation: show-nav-bar .01s ease-out;
   padding: 0.7rem;
   background-color: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.0352941176);
   border-radius: 20px;
   color: #fff;
   text-align: end;
-  text-transform: uppercase;
 }
 #home-main #info-updates #btn-info {
   position: relative;
@@ -675,7 +675,6 @@ animation: show-nav-bar .01s ease-out;
 #home-main #info-updates code {
   font-size: 0.6rem;
   font-weight: 400;
-  letter-spacing: 2px;
 }
 
 .data-updates {
@@ -980,36 +979,56 @@ animation: show-nav-bar .01s ease-out;
 }
 
 .wave {
+  z-index: 2;
   position: absolute;
   top: 50%;
-  left: 101.2%;
-  width: 300px;
-  height: 300px;
+  left: 101%;
+  width: 350px;
+  height: 350px;
   background: radial-gradient(rgb(0, 0, 0) 10%, transparent 0%, rgb(170, 170, 170) 80%);
   border-radius: 20px;
   animation: waveAnimation 5s infinite linear;
+  background-image: url(/img/rose.png);
+  background-position: center;
+  background-size: cover;
+  opacity: 1;
 }
 
 .wave:nth-child(2) {
+  z-index: 3;
   animation-duration: 10s;
   animation-direction: reverse;
   animation-delay: -10s;
+  background-image: url(/img/rose.png);
+  background-position: center;
+  background-size: cover;
+  opacity: 0.6;
 }
 
 .wave:nth-child(3) {
+  z-index: -1;
   animation-duration: 10s;
   animation-delay: -15s;
-  opacity: 0.5;
+  background-image: url(/img/part-06-wave.png);
+  background-position: center;
+  background-size: cover;
+  opacity: 1;
 }
 
 .wave:nth-child(4) {
+  z-index: 3;
   animation-duration: 15s;
   animation-delay: -20s;
 }
 
 .wave:nth-child(5) {
+  z-index: 4;
   animation-duration: 10s;
   animation-delay: -25s;
+  background-image: url(/img/part-06-wave.png);
+  background-position: center;
+  background-size: cover;
+  opacity: 1;
 }
 
 @keyframes waveAnimation {
@@ -1586,11 +1605,11 @@ footer {
   height: auto;
   width: 100%;
   padding: 6rem 1rem;
-  background-color: #000000;
   color: var(--white);
-  border-top: 1px solid #272727;
-  opacity: 1;
-  background-image: url(/img/lines-ft.png);
+  border-top: 1px solid rgba(255, 255, 255, 0.0549019608);
+  background-color: #000000;
+  background-image: url(/img/Grid.png);
+  mix-blend-mode: screen;
 }
 footer h3 {
   font-size: 1.5rem;
@@ -1628,12 +1647,9 @@ footer h3 {
   position: relative;
   display: inline-block;
   text-align: center;
-  animation: left-to-right 0.5s linear 1;
-  transition: 0.3s ease;
+  animation: left-to-right 0s linear 1;
   font-family: "chakra petch", sans-serif;
   color: var(--white);
-  /* background-color: rgb(12, 12, 12); */
-  /* border: 1px solid rgba(221, 221, 221, 0.116); */
   border-radius: 3px;
   font-size: 0.8rem;
   font-weight: 400;
@@ -1695,6 +1711,9 @@ footer h3 {
   top: 12.5px;
   right: 30px;
   cursor: pointer;
+}
+.container-social-media #btn-open-social-networks:hover {
+  opacity: 0.5;
 }
 .container-social-media #btn-open-social-networks:hover #social-networks {
   opacity: 1;
@@ -2424,7 +2443,7 @@ form #btn-register:hover {
 }
 #latest {
   position: relative;
-  height: auto;
+  height: 100vh;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -2465,7 +2484,7 @@ form #btn-register:hover {
 }
 #latest .container-latest .container-details-latest {
   position: relative;
-  height: 100%;
+  height: auto;
   display: flex;
   justify-content: start;
   align-items: center;
@@ -2513,8 +2532,9 @@ form #btn-register:hover {
   align-items: center;
   gap: 10px;
   flex-wrap: wrap;
-  border: 1px solid rgba(255, 255, 255, 0.3137254902);
-  border-radius: 7px;
+  border: 1px solid rgba(255, 255, 255, 0.062745098);
+  border-radius: 1px;
+  margin-top: 2rem;
   padding: 2rem;
 }
 @media screen and (max-width: 768px) {
@@ -2882,6 +2902,18 @@ main h2 {
   padding: 1rem;
   hyphens: auto;
 }
+main p {
+  font-size: 2rem;
+}
+@media screen and (max-width: 1000px) {
+  main p {
+    font-size: 1rem;
+  }
+}
+main p em {
+  color: var(--primary);
+  font-weight: bold;
+}
 main span {
   font-family: h-02;
   font-size: 7rem;
@@ -2905,6 +2937,7 @@ main button {
   border: 1px solid var(--white);
   border-radius: 15px;
   color: #fff;
+  margin-top: 1rem;
 }
 main button:hover {
   background-color: #fff;

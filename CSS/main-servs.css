@@ -1,0 +1,161 @@
+:root {
+    --white: #fff;
+    --black: #000;
+    --primary: #634092;
+}
+
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: "Chakra Petch", sans-serif;
+    font-size: 1rem;
+    margin: 0;
+    padding: 0;
+  }
+
+body {
+    background-color: var(--black);
+    color: var(--white);
+} 
+
+header {
+    position: relative;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 5rem;
+    text-align: center;
+    padding-top: 2rem;
+    hyphens: auto;
+
+    @media screen and (max-width: 1000px) {
+        font-size: 4rem;
+        
+    }
+}
+
+#servs {
+    position: relative;
+    max-width: 1300px;
+    margin: 0 auto;
+
+    & .products {
+        font-size: 1.5rem;
+        text-align: center;
+        padding: 1rem 4rem .3rem 4rem;
+        color: var(--black);
+        background-color: var(--primary);
+
+        & a {
+            color: var(--white);
+        }
+    }
+}
+
+.container-servs {
+    position: relative;
+    max-width: 1300px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: .5rem;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    padding: 1rem;
+
+    & .item-serv {
+        min-width: 390px;
+        max-width: 390px;
+        min-height: 600px;
+        max-height: 640px;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: 4rem;
+        flex-direction: column;
+        background-color: rgba(14, 14, 14, 0.603);
+        background-image: url(/img/9.png);
+        mix-blend-mode: lighten;
+        background-repeat: no-repeat;
+        backdrop-filter: blur(40px);
+        padding: 3rem 1rem;
+        width: 390px;
+        border: 1px solid #ffffff33;
+        border-radius: 5px;
+
+        & button {
+            z-index: 1;
+            font-size: 1rem;
+            color: #6d6d6d;
+            background-color: transparent;
+            border: 1px solid #fff;
+            border-radius: 3px;
+            padding: 1rem 2rem;
+            cursor: pointer;
+
+            &:hover {
+                opacity: .5;
+            }
+        }
+
+        & h2 {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+        .basic {
+            color: #6d6d6d;
+        }
+
+        .advanced {
+            color: rgba(47, 243, 184, 0.699);
+        }
+
+        & .descrip {
+            padding: 1rem 0;
+
+            & h3 {
+                color: var(--primary);
+                margin-top: 1rem;
+            }
+
+            & p:nth-child(1)  {
+                color: rgb(173, 173, 173);
+                font-weight: 300;
+            }
+
+            & p {
+                padding: .5rem 1rem;
+                font-size: 1.2rem;
+                font-weight: 700;
+
+                & span {
+                    color: #ffe138;
+                }
+            }
+        }
+
+        @media screen and (max-width: 1000px) {
+            min-width: 300px;
+            max-width: 350px;
+            min-height: 200px;
+            padding: 2rem 1rem;
+            width: 390px;
+            border: 1px solid #ffffff33;
+            border-radius: 5px;
+        }
+    }
+
+    .pro {
+        max-height: 670px;
+
+        & h2 {
+            color: red;
+        }
+    }
+}
