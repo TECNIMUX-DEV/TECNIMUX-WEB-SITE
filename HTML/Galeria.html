@@ -26,19 +26,24 @@
     <div class="container"></div>
     <h1>GA</h1>
     <h1>LERIA</h1>
-<a href="#navegation"><button>IR</button></a>
+<a href="#btn-open-filters"><button>IR</button></a>
 </div>
+
 <!-- Navegation -->
- <nav id="navegation">  
-    <svg id="btn-open-filters" xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="#000"  
-    stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-adjustments-alt"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 8h4v4h-4z" /><path d="M6 4l0 4" /><path d="M6 12l0 8" /><path d="M10 14h4v4h-4z" /><path d="M12 4l0 10" /><path d="M12 18l0 2" /><path d="M16 5h4v4h-4z" /><path d="M18 4l0 1" /><path d="M18 9l0 11" /></svg>
-    <ul id="items-nav" class="hidden-items">
-    <li><a href="#tech-s">Tech Session</a></li>
-    <li><a href="#TX-bgs">Backgrounds</a></li>
-</ul>
+<nav id="btn-open-filters" class="navegation">  
+    <p>Filtros <svg xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="#000"  
+        stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-adjustments-alt"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 8h4v4h-4z" /><path d="M6 4l0 4" /><path d="M6 12l0 8" /><path d="M10 14h4v4h-4z" /><path d="M12 4l0 10" /><path d="M12 18l0 2" /><path d="M16 5h4v4h-4z" /><path d="M18 4l0 1" /><path d="M18 9l0 11" /></svg>
+    </p>
+    <ul id="itemsNav" class="hidden-items">
+        Secciones
+        <a href="#tech-s"><li>Hardware computadoras</li></a>
+        <a href="#tech-s"><li>Sección tecnologica</li></a>
+        <a href="#TX-bgs"><li>Fondos de pantalla TX</li></a>
+        <a href="#tech-s"><li>Fondos futuristas</li></a>
+    </ul>
 </nav>
 
-      <!-- Tech Sesion -->
+<!-- Tech Sesion -->
 <section id="tech-s">
     <div class="filter-all"></div>
     <div class="modal-prev-images" id="modal-prev-images">
@@ -146,10 +151,10 @@
             alt="BG-08 BACKGROUND" loading="lazy" class="tx-item">
         </div>
         
-        <div class="image"> 
-            <img src="https://res.cloudinary.com/dxwfpc5fu/image/upload/f_auto,q_auto/v1/RESOURCES%20TECNIMUX/Gallery/xvyvdffzk2onro156pp3" 
+        <!-- <div class="image"> 
+            <img src="" 
             alt="BG-09 BACKGROUND" loading="lazy" class="tx-item">
-        </div>
+        </div> -->
     </div>
 </section>
 <script>
@@ -162,8 +167,8 @@
             txItem.classList.add('animation');
         });
 });
-    const image = document.querySelectorAll('.image');
 
+    const image = document.querySelectorAll('.image');
 
         txItem.forEach(txItem => {
             txItem.addEventListener('click', () => {
@@ -191,7 +196,7 @@ modalPrevImages.addEventListener('click', () => {
 // const TXBg = document.getElementById('TX-bg');
 // const techS = document.getElementById('tech-s');
 const btnOpenFilters = document.getElementById('btn-open-filters');
-const itemsNav = document.getElementById('items-nav');
+const itemsNav = document.getElementById('itemsNav');
 
 const toggleF =  () => {
 itemsNav.classList.toggle('show-items');
@@ -206,17 +211,29 @@ let stateToggleFilterAll = true;
 btnOpenFilters.addEventListener('click', () => {
     filterAll.forEach(filterAll => {
 
-    if(stateToggleFilterAll) {
+    if (stateToggleFilterAll) {
         filterAll.style.display = 'block';
+        itemsNav.style.display = "flex";
         // document.body.style.overflowY = 'hidden';
     } else {
         filterAll.style.display = 'none';
+        itemsNav.style.display = "none";
         // document.body.style.overflowY = 'auto';
     }
 })
 stateToggleFilterAll = !stateToggleFilterAll;
 
 }) 
+
+// Add animation to bottom
+window.addEventListener('load', function() {
+    setTimeout(function() {
+        document.getElementById('btn-open-filters').scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
+    }, 1000); 
+})
 
 </script>
 </body>
