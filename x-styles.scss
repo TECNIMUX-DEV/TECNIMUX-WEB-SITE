@@ -1149,7 +1149,7 @@ animation: show-nav-bar .01s ease-out;
   top: 140%; 
   /* transform: translateX(-15%); */
   border: 1px solid rgba(255, 255, 255, 0.151);
-  background: linear-gradient(-45deg, #000000, transparent);
+  background-color: var(--black);
   backdrop-filter: blur(20px);
   padding: 0.5rem;
   border-radius: 3px; 
@@ -1704,6 +1704,8 @@ footer {
   background-color: #000000;
   background-image: url(/img/Grid.png);
   mix-blend-mode: screen;
+  background-size: cover;
+  background-repeat: no-repeat;
 
   & h3 {
     font-size: 1.5rem;
@@ -2572,7 +2574,8 @@ animation:  pulsePulse .5s ease-in-out  infinite;
 
 #latest {
   position: relative;
-  height: 100vh;
+  height: auto;
+  min-height: 100vh;
   width: 100%;
   display: flex;
   justify-content: center;
