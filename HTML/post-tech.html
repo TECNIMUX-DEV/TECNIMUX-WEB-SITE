@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POST TECH</title>
+    <link rel="stylesheet" href="/css/post-tech.css">
+    <link rel="shortcut icon" href="/favicons/TX-BLACK.png" type="image/png">
+</head>
+<body>
+    <header>
+        <h1>POST Tecnologicos</h1>
+    </header>
+
+    <div class="container-posts">
+        <div class="post">
+            <img src="/img/Post-tech/Comentarios en lenguajes de programación - 02.png" 
+            alt="">   
+            <div class="descrip">
+                <p>Como hacer comentarios en diferentes lenguajes de programación <span></span></p>
+                <h2>DEV</h2>
+                <p>#Programación</p>
+            </div>
+        </div>
+ 
+    </div>
+
+    <div class="modal" id="imageModal">
+        <img src="" alt="Imagen destacada">
+    </div>
+
+    <script>
+
+        const posts = document.querySelectorAll('.post');
+        const modal = document.getElementById('imageModal');
+        const modalImage = modal.querySelector('img');
+posts.forEach(post => {
+    post.addEventListener("click", () => {
+        const imgSrc = post.querySelector('img').src;
+        modalImage.src = imgSrc;
+        modal.classList.add("active")
+    });
+});
+
+modal.addEventListener("click", () => {
+    modal.classList.remove("active");
+});
+
+
+    //     let posts = document.getElementsByClassName("post");
+    //     Array.from(posts).forEach(post => {
+    //         post.addEventListener("click", () => {
+    //         Array.from(posts).forEach(p => {
+    //             post.classList.add("open-post")
+    //             console.log("UX");
+    //         });
+    //     })
+    // })
+    </script>
+</body>
+</html>

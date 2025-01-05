@@ -82,8 +82,8 @@ p {
 }
 
 a {
-  cursor: pointer;
   color: #fff;
+  cursor: pointer;
 }
 
 button {
@@ -1112,7 +1112,7 @@ animation: show-nav-bar .01s ease-out;
 }
 .container-items-nav-main .items-nav-main li {
   border-radius: 0;
-  cursor: default;
+  cursor: pointer;
   padding: 0.1rem 0.2rem;
 }
 .container-items-nav-main .items-nav-main li:hover {
@@ -1656,9 +1656,7 @@ footer h3 {
   font-size: 0.8rem;
   font-weight: 400;
   text-transform: uppercase;
-  cursor: default;
   padding: 0.3rem 0.7rem;
-  cursor: pointer;
 }
 .nav-bar li:hover {
   background-color: rgb(255, 255, 255);

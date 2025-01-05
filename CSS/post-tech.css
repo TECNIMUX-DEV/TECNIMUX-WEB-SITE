@@ -1,0 +1,136 @@
+:root {
+    --white: #fff;
+    --black: #000;
+    --primary: #634092;
+}
+
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(7, 7, 7, 0.897);
+    font-family: "Chakra Petch", sans-serif;
+    color: var(--white);
+    max-width: 2000px;
+    margin: 0 auto;
+}
+
+header {
+    z-index: 10;
+    position: sticky;
+    min-width: 100%;
+    max-width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 5px;
+    background-color: #644092a1;
+    backdrop-filter: blur(7px);
+    border-radius: 40px;
+    border: 1px solid var(--white);
+    padding: .6rem;
+
+    & h1 {
+        font-size: 1.2rem;
+        font-weight: bolder;
+        text-align: center;
+        background-color: #ffffff44;
+        width: fit-content;
+        padding: .4rem;
+    }
+}
+
+& .container-posts {
+    position: relative;
+    max-width: 1400px;
+    min-width: 80%;
+    margin: 2rem auto;
+    padding: 2rem;
+
+    backdrop-filter: blur(4px);
+    border-radius: 5px;
+
+    & .post {
+        z-index: 5;
+        position: relative;
+        height: 330px;
+        width: 270px;
+        border: 2px solid var(--white);
+        border-radius: 20px;
+        overflow: hidden;
+        cursor: pointer;
+        transition: all .2s;
+
+        & img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        & .descrip {
+            position: absolute;
+            bottom: 0;
+            background-color: #ffffff02;
+            backdrop-filter: blur(7px);
+            box-shadow: 0 1px 10px #ffffff33;
+            padding: 1rem .5rem;
+            /* border-top: 2px solid var(--white); */
+
+            & p {
+                font-size: .8rem;
+                color: #c0c0c0;
+            }
+
+            & h2 {
+                margin-top: 1rem;
+                color: var();
+            }
+        
+            & p:last-child {
+                font-size: .5rem;
+                color: #ffffff6e;
+
+            }
+        }
+
+        &:hover {
+            transform: scale(1.2);
+        }
+
+    }
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal img {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.modal.active {
+    z-index: 11;
+    display: flex;
+}
+
+.open-post {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
