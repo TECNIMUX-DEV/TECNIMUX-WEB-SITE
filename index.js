@@ -70,18 +70,13 @@ const header01 = document.getElementById('header-01');
  window.addEventListener('scroll', () => {
      if (window.scrollY > stateScrollTwo) {
         header01.classList.add('header-color');
-        // imagotipo.style.backgroundColor = 'transparent';
-        // imagotipo.style.padding = '.5rem';
-        // imagotipo.style.border = 'none';
-        // header01.style.backgroundColor = '#000';
-        // socialNetworks.style.display = 'none';
-        // header01.style.borderRadius='15px';
+        qrCode.style.display = "none";
+        socialNetworks.style.display = 'none';
      } else {
          header01.classList.remove('header-color');
-        //  txLogo.style.display = 'block';
+         qrCode.style.display = "flex";
+         socialNetworks.style.display = 'block';
         header01.style.backgroundColor = 'transparent';
-        //  header01.style.width='100%';
-        //  header01.style.borderRadius='0';
          }
          });
 
