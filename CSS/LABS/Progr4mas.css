@@ -1,20 +1,24 @@
-:root p, h1, h2, h3 {
+:root {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   color: #fff;
+  --white: #fff;
+  --black: #000;
+  --primary: #634092;
 }
+
 *, ::before, ::after {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
   scroll-behavior: smooth;
 }
 
 body {
   display: flex;
   flex-direction: column;
-  background-image: linear-gradient(to right bottom, #196000, #005430, #004645, #003546, #092434, #141e2a, #17181f, #141414, #161616, #171717, #191919, #1a1a1a);
+  background-color: var(--black);
   background-attachment: fixed;
-  font-family: "F";
+  font-family: "Chakra Petch", sans-serif;;
   color: #fff;
 }
 
@@ -25,13 +29,13 @@ a {
 
 header {
   position: relative;
-  height: 40px;
+  /* height: 40px; */
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: rgb(30, 30, 30, .7);
-  padding: 0 20px;
+  padding: 0 0 0 20px;
 
   & h3 {
     font-weight: 100;
@@ -39,10 +43,30 @@ header {
 }
 
 #logo-TECNIMUX {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .5rem;
+  padding: .5rem;
+  border-radius: 15px;
+  cursor: pointer;
+
+    & p {
+      display: inline;
+      color: var(--white);
+      font-weight: bold;
+    }
 
     & img {
+      display: inline;
       height: auto;
       width: 12px;
+    }
+
+    &:hover {
+      background-color: #ffffff2c;
+      opacity: .5;
     }
   }
 
@@ -52,9 +76,10 @@ header {
     width: 60%;
     display: flex;
     flex-direction: column;
+    gap: 60px;
     background-color: #00000075;
     backdrop-filter: blur(40px);
-    margin: 1rem auto;
+    margin: 3rem auto;
 
     & h2 {
       padding: .4rem 0;
@@ -65,16 +90,19 @@ header {
       width: 100%;
       display: flex;
       justify-content: center;
-      align-items: center;
+      align-items: start;
+      gap: 1px;
       flex-direction: column;
       list-style: none;
 
       & li {
-        width: 100%;
+        width: 400px;
+        max-width: 450px;
         display: flex;
         justify-content: space-between;
         background-color: rgba(255, 255, 255, 0.041);
-        margin-bottom: 1px;
+        padding: 1rem;
+        border-radius: 20px;
 
         & a {
           text-decoration: none;
@@ -86,6 +114,11 @@ header {
 
         &:hover {
           background-color: rgba(255, 255, 255, 0.096);
+        }
+
+        @media screen and (max-width: 520px) {
+          width: 100%;
+          min-width: 250px;
         }
       }
     }
@@ -101,11 +134,18 @@ header {
         font-size: 1.2rem;
         color: #e7e7e7;
         font-weight: 100;
+
+        & span {
+         display: block;
+         font-size: .6rem;
+         color: rgb(136, 136, 136);
+        }
       }
 
       & img {
         height: auto;
-        width: 20px;
+        width: 40px;
+        margin-right: 1rem;
       }
     }
 
@@ -116,12 +156,13 @@ header {
 
       & .details {
         position: absolute;
+        height: auto;
         top: 50%;
         right: 100%;
         width: 200px;
         transform: translateY(-50%);
         padding: .2rem;
-        background-color: rgba(255, 255, 255, 0.733);
+        background-color: rgb(255, 255, 255);
         backdrop-filter: blur(20px);
         border-radius: 5px;
         font-size: .8rem;
@@ -135,21 +176,29 @@ header {
         }
       }
 
-      & svg:first-child:hover + .details {
+      & svg {
         display: block;
       }
 
+      /* 
+      & svg:nth-child(1) {
+        height: 15px;
+        width: 15px;
+        opacity: .2;
+      } */
+
+      & svg:first-child:hover + .details {
+        display: block;
+        filter: blur(10);
+      }
+
       & a:hover {
-        opacity: .6;
+        opacity: .5;
       }
     }
 
     @media  screen and (max-width: 768px) {
       width: 90%;
-
-      & .action-app {
-        min-width: 65wpx;
-      }
     }
   }
   
@@ -170,7 +219,7 @@ header {
 .btn {
   position: absolute;
   top: 0;
-  right: -150px;
+  right: -180px;
   transform: translate(-50%);
   background-color: transparent;
   border: none;
@@ -178,41 +227,39 @@ header {
   border-radius: 0.4rem;
   width: 200px;
   height: 60px;
+
+  &:hover {
+    opacity: .5;
+  }
 }
 
-.btn::before {
-  position: absolute;
-  font-weight: 200;
-  content: "CLAVE 🔒";
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 0.8rem;
-  background-color: transparent;
-  color: #ffff;
-  transition: 0.5s ease;
-}
+
 
 .btn::after {
   position: absolute;
-  content: "COPIAR";
+  content: "🔑 Contraseña: TECNIMUX";
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(0);
+  right: 5%;
+  transform: translate(0%, -50%) scale(1);
   font-size: 1rem;
-  background-color: transparent;
-  color: #634092;
+  font-weight: bold;
+  background-color: var(--primary);
+  color: var(--white);
   font-weight: 200;
-  transition: 0.5s ease;
-  opacity: 0;
+  animation: startOn .5s linear forwards;
+  border-radius: 20px;
+  padding: .2rem;
 }
 
-.btn:hover::before {
-  transform: translate(-50%, -50%) scale(1.5);
-  opacity: 0;
-}
 
 .btn:hover::after {
-  transform: translate(-50%, -50%) scale(1);
-  opacity: 1;
+  background-color: rgba(255, 255, 255, 0.096);
+}
+
+@keyframes startOn {
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+
 }

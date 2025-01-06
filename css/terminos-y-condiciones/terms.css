@@ -48,6 +48,7 @@ body {
             right: 0px;
             height: auto;
             width: 40px;
+            border-radius: 50%;
         }
     }
 }
