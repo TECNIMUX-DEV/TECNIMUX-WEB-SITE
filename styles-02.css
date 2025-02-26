@@ -1,0 +1,300 @@
+:root {
+--primary: #634092;
+--black: #000;
+--white: #fff;
+}
+
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    position: relative;
+    max-width: 1800px;
+    margin: 0 auto;
+    width: 100%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    /* background-color: #141414; */
+}
+
+.landing-video {
+    z-index: -1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: cover;
+}
+
+header {
+    z-index: 20;
+    /* position: sticky;
+    top: 20px; */
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 15px 10px;
+    /* background: linear-gradient(64deg, rgb(22, 22, 22), rgb(0, 0, 0) ,#000, transparent); */
+    background-color: #00000013;
+    backdrop-filter: blur(15px);
+    padding: 30px;
+    border: 1px solid #adadad85;
+    border-radius: 24px;
+
+
+    ul {
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+        list-style: none;
+
+        & li {
+            padding: 20px;
+            color: var(--white);
+            /*
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(5px);
+            transition: background 0.3s, border-color 0.3s;
+            padding: 5px 50px;*/
+            border-radius: 5px; 
+            cursor: pointer;
+
+            &:hover {
+                background: rgba(255, 255, 255, 0.2);
+                border-color: rgba(255, 255, 255, 0.5);
+                opacity: .5;
+              }
+        }
+
+    }
+
+    /* #pro {
+        z-index: 21;
+        top: 0;
+        left: 0;
+        background: #ff519f;
+        background-image: url(/img/Landing-v02/3.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        border-radius: 8px;
+        border: 4px solid var(--white);
+        color: var(--white);
+        margin: 10px;
+        padding: 10px 65px;
+        cursor: pointer;
+        font-size: 2rem;
+        font-weight: bold; */
+
+        /* From Uiverse.io by gharsh11032000 */ 
+#pro {
+    position: relative;
+    background-color: transparent;
+    color: #e8e8e8;
+    font-size: 17px;
+    font-weight: 600;
+    border-radius: 10px;
+    width: 150px;
+    height: 60px;
+    /* margin: 10px 30px; */
+    border: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(51, 51, 51, 0.2);
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+
+  
+  &::before {
+    content: "Vamos!";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background: linear-gradient(135deg,#dc2443, #ff519f );
+    transform: translate(0%,90%);
+    z-index: 99;
+    position: relative;
+    transform-origin: bottom;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+  
+  
+  &::after {
+    content: "Contratar";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #333;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    transform-origin: top;
+    transform: translate(0%,-100%);
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+  }
+  
+  &:hover::before {
+    transform: translate(0%,0%);
+  }
+  
+  &:hover::after {
+    transform: translate(0%,-200%);
+  }
+  
+  &:focus {
+    outline: none;
+  }
+  
+  &.active {
+    scale: 0.95;
+  }
+    }
+
+    #home {
+        z-index: 21;
+        top: 0;
+        right: 0;
+        padding: 0;
+        border-radius: 50%;
+        border: 4px solid var(--white);
+        background-color: transparent;
+        cursor: pointer;
+
+        & img {
+            height: 60px;
+            width: 60px;
+            display: block;
+            border: 1px solid transparent;
+        }
+
+        &:hover {
+            opacity: .5;
+        }
+    }
+}
+
+.landing {
+    position: relative;
+    height: 40vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    max-width: 80%;
+    margin: 2.5rem auto;
+    padding: 30px;
+    background-image: url(/img/Landing-v02/DiseñoCalidad.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+
+    & h2 {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 3rem;
+        font-weight: 700;
+    }
+    
+    & h3 {
+        font-size: 3rem;
+        font-weight: 700;
+    }
+}
+
+.container-hecho {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 60%;
+
+    & ul {
+        display: flex;
+        gap: 5px;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        list-style: none;
+        padding: 5px;
+
+        & li {
+            color: var(--white);
+            backdrop-filter: blur(5px);
+            padding: 5px 10px;
+            transition: background 0.3s, border-color 0.3s;
+            border-radius: 4px;
+            cursor: pointer;
+
+            &:hover {
+                /* background-color: #dadada1e; */
+                opacity: .5;
+            }
+        }
+    }
+}
+
+.hecho {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3px;
+    border: 1px solid var(--black);
+    border-radius: 12px;
+    /* margin: 15px; */
+    padding: 5px;
+    background-color: var(--black);
+
+    & .preview {
+        height: 280px;
+        width: 280px;
+        background-color: red;
+        border-radius: 5px;
+    }
+}
+
+footer {
+    min-height: 35vh;
+    max-width: 60%;
+    color: var(--white);
+    font-size: .8rem;
+    font-weight: 400;
+    margin: 1rem auto;
+
+    & p {
+        opacity: .5;
+    }
+
+    & .by {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: end;
+        flex-direction: column;
+        gap: 3px;
+
+        & img {
+            display: block;
+            height: 18px;
+            width: 18px;
+        }
+    }
+}

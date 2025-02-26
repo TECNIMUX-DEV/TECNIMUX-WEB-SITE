@@ -60,7 +60,7 @@ body {
 }
 
 section {
-  z-index: 1;
+  /* z-index: 1; */
   /* backdrop-filter: blur(50px); */
   /* border: 1px solid #161616; */
   background-color: #1a1a1a;
@@ -1607,9 +1607,37 @@ footer {
   mix-blend-mode: screen;
   background-size: cover;
   background-repeat: no-repeat;
-}
-footer h3 {
+  
+  & h3 {
   font-size: 1.5rem;
+  }
+}
+
+#back-to-top {
+  display: none;
+  z-index: 20;
+  position: fixed;
+  right: 30px;
+  bottom: 120px;
+  background-color: var(--primary);
+  border-radius: 6px;
+  border: 1px solid rgb(22, 22, 22);
+  cursor: pointer;
+
+  & svg {
+    transition: all .2s linear;
+    margin: 10px;
+  }
+
+  &:hover {
+    opacity: .5;
+
+  }
+
+  &:hover svg {
+    transform: translateY(-5px);
+    
+  }
 }
 
 .i-from {
@@ -3421,9 +3449,9 @@ main span svg {
   #guia {
     display: block;
   }
-  #filter-general {
+  /* #filter-general {
     display: block;
-  }
+  } */
   #high-store {
     height: 80vh;
   }

@@ -72,11 +72,13 @@ const header01 = document.getElementById('header-01');
         header01.classList.add('header-color');
         qrCode.style.display = "none";
         socialNetworks.style.display = 'none';
+        backToTop.style.display= "fixed";
      } else {
          header01.classList.remove('header-color');
          qrCode.style.display = "flex";
          socialNetworks.style.display = 'block';
         header01.style.backgroundColor = 'transparent';
+        backToTop.style.display= "none";
          }
          });
 
@@ -416,4 +418,15 @@ btnInfo.addEventListener('click', () => {
   stateDataAnimation = !stateDataAnimation;
 });
 
+
+// Button back to top
+let backToTop = document.getElementById('back-to-top');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY >= 150 ) {
+     backToTop.style.display= "block";
+  } else {
+     backToTop.style.display= "none";
+      }
+      });
 
