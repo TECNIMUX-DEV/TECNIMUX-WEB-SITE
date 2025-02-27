@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TX Servicios</title>
     <link rel="stylesheet" href="/services.css">
-    <meta name="theme-color" content="#ff519f">
+    <meta name="theme-color" content="#000">
     <!-- Favicon en formato .ico -->
-    <link rel="icon" href="/favicons/Favicons-v-Black/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicons/A-White.png" type="image/x-icon">
     <script src="/js/services.js" type="module"></script>
 </head>
 <body>
@@ -15,7 +15,7 @@
         <div>
             <button id="pro"></button>
         </div>
-        <div>
+
             <ul id="menu-main">
                 <li>Marcas</li>
                 <li>Sitíos web</li>
@@ -25,16 +25,29 @@
                 <li>Asistencia</li>
                 <li id="who">¿Quienes Somos?</li>
             </ul>
-        </div>
+
+
+            <div id="home">
+                <a href="/">
+                        <h2>TX <span>FREELANCE</span></h2>
+                </a>
+                <a href="/">
+                    <button>
+                        <img src="/favicons/A-White.png" 
+                        alt="home" title="TECNIMUX">
+                    </button>        
+                </a>
+            </div>
+
+
         <div>
-            <a href="/">
-            <button id="home">
-                <img src="/favicons/social-tx.png" alt="home" title="TECNIMUX">
-            </button>
-            </a>
-        </div>
-        <div id="btn-menu">
-            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="#fff"  stroke-width="3"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-menu-2"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 6l16 0" /><path d="M4 12l16 0" /><path d="M4 18l16 0" /></svg>
+            <!-- From Uiverse.io by Cevorob --> 
+            <label class="burger" for="burger">
+                <input type="checkbox" id="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
         </div>
     </header>
     <section id="landing-page">
@@ -184,6 +197,17 @@
     </section>
 
     <footer>
+        <!-- Back to top -->
+<a href="#">
+    <div id="back-to-top">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="28" viewBox="0 0 32 28" fill="#000000ec">
+            <path stroke="none" d="M0 0h32v28H0z" fill="none"/>
+            <path d="M16 2a3 3 0 0 0 -2.58 1.5L2.5 16.5A3 3 0 0 0 5 22h22a3 3 0 0 0 2.5 -4.5L18.58 3.5A3 3 0 0 0 16 2z" />
+            <rect x="11" y="20" width="10" height="6" rx="2"/>
+          </svg>    
+    </div>
+</a>
+
         <div id="avatar">
                 <img src="/img/Avatar/Me-without-mitad.png"
                 alt="">
@@ -209,8 +233,8 @@
         </div>
         <div class="terms">
             <h3>TERMINOS</h3>
-            <p>Todos los derechos reservados ©</p>
             <p>Terminos y condiciones</p>
+            <p>Todos los derechos reservados ©</p>
         </div>
     </footer>
 

@@ -13,20 +13,28 @@
 
 body {
     position: relative;
-    max-width: 1800px;
+    max-width: 1900px;
     margin: 0 auto !important;
     width: 100%;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     /* background-color: #141414; */
     color: var(--white);
     overflow-x: hidden;
+    padding-top: 100px;
+}
+@font-face {
+    font-family: Pixel;
+    src: url(/fonts/Pixelmax-vnR7A.otf);
 }
 
 li {
+    color: var(--black);
+}
 
-    &:hover {
-        color: var(--second);
-    }
+a {
+    text-decoration: none;
+    display: block;
+    color: var(--black);
 }
 
 .landing-video {
@@ -53,20 +61,20 @@ video {
 
 header {
     z-index: 20;
-    /* position: sticky;
-    top: 20px; */
-    position: relative;
+    position: fixed;
+    top: 0;
+    width: 100%;
     display: flex;
     justify-content: space-between;
+    flex-direction: row-reverse;
     align-items: center;
     flex-wrap: wrap;
-    margin: 15px 10px;
-    /* background: linear-gradient(64deg, rgb(22, 22, 22), rgb(0, 0, 0) ,#000, transparent); */
-    background-color: #00000013;
-    backdrop-filter: blur(30px);
-    padding: 30px;
-    border: 3px solid var(--second);
-    border-radius: 24px;
+    background-color: var(--white);
+    /* backdrop-filter: blur(30px); */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.062);
+    /* border-radius: 8px; */
+    padding: 20px 30px 15px 30px;
+    transition: opacity 0.3s ease, transform 0.3s ease;
 
 
     & ul {
@@ -77,63 +85,40 @@ header {
         list-style: none;
 
         & li {
-            padding: 20px;
-            color: var(--white);
-            /*
-            background: rgba(255, 255, 255, 0.1);
-            border: 2px solid rgba(255, 255, 255, 0.3);
-            backdrop-filter: blur(5px);
-            transition: background 0.3s, border-color 0.3s;
-            padding: 5px 50px;*/
+            padding: 10px;
+            color: var(--black);
             border-radius: 5px;
             font-weight: bold; 
             cursor: pointer;
+            opacity: .8;
 
             &:hover {
                 background-color: #adadad11; 
-                /* border-color: rgba(255, 255, 255, 0.5); */
-                opacity: .8;
-                color: var(--second);
-                text-shadow: 0 0 10px var(--black);
+                outline: 1px solid var(--black);
+                opacity: 1;
               }
         }
     }
 
-    /* #pro {
-        z-index: 21;
-        top: 0;
-        left: 0;
-        background: #ff519f;
-        background-image: url(/img/Landing-v02/3.png);
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: contain;
-        border-radius: 8px;
-        border: 4px solid var(--white);
-        color: var(--white);
-        margin: 10px;
-        padding: 10px 65px;
-        cursor: pointer;
-        font-size: 2rem;
-        font-weight: bold; */
-
-        /* From Uiverse.io by gharsh11032000 */ 
 #pro {
     position: relative;
     background-color: transparent;
-    color: #e8e8e8;
+    color: var(#333);
     font-size: 17px;
     font-weight: 600;
     border-radius: 10px;
-    width: 150px;
-    height: 60px;
+    width: 170px;
+    height: 50px;
     /* margin: 10px 30px; */
     border: none;
     text-transform: uppercase;
     cursor: pointer;
     overflow: hidden;
-    box-shadow: 0 10px 20px rgba(51, 51, 51, 0.2);
+    box-shadow: 0 10px 20px rgba(37, 37, 37, 0.616);
     transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+    background-color: #000000ec;
+    color: var(--white);
+    /* border: 1.5px solid var(--second); */
 
   
   &::before {
@@ -144,7 +129,7 @@ header {
     width: 100%;
     height: 100%;
     pointer-events: none;
-    background: linear-gradient(135deg,#dc2443, #ff519f );
+    /* background: linear-gradient(135deg,#dc2443, #ff519f ); */
     transform: translate(0%,90%);
     z-index: 99;
     position: relative;
@@ -154,11 +139,12 @@ header {
   
   
   &::after {
-    content: "Contratar";
+    content: "Agendar";
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #333;
+    /* background-color: #333; */
+    background-color: transparent;
     width: 100%;
     height: 100%;
     pointer-events: none;
@@ -182,45 +168,163 @@ header {
   &.active {
     scale: 0.95;
   }
+
+  &:hover {
+    border: 1.5px solid #000;
+    background-color: var(--second);
+  }
     }
 
     #home {
         z-index: 21;
+        position: relative;
+        display: flex;
+        align-items: center;
+        flex-direction: row-reverse;
+        gap: .5rem;
         top: 0;
         right: 0;
         padding: 0;
-        border-radius: 50%;
-        /* border: 4px solid #ff006285; */
-        border: 3px solid var(--second);
+        border: none;
         background-color: transparent;
         cursor: pointer;
 
+        & a {
+            text-decoration: none;
+            color: var(--black);
+        }
+
+        & h2 {
+
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: bold;
+            font-size: 2rem;
+
+            & span {
+                font-family: Pixel;
+                font-size: .8rem;
+            }
+        }
+
+        & button {
+        border: none;
+        background-color: transparent;
+
+        }
+
         & img {
-            height: 60px;
-            width: 60px;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            border: 1px solid var(--black);
+
             display: block;
-            border: 1px solid transparent;
+            background-color: transparent;
         }
-
-        &:hover {
-            opacity: .5;
-        }
-    }
-
-    & #menu-main {
-        position: relative;
-    }
-
-    & #btn-menu {
-        display: none;
-        border: 2px solid var(--white);
-        padding: .5rem;
-        border-radius: 10px;
-        top: 30px;
-        right: 30px;
     }
 
 }
+
+/* Button menu */
+/* From Uiverse.io by Cevorob */ 
+#menu-main {
+    position: relative;
+}
+
+#burger {
+    display: none;
+    border: 2px solid var(--white);
+    padding: .5rem;
+    border-radius: 10px;
+    top: 30px;
+    right: 30px;
+}
+.burger {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 30px;
+    background: transparent;
+    cursor: pointer;
+    display: none;
+  }
+  
+  .burger input {
+    display: none;
+  }
+  
+  .burger span {
+    display: block;
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    background: black;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+  }
+  
+  .burger span:nth-of-type(1) {
+    top: 0px;
+    transform-origin: left center;
+  }
+  
+  .burger span:nth-of-type(2) {
+    top: 50%;
+    transform: translateY(-50%);
+    transform-origin: left center;
+  }
+  
+  .burger span:nth-of-type(3) {
+    top: 100%;
+    transform-origin: left center;
+    transform: translateY(-100%);
+  }
+  
+  .burger input:checked ~ span:nth-of-type(1) {
+    transform: rotate(45deg);
+    top: 0px;
+    left: 5px;
+  }
+  
+  .burger input:checked ~ span:nth-of-type(2) {
+    width: 0%;
+    opacity: 0;
+  }
+  
+  .burger input:checked ~ span:nth-of-type(3) {
+    transform: rotate(-45deg);
+    top: 28px;
+    left: 5px;
+  }
+
+
+
+@keyframes ss {
+    from {
+        transform: translateY(0);
+        opacity: 0;
+    } to {
+        transform: translateY(50);
+        opacity: 1;
+    }
+}
+@keyframes sss {
+    to {
+
+    }
+}
+
+.header-hidden {
+    transform: translateY(-100%);
+    opacity: 0;
+    /* transition: all .5s ease; */
+    pointer-events: none;
+}
+
 
 #landing-page {
 
@@ -574,11 +678,42 @@ footer {
     }
 }
 
+#back-to-top {
+    display: none;
+    z-index: 20;
+    position: fixed;
+    right: 30px;
+    bottom: 120px;
+    background-color: var(--second);
+    border-radius: 6px;
+    border: 1px solid rgb(22, 22, 22);
+    cursor: pointer;
+  
+    & svg {
+      transition: all .2s linear;
+      margin: 10px;
+    }
+  
+    &:hover {
+      opacity: .5;
+  
+    }
+  
+    &:hover svg {
+      transform: translateY(-5px);
+      
+    }
+  }
+
 @media screen and (max-width: 750px ) {
     header {
-        margin: 15px;
+        flex-direction: row;
 
         & #home {
+
+            & h2 {
+                font-size: 1rem;
+            }
 
             & img {
                 height: 30px;
@@ -593,13 +728,14 @@ footer {
         & #pro {
             height: 40px;
             width: 140px;
+            display: none;
         }
 
         & #menu-main {
             display: none
         }
 
-        & #btn-menu {
+        & .burger{
             display: block;
         }
     }
@@ -633,4 +769,6 @@ footer {
         padding: 4rem 0;
     }
 }
+
+
 
