@@ -58,3 +58,24 @@ window.addEventListener('scroll', () => {
      backToTop.style.display= "none";
       }
       });
+
+
+// Show elements home 
+const previews = document.querySelectorAll('.preview'); 
+const bgDarkg = document.getElementById('bg-dark-g');
+ 
+previews.forEach(preview => {
+preview.addEventListener('click', () => {
+    preview.classList.toggle('center-preview');
+    bgDarkg.style.display = 'block';
+    document.body.style.overflow = 'hidden';
+} )
+
+
+bgDarkg.addEventListener('click', () => {
+    bgDarkg.style.display = 'none';
+    preview.classList.remove('center-preview');
+    document.body.style.overflow = 'auto';
+    console.log('error');
+})
+})

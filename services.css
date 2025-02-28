@@ -327,6 +327,12 @@ header {
     pointer-events: none;
 }
 
+/* .center-preview {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+} */
+
 
 #landing-page {
 
@@ -400,12 +406,18 @@ header {
     }
      
     & p {
+        font-size: 1.5rem;
         color: var(--white);
 
         & span {
             color: var(--second);
             text-shadow: 0 0 3px var(--black);
         }
+    }
+
+    & .content-our {
+        max-height: 60%;
+        max-width: 40%;
     }
     
     & #btn-go-works {
@@ -489,18 +501,14 @@ header {
     /* margin: 15px; */
     padding: 10px;
     /* background-color: var(--black); */
+}
 
-    & .preview {
-        z-index: 2;
-        position: relative;
-        height: 280px;
-        width: 280px;
-        background-color: var(--second);
-        border-radius: 5px;
-        overflow: hidden;
-        cursor: pointer;
+    .preview {
+        z-index: 40;
 
         & img {
+            z-index: 40;
+            position: relative;
             height: auto;
             width: 100%;
             object-fit: cover;
@@ -526,7 +534,43 @@ header {
             transition: .3s ease;
         }
     }
-}
+    
+    .preview {
+        z-index: 2;
+        position: relative;
+        height: 280px;
+        width: 280px;
+        background-color: var(--second);
+        border-radius: 5px;
+        overflow: hidden;
+        cursor: pointer;
+    }
+
+    #bg-dark-g {
+        z-index: 30;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-color: #0000007c;
+        backdrop-filter: blur(8px);
+        display: none;
+    }
+
+    .preview .center-preview {
+        z-index: 50;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .center-preview {
+        z-index: 50;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(2);
+    }
 
 #sites {
     position: relative;
@@ -770,7 +814,32 @@ footer {
         margin: 3rem auto;
         padding: 4rem 0;
     }
+
+    #somos-tx {
+
+        & .content-our {
+            max-height: 60%;
+            max-width: 95%;
+        }
+
+    }
+
 }
 
 
+@media screen and (max-width: 750px ) {
+#somos-tx {
+
+    & p {
+        font-size: 1rem;
+    }
+
+    & .content-our {
+        max-height: 60%;
+        max-width: 95%;
+    }
+
+}
+
+}
 
