@@ -24,11 +24,13 @@ const somosTX = document.getElementById('somos-tx');
 const btnCloseSomostx = document.getElementById('btn-close-somostx');
 
 btnCloseSomostx.addEventListener('click', () => {
-somosTX.style.display = "none";
+    somosTX.style.display = "none";
+    document.body.style.overflowY = 'auto';
 })
 
 who.addEventListener('click', () => {
     somosTX.style.display = "flex";
+    document.body.style.overflowY = 'hidden';
     })
 
 
@@ -36,16 +38,27 @@ who.addEventListener('click', () => {
 let lastScrollY = window.scrollY;
 const header01 = document.querySelector('header');
 
- window.addEventListener('scroll', () => {
-     if (window.scrollY > lastScrollY) {
-         header01.classList.add("header-hidden")
-     } else if (lastScrollY <= 100){
-        header01.classList.remove("header-hidden")
-         }
-         lastScrollY = window.scrollY;
-         });
+window.addEventListener('scroll', () => {
+    if (window.scrollY > lastScrollY) {
+        header01.classList.add("header-hidden")
+    } else{
+       header01.classList.remove("header-hidden")
+        }
+        lastScrollY = window.scrollY;
+        });
 
 });
+
+//  window.addEventListener('scroll', () => {
+//      if (window.scrollY > lastScrollY) {
+//          header01.classList.add("header-hidden")
+//      } else if (lastScrollY <= 100){
+//         header01.classList.remove("header-hidden")
+//          }
+//          lastScrollY = window.scrollY;
+//          });
+
+// });
 
 
 // Button back to top
@@ -79,3 +92,10 @@ bgDarkg.addEventListener('click', () => {
     console.log('error');
 })
 })
+
+// btn-close-Our
+// let somostx = document.getElementById('somos-tx');
+// let btnCloseSomostx = document.getElementById('btn-close-somostx');
+// btnCloseSomostx.addEventListener('click', () => {
+
+//     })
