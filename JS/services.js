@@ -99,3 +99,16 @@ bgDarkg.addEventListener('click', () => {
 // btnCloseSomostx.addEventListener('click', () => {
 
 //     })
+
+// Menu accessibility 
+const acc = document.getElementById('acc');
+const menuAcc = document.getElementById('menu-acc');
+const btnCloseMenuAcc = document.getElementById('btn-close-menu-acc');
+
+acc.addEventListener('click', () => {
+    menuAcc.style.display = 'block';
+})
+
+btnCloseMenuAcc.addEventListener('click', () => {
+    menuAcc.style.display = 'none';
+})
