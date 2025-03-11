@@ -70,13 +70,13 @@ const header01 = document.getElementById('header-01');
  window.addEventListener('scroll', () => {
      if (window.scrollY > stateScrollTwo) {
         header01.classList.add('header-color');
-        qrCode.style.display = "none";
-        socialNetworks.style.display = 'none';
+        // qrCode.style.display = "none";
+        // socialNetworks.style.display = 'none';
         backToTop.style.display= "fixed";
      } else {
-         header01.classList.remove('header-color');
-         qrCode.style.display = "flex";
-         socialNetworks.style.display = 'block';
+        header01.classList.remove('header-color');
+        //  qrCode.style.display = "flex";
+        // socialNetworks.style.display = 'block';
         header01.style.backgroundColor = 'transparent';
         backToTop.style.display= "none";
          }
@@ -352,31 +352,49 @@ for (let i = 0; i < 8; i++) {
 
 
 // Open social networks
-const btnOpenSocialNetworks = document.getElementById('btn-open-social-networks');
-const socialNetworks = document.getElementById('social-networks');
-let isOpen = true;
-btnOpenSocialNetworks.addEventListener('mouseenter', () => {
-  socialNetworks.style.display = 'block';
+// const btnOpenSocialNetworks = document.getElementById('btn-open-social-networks');
+// const socialNetworks = document.getElementById('social-networks');
+// let isOpen = true;
+// btnOpenSocialNetworks.addEventListener('mouseenter', () => {
+//   socialNetworks.style.display = 'block';
 
-  setTimeout(() => {
-    socialNetworks.style.display = 'none';
-  }, 10000);
-});
+//   setTimeout(() => {
+//     socialNetworks.style.display = 'none';
+//   }, 10000);
+// });
 
 // QR-Code
-const qrCode = document.getElementById('qr-social');
-const qrCodeSocial = document.getElementById('qr-code-social');
-qrCode.addEventListener('click', () => {
-  qrCodeSocial.classList.add('translate');
-  qrCode.classList.remove('translate-02');
-  qrCodeSocial.style.width = '400px';
-  setTimeout(() => {
-    qrCode.classList.remove('translate-01');
-    qrCode.classList.add('translate-02');
-    qrCodeSocial.style.width = '40px';
-  }, 5000);
-})
+// const containerQrSocial = document.getElementById('container-qr-social');
+// const qrCodeSocial = document.getElementById('qr-code-social');
 
+// let stateToggleNetworks = true;
+// qrCodeSocial.addEventListener('click', () => {
+// if(stateToggleNetworks) {
+//   qrCodeSocial.classList.add('translate');
+//   qrCodeSocial.style.width = '400px';
+// } else {
+//   qrCode.classList.remove('translate');
+//   qrCodeSocial.style.width = '45px';
+// }
+
+// stateToggleNetworks = ! stateToggleNetworks;
+// }) 
+const qrCodeImage1 = document.getElementById('container-qr-social');
+const qrCodeImage = document.getElementById('qr-code-social');
+
+qrCodeImage1.addEventListener("click", function () {
+  // Aplica la transformación para mover al centro y aumentar el tamaño
+  qrCodeImage.style.transition = "transform 0.6s ease-in-out";
+  qrCodeImage.style.transform = "translate(-350%, 350%) scale(5)";  // Centrado y aumento de tamaño
+  // qrCodeImage.classList.toggle = 'remove'; 
+  qrCodeImage1.classList.add = 'tlt';
+  
+  // Restablece la imagen a su posición original después de 1 segundo
+  setTimeout(function () {
+    qrCodeImage.style.transform = "translate(0, 0) scale(1)";
+    qrCodeImage1.classList.remove = 'tlt';
+  }, 5000); // 1 segundo después, vuelve a la posición original
+});
 
 // Btn info Updates
 const infoUpdates = document.getElementById('info-updates');
