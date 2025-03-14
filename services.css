@@ -21,6 +21,7 @@ body {
     color: var(--black);
     overflow-x: hidden;
     padding-top: 100px;
+    /* cursor: url("/icons/CURSOR/CURSOR.png") 16 16 auto; */
 }
 @font-face {
     font-family: Pixel;
@@ -1051,3 +1052,28 @@ footer {
 }
 
 
+/* Scrollbar para navegadores basados en WebKit (Chrome, Edge, Safari, etc.) */
+::-webkit-scrollbar {
+    width: 8px; /* Grosor del scroll */
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #f0f0f0; /* Color del fondo del scroll */
+    border-radius: 4px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #262626; /* Color del thumb */
+    border-radius: 6px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #777; /* Color del thumb al hacer hover */
+  }
+  
+  /* Scrollbar para Firefox */
+  * {
+    scrollbar-width: thin; /* "thin" hace que el scroll sea delgado */
+    scrollbar-color: #262626 #f0f0f0; /* (color del thumb) (color del track) */
+  }
+  

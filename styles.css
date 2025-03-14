@@ -1616,20 +1616,25 @@ footer {
 }
 
 #back-to-top {
-  display: none;
   z-index: 20;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 40px;
   position: fixed;
   right: 30px;
   bottom: 120px;
-  background-color: rgba(43, 43, 43, 0.123);
-  border-radius: 6px;
-  border: 1px solid rgb(22, 22, 22);
+  background-color: rgba(170, 170, 170, 0.205);
+  backdrop-filter: blur(15px);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.116);
   backdrop-filter: blur(10px);
   cursor: pointer;
 
   & svg {
+    display: block;
     transition: all .2s linear;
-    margin: 10px;
   }
 
   &::after {
@@ -1718,15 +1723,17 @@ footer {
   display: block;
   z-index: 10;
   padding: 0.3rem 0.6rem;
-  color: #7e19f9;
-  border: 1px solid #7e19f9;
+  /* color: #7e19f9;
+  border: 1px solid #7e19f9; */
+  color: #ff519f;
+  border: 1px solid #ff519f;
   border-radius: 8px;
   margin-left: 1rem;
   cursor: pointer;
 
   &:hover {
     background-color: transparent;
-    color: #7e19f9;
+    color: #ff519f;
   }
 }
 
@@ -3605,4 +3612,28 @@ main span svg {
   }
 }
 
-/*# sourceMappingURL=styles.css.map */
+/* Scrollbar para navegadores basados en WebKit (Chrome, Edge, Safari, etc.) */
+::-webkit-scrollbar {
+  width: 8px; /* Grosor del scroll */
+}
+
+::-webkit-scrollbar-track {
+  background: #f0f0f0; /* Color del fondo del scroll */
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #262626; /* Color del thumb */
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #777; /* Color del thumb al hacer hover */
+}
+
+/* Scrollbar para Firefox */
+* {
+  scrollbar-width: thin; /* "thin" hace que el scroll sea delgado */
+  scrollbar-color: #262626 #f0f0f0; /* (color del thumb) (color del track) */
+}
+

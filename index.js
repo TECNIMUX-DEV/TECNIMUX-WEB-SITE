@@ -442,7 +442,7 @@ let backToTop = document.getElementById('back-to-top');
 
 window.addEventListener('scroll', () => {
   if (window.scrollY >= 150 ) {
-     backToTop.style.display= "block";
+     backToTop.style.display= "flex";
   } else {
      backToTop.style.display= "none";
       }

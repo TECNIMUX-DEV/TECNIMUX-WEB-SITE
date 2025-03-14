@@ -112,3 +112,5 @@ acc.addEventListener('click', () => {
 btnCloseMenuAcc.addEventListener('click', () => {
     menuAcc.style.display = 'none';
 })
+
+document.body.style.cursor = "url('/icons/CURSOR/CURSOR.png') 16 16, auto";
