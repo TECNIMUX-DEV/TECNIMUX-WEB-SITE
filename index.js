@@ -447,3 +447,178 @@ window.addEventListener('scroll', () => {
      backToTop.style.display= "none";
       }
       });
+
+
+      // THREE JS
+// Esperar a que el DOM esté completamente cargado
+document.addEventListener('DOMContentLoaded', () => {
+  // Variables para seguimiento del cursor
+  let mouseX = window.innerWidth / 2;
+  let mouseY = window.innerHeight / 2;
+  let targetX = 0;
+  let targetY = 0;
+  let windowHalfX = window.innerWidth / 2;
+  let windowHalfY = window.innerHeight / 2;
+  
+  // Variables para Three.js
+  let scene, camera, renderer;
+  let avatar, clock;
+  let tempObject;
+  
+  // Inicializar Three.js
+  function init() {
+      // Crear escena
+      scene = new THREE.Scene();
+      
+      // Crear cámara
+      camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 1000);
+      camera.position.z = 5;
+      
+      // Crear renderer
+      renderer = new THREE.WebGLRenderer({ 
+          antialias: true,
+          alpha: true 
+      });
+      renderer.setSize(window.innerWidth, window.innerHeight);
+      renderer.setPixelRatio(window.devicePixelRatio);
+      document.getElementById('canvas-container').appendChild(renderer.domElement);
+      
+      // Añadir luces
+      addLights();
+      
+      // Crear objeto temporal mientras carga la imagen
+      createTempObject();
+      
+      // Cargar la imagen
+      loadAvatar();
+      
+      // Iniciar reloj para animaciones
+      clock = new THREE.Clock();
+      
+      // Añadir event listeners
+      addEventListeners();
+      
+      // Iniciar bucle de animación
+      animate();
+  }
+  
+  // Añadir luces a la escena
+  function addLights() {
+      // Luz ambiental
+      const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
+      scene.add(ambientLight);
+      
+      // Luz direccional principal
+      const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
+      directionalLight.position.set(5, 5, 5);
+      scene.add(directionalLight);
+  }
+  
+  // Crear objeto temporal mientras carga la imagen
+  function createTempObject() {
+      const geometry = new THREE.SphereGeometry(0.5, 16, 16);
+      const material = new THREE.MeshStandardMaterial({
+          color: 0x3b82f6,
+          emissive: 0x072a4f,
+          metalness: 0.2,
+          roughness: 0.5
+      });
+      tempObject = new THREE.Mesh(geometry, material);
+      scene.add(tempObject);
+  }
+  
+  // Cargar la imagen PNG
+  function loadAvatar() {
+      // Crear un cargador de texturas
+      const textureLoader = new THREE.TextureLoader();
+      
+      // Cargar la imagen PNG
+      textureLoader.load(
+          // URL de la imagen - ajusta esta ruta según la ubicación de tu imagen
+          'img/Avatar/po-48.png',
+          // Callback cuando la imagen está cargada
+          function(texture) {
+              // Eliminar objeto temporal
+              scene.remove(tempObject);
+              
+              // Obtener las proporciones de la imagen para mantener su aspecto
+              const imageAspect = texture.image.width / texture.image.height;
+              
+              // Crear geometría del plano con las proporciones correctas
+              const planeGeometry = new THREE.PlaneGeometry(imageAspect, 1);
+              
+              // Crear material con la textura
+              const planeMaterial = new THREE.MeshBasicMaterial({ 
+                  map: texture,
+                  transparent: true, // Permitir transparencia si el PNG tiene canal alfa
+                  side: THREE.DoubleSide // Visible desde ambos lados
+              });
+              
+              // Crear malla
+              avatar = new THREE.Mesh(planeGeometry, planeMaterial);
+              
+              // Ajustar escala (ajusta este valor según el tamaño que necesites)
+              avatar.scale.set(.1, .1, .1);
+              
+              // Añadir a la escena
+              scene.add(avatar);
+          },
+          // Callback de progreso
+          function(xhr) {
+              console.log((xhr.loaded / xhr.total * 100) + '% cargado');
+          },
+          // Callback de error
+          function(error) {
+              console.error('Error al cargar la imagen:', error);
+          }
+      );
+  }
+  
+  // Añadir event listeners
+  function addEventListeners() {
+      // Seguimiento del cursor
+      document.addEventListener('mousemove', (event) => {
+          mouseX = event.clientX;
+          mouseY = event.clientY;
+      });
+      
+      // Manejar cambio de tamaño de ventana
+      window.addEventListener('resize', () => {
+          windowHalfX = window.innerWidth / 2;
+          windowHalfY = window.innerHeight / 2;
+          camera.aspect = window.innerWidth / window.innerHeight;
+          camera.updateProjectionMatrix();
+          renderer.setSize(window.innerWidth, window.innerHeight);
+      });
+  }
+  
+  // Bucle de animación
+  function animate() {
+      requestAnimationFrame(animate);
+      
+      // Calcular posición objetivo basada en la posición del mouse
+      targetX = (mouseX - windowHalfX) * 0.002;
+      targetY = (mouseY - windowHalfY) * 0.002;
+      
+      // Aplicar easing para movimiento suave
+      if (avatar) {
+          // Mover hacia la posición del cursor con efecto suave
+          avatar.position.x += (targetX - avatar.position.x) * 0.05;
+          avatar.position.y += (-targetY - avatar.position.y) * 0.05;
+          
+          // Rotar ligeramente hacia el cursor
+          avatar.rotation.z = targetX * 0.5;
+      } else if (tempObject) {
+          // Mover el objeto temporal mientras carga la imagen
+          tempObject.position.x += (targetX - tempObject.position.x) * 0.05;
+          tempObject.position.y += (-targetY - tempObject.position.y) * 0.05;
+          tempObject.rotation.x += 0.01;
+          tempObject.rotation.y += 0.01;
+      }
+      
+      renderer.render(scene, camera);
+  }
+  
+  // Iniciar la aplicación
+  init();
+});

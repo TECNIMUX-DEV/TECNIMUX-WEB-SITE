@@ -59,6 +59,18 @@ body {
   /* background-attachment: fixed; */
 }
 
+canvas {
+  display: block;
+}
+
+#canvas-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 section {
   /* z-index: 1; */
   /* backdrop-filter: blur(50px); */

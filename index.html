@@ -63,10 +63,10 @@ Estomos comprometidos a entregar recursos en alta calidad y brindar una excelent
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
 
-
-
+    <script type="module" src="/index.js"></script>
 </head>
 <body>
+    <div id="canvas-container"></div>
     <div id="loading" class="loading"><img src="/favicons/TX-logo-v04.11-f.png" alt="Loading" ></div>
 
         <nav id="hidden-list">
@@ -839,9 +839,12 @@ Estomos comprometidos a entregar recursos en alta calidad y brindar una excelent
         <path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 6h10" /><path d="M4 12h16" /><path d="M7 12h13" /><path d="M4 18h10" /></svg>
     </button>
 </div> -->
-
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-<script src="/index.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+          <!-- Cargar Three.js y GLTFLoader desde CDN -->
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.160.0/three.min.js"></script>
+          <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/loaders/GLTFLoader.min.js"></script>
 </body>
 </html>
