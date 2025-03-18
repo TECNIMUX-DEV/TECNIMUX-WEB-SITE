@@ -417,6 +417,15 @@ input[type=text]::-webkit-clear-button {
   font-size: 1rem;
   color: var(--white);
 }
+
+.sn-r {
+  display: flex;
+  justify-content: center !important;
+  align-items: center;
+  flex-direction: row !important;
+}
+
+
 .section-nav li {
   position: relative;
   display: none;
@@ -429,7 +438,7 @@ input[type=text]::-webkit-clear-button {
   padding: 0.6rem;
   border-bottom: 1px solid rgba(139, 139, 139, 0.0470588235);
   color: var(--white);
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 .section-nav .active-menu-responsive svg {
   display: inline-flex;
