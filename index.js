@@ -68,15 +68,13 @@ const header01 = document.getElementById('header-01');
 // const imagotipo = document.getElementById('imagotipo');
 // const txLogo = document.getElementById('tx-logo');
  window.addEventListener('scroll', () => {
-     if (window.scrollY > stateScrollTwo) {
+     if (window.scrollY > 0) {
         header01.classList.add('header-color');
+        backToTop.style.display = "flex";
         // qrCode.style.display = "none";
         // socialNetworks.style.display = 'none';
-        backToTop.style.display= "fixed";
      } else {
         header01.classList.remove('header-color');
-        //  qrCode.style.display = "flex";
-        // socialNetworks.style.display = 'block';
         header01.style.backgroundColor = 'transparent';
         backToTop.style.display= "none";
          }
@@ -107,8 +105,6 @@ const header01 = document.getElementById('header-01');
 // }
 // stateScroll = scrollTop <= 0 ? 0: scrollTop; 
 // });
-
-let stateScrollTwo = 0;
 
 // Remove guia nav bar when scrolling
 // const guia = document.getElementById('guia');
@@ -335,19 +331,19 @@ document.body.style.overflow = 'hidden';
 // });
 
 // Animation Home
-const linesContainer = document.querySelector('.lines');
-for (let i = 0; i < 8; i++) {
-    const line = document.createElement('div');
-    line.classList.add('line');
-    line.style.left = `${Math.random() * 100}%`;
-    line.style.top = `${Math.random() * 100}%`;
-    line.style.width = `${Math.random() * 30 + 20}%`;
-    line.style.height = `${Math.random() * 1.5 + 0.5}px`;
-    line.style.animationDuration = `${Math.random() * 10 + 15}s`;
-    line.style.animationDelay = `${Math.random() * 10}s`;
-    line.style.opacity = Math.random() * 0.2 + 0.1;
-    linesContainer.appendChild(line);
-}
+// const linesContainer = document.querySelector('.lines');
+// for (let i = 0; i < 8; i++) {
+//     const line = document.createElement('div');
+//     line.classList.add('line');
+//     line.style.left = `${Math.random() * 100}%`;
+//     line.style.top = `${Math.random() * 100}%`;
+//     line.style.width = `${Math.random() * 30 + 20}%`;
+//     line.style.height = `${Math.random() * 1.5 + 0.5}px`;
+//     line.style.animationDuration = `${Math.random() * 10 + 15}s`;
+//     line.style.animationDelay = `${Math.random() * 10}s`;
+//     line.style.opacity = Math.random() * 0.2 + 0.1;
+//     linesContainer.appendChild(line);
+// }
 });
 
 
@@ -437,16 +433,22 @@ btnInfo.addEventListener('click', () => {
 });
 
 
-// Button back to top
-let backToTop = document.getElementById('back-to-top');
 
-window.addEventListener('scroll', () => {
-  if (window.scrollY >= 150 ) {
-     backToTop.style.display= "flex";
-  } else {
-     backToTop.style.display= "none";
-      }
-      });
+// Button back to top
+let backToTop = document.getElementById("back-to-top");
+document.addEventListener("DOMContentLoaded", () => {
+
+  // Mostrar botón cuando haya desplazamiento
+  window.addEventListener("scroll", () => {
+    if (window.scrollY < 1) {
+      backToTop.style.display='none';
+
+    } else {
+      backToTop.style.display = 'flex';
+    }
+  });
+});
+
 
 
 // THREE JS
@@ -481,8 +483,8 @@ document.addEventListener('DOMContentLoaded', () => {
       });
       renderer.setSize(window.innerWidth, window.innerHeight);
       renderer.setPixelRatio(window.devicePixelRatio);
+            renderer.domElement.style.zIndex = "9999"; // Asegura que esté por encima de todo
       document.getElementById('canvas-container').appendChild(renderer.domElement);
-      renderer.domElement.style.zIndex = "9999"; // Asegura que esté por encima de todo
       
       // Añadir luces
       addLights();
