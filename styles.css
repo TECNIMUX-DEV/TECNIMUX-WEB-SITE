@@ -1539,13 +1539,12 @@ li:hover .container-items-nav-main {
 .primary-nav svg {
   cursor: pointer;
 }
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 800px) {
   .primary-nav {
-    display: none;
+    display: none !important;
   }
 }
 
-/* From Uiverse.io by Yaya12085 */
 #btn-open {
   display: none;
 }
@@ -2093,7 +2092,7 @@ footer {
 }
 
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1200px) {
   .container-social-media {
     display: none;
   }

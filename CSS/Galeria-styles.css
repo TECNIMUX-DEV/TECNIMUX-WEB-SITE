@@ -1,5 +1,6 @@
 :root {
   --white: #fff;
+  --black: #000;
 }
 
 *, ::before, ::after {
@@ -7,6 +8,12 @@
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 a {
@@ -20,16 +27,39 @@ a {
 }
 
 header {
+  z-index: 10;
   position: absolute;
-  height: 45px;
+  top: 0;
+  height: auto;
   width: 100%;
   display: flex;
-  justify-content: start;
+  justify-content: end;
   align-items: center;
-  backdrop-filter: 3px;
 
-  & img {
+  & a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row-reverse;
+    gap: 5px;
+    color: var(--white);
+    font-weight: bold;
     cursor: pointer;
+    padding: 0 .2rem;
+  }
+
+  & h2 {
+    display: inline-block;
+    color: var(--black);
+    font-weight: 700;
+    margin: 2rem;
+    padding: .2rem 2rem;
+    background-color: rgb(255, 255, 255);
+    transform: rotate(2deg);
+  }
+
+  & span {
+    font-weight: lighter;
   }
 
 }
@@ -78,93 +108,97 @@ video {
 } */
 
 
-body {
+#landing-page {
   position: relative;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
-
-#home {
-  position: relative;
-  height: 100vh;
-  width: 100%;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url(https://res.cloudinary.com/dxwfpc5fu/image/upload/f_auto,q_auto/v1/HOME%20IMAGES/robot-FA-05-r-min_d43xwa);
-  background-repeat: no-repeat;
-  background-position: 50% 75%;
-  background-size: 20rem;
+  flex-direction: column;
+  height: auto;
+  min-height: 100vh;
+  width: 100%;
+  background: linear-gradient(to top, #000, #9b5eff) ;
+  margin: 0 auto;
 
-  & h1 {
-    z-index: 1;
-    position: absolute;
-    font-family:Verdana, Geneva, Tahoma, sans-serif, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 5rem;
-    letter-spacing: .2rem;
-    text-shadow: 10px 10px 10px #00000046;
-    font-weight: bold;
-    font-style: italic;
-    background-color: #634092;
-    border: 2px solid #0c0c0c;
-    transform: rotate(-10deg) translateY(-140px);
+  & main {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 
-    &:nth-child(3) {
-      transform: rotate(10deg) translate(-30px, -130px);
-      margin-top: 11rem;
-      color: #fff;
-      background-color: #2c2c2c;
-      text-shadow: 10px 10px 10px #5c5c5c46;
+    & h1 {
+      font-size: 5rem;
+      font-weight: 700;
+      color: var(--white);
+    }
+
+    & h2 {
+      color: var(--white); 
+      font-size: 1.5rem;
+    }
+
+    & img {
+      height: auto;
+      width: 350px;
+
     }
   }
 
-  & /* From Uiverse.io by csemszepp */ 
-  .container {
-    z-index: -1;
-    width: 100%;
-    height: 100%;
-    --s: 84px;
-    --c1: #3333339d;
-    --c2: #000000;
-    --c3: #634092;
-  
-    --_g: 0 120deg, #0000 0;
-    background: conic-gradient(
-        from 0deg at calc(500% / 6) calc(100% / 3),
-        var(--c3) var(--_g)
-      ),
-      conic-gradient(
-        from -120deg at calc(100% / 6) calc(100% / 3),
-        var(--c2) var(--_g)
-      ),
-      conic-gradient(
-        from 120deg at calc(100% / 3) calc(500% / 6),
-        var(--c1) var(--_g)
-      ),
-      conic-gradient(
-        from 120deg at calc(200% / 3) calc(500% / 6),
-        var(--c1) var(--_g)
-      ),
-      conic-gradient(
-        from -180deg at calc(100% / 3) 50%,
-        var(--c2) 60deg,
-        var(--c1) var(--_g)
-      ),
-      conic-gradient(
-        from 60deg at calc(200% / 3) 50%,
-        var(--c1) 60deg,
-        var(--c3) var(--_g)
-      ),
-      conic-gradient(
-        from -60deg at 50% calc(100% / 3),
-        var(--c1) 120deg,
-        var(--c2) 0 240deg,
-        var(--c3) 0
-      );
-      background-size: calc(var(--s) * 2.732) var(--s);
+
+  & #sections {
+    position: relative;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+
+    & p {
+      width: 100%;
+      text-align: center;
+      color: #cecece;
+      
+    }
+
+    & li {
+      color: var(--white);
+      font-size: 1.5rem;
+      font-weight: 700;
+      border: 1px solid rgba(216, 216, 216, 0.288);
+      list-style: none;
+      border-radius: 16px;
+      transition: .1s ease;
+      padding: 1rem;
+      backdrop-filter: blur(18px);
+      cursor: pointer;
+
+      &:hover {
+        transform: scale(.9);
+      }
+    }
+/* 
+    &::before {
+      content: "        <p>Muchos recursos <span>¡Que vuele tu imaginación!</span></p>";
+      position: absolute;
+      top: 0;
+      left: 0;
+
+    } */
   }
 
+}
+
+#home {
+  z-index: 20;
+  position: sticky;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  }
+/* 
   & button {
     position: absolute;
     right: 20px;
@@ -183,20 +217,14 @@ body {
     }
   }
   
-}
+} */
 
-.navegation {
-  z-index: 2;
-  position: sticky;
+#navegation-filters {
+  z-index: 10;
+  position: sticky; /* Para que el header pueda posicionarse sticky dentro */
   top: 0;
-  right: 0;
+  height: auto;
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: end;
-  flex-direction: column;
-  padding: 10px;
-  background-color: #fff;
 
   & p {
     display: flex;
@@ -210,9 +238,92 @@ body {
   }
 }
 
+.header-filters {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  height: fit-content;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
+  gap: 1rem;
+  background-color: rgb(255, 255, 255);
+  z-index: 10; /* Asegura que esté por encima del nav */
+  padding: 10px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Efecto de sombra opcional */
+
+  & h2 {
+    font-weight: 700;
+  }
+
+  & span {
+    font-weight: lighter;
+  }
+}
+
+#container-all-filters {
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: 2rem;
+  height: auto;
+  height: auto;
+  min-height: calc(100vh - 52px);
+  width: 100%;
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.966);
+  backdrop-filter: blur(8px);
+  display: none;
+
+  & ul {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: .5rem;
+    padding: 1rem;
+
+    
+
+
+    & li {
+      font-weight: 400;
+      color: gray;
+      list-style: none;
+    }
+  }
+}
+
+  /* @media screen and (min-width: 1000px) {
+
+      #container-all-filters {
+        min-height: calc(100vh - 48px);
+        width: 40%;
+        margin-top: 1rem;
+        margin-left: 1rem;
+        padding: 2rem;
+        background-color: rgba(255, 255, 255, 0.966);
+        backdrop-filter: blur(32px);
+        border-radius: 40px;
+    }
+  }
+} */
+
 #btn-open-filters{
-  /* width: fit-content; */
+  position: relative;
+  display: inline;
+  justify-content: end;
+  width: fit-content;
+  top: 0;
   cursor: pointer;
+
 }
 .bg-navegation {
   z-index: 2;
@@ -230,63 +341,8 @@ body {
 }
 
 
-#itemsNav {
-  display: flex;
-  justify-content: end;
-  align-items: end;
-  flex-direction: column;
-  gap: .2rem;
-  margin-top: 2rem;
-  display: none;
-
-    & li {
-    list-style: none;
-    padding: 5px;
-    font-weight: 600;
-    background-color: #000;
-    color: var(--white);
-    border-radius: 5px;
-
-    &:hover {
-      opacity: .5;
-    }
-  }
-}
-
 .display-block {
   display: block;
-}
-
-.hidden-items {
-  height: 100%;
-  position: relative;
-  display: inline-flex;
-  justify-content: center;
-  align-items: end;
-  flex-direction: column;
-  padding-right: 20px;
-  padding-top: 20px;
-  display: none;
-}
-
-.show-items {
-  width: 100%;
-  flex-direction: row;
-  display: flex;
-  justify-content: end;
-  align-items: center;
-  gap: 5px;
-
-}
-
-#navegation li a {
-  display: block;
-  text-decoration: none;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-size: 0.7rem;
-  color: var(--white);
-  text-transform: uppercase;
-
 }
 
 /* Logo TECNIMUX */
@@ -296,19 +352,31 @@ body {
   top: 0;
   left: 0;
   margin: 20px;
+  padding: .3rem .5rem;
+  border: 1px solid rgba(255, 255, 255, 0.61);
+  backdrop-filter: blur(18px);
+  border-radius: 16px;
+
 
   & img {
     height: auto;
     width: 22px;
-    border: 1px solid #c2c2c2;
-    border-radius: 5px;
     padding: .2rem .3rem;
+  }
+
+  &:hover {
+    opacity: .8;
+  }
+  &:active {
+    opacity: .4;
   }
 }
 
 
 /* Galeria */
+
 #tech-s {
+  padding-top: 3rem;
   background-color: #0c0c0c;
 }
 .container-img {
@@ -316,19 +384,33 @@ body {
   gap: 20px;
   flex-wrap: wrap;
   padding: 4rem 10rem;
-
 }
 .image {
   position: relative;
   background-color: rgba(27, 27, 27, 0.4);
-  backdrop-filter: blur(5px);
-  flex: 1 1 20%;
-  height: 400px;
-  width: 500px;
-  padding: 0 40px;
+  /* backdrop-filter: blur(5px); */
+  flex: 1 1 30%;
+  height: 200px;
+  width: 700px;
+  padding: 2rem;
   overflow: hidden;
-  transition: 0.3s ease-in;
+  transition: 0.3 ease-in;
 }
+
+@media screen and (min-width: 1000px) {
+  .image {
+    flex: 1 1 10%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .container-img {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 1rem;
+  }
+}
+
 .image:hover {
 background-color: rgb(255, 255, 255, 0.3);
 }
@@ -414,31 +496,42 @@ transition: 0.5s ease;
   overflow-y: hidden;
 }
 
+#btn-scroll {
+  margin-top: 1rem;
+  padding: 2rem;
+  border-radius: 50%;
+  background-color: transparent;
+}
+
  @media screen and (max-width: 1000px) {
+  #landing-page {
   
-  /* .container-img {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    padding: 3rem 0;
-    
-    & img {
-      height: 40%;
-      width: 40%;
-      cursor: pointer;
-      transition: transform 0.2s;
+    & main {
+  
+      & h1 {
+        font-size: 3.5rem;
+      }
+  
+      & h2 {
+        font-size: 1rem;
+      }
+  
+      & img {
+        width: 250px;
+  
+      }
     }
+  }
+  
+    & #sections {
+      gap: 1rem;
+      margin-top: 2rem;
+  }
 
-  } */
-   .container-img {
-    padding: 1rem;
-   }
-
-   .image {
-    flex: 1 1 30%;
+  #btn-scroll {
+    height: auto;
+    width: 30px;
+    margin-top: .5rem;
     padding: 0;
-    height: 200px;
-   }
-} 
+  }
+}
