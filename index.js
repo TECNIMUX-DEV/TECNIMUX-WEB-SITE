@@ -449,7 +449,7 @@ window.addEventListener('scroll', () => {
       });
 
 
-      // THREE JS
+// THREE JS
 // Esperar a que el DOM esté completamente cargado
 document.addEventListener('DOMContentLoaded', () => {
   // Variables para seguimiento del cursor
@@ -482,6 +482,7 @@ document.addEventListener('DOMContentLoaded', () => {
       renderer.setSize(window.innerWidth, window.innerHeight);
       renderer.setPixelRatio(window.devicePixelRatio);
       document.getElementById('canvas-container').appendChild(renderer.domElement);
+      renderer.domElement.style.zIndex = "9999"; // Asegura que esté por encima de todo
       
       // Añadir luces
       addLights();
@@ -516,12 +517,13 @@ document.addEventListener('DOMContentLoaded', () => {
   
   // Crear objeto temporal mientras carga la imagen
   function createTempObject() {
-      const geometry = new THREE.SphereGeometry(0.5, 16, 16);
+      const geometry = new THREE.SphereGeometry(0.2, 4, 4);
       const material = new THREE.MeshStandardMaterial({
-          color: 0x3b82f6,
-          emissive: 0x072a4f,
-          metalness: 0.2,
-          roughness: 0.5
+          color: 0x8929ff,
+          emissive: 0x8929ff,
+          emissiveIntensity: .5,
+          metalness: 0.8,
+          roughness: 0.1
       });
       tempObject = new THREE.Mesh(geometry, material);
       scene.add(tempObject);
@@ -535,7 +537,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // Cargar la imagen PNG
       textureLoader.load(
           // URL de la imagen - ajusta esta ruta según la ubicación de tu imagen
-          'img/Avatar/po-48.png',
+          'img/Avatar/Cs.png',
           // Callback cuando la imagen está cargada
           function(texture) {
               // Eliminar objeto temporal
@@ -558,7 +560,7 @@ document.addEventListener('DOMContentLoaded', () => {
               avatar = new THREE.Mesh(planeGeometry, planeMaterial);
               
               // Ajustar escala (ajusta este valor según el tamaño que necesites)
-              avatar.scale.set(.1, .1, .1);
+              avatar.scale.set(.2, .2, .2);
               
               // Añadir a la escena
               scene.add(avatar);
@@ -597,14 +599,14 @@ document.addEventListener('DOMContentLoaded', () => {
       requestAnimationFrame(animate);
       
       // Calcular posición objetivo basada en la posición del mouse
-      targetX = (mouseX - windowHalfX) * 0.002;
-      targetY = (mouseY - windowHalfY) * 0.002;
+      targetX = (mouseX - windowHalfX) * 0.007;
+      targetY = (mouseY - windowHalfY) * 0.007;
       
       // Aplicar easing para movimiento suave
       if (avatar) {
           // Mover hacia la posición del cursor con efecto suave
-          avatar.position.x += (targetX - avatar.position.x) * 0.05;
-          avatar.position.y += (-targetY - avatar.position.y) * 0.05;
+          avatar.position.x += (targetX - avatar.position.x) * 0.4;
+          avatar.position.y += (-targetY - avatar.position.y) * 0.4;
           
           // Rotar ligeramente hacia el cursor
           avatar.rotation.z = targetX * 0.5;
