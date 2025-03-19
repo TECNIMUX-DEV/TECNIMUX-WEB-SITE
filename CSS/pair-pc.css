@@ -1,0 +1,107 @@
+:root {
+    --white: #fff;
+    --black: #000;
+}
+
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: var(--white);
+    text-decoration: none;
+}
+
+body {
+    color: var(--white);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header {
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+    color: var(--white);
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+    font-weight: 700;
+    padding: 1rem;
+
+    & .menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: .5rem;
+        border: 1px solid var(--white);
+        border-radius: 8px;
+        padding: .3rem .6rem;
+        cursor: pointer;
+
+        & img {
+            height: auto;
+            width: 20px;
+        }
+
+        &:hover {
+            opacity: .7;
+        }
+
+        &:active {
+            opacity: .4;
+        }
+    }
+}
+
+#pc-labs {
+    height: auto;
+    width: 300px;
+    user-select: none;
+    -webkit-user-drag: none;
+    animation: rotate 10s linear infinite both;
+}
+
+@keyframes rotate {
+    
+    from {
+        transform: rotateY(0deg);
+        filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.02));
+    }
+    
+    to {
+        transform: rotateY(360deg);
+        filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.2));
+    }
+}
+
+#hero {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding: 1rem;
+
+    & h2 {
+        font-size: .7rem;
+    }
+
+    & img {
+        height: auto;
+        width: 16px;
+    }
+}
