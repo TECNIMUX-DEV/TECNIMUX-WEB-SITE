@@ -604,55 +604,46 @@ animation: show-nav-bar .01s ease-out;
   z-index: 30;
   position: fixed;
   height: 80px;
+  width: 100%;
   display: flex;
   top: 0;
   left: 0;
   right: 0;
-  width: 100%;
   align-items: center;
   justify-content: space-between;
   margin: 0 auto;
-}
-#header-01 a {
-  text-decoration: none;
-}
-#header-01 h1 {
-  font-size: 1.5rem;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  letter-spacing: 0.1rem;
-}
-@media screen and (max-width: 900px) {
-  #header-01 {
-    width: 100%;
-  }
-}
 
-#header-01 .header-color {
-  /* background-color: rgba(0, 0, 0, 0.8); */
-  /* border-bottom: 1px solid var(--primary); */
-  /* background-color: red; */
-  backdrop-filter: blur(50px);
-  animation: animation-opacity 0.6s ease-in-out;
-  margin-top: 0;
+  & a {
+  text-decoration: none;
+  }
+
+  & h1 {
+    font-size: 1.5rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    letter-spacing: 0.1rem;
+  }
 }
 
 .header-color {
-  background-color: #000000ab;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.062745098);
-  backdrop-filter: blur(50px);
-  /*
-  animation: animation-opacity .6s ease-in-out;
-  margin-top: 0; */
+  animation: animation-opacity .5s linear both;
 }
 
+
 @keyframes animation-opacity {
-  from {
+  0% {
+    background-color: transparent;
+    backdrop-filter: blur(0);
     opacity: 0;
   }
-  to {
+  
+  100% {
     opacity: 1;
+    backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.062745098);
   }
 }
+
 #home-main {
   position: relative;
   height: 100vh;
@@ -660,13 +651,14 @@ animation: show-nav-bar .01s ease-out;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin: 0;
   padding: 0;
   width: 100%;
   /* background: rgb(0, 0, 0);
   background-image: url(/img/bg-LP.png); */
+  mask: linear-gradient(to bottom, #000 80%, transparent 100%);
   background-position: center;
   background-size: cover;
+  mix-blend-mode: screen;
   background-repeat: no-repeat;
   mix-blend-mode: screen;
   font-family: Arial, sans-serif;
@@ -781,6 +773,7 @@ main {
   top: 0;
   left: 0;
   background-color:rgba(0, 0, 0, 0.726);
+  mask: linear-gradient(to bottom, #000 80%, transparent 100%);
   backdrop-filter: blur(18px);
   } 
 
@@ -1499,7 +1492,7 @@ li:hover .container-items-nav-main {
 .primary-nav svg {
   cursor: pointer;
 }
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 1000px) {
   .primary-nav {
     display: none !important;
   }
@@ -1806,18 +1799,20 @@ footer {
 .i-from {
   display: flex;
   justify-content: start;
-  align-items: center;
+  align-items: end;
   flex-direction: row-reverse;
-  padding: 1rem 0;
+  padding-bottom: 1rem;
   transition: all 0.5s;
 }
+
 .i-from p {
   font-size: 0.7rem;
 }
+
 .i-from svg {
   height: auto;
   width: 15px;
-  margin: 0 0.4rem;
+  margin: 0 .4rem 0 0;
 }
 
 .nav-bar {
@@ -1982,6 +1977,12 @@ footer {
     &:active {
       opacity: .4;
     }
+  }
+}
+
+@media screen and (max-width: 1520px) {
+  #social-networks {
+    display: none;
   }
 }
 
@@ -2190,6 +2191,11 @@ footer {
       display: flex;
       gap: 1rem;
 
+      & button {
+        margin: 0;
+        padding: 0;      
+      }
+
       & #btn-google {
         background-color: rgb(255, 255, 255);
       }
@@ -2228,7 +2234,18 @@ footer {
 
 @media screen and (max-width: 1000px) {
   #form {
-    width: 75%;
+    width: 100%;
+    border: none;
+
+
+    & .login {
+
+      & input {
+        width: 90%;
+        padding: 1rem;
+      }
+
+    }
 
     & .login-alternatives {
       align-items: center;
@@ -2325,7 +2342,7 @@ form button {
     margin: 0;
 
     & .btn-login {
-      margin-right: 55px;
+      margin-right: 30px;
     }
   }
 }
@@ -2920,6 +2937,7 @@ form button {
   flex-direction: column;
   flex-wrap: wrap;
   color: var(--color-text);
+  margin-bottom: 5rem;
 
   & h2 {
     font-size: 5rem;
@@ -3957,7 +3975,7 @@ main span svg {
 }
 
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1000px) {
   #latest {
 
     & .container-latest .img-latest {
@@ -4028,6 +4046,7 @@ main span svg {
 
   video {
     opacity: .7;
+    mask: linear-gradient(to bottom, #000 80%, transparent 100%);
   }
 }
 

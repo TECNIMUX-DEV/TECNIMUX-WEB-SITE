@@ -75,7 +75,6 @@ const header01 = document.getElementById('header-01');
         // socialNetworks.style.display = 'none';
      } else {
         header01.classList.remove('header-color');
-        header01.style.backgroundColor = 'transparent';
         backToTop.style.display= "none";
          }
          });
@@ -696,44 +695,63 @@ document.addEventListener('DOMContentLoaded', () => {
   init();
 });
 
-
 // Login supabase
+
+// Inicializar Supabase
 const supabaseUrl = "https://gtzrweraragayovdrysa.supabase.co";
-const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imd0enJ3ZXJhcmFnYXlvdmRyeXNhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDI0MzQ3NDIsImV4cCI6MjA1ODAxMDc0Mn0.G6aNX5m8DVaEwhbcPOjs2E8juQGCR3dp20Ame3Xe6mU";
-const supabase = supabase.createClient(supabaseUrl, supabaseKey);
+const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imd0enJ3ZXJhcmFnYXlvdmRyeXNhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDI0MzQ3NDIsImV4cCI6MjA1ODAxMDc0Mn0.G6aNX5m8DVaEwhbcPOjs2E8juQGCR3dp20Ame3Xe6mU"; // Usa la clave pública de Supabase
+const supabase = window.supabase.createClient(supabaseUrl, supabaseKey, {
 
-async function signUp () {
-  const email = document.getElementById('email').value;
-  const password = document.getElementById('password').value;
+  auth: {
+    persistSession: true,
+  },
+});
 
-  const { user, error } = await supabase.auth.signUp({ email, password });
 
-  if(error) {
-    console.log("No se puedo completar el Registro");;
 
+// Función para registrar usuarios
+async function signUp() {
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
+
+  const { data, error } = await supabase.auth.signUp({
+      email,
+      password,
+      options: {
+          emailRedirectTo: "https://tu-sitio.com/confirmacion",
+      },
+  });
+
+  if (error) {
+      console.error("Error al registrarse:", error.message);
+      alert(`Error: ${error.message}`);
   } else {
-    console.log("Usuario registrado: ", user);
-    alert("Registro Exitoso");
+      console.log("Usuario registrado:", data);
+      alert("Registro exitoso. Revisa tu correo para verificar.");
   }
 }
 
-async function signIn () {
-  const email = document.getElementById('email').value;
-  const password = document.getElementById('password').value;
 
-  const { user, error } = await supabase.auth.signInWithPassword({ email, password });
+
+// Función para iniciar sesión
+async function signIn() {
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+
+    const { data, error } = await supabase.auth.signInWithPassword({ email, password });
 
     if (error) {
-      console.log("Error al iniciar Sesion");
-
+        console.log("Error al iniciar sesión:");
+        alert(`Error: ${error.message}`);
     } else {
-      console.log("Ingreso exitoso de: ", user);
-      alert("logeo exitoso");
+        console.log("Ingreso exitoso de:", data);
+        alert("Logeo exitoso");
     }
-  }
+}
 
-  async function signOut() {
+// Función para cerrar sesión
+async function signOut() {
     await supabase.auth.signOut();
-    console.log("Sesion Cerrada.");
-    alert("Sesion Cerrada.");
-  }
+    console.log("Sesión Cerrada.");
+    alert("Sesión Cerrada.");
+}
