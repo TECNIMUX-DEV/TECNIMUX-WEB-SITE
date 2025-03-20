@@ -63,9 +63,10 @@ Estomos comprometidos a entregar recursos en alta calidad y brindar una excelent
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
 
-    <script type="module" src="/index.js"></script>
+    <script defer src="/index.js"></script>
 </head>
 <body>
+    <div class="filter-form"></div>
     <div id="canvas-container"></div>
     <section id="landing-00">
         <video src="/img/bg-Vo.mp4" autoplay muted loop playsinline> </video>
@@ -139,6 +140,29 @@ Estomos comprometidos a entregar recursos en alta calidad y brindar una excelent
                             </li>
                         </a>
                     </ul>
+
+                    <div class="container-sub-menu-rr">
+                        <!-- Dynamic-content -->
+                    </div>
+
+                    <!-- <ul id="sub-menu-second">
+                        <a href="#">
+                            <div id="btn-open-lang" class="item-login btn-sub-menu container-lang-btn">
+                                <svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  
+                                stroke-width="1"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-world">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" /><path d="M3.6 9h16.8" />
+                                <path d="M3.6 15h16.8" /><path d="M11.5 3a17 17 0 0 0 0 18" /><path d="M12.5 3a17 17 0 0 1 0 18" /></svg>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div id="btn-open-form" class="item-login btn-sub-menu container-login-btn">
+                                <svg  xmlns="http://www.w3.org/2000/svg"    viewBox="0 0 24 24"  fill="none"  stroke="currentColor"
+                                stroke-width=".5"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline 
+                                icon-tabler-login-2"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 8v-2a2 2 0 0 1 2 -2h7a2 2 0 0 1 
+                                2 2v12a2 2 0 0 1 -2 2h-7a2 2 0 0 1 -2 -2v-2" /><path d="M3 12h13l-3 -3" /><path d="M13 15l3 -3" /></svg>
+                            </div>
+                        </a>
+                    </ul> -->
             </div>
         </ul>
         <div class="version vresponsive">
@@ -286,30 +310,25 @@ Estomos comprometidos a entregar recursos en alta calidad y brindar una excelent
                 </a>
             </ul>
 
-            <ul id="container-qr-social">
-                <li>
+            <ul>
+                <li id="container-qr-social">
                     <img src="/img/qr-social-networks/qr-code.png" id="qr-code-social" 
-                    alt="QR-Social-TX">
+                    alt="QR-Social-TX" title="Qr Redes Sociales">
                 </li>
             </ul> 
+            
+            <div class="container-sub-menu-rr">
+                <!-- Dynamic-content -->
+            </div>
         </div>
             <!-- <a href="/html/Galeria.html"><P>Normas</P></a> -->
     </nav> 
 
-    <!-- <div class="container-login">
-        <div class="item-login">
-            <svg  xmlns="http://www.w3.org/2000/svg"  id="btn-open-lang" width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  
-            stroke-width="1.25"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-world">
-            <path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" /><path d="M3.6 9h16.8" />
-            <path d="M3.6 15h16.8" /><path d="M11.5 3a17 17 0 0 0 0 18" /><path d="M12.5 3a17 17 0 0 1 0 18" /></svg>
-        </div>
-        <div class="item-login">
-            <svg  xmlns="http://www.w3.org/2000/svg"  id="btn-open-form" width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"
-            stroke-width="1"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline 
-            icon-tabler-login-2"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 8v-2a2 2 0 0 1 2 -2h7a2 2 0 0 1 
-            2 2v12a2 2 0 0 1 -2 2h-7a2 2 0 0 1 -2 -2v-2" /><path d="M3 12h13l-3 -3" /><path d="M13 15l3 -3" /></svg>
-        </div>
-    </div> -->
+    <div class="container-login">
+    </div> 
+
+
+
     <div id="btn-open-primary-nav" class="primary-nav">
         <input id="btn-open" type="checkbox">
            <label class="toggle" for="checkbox">
@@ -400,43 +419,44 @@ Estomos comprometidos a entregar recursos en alta calidad y brindar una excelent
 <section id="login-home">
     <div class="filter-login"></div>
     <div id="form">
-        <div class="filter-form"></div>
         <form>
             <h2>Iniciar Sesión</h2>
             <div class="login">
-                <input type="email" placeholder="Correo electronico" class="input-email">
-                <input type="password" placeholder="Contraseña" class="input-password">
+                <input type="email" placeholder="Correo" id="email" class="input-email">
+                <input type="password" placeholder="Contraseña" id="password" class="input-password">
             </div>
             <div class="container-btn-login">
-            <button class="btn-login"><strong>Ingresar</strong></button>
+            <button class="btn-login" onclick="signIn()"><strong>Ingresar</strong></button>
             </div>
             <div class="btn-close-login">
                 <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24" viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1"
                   stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-x"><path stroke="none" d="M0 0h24v24H0z"
                    fill="none"/><path d="M18 6l-12 12" /><path d="M6 6l12 12" /></svg>
             </div>
-                <div class="login-alternatives ">
-                     <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100"  viewBox="0 0 48 48">
-                     <path fill="#4caf50" d="M45,16.2l-5,2.75l-5,4.75L35,40h7c1.657,0,3-1.343,3-3V16.2z"></path><path fill="#1e88e5" d="M3,16.2l3.614,1.71L13,23.7V40H6c-1.657,0-3-1.343-3-3V16.2z"></path><polygon fill="#e53935" points="35,11.2 24,19.45 13,11.2 12,17 13,23.7 24,31.95 35,23.7 36,17"></polygon><path fill="#c62828" d="M3,12.298V16.2l10,7.5V11.2L9.876,8.859C9.132,8.301,8.228,8,7.298,8h0C4.924,8,3,9.924,3,12.298z"></path><path fill="#fbc02d" d="M45,12.298V16.2l-10,7.5V11.2l3.124-2.341C38.868,8.301,39.772,8,40.702,8h0 C43.076,8,45,9.924,45,12.298z"></path>
-                    </svg>
-                     <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-devices-pc"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 5h6v14h-6z" /><path d="M12 9h10v7h-10z" /><path d="M14 19h6" /><path d="M17 16v3" /><path d="M6 13v.01" /><path d="M6 16v.01" /></svg>
-                </div>
-                <button id="btn-register"><strong>Registrarme</strong></button>
+                <div class="login-alternatives">
+                    <h3><em>Ingresar con:</em></h3>
+                        <div class="options-login">
+                            <svg width="256" height="262" id="btn-google" viewBox="0 0 256 262" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid"><path d="M255.878 133.451c0-10.734-.871-18.567-2.756-26.69H130.55v48.448h71.947c-1.45 12.04-9.283 30.172-26.69 42.356l-.244 1.622 38.755 30.023 2.685.268c24.659-22.774 38.875-56.282 38.875-96.027" fill="#4285F4"/><path d="M130.55 261.1c35.248 0 64.839-11.605 86.453-31.622l-41.196-31.913c-11.024 7.688-25.82 13.055-45.257 13.055-34.523 0-63.824-22.773-74.269-54.25l-1.531.13-40.298 31.187-.527 1.465C35.393 231.798 79.49 261.1 130.55 261.1" fill="#34A853"/><path d="M56.281 156.37c-2.756-8.123-4.351-16.827-4.351-25.82 0-8.994 1.595-17.697 4.206-25.82l-.073-1.73L15.26 71.312l-1.335.635C5.077 89.644 0 109.517 0 130.55s5.077 40.905 13.925 58.602l42.356-32.782" fill="#FBBC05"/><path d="M130.55 50.479c24.514 0 41.05 10.589 50.479 19.438l36.844-35.974C195.245 12.91 165.798 0 130.55 0 79.49 0 35.393 29.301 13.925 71.947l42.211 32.783c10.59-31.477 39.891-54.251 74.414-54.251" fill="#EB4335"/></svg>
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-devices-pc"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 5h6v14h-6z" /><path d="M12 9h10v7h-10z" /><path d="M14 19h6" /><path d="M17 16v3" /><path d="M6 13v.01" /><path d="M6 16v.01" /></svg>
+                        </div>
+                    </div>
+                <button id="btn-register" onclick="signUp()"><strong>Registrarme</strong></button>
+                <button id="signOut" onclick="signOut()">Cerrar Sesión</button>
         </form>
     </div>  
     </section>
 
     <section id="languajes">
         <div class="filter-login"></div>
-        <div class="container-lang">
+        <ul class="container-lang">
             <div class="btn-close-langs">
                 <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24" viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1"
                   stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-x"><path stroke="none" d="M0 0h24v24H0z"
                    fill="none"/><path d="M18 6l-12 12" /><path d="M6 6l12 12" /></svg>
             </div>
-            <p>Español <em>latam</em></p>
-            <p>English <em>us</em></p>
-        </div>
+            <li>Español <em>latam</em></li>
+            <li>English <em>us</em></li>
+        </ul>
     </section>
 
 <div id="filter-general"></div>
@@ -891,10 +911,6 @@ Estomos comprometidos a entregar recursos en alta calidad y brindar una excelent
         <path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 6h10" /><path d="M4 12h16" /><path d="M7 12h13" /><path d="M4 18h10" /></svg>
     </button>
 </div> -->
-<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-
           <!-- Cargar Three.js y GLTFLoader desde CDN -->
           <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.160.0/three.min.js"></script>
           <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/loaders/GLTFLoader.min.js"></script>
@@ -908,5 +924,10 @@ Estomos comprometidos a entregar recursos en alta calidad y brindar una excelent
           </svg>   
     </div>
 </a>
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
 </body>
 </html>

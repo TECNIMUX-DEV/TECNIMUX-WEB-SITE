@@ -194,7 +194,7 @@ input[type=text]::-webkit-clear-button {
   }
 }
 #hidden-list {
-  z-index: 15;
+  z-index: 31;
   position: fixed;
   width: 100%;
   height: 100%;
@@ -601,7 +601,7 @@ animation: show-nav-bar .01s ease-out;
 }
 
 #header-01 {
-  z-index: 10;
+  z-index: 30;
   position: fixed;
   height: 80px;
   display: flex;
@@ -786,7 +786,7 @@ main {
 
 
 #home-main #info-updates {
-  z-index: 100;
+  z-index: 30;
   position: fixed;
   bottom: 30px;
   right: 15px;
@@ -1148,81 +1148,21 @@ section {
   opacity: 0.5;
 }
 
-.wave {
-  z-index: 2;
-  position: absolute;
-  top: 50%;
-  left: 101%;
-  width: 350px;
-  height: 350px;
-  background: radial-gradient(rgb(0, 0, 0) 10%, transparent 0%, rgb(170, 170, 170) 80%);
-  border-radius: 20px;
-  animation: waveAnimation 5s infinite linear;
-  background-image: url(/img/rose.png);
-  background-position: center;
-  background-size: cover;
-  opacity: 1;
-}
-
-.wave:nth-child(2) {
-  z-index: 3;
-  animation-duration: 10s;
-  animation-direction: reverse;
-  animation-delay: -10s;
-  background-image: url(/img/rose.png);
-  background-position: center;
-  background-size: cover;
-  opacity: 0.6;
-}
-
-.wave:nth-child(3) {
-  z-index: -1;
-  animation-duration: 10s;
-  animation-delay: -15s;
-  background-image: url(/img/part-06-wave.png);
-  background-position: center;
-  background-size: cover;
-  opacity: 1;
-}
-
-.wave:nth-child(4) {
-  z-index: 3;
-  animation-duration: 15s;
-  animation-delay: -20s;
-}
-
-.wave:nth-child(5) {
-  z-index: 4;
-  animation-duration: 10s;
-  animation-delay: -25s;
-  background-image: url(/img/part-06-wave.png);
-  background-position: center;
-  background-size: cover;
-  opacity: 1;
-}
-
-@keyframes waveAnimation {
-  0% {
-    transform: translate(-50%, -50%) rotate(0deg);
-  }
-  100% {
-    transform: translate(-50%, -50%) rotate(-360deg);
-  }
-}
-/* #main {
+#main {
+  z-index: 20;
   position: relative;
   height: auto;
   width: 100%;
-  /* width: 1400px; 
-  /* max-width: 1400px; 
-  /* max-width: 1750px; 
+  /* width: 1400px; */
+  /* max-width: 1400px; */
+  /* max-width: 1750px; */
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   margin: 0 auto;
   border: none;
-} */
+} 
 @media screen and (max-width: 1000px) {
   #main {
     max-width: 100%;
@@ -1455,6 +1395,7 @@ li:hover .container-items-nav-main {
 }
 
 .container-login {
+  z-index: 50;
   position: absolute;
   height: 30px;
   width: auto;
@@ -1469,6 +1410,7 @@ li:hover .container-items-nav-main {
   border: 1px solid #00000098;
   background-color: #fff; */
 }
+
 .container-login .item-login {
   height: 85%;
   width: 85%;
@@ -1487,6 +1429,22 @@ li:hover .container-items-nav-main {
 .container-login .item-login:hover {
   opacity: 0.8;
 }
+
+#sub-menu-second {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1rem;
+  gap: .3rem;
+}
+
+.btn-sub-menu {
+  display: block;
+  height: 30px;
+  width: 30px;
+  opacity: .7;
+  cursor: pointer;
+}
 @media screen and (max-width: 1000px) {
   .container-login {
     display: none;
@@ -1494,16 +1452,17 @@ li:hover .container-items-nav-main {
 }
 
 .filter-login {
-  z-index: 1;
+  z-index: 9000;
   position: absolute;
   height: 100vh;
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.137);
+  background-color: rgb(255, 12, 12);
   backdrop-filter: blur(3px);
 }
 
 .filter-login::before {
   content: "";
+  z-index: 9000;
   position: absolute;
   top: 0;
   left: 0;
@@ -1515,19 +1474,20 @@ li:hover .container-items-nav-main {
   linear-gradient(-45deg, transparent 75%, #ffffff3a 75%);
   background-size: 150px 150px;
   background-position: 0 0, 30px 0, 30px -30px, 0px -30px; */
-  background-image: linear-gradient(45deg, black 25%, transparent 25%), linear-gradient(-45deg, black 25%, transparent 25%), linear-gradient(45deg, transparent 75%, black 75%), linear-gradient(-45deg, transparent 75%, black 75%);
+  background-image: linear-gradient(45deg, rgb(251, 255, 0) 25%, transparent 25%), linear-gradient(-45deg, rgb(0, 228, 87) 25%, transparent 25%), linear-gradient(45deg, transparent 75%, rgb(0, 155, 83) 75%), linear-gradient(-45deg, transparent 75%, rgb(0, 245, 253) 75%);
   background-size: 360px 360px;
   background-position: 0 0, 30px 0, 30px -30px, 0px -30px;
-  opacity: 0.05;
+  opacity: 1;
 }
 
 .filter-form {
-  z-index: -1;
-  position: absolute;
-  height: 100%;
+  z-index: 10;
+  position: fixed;
+  height: 100vh;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(1px);
+  backdrop-filter: blur(4px);
+  display: none;
 }
 
 .primary-nav {
@@ -1787,7 +1747,7 @@ footer {
 }
 
 #back-to-top {
-  z-index: 9;
+  z-index: 30;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1811,13 +1771,19 @@ footer {
   &::after {
     content: "Volver arriba";
     position: absolute;
-    top: -50px;
+    bottom: -50px;
     left: 50%;
     transform: translateX(-50%);
-    color: var(--white);
+    width: max-content;
+    padding: .5rem;
+    border: 1px solid #c9c9c921;
+    border-radius: 10px;
+    color: #8d8d8d;
     font-size: .7rem;
     opacity: 0;
     transition: .3s ease;
+    display: inline-block;
+    pointer-events: none;
   }
 
   &:hover::after {
@@ -2009,7 +1975,7 @@ footer {
       background: linear-gradient(45deg, #ffffff00, transparent 90%, #ffffff00);
     */
 
-    &:hover{
+    &:hover {
       background-color: var(--base);
     }
 
@@ -2019,8 +1985,8 @@ footer {
   }
 }
 
- #container-qr-social {
-  z-index: 20;
+#container-qr-social {
+  z-index: 1;
   position: relative;
   display: flex;
   justify-content: center;
@@ -2030,33 +1996,44 @@ footer {
   border-radius: 0%;
   backdrop-filter: blur(0);
   list-style: none;
-  padding: 0 1rem 0 0; 
+  margin-right: 1rem;
+  padding: 0; 
+  border: 1px solid #c9c9c921;
+  border-radius: 10px;
+  cursor: pointer;
 
   & #qr-code-social {
-      position: relative;
-      display: block;
-      height: 40px;
-      width: 40px;
-      padding: 5px;
+    position: relative;
+    display: block;
+    height: 40px;
+    width: 40px;
+    padding: 6px;
+    border-radius: 8px;
+    }
+    
+    &::after {
+      content: "Qr Redes Sociales";
+      position: absolute;
+      bottom: -50px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: max-content;
+      padding: .5rem;
+      border: 1px solid #c9c9c921;
+      border-radius: 10px;
       color: #8d8d8d;
-      cursor: pointer;
-    } 
+      font-size: .7rem;
+      opacity: 0;
+      transition: .3s ease;
+      display: inline-block;
+      pointer-events: none;
+    }
     
-      &::after {
-        content: "QR redes sociales";
-        position: absolute;
-        bottom: -50px;
-        left: 50%;
-        transform: translateX(-50%);
-        color: var(--white);
-        font-size: .7rem;
-        opacity: 0;
-        transition: .3s ease;
-      }
-    
-      &:hover::after {
-        opacity: 1;
-      }
+    &:hover::after {
+      opacity: 1;
+    }
+}
+
   
     /* &:hover::before {
       top: 0%;
@@ -2068,13 +2045,11 @@ footer {
     /* &:hover {
       transform: scale(1.1);
     } */
-  }
-
 
   
-#qr-code-social.remove::after {
-    content: none;  /* Elimina el pseudo-elemento */
-  }
+/* #qr-code-social.remove::after {
+    content: none;
+  } */
 
 /* .container-social-media #social-networks a:hover {
   opacity: .4;
@@ -2168,8 +2143,8 @@ footer {
   z-index: 4;
   position: fixed;
   height: auto;
-  width: 450px;
-  max-width: 450px;
+  width: 480px;
+  max-width: 480px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -2178,62 +2153,123 @@ footer {
   align-items: center;
   flex-direction: column;
   background-color: #000;
-  /* background:
-  	linear-gradient(-45deg,#0000 1.3%,#000000 0 32%,#0000 0),
-  	linear-gradient( 45deg,#0000  48%,#ffffff0c 0 52%,#0000 0),
-  	linear-gradient( 45deg,#0000 1.3%,#000000 0 32%,#0000 0) calc(34px/2) calc(34px/2),
-  	linear-gradient(-45deg,#0000  48%,#ffffff05 0 52%,#0000 0) #000000;
-  background-size: calc(2*34px) 34px, 34px 34px; */
+  border: 1px solid #c9c9c921;
   border-radius: 10px;
   overflow-y: auto;
+
+  & .login-alternatives {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: -.8rem;
+    padding: 20px;
+
+    & h3 {
+      width: 100%;
+      text-align: start;
+      font-size: .8rem;
+      color: #c9c9c99f;
+    }
+    
+    & svg {
+    height: 45px;
+    width: 120px;
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.151);
+    box-shadow: inset 0 0 150px rgba(255, 255, 255, 0.082);
+    cursor: pointer;
+    }
+
+    & .options-login {
+      position: relative;
+      display: flex;
+      gap: 1rem;
+
+      & #btn-google {
+        background-color: rgb(255, 255, 255);
+      }
+    }
+  }
+
+  & .login {
+    padding: 0.5rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+
+    }
+
+  & svg:hover {
+    opacity: .8;
+  }
+
+  & svg:active {
+    opacity: .4;
+  }
 }
-#form svg:hover {
-  opacity: 0.8;
+
+#btn-register {
+  text-decoration: underline;
 }
-#form .login {
-  padding: 0.5rem;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
-}
-#form .login-alternatives {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  padding: 10px;
-}
-#form .login-alternatives svg {
-  height: 45px;
-  width: 45px;
-  padding: 0.5rem;
-  box-shadow: 0 0 0.1rem rgba(255, 255, 255, 0.2666666667);
-}
-#form .login-alternatives svg:hover {
-  opacity: 0.8;
+
+#signOut {
+  padding: .6rem 1rem;
+  box-shadow: inset 0 0 150px rgba(255, 0, 0, 0.082);
+  border: 1px solid red;
+  border-radius: 8px;
+  color: red;
 }
 
 @media screen and (max-width: 1000px) {
   #form {
     width: 75%;
+
+    & .login-alternatives {
+      align-items: center;
+
+      & h3 {
+        text-align: center;
+      }
+
+      & svg {
+      width: 60px;
+      }
+    }
   }
 }
+
 form {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   padding: 1rem 0 2rem 0;
-}
-form input {
+
+  & input {
+  color: var(--white);
   background-color: transparent;
   box-shadow: rgba(255, 255, 255, 0.09) 0px 0px 0px 1px;
   border: none;
   margin: 0.5rem;
   padding: 0.4rem;
-  border-radius: 3px;
+  border-radius: 4px;
+
+    &::placeholder {
+      color: rgba(255, 255, 255, 0.300);
+    }
+  }
+
+  &:hover ::placeholder {
+    color: rgba(255, 255, 255, 0.400);
+  }
 }
+
 form input:focus {
   background-color: transparent;
   border: none;
@@ -2252,15 +2288,14 @@ form button {
   padding: 0.5rem;
   color: #c9c9c9;
   transition: 0.5 ease-in-out;
-}
-form button:hover {
-  opacity: 0.8;
-}
-form #btn-register {
-  opacity: 0.5;
-}
-form #btn-register:hover {
-  opacity: 1;
+
+  &:hover {
+    opacity: .7;
+  }
+
+  &:active {
+    opacity: .4;
+  }
 }
 
 @media screen and (max-width: 1000px) {
@@ -2277,7 +2312,7 @@ form #btn-register:hover {
 }
 .container-btn-login .btn-login {
   position: relative;
-  margin: 10px 15px 15px 0;
+  margin: -2px 15px 15px 0;
   padding-right: 1rem;
   padding: 0.5rem;
   border-radius: 5px;
@@ -2286,13 +2321,17 @@ form #btn-register:hover {
 }
 @media screen and (max-width: 1000px) {
   .container-btn-login {
-    justify-content: center;
+    justify-content: end;
     margin: 0;
+
+    & .btn-login {
+      margin-right: 55px;
+    }
   }
 }
 
 #languajes {
-  z-index: 3;
+  z-index: 10;
   position: fixed;
   height: 100%;
   width: 100%;
@@ -2302,11 +2341,26 @@ form #btn-register:hover {
   opacity: 0.8;
 }
 
+.container-sub-menu-rr a {
+  position: relative;
+  width: max-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 1rem;
+  margin-right: 1rem;
+
+  & svg {
+    display: inline-block;
+  }
+}
+
 .container-lang {
-  z-index: 4;
+  z-index: 10;
   position: fixed;
   height: auto;
-  width: 20%;
+  width: max-content;
   top: 150px;
   right: 3%;
   transform: translate(-10%, -50%);
@@ -2314,20 +2368,81 @@ form #btn-register:hover {
   justify-content: start;
   align-items: start;
   flex-direction: column;
+  gap: 8px;
   padding: 2rem;
   background-color: #000;
+  border: 1px solid #c9c9c921;
   border-radius: 10px;
   text-align: start;
 }
-.container-lang p {
+.container-lang li {
+  padding: .2rem .3rem;
   line-height: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.068);
+  border-radius: 8px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.089);
+    opacity: .7;
+  }
 }
 .container-lang em {
   color: #585858;
 }
-@media screen and (max-width: 1000px) {
-  .container-lang {
-    width: 40%;
+
+
+#btn-open-lang {
+  cursor: pointer;
+  position: relative;
+
+  &::after {
+    content: "Idioma";
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: max-content;
+    padding: .5rem;
+    border: 1px solid #c9c9c921;
+    border-radius: 10px;
+    color: #8d8d8d;
+    font-size: .7rem;
+    opacity: 0;
+    transition: .3s ease;
+    display: inline-block;
+    pointer-events: none;
+  }
+
+  &:hover::after {
+    opacity: 1;
+  }
+}
+
+#btn-open-form {
+  cursor: pointer;
+  position: relative;
+
+  &::after {
+    content: "Login";
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: max-content;
+    padding: .5rem;
+    border: 1px solid #c9c9c921;
+    border-radius: 10px;
+    color: #8d8d8d;
+    font-size: .7rem;
+    opacity: 0;
+    transition: .3s ease;
+    display: inline-block;
+    pointer-events: none;
+  }
+
+  &:hover::after {
+    opacity: 1;
   }
 }
 
@@ -2340,6 +2455,7 @@ form #btn-register:hover {
 }
 
 .btn-close-langs {
+  z-index: 20;
   position: absolute;
   top: 0;
   right: 0;

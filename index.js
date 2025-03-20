@@ -268,56 +268,125 @@ document.body.style.overflow = 'hidden';
     }, 1000);
 
 
-// Form
-// const form = document.getElementById('form');
-// const btnCloseLogin = document.querySelector('.btn-close-login');
-// const btnCloseLangs = document.querySelector('.btn-close-langs');
+// Obtener elementos
+const menuHTML = `
+<ul class="sub-menu-second">
+  <a href="#">
+    <div class="btn-open-lang item-login btn-sub-menu container-lang-btn">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon icon-tabler icons-tabler-outline icon-tabler-world">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+        <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" />
+        <path d="M3.6 9h16.8" />
+        <path d="M3.6 15h16.8" />
+        <path d="M11.5 3a17 17 0 0 0 0 18" />
+        <path d="M12.5 3a17 17 0 0 1 0 18" />
+      </svg>
+    </div>
+  </a>
+
+  <a href="#">
+    <div class="btn-open-form item-login btn-sub-menu container-login-btn">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width=".5" stroke-linecap="round" stroke-linejoin="round"
+      class="icon icon-tabler icons-tabler-outline icon-tabler-login-2">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+        <path d="M9 8v-2a2 2 0 0 1 2 -2h7a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-7a2 2 0 0 1 -2 -2v-2" />
+        <path d="M3 12h13l-3 -3" />
+        <path d="M13 15l3 -3" />
+      </svg>
+    </div>
+  </a>
+</ul>
+`;
+
+// Insertamos el menú en todos los contenedores
+document.querySelectorAll(".container-sub-menu-rr").forEach((container) => {
+  container.innerHTML = menuHTML;
+});
+
+// Capturamos TODOS los botones en todas las instancias
+document.querySelectorAll(".btn-open-lang").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    console.log("Botón de idioma presionado en este menú.");
+  });
+});
+
+document.querySelectorAll(".btn-open-form").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    console.log("Botón de login presionado en este menú.");
+  });
+});
+
+
+
+const form = document.getElementById('form');
+const btnCloseLogin = document.querySelector('.btn-close-login');
+const btnCloseLangs = document.querySelector('.btn-close-langs');
 // const btnOpenForm = document.getElementById('btn-open-form');
 // const btnOpenLang = document.getElementById('btn-open-lang');
-// const loginHome = document.getElementById('login-home');
+const loginHome = document.getElementById('login-home');
+const languajes = document.getElementById('languajes'); // Este faltaba en tu código
+const filterForms = document.querySelectorAll('.filter-form'); 
 
+// Función para cerrar el formulario
+function closeAll() {
+  loginHome.style.display = 'none';
+  form.style.display = 'none';
+  languajes.style.display = 'none';
+  document.body.style.overflow = 'auto';
 
-// document.querySelectorAll('.filter-login').forEach(element => {
-//     const filterLogin = element;
-//         filterLogin.addEventListener('click', () => {
-//         loginHome.style.display = 'none';
-//         filterLogin.style.display = 'none';
-//         languajes.style.display = 'none';
-//         form.style.display = 'none';
-//         document.body.style.overflow = 'auto';
-// });
+  // Ocultar todos los elementos de filtro
+  filterForms.forEach(filter => {
+      filter.style.display = 'none';
+  });
+}
 
-// btnOpenForm.addEventListener('click', () => {
-//     loginHome.style.display = 'flex';
-//     languajes.style.display = 'none';
-//     form.style.display = 'flex';
-//     filterLogin.style.display = 'block';
-//     document.body.style.overflow = 'hidden';
-// });
+// Agregar eventos a cada filterForm
+filterForms.forEach(filterForm => {
+  filterForm.addEventListener('click', closeAll);
+});
 
-// btnOpenLang.addEventListener('click', () => {
-//     loginHome.style.display = 'none';
-//     form.style.display = 'none';
-//     languajes.style.display = 'flex';
-//     filterLogin.style.display = 'block';
-//     document.body.style.overflow = 'hidden';
-// });
-// }); 
+// Capturar **todas** las instancias de los botones
+document.querySelectorAll(".btn-open-form").forEach(btn => {
+  btn.addEventListener("click", () => {
+      loginHome.style.display = 'flex';
+      languajes.style.display = 'none';
+      form.style.display = 'flex';
+      hiddenList.style.display = 'none';
+      btnOpenNavPrimaryNav.style.display = 'block';
 
+      // Mostrar todos los elementos de filtro
+      filterForms.forEach(filter => {
+          filter.style.display = 'block';
+      });
 
-// btnCloseLogin.addEventListener('click', () => {
-//     loginHome.style.display = 'none';
-//     form.style.display = 'none';
-//     languajes.style.display = 'none';
-//     document.body.style.overflow = 'auto';
-// });
+      document.body.style.overflow = 'hidden';
+  });
+});
 
-// btnCloseLangs.addEventListener('click', () => {
-//     loginHome.style.display = 'none';
-//     form.style.display = 'none';
-//     languajes.style.display = 'none';
-//     document.body.style.overflow = 'auto';
-// });
+document.querySelectorAll(".btn-open-lang").forEach(btn => {
+  btn.addEventListener("click", () => {
+      loginHome.style.display = 'none';
+      form.style.display = 'none';
+      languajes.style.display = 'flex';
+      hiddenList.style.display = 'none';
+      btnOpenNavPrimaryNav.style.display = 'block';
+
+      // Mostrar todos los elementos de filtro
+      filterForms.forEach(filter => {
+          filter.style.display = 'block';
+      });
+
+      document.body.style.overflow = 'hidden';
+  });
+});
+
+// Botones de cierre
+btnCloseLogin.addEventListener('click', closeAll);
+btnCloseLangs.addEventListener('click', closeAll);
+
 
 // Add List of menu responsive 
 // const list = document.querySelectorAll('.list-nav li');
@@ -378,7 +447,7 @@ document.body.style.overflow = 'hidden';
 const qrCodeImage1 = document.getElementById('container-qr-social');
 const qrCodeImage = document.getElementById('qr-code-social');
 
-qrCodeImage1.addEventListener("click", function () {
+qrCodeImage.addEventListener("click", function () {
   // Aplica la transformación para mover al centro y aumentar el tamaño
   qrCodeImage.style.transition = "transform 0.6s ease-in-out";
   qrCodeImage.style.transform = "translate(-350%, 350%) scale(5)";  // Centrado y aumento de tamaño
@@ -626,3 +695,45 @@ document.addEventListener('DOMContentLoaded', () => {
   // Iniciar la aplicación
   init();
 });
+
+
+// Login supabase
+const supabaseUrl = "https://gtzrweraragayovdrysa.supabase.co";
+const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imd0enJ3ZXJhcmFnYXlvdmRyeXNhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDI0MzQ3NDIsImV4cCI6MjA1ODAxMDc0Mn0.G6aNX5m8DVaEwhbcPOjs2E8juQGCR3dp20Ame3Xe6mU";
+const supabase = supabase.createClient(supabaseUrl, supabaseKey);
+
+async function signUp () {
+  const email = document.getElementById('email').value;
+  const password = document.getElementById('password').value;
+
+  const { user, error } = await supabase.auth.signUp({ email, password });
+
+  if(error) {
+    console.log("No se puedo completar el Registro");;
+
+  } else {
+    console.log("Usuario registrado: ", user);
+    alert("Registro Exitoso");
+  }
+}
+
+async function signIn () {
+  const email = document.getElementById('email').value;
+  const password = document.getElementById('password').value;
+
+  const { user, error } = await supabase.auth.signInWithPassword({ email, password });
+
+    if (error) {
+      console.log("Error al iniciar Sesion");
+
+    } else {
+      console.log("Ingreso exitoso de: ", user);
+      alert("logeo exitoso");
+    }
+  }
+
+  async function signOut() {
+    await supabase.auth.signOut();
+    console.log("Sesion Cerrada.");
+    alert("Sesion Cerrada.");
+  }
