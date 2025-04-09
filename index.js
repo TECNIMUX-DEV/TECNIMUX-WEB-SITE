@@ -63,23 +63,6 @@ activeMenuResponsive.forEach(active => {
       });
     });
   });
-  
-
-// Add header color when scrolling
-// const header01 = document.getElementById('header-01');
-// // const imagotipo = document.getElementById('imagotipo');
-// // const txLogo = document.getElementById('tx-logo');
-//  window.addEventListener('scroll', () => {
-//      if (window.scrollY > 0) {
-//         header01.classList.add('header-color');
-//         backToTop.style.display = "flex";
-//         // qrCode.style.display = "none";
-//         // socialNetworks.style.display = 'none';
-//      } else {
-//         header01.classList.remove('header-color');
-//         backToTop.style.display= "none";
-//          }
-//          });
 
 const scrollWrapper = document.querySelector('.scroll-wrapper'); // el contenedor con data-simplebar
 const simplebarContent = scrollWrapper.querySelector('.simplebar-content-wrapper');
