@@ -1,4 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
+
+
 // Show and hidden menu responsive
 let hiddenList = document.getElementById('hidden-list');
 // let btnOpenNavMain = document.getElementById('btn-open-nav-main');
@@ -64,20 +66,35 @@ activeMenuResponsive.forEach(active => {
   
 
 // Add header color when scrolling
+// const header01 = document.getElementById('header-01');
+// // const imagotipo = document.getElementById('imagotipo');
+// // const txLogo = document.getElementById('tx-logo');
+//  window.addEventListener('scroll', () => {
+//      if (window.scrollY > 0) {
+//         header01.classList.add('header-color');
+//         backToTop.style.display = "flex";
+//         // qrCode.style.display = "none";
+//         // socialNetworks.style.display = 'none';
+//      } else {
+//         header01.classList.remove('header-color');
+//         backToTop.style.display= "none";
+//          }
+//          });
+
+const scrollWrapper = document.querySelector('.scroll-wrapper'); // el contenedor con data-simplebar
+const simplebarContent = scrollWrapper.querySelector('.simplebar-content-wrapper');
+
 const header01 = document.getElementById('header-01');
-// const imagotipo = document.getElementById('imagotipo');
-// const txLogo = document.getElementById('tx-logo');
- window.addEventListener('scroll', () => {
-     if (window.scrollY > 0) {
-        header01.classList.add('header-color');
-        backToTop.style.display = "flex";
-        // qrCode.style.display = "none";
-        // socialNetworks.style.display = 'none';
-     } else {
-        header01.classList.remove('header-color');
-        backToTop.style.display= "none";
-         }
-         });
+
+simplebarContent.addEventListener('scroll', () => {
+  if (simplebarContent.scrollTop > 0) {
+    header01.classList.add('header-color');
+    // backToTop.style.display = "flex";
+  } else {
+    header01.classList.remove('header-color');
+    // backToTop.style.display = "none";
+  }
+});
 
 // MAIN <1000 Remove nav bar when scrolling
 // const containerOpenNav = document.getElementById('container-open-nav');
@@ -273,7 +290,7 @@ const menuHTML = `
   <a href="#">
     <div class="btn-open-lang item-login btn-sub-menu container-lang-btn">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
       class="icon icon-tabler icons-tabler-outline icon-tabler-world">
         <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
         <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" />
@@ -288,7 +305,7 @@ const menuHTML = `
   <a href="#">
     <div class="btn-open-form item-login btn-sub-menu container-login-btn">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-      stroke-width=".5" stroke-linecap="round" stroke-linejoin="round"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
       class="icon icon-tabler icons-tabler-outline icon-tabler-login-2">
         <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
         <path d="M9 8v-2a2 2 0 0 1 2 -2h7a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-7a2 2 0 0 1 -2 -2v-2" />
@@ -303,6 +320,7 @@ const menuHTML = `
 // Insertamos el menú en todos los contenedores
 document.querySelectorAll(".container-sub-menu-rr").forEach((container) => {
   container.innerHTML = menuHTML;
+  // container.classList.add('flex-container');
 });
 
 // Capturamos TODOS los botones en todas las instancias
@@ -443,22 +461,60 @@ btnCloseLangs.addEventListener('click', closeAll);
 
 // stateToggleNetworks = ! stateToggleNetworks;
 // }) 
-const qrCodeImage1 = document.getElementById('container-qr-social');
-const qrCodeImage = document.getElementById('qr-code-social');
+// const containerQrSocial = document.getElementById('container-qr-social');
 
-qrCodeImage.addEventListener("click", function () {
-  // Aplica la transformación para mover al centro y aumentar el tamaño
-  qrCodeImage.style.transition = "transform 0.6s ease-in-out";
-  qrCodeImage.style.transform = "translate(-350%, 350%) scale(5)";  // Centrado y aumento de tamaño
-  // qrCodeImage.classList.toggle = 'remove'; 
-  qrCodeImage1.classList.add = 'tlt';
-  
-  // Restablece la imagen a su posición original después de 1 segundo
-  setTimeout(function () {
-    qrCodeImage.style.transform = "translate(0, 0) scale(1)";
-    qrCodeImage1.classList.remove = 'tlt';
-  }, 5000); // 1 segundo después, vuelve a la posición original
+
+const qrImg = document.getElementById("qr-img");
+
+let isFloating = false;
+
+qrImg.addEventListener("click", () => {
+  if (isFloating) return;
+  isFloating = true;
+  // General Mask
+let generalMask = document.getElementById('general-mask');
+  generalMask.style.display = 'block';
+
+  // Clonamos el QR para animarlo sin mover el original
+  const qrClone = qrImg.cloneNode(true);
+  qrClone.id = "qr-clone";
+  document.body.appendChild(qrClone);
+
+
+  // Posicionamos el clon encima del original
+  const rect = qrImg.getBoundingClientRect();
+  qrClone.style.position = "fixed";
+  qrClone.style.top = rect.top + "px";
+  qrClone.style.left = rect.left + "px";
+  qrClone.style.height = rect.height + "px";
+  qrClone.style.width = rect.width + "px";
+  qrClone.style.transition = "all 0.6s ease-in-out";
+  qrClone.style.zIndex = "9999";
+
+  // Forzamos un reflow para que aplique el siguiente paso con transición
+  void qrClone.offsetWidth;
+
+  // Ahora animamos al centro con escala x3
+  qrClone.classList.add("qr-floating");
+
+  // Luego de 3.5 segundos lo devolvemos
+  setTimeout(() => {
+    qrClone.classList.remove("qr-floating");
+    qrClone.style.top = rect.top + "px";
+    qrClone.style.left = rect.left + "px";
+    qrClone.style.transform = "scale(1)";
+
+    setTimeout(() => {
+      qrClone.remove(); // eliminar clon
+      isFloating = false;
+      generalMask.style.display = 'none';
+    }, 600); // esperar que termine la animación de regreso
+  }, 3500);
 });
+
+
+
+
 
 // Btn info Updates
 const infoUpdates = document.getElementById('info-updates');
@@ -503,16 +559,18 @@ btnInfo.addEventListener('click', () => {
 
 
 // Button back to top
-let backToTop = document.getElementById("back-to-top");
 document.addEventListener("DOMContentLoaded", () => {
+  const scrollWrapper = document.querySelector('.scroll-wrapper'); // Asegúrate que este contenedor tenga data-simplebar
+  const simplebarContent = scrollWrapper.querySelector('.simplebar-content-wrapper');
+
+  const backToTop = document.getElementById("back-to-top");
 
   // Mostrar botón cuando haya desplazamiento
-  window.addEventListener("scroll", () => {
-    if (window.scrollY < 1) {
-      backToTop.style.display='none';
-
-    } else {
+  simplebarContent.addEventListener("scroll", () => {
+    if (simplebarContent.scrollTop > 0) {
       backToTop.style.display = 'flex';
+    } else {
+      backToTop.style.display = 'none';
     }
   });
 });
