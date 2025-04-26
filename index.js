@@ -796,3 +796,26 @@ async function signOut() {
     console.log("Sesión Cerrada.");
     alert("Sesión Cerrada.");
 }
+
+
+// Our
+const btnCloseOur = document.getElementById('btn-close-our');
+
+const btnOpenOur = document.querySelectorAll('.btnOpenOur');
+const our = document.querySelector('.our'); // Asegúrate de tener esto
+
+btnOpenOur.forEach(btn => {
+  btn.addEventListener('click', () => {
+    our.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+    document.getElementsByClassName('hidden-list')[0].style.display = 'none';
+  });
+});
+
+
+
+btnCloseOur.addEventListener('click', () => {
+    our.style.display = 'none';
+    document.body.style.overflow = 'auto';
+    document.getElementsByClassName('hidden-list')[0].style.display = 'flex';
+});
