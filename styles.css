@@ -324,7 +324,7 @@ input[type=text]::-webkit-clear-button {
 .container-ui-modes-responsive {
   display: inline-flex;
   gap: 1rem;
-  padding: 1rem;
+  padding: 10px 16px;
   border-radius: 16px;
   border: 1px solid #1d1d1d;
   background-color: #000;
@@ -727,8 +727,9 @@ header h1 {
   backdrop-filter: blur(16px);
 
   & p {
-    z-index: 20;
-    color: hsl(240 5% 64.9%);
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: hsl(240deg 5% 64.9% / 51%);
   }
 
   /* &::after {
@@ -772,7 +773,7 @@ header h1 {
 
     & #alter {
       font-size: 1rem;
-      color: gray;
+      color: var(--white);
       font-weight: bold;
       padding: 8px 16px;
       background-color: transparent;
@@ -784,20 +785,20 @@ header h1 {
 }
 
 main {
+  z-index: 20;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  z-index: 20;
   filter:drop-shadow( 0 0 1rem #ffffff0c);
   
   & h1 {
-    z-index: 20;
-    font-size: 3rem;
+    font-size: 5rem;
     letter-spacing: -0.025em;
     font-weight: 700;
-    line-height: 50px;
+    line-height: 80px;
+    text-align: center;
   }
 
   & .container-avatar {
@@ -2099,24 +2100,24 @@ footer {
 .nav-bar .btn-business {
   z-index: 40;
   background-color: transparent;
-  color: var(--base);
+  font-family: 'Inter', sans-serif;
   font-size: 1rem;
   font-weight: 200;
-  font-family: 'Inter', sans-serif;
-  padding: .5rem;
-  border-radius: 8px;
-  border: 1px solid rgba(255, 255, 255, 0.151);
-  /* box-shadow:inset 0 0 120px rgba(211, 211, 211, 0.014); */
+  color: var(--white);
+  text-align: center;
+  letter-spacing: 1px;
+  margin-left: 15px;
+  padding: 8px 16px;
+  border-radius: 16px;
+  border: 1px solid rgb(255, 255, 255);
   line-height: 1em;
-  cursor: pointer;
-  /* background: radial-gradient(rgba(140, 0, 255, 0.048), rgba(140, 0, 255, 0.041)); */
-  /* box-shadow: inset 0 0 420px #8929ff25; */
   transition: background-color 0.3s ease, transform 0.2s ease;
   animation: pulsar 1s ease-in-out infinite;
+  cursor: pointer;
   
   &:hover {
-    color: var(--base);
-    opacity: .5;
+    color: gray;
+    border: 1px solid var(--base);
   }
   
   &:active {
@@ -2135,22 +2136,29 @@ footer {
 
 #btn-business-rpv {
   z-index: 40;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
   background-color: transparent;
-  color: var(--base);
-  font-size: 1rem;
-  font-weight: 200;
   font-family: 'Inter', sans-serif;
-  padding: .5rem;
-  border-radius: 8px;
-  border: 1px solid rgba(255, 255, 255, 0.151);
+  font-size: 1.3rem;
+  font-weight: 200;
+  color: var(--white);
+  text-align: center;
+  letter-spacing: 1px;
+  margin: 30px auto;
+  padding: 8px 16px;
+  border-radius: 16px;
+  border: 1px solid rgb(255, 255, 255);
   line-height: 1em;
-  cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
   animation: pulsar 1s ease-in-out infinite;
+  cursor: pointer;
   
   &:hover {
-    color: var(--base);
-    opacity: .5;
+    color: gray;
+    border: 1px solid var(--base);
   }
   
   &:active {
@@ -4453,9 +4461,9 @@ main span svg {
     padding: 0 2rem;
 
     & h1 {
-      font-size: 2rem;
-      text-align: start;
-      line-height: 35px;
+      font-size: 3rem;
+      text-align: center;
+      line-height: 48px;
     }
 
     & p {
@@ -4477,7 +4485,7 @@ main span svg {
   }
 
   main {
-    align-items: start;
+    align-items: center;
   }
 
   #latest {
