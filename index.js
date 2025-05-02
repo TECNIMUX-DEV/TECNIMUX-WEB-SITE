@@ -819,3 +819,31 @@ btnCloseOur.addEventListener('click', () => {
     document.body.style.overflow = 'auto';
     document.getElementsByClassName('hidden-list')[0].style.display = 'flex';
 });
+
+
+// Add animations when scroll
+const sections = document.querySelectorAll('.animation-section');
+
+sections.forEach(section => {
+  const id = section.id;
+  const alreadyViewed = localStorage.getItem(`viewed-${id}`);
+
+  if (alreadyViewed === 'true') {
+    section.classList.add('visible');
+    return; // No hace falta observar
+  }
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        localStorage.setItem(`viewed-${id}`, 'true');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.1
+  });
+
+  observer.observe(section);
+});
