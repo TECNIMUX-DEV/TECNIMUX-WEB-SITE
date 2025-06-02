@@ -23,25 +23,20 @@ body {
 
 header {
     z-index: 10;
-    position: sticky;
+    position: relative;
     min-width: 80%;
     max-width: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
     top: 5px;
-    background-color: #644092a1;
-    backdrop-filter: blur(7px);
-    border-radius: 40px;
-    border: 1px solid var(--white);
     margin: 0 auto;
     padding: .6rem;
 
     & h1 {
-        font-size: 1.2rem;
+        font-size: 2rem;
         font-weight: bolder;
         text-align: center;
-        background-color: #ffffff44;
         width: fit-content;
         padding: .4rem;
     }
@@ -54,26 +49,34 @@ header {
     min-width: 80%;
     margin: 2rem auto;
     padding: 2rem;
-    background-color: #232323;
+    background-color: #414141;
     backdrop-filter: blur(4px);
     border-radius: 5px;
+
+    & p {
+        font-size: 1.5em;
+        color: #eeeeee;
+    }
 
     & .post {
         z-index: 5;
         position: relative;
         height: 330px;
         width: 270px;
-        border: 2px solid var(--white);
+        border: 1px solid var(--white);
         border-radius: 20px;
+        margin-top: 2rem;
         overflow: hidden;
         cursor: pointer;
         transition: all .2s;
+
 
         & img {
             height: 100%;
             width: 100%;
             filter: blur(1px);
             object-fit: cover;
+            padding: 1rem;
         }
 
         & .descrip {

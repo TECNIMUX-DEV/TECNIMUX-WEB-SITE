@@ -1969,12 +1969,22 @@ footer {
         justify-content: start;
         align-items: start;
         flex-direction: column;
+        font-size: 1.5rem;
         text-align: start;
-        color: var(--base);
+        color: var(--white);
+
+        & a {
+          text-decoration: none;
+        }
 
         & li {
+          font-size: 1rem;
           color: gray;
           list-style: none;
+
+          &:hover {
+            color: var(--white);
+          }
         }
       }
     }
