@@ -3343,6 +3343,10 @@ form button {
 
       & li {
         z-index: 1;
+        position: relative;
+        display: flex;
+        justify-content: start;
+        align-items: center;
         height: 100%;
         min-height: 300px;
         max-height: 300px;
@@ -3351,7 +3355,7 @@ form button {
         max-width: 300px;
         /* background-color: var(--base); */
         border-radius: 10px;
-        padding: 1rem;
+        padding: 3rem 1rem 1rem 1rem;
         box-shadow: 0 0 1rem rgba(0, 0, 0, 0.87);
         font-size: 2.5rem;
         color: var(--base);
@@ -3373,6 +3377,8 @@ form button {
           text-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3490196078);
           text-wrap: pretty;
           text-shadow: 0 0 6px #000;
+          margin-top: 8px;
+          padding: 0 12px;
         }
       }
 
@@ -3383,8 +3389,26 @@ form button {
     text-align: start;
     font-size: 3.5rem;
     font-weight: 700;
+
+    & span {
+      background: linear-gradient(to right, rgba(60, 45, 102, 0.062), rgba(119, 119, 119, 0.021)) ;
+      border: 1px solid #8929ff56;
+      margin-bottom: 3px;
+      padding: 7px 17px 15px 17px;
+      border-top-right-radius: 30px;
+      border-bottom-left-radius: 30px;
+    }
   }
 
+}
+
+  @media screen and (max-width: 1000px) {
+    #eb {
+      
+      & h2 span {
+        padding: 0px 12px;
+      }
+    }
 }
 
 .animation-section {
@@ -3461,7 +3485,7 @@ form button {
    align-items: start;
    gap: 1rem;
    flex-wrap: wrap;
-   padding: 100px 40px;
+   padding: 100px 40px 300px 40px;
 
   & h2 {
   text-align: start;
@@ -3472,10 +3496,11 @@ form button {
    }
 
    & p {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     color: var(--white);
     font-weight: 600;
-    text-align: start;
+    text-align: center;
+    text-shadow: 0 0 3px #000;
    }
 
    & ul {
@@ -3484,11 +3509,13 @@ form button {
      align-items: center;
      gap: 1rem;
      list-style: none;
-     padding: 0;
      margin: 0;
+     padding: 0;
      flex-wrap: wrap;
 
      & li {
+      z-index: 1;
+      position: relative;
       height: 100%;
       min-height: 200px;
       max-height: 200px;
@@ -3500,6 +3527,36 @@ form button {
       border-radius: 10px;
       padding: 1.5rem;
       box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+      overflow: hidden;
+
+      & img {
+        z-index: -1;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: auto;
+        width: 180px;
+        opacity: .3;
+      }
+
+      &:nth-child(1) {
+        background-color: var(--base);
+
+        & p {
+          font-size: 1.5rem;
+        }
+
+        & span {
+          font-size: 2rem;
+          font-style: italic;
+        }
+      }
+
+      & #coin {
+        width: 115px;
+      }
+
      }  
    }
 }
@@ -3610,6 +3667,7 @@ form button {
   margin-top: 2rem;
   padding: 2rem;
 }
+
 @media screen and (max-width: 768px) {
   #latest .container-latest .container-latest-top {
     width: 100%;
