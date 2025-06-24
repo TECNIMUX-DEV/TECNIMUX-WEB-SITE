@@ -1,0 +1,119 @@
+:root {
+    --white: #fff;
+    --black: #000;
+    --base: #8929ff;
+}
+
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(0, 0, 0);
+    font-family: "Chakra Petch", sans-serif;
+    color: var(--white);
+    max-width: 2000px;
+    margin: 0 auto;
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem;
+    list-style: none;
+
+    & h1 {
+        width: 100%;
+        font-size: 3rem;
+        font-weight: bolder;
+        text-align: center;
+        color: var(--white);
+        padding: 3rem;
+
+        & span {
+            color: var(--base);
+            font-weight: bolder;
+        }
+    }
+
+    & a {
+        text-decoration: none;
+        color: var(--white);
+    }
+
+    & li {
+        position: relative;
+        height: 600px;
+        min-height: 600px;
+        width: 400px;
+        min-width: 400px;
+        margin: 1rem;
+        border: 1px solid var(--white);
+        border-radius: 20px;
+        text-align: center;
+        padding: 1rem;
+        overflow: hidden;
+        transition: all .3s ease;
+
+        & h2 {
+            z-index: 5;
+            font-size: 3.5rem;
+            padding-top: 1rem;
+        }
+
+        & p {
+            z-index: 10;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            padding: 35px;
+            color: var(--white);
+            font-weight: 700;
+            font-size: 1.6rem;
+            text-align: start;
+            text-wrap: pretty;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        & img {
+            z-index: 1;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            filter: blur(5px);
+            transition: all .5s ease;
+        }
+
+            &:hover img {
+                width: 250%;
+                z-index: 2;
+                transform: scale(.8);
+                filter: blur(0);
+            }
+
+            &:hover svg {
+                display: none;
+            }
+
+            &:hover p {
+                opacity: 0;
+            }
+
+        & svg {
+            z-index: 1;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(10);
+            transition: all .5s ease;
+
+        }
+    }
+}
