@@ -432,16 +432,33 @@ input[type=text]::-webkit-clear-button {
 #btn-acc {
   z-index: 200;
   position: absolute;
+  height: fit-content;
+  width: fit-content;
+  top: 120px;
+  right: 30px;
   display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 1rem;
-  top: 100px;
-  right: 20px;
-  padding: 10px;
-  border: 1px solid #c9c9c921;
-  border-radius: 10px;
-  color: #000;
+  gap: 8px;
+  padding: 4px 12px;
+  border: 2px solid #fff;
+  border-radius: 16px;
+  background-color: rgb(0, 153, 255);
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--white);
   opacity: 1;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+
+
+  & svg {
+    display: block;
+    height: auto;
+    width: 40px;
+    color: var(--white);
+    margin: 0;
+    padding: 0;
+  }
 }
 
 .code-social {
@@ -1586,8 +1603,8 @@ li:hover .container-items-nav-main {
 
   & svg {
     position: absolute;
-    top: 40px;
-    right: 40px;
+    top: 60px;
+    right: 30px;
     cursor: pointer;
   }
 
@@ -1899,23 +1916,37 @@ footer {
   gap: 20px;
   height: auto;
   width: 100%;
-  padding: 3rem 6rem 2rem 6rem;
+  padding: 13rem 6rem 2rem 6rem;
   color: var(--white);
-  background-color: rgba(255, 255, 255, 0.082);
   border-top: 1px solid rgba(255, 255, 255, 0.0549019608);
-  /* background-color: #000000;
-  background-image: url(/img/Grid.png);
-  mix-blend-mode: screen; */
+  background-color: #ffffff15;
+  background-image: url(/img/Footer/3footer.png);
+  mix-blend-mode: screen;
   background-size: cover;
   background-repeat: no-repeat;
-  backdrop-filter: blur(16px);
+  /* backdrop-filter: blur(8px);
+mask: linear-gradient(to bottom,
+  rgb(0, 0, 0) 99%,
+  rgba(0, 0, 0, 0.897) 59%,
+  transparent 100%); */
+
+
+
+
 
   & .title-f {
     width: 100%;
     text-align: center;
-    font-size: 3rem;
-    color: gray;
+    font-size: 2rem;
+    color: rgb(82, 82, 82);
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.048);
+
+    & span {
+      display: block;
+      font-size: 1.5rem;
+      font-weight: 100;
+      line-height: 15px;
+    }
   }
   
   & h3 {

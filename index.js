@@ -72,6 +72,7 @@ const header01 = document.getElementById('header-01');
 simplebarContent.addEventListener('scroll', () => {
   if (simplebarContent.scrollTop > 0) {
     header01.classList.add('header-color');
+    document.getElementsByClassName('primary-nav')[0].style.display = 'flex';
     // backToTop.style.display = "flex";
   } else {
     header01.classList.remove('header-color');
@@ -817,7 +818,6 @@ btnOpenOur.forEach(btn => {
 btnCloseOur.addEventListener('click', () => {
     our.style.display = 'none';
     document.body.style.overflow = 'auto';
-    document.getElementsByClassName('hidden-list')[0].style.display = 'flex';
 });
 
 
