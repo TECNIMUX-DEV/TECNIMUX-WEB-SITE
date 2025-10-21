@@ -1729,7 +1729,7 @@ li:hover .container-items-nav-main {
   border-radius: 8px;
   padding: .5rem;
   border: 1px solid rgba(255, 255, 255, 0.151);
-  box-shadow: inset 0 0 150px rgba(255, 255, 255, 0.082);
+  /* box-shadow: inset 0 0 150px rgba(255, 255, 255, 0.082); */
   cursor: pointer;
 
   &:hover {
@@ -2851,7 +2851,7 @@ form button {
   display: none;
 }
 #languajes svg:hover {
-  opacity: 0.8;
+  opacity: 1;
 }
 
 .container-sub-menu-rr {
