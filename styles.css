@@ -495,6 +495,12 @@ input[type=text]::-webkit-clear-button {
   }
 }
 
+@media screen and (max-width: 1000px) {
+  #sAcc {
+    width: 100%;
+  }
+}
+
 #capa-behind {
   z-index: 100;
   position: absolute;
@@ -2165,7 +2171,6 @@ footer {
   right: 30px;
   bottom: 30px;
   border-radius: 8px;
-  backdrop-filter: blur(18px);
   cursor: pointer;
   display: none;
 
@@ -3497,6 +3502,7 @@ form button {
         font-weight: 900;
         text-shadow: 0 0 6px #000;
         transition: .2s ease;
+        cursor: pointer;
 
         &:hover {
           transform: scale(.95);
@@ -3513,6 +3519,10 @@ form button {
           text-shadow: 0 0 6px #000;
           margin-top: 8px;
           padding: 0 12px;
+        }
+
+        & span {
+          color: var(--base);
         }
       }
 
@@ -3609,29 +3619,67 @@ form button {
 
 } */
 
+.video-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh; /* toda la altura visible */
+  background: #000; /* opcional, para contraste */
+  padding: 1rem;
+
+  & h2 {
+    padding: 1rem;
+    width: 100%;
+    text-align: start;
+    font-size: 3.5rem;
+    color: var(--base);
+  }
+
+  & p {
+    padding: 1rem;
+    width: 100%;
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-align: end;
+  }
+}
+
+.video-section video {
+  width: 70vw;   /* 70% del ancho de la ventana */
+  height: 60vh;  /* 60% del alto de la ventana */
+  object-fit: cover; /* recorta sin deformar */
+  border-radius: 10px; /* opcional */
+}
+
+
 #wc {
    position: relative;
-   height: 100%;
-   /* min-height: 100vh; */
+   height: auto;
+   min-height: 100vh;
    width: 100%;
    max-width: 1200px;
    display: flex;
-   justify-content: start;
-   align-items: start;
+   justify-content: center;
+   align-items: center;
    gap: 1rem;
    flex-wrap: wrap;
-   padding: 100px 40px 300px 40px;
+   padding: 100px 40px 50px 40px;
+   backdrop-filter: blur(20px);
+   transform: scale(0.75);
+   transform-origin: top center;
 
-  & h2 {
-  text-align: start;
-  font-size: 3.5rem;
-  font-weight: 700;
-  text-wrap: pretty;
+    & h2 {
+    text-align: center;
+    font-size: 3.5rem;
+    font-weight: 700;
+    text-wrap: pretty;
 
-   }
+    }
 
    & p {
-    font-size: 1.5rem;
+    z-index: 5;
+    font-size: 2rem;
     color: var(--white);
     font-weight: 600;
     text-align: center;
@@ -3646,26 +3694,31 @@ form button {
      list-style: none;
      margin: 0;
      padding: 0;
+     list-style: none;
      flex-wrap: wrap;
 
      & li {
       z-index: 1;
       position: relative;
       height: 100%;
-      min-height: 200px;
-      max-height: 200px;
+      min-height: 350px;
+      max-height: 350px;
       width: 100%;
-      min-width: 250px;
-      max-width: 250px;
+      min-width: 450px;
+      max-width: 450px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       background: linear-gradient(to bottom, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
       border: 1px solid var(--base);
       border-radius: 10px;
       padding: 1.5rem;
-      box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+      font-size: 3rem;
+      box-shadow: inset 0 0 1rem rgba(0, 0, 0, 0.5);
       overflow: hidden;
 
       & img {
-        z-index: -1;
+        z-index: 1;
         position: absolute;
         top: 50%;
         left: 50%;
@@ -3673,14 +3726,14 @@ form button {
         filter: grayscale(1);
         height: auto;
         width: 150px;
-        opacity: .3;
+        opacity: .1;
       }
 
       &:nth-child(1) {
         background-color: var(--base);
 
         & p {
-          font-size: 1.5rem;
+          font-size: 3rem;
           text-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3490196078);
         }
 
@@ -3696,6 +3749,40 @@ form button {
 
      }  
    }
+}
+
+.cap {
+  z-index: 5;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.014);
+  box-shadow: inset 0 0 100px #7300ff25;
+
+}
+
+@media screen and (max-width: 1000px) {
+  
+  & #wc {
+
+    & ul {
+
+      & li {
+        min-width: 400px;
+        max-width: 400px;
+        min-height: 400px;
+        max-height: 400px;
+        font-size: 1rem;
+
+      }
+    }
+
+    & p {
+      font-size: 1.7rem !important;
+    }
+  }
 }
 
 #latest {
