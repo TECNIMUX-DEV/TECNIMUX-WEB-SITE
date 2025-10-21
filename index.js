@@ -847,3 +847,27 @@ sections.forEach(section => {
 
   observer.observe(section);
 });
+
+// Accesibilidad
+const btnAcc = document.getElementById('btn-acc');
+const sAcc = document.getElementById('sAcc');
+const capaBehind = document.getElementById('capa-behind');
+const close = document.getElementById('close');
+
+btnAcc.addEventListener('click', () => {
+    sAcc.style.display = 'flex';
+    capaBehind.style.display = 'block';
+    document.body.style.overflow = 'hidden';
+});
+
+capaBehind.addEventListener('click', () => {
+    sAcc.style.display = 'none';
+    capaBehind.style.display = 'none';
+    document.body.style.overflow = 'auto';
+});
+
+close.addEventListener('click', () => {
+    sAcc.style.display = 'none';
+    capaBehind.style.display = 'none';
+    document.body.style.overflow = 'auto';
+});
