@@ -871,3 +871,13 @@ close.addEventListener('click', () => {
     capaBehind.style.display = 'none';
     document.body.style.overflow = 'auto';
 });
+
+
+// More
+const btnMore = document.getElementById('btn-more');
+const moreBox = document.getElementById('more-box');
+
+btnMore.addEventListener('click', () => {
+    moreBox.style.display = 'flex';
+    btnMore.style.display = 'none';
+});

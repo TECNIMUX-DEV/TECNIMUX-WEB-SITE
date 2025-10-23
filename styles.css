@@ -3546,6 +3546,28 @@ form button {
 
 }
 
+#btn-more {
+  position: relative;
+  bottom: 0;
+  right: 0;
+  margin: 1rem;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 5px;
+  color: #ffffff;
+  background-color: transparent;
+}
+
+#more-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  list-style: none;
+  display: none;
+}
+
   @media screen and (max-width: 1000px) {
     #eb {
       
@@ -3658,7 +3680,7 @@ form button {
    height: auto;
    min-height: 100vh;
    width: 100%;
-   max-width: 1200px;
+   max-width: 2600px;
    display: flex;
    justify-content: center;
    align-items: center;
@@ -3670,17 +3692,18 @@ form button {
    transform-origin: top center;
 
     & h2 {
-    text-align: center;
-    font-size: 3.5rem;
-    font-weight: 700;
-    text-wrap: pretty;
-
+      width: 100vw;
+      text-align: center;
+      font-size: 3.5rem;
+      font-weight: 700;
+      text-wrap: pretty;
+      padding-bottom: 3rem;
     }
 
    & p {
     z-index: 5;
-    font-size: 2rem;
-    color: var(--white);
+    font-size: 1.1rem;
+    color: gray;
     font-weight: 600;
     text-align: center;
     text-shadow: 0 0 3px #000;
@@ -3690,12 +3713,12 @@ form button {
      display: flex;
      justify-content: center;
      align-items: center;
+     flex-wrap: wrap;
      gap: 1rem;
      list-style: none;
      margin: 0;
      padding: 0;
      list-style: none;
-     flex-wrap: wrap;
 
      & li {
       z-index: 1;
@@ -3704,32 +3727,54 @@ form button {
       min-height: 350px;
       max-height: 350px;
       width: 100%;
-      min-width: 450px;
+      min-width: 550px;
       max-width: 450px;
       display: flex;
       justify-content: center;
-      align-items: center;
-      background: linear-gradient(to bottom, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+      align-items: end;
+      flex-direction: column;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.05), rgba(255, 255, 255, 0.034));
       border: 1px solid var(--base);
       border-radius: 10px;
-      padding: 1.5rem;
+      padding: 6.5rem 1.5rem .5rem 1.5rem;
       font-size: 3rem;
       box-shadow: inset 0 0 1rem rgba(0, 0, 0, 0.5);
       overflow: hidden;
 
+      & h3 {
+        width: 100%;
+        font-size: 2.5rem;
+        text-align: center;
+        color: var(--base);
+      }
+
+      & p {
+        width: 100%;
+        text-align: center;
+      }
+
       & img {
         z-index: 1;
         position: absolute;
-        top: 50%;
+        top: 30%;
         left: 50%;
         transform: translate(-50%, -50%);
         filter: grayscale(1);
+        /* filter: brightness(100%); */
         height: auto;
-        width: 150px;
-        opacity: .1;
+        width: 100px;
+        min-width: 100px;
+        max-width: 100px;
+        opacity: .8;
+        background-color: #8929ff;
+        border: 2px solid var(--base);
+        box-shadow: 0 0 20px #a0a0a01f,
+        inset 0 0 20px #000000a4;
+        border-radius: 50%;
+        padding: 1.1rem;
       }
 
-      &:nth-child(1) {
+      /* &:nth-child(1) {
         background-color: var(--base);
 
         & p {
@@ -3741,7 +3786,7 @@ form button {
           font-size: 2rem;
           font-style: italic;
         }
-      }
+      } */
 
       & #coin {
         width: 115px;
@@ -3759,7 +3804,7 @@ form button {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.014);
-  box-shadow: inset 0 0 100px #7300ff25;
+  box-shadow: inset 0 0 50px #7300ff14;
 
 }
 
