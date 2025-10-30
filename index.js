@@ -328,14 +328,14 @@ const btnCloseLangs = document.querySelector('.btn-close-langs');
 // const btnOpenForm = document.getElementById('btn-open-form');
 // const btnOpenLang = document.getElementById('btn-open-lang');
 const loginHome = document.getElementById('login-home');
-const languajes = document.getElementById('languajes'); // Este faltaba en tu código
+const languages = document.getElementById('languages');
 const filterForms = document.querySelectorAll('.filter-form'); 
 
 // Función para cerrar el formulario
 function closeAll() {
   loginHome.style.display = 'none';
   form.style.display = 'none';
-  languajes.style.display = 'none';
+  languages.style.display = 'none';
   document.body.style.overflow = 'auto';
 
   // Ocultar todos los elementos de filtro
@@ -353,7 +353,7 @@ filterForms.forEach(filterForm => {
 document.querySelectorAll(".btn-open-form").forEach(btn => {
   btn.addEventListener("click", () => {
       loginHome.style.display = 'flex';
-      languajes.style.display = 'none';
+      languages.style.display = 'none';
       form.style.display = 'flex';
       hiddenList.style.display = 'none';
       btnOpenNavPrimaryNav.style.display = 'block';
@@ -371,7 +371,7 @@ document.querySelectorAll(".btn-open-lang").forEach(btn => {
   btn.addEventListener("click", () => {
       loginHome.style.display = 'none';
       form.style.display = 'none';
-      languajes.style.display = 'flex';
+      languages.style.display = 'flex';
       hiddenList.style.display = 'none';
       btnOpenNavPrimaryNav.style.display = 'block';
 
@@ -447,7 +447,42 @@ btnCloseLangs.addEventListener('click', closeAll);
 // }) 
 // const containerQrSocial = document.getElementById('container-qr-social');
 
+// Languages
+// Botones
+const l1 = document.getElementById('l1');
+const l2 = document.getElementById('l2');
 
+// Detecta si hay un idioma guardado en localStorage
+const currentLang = localStorage.getItem('lang') || 'es';
+
+// Aplica idioma guardado automáticamente
+applyLanguage(currentLang);
+
+// --- Función principal ---
+function applyLanguage(lang) {
+  // Guarda idioma en localStorage
+  localStorage.setItem('lang', lang);
+
+  // Crea la cookie que usa Google Translate (formato: /origen/destino)
+  const cookieValue = `/es/${lang}`;
+  document.cookie = `googtrans=${cookieValue};path=/;domain=${location.hostname}`;
+
+  // Elimina la barra del traductor si aparece
+  const banner = document.querySelector('.goog-te-banner-frame');
+  if (banner) banner.remove();
+
+  // Recarga la página solo si el idioma cambia
+  if (lang !== currentLang) {
+    location.reload();
+  }
+}
+
+// --- Eventos de los botones ---
+l1.addEventListener('click', () => applyLanguage('es'));
+l2.addEventListener('click', () => applyLanguage('en'));
+
+
+// QR Code
 const qrImg = document.getElementById("qr-img");
 
 let isFloating = false;
@@ -880,4 +915,14 @@ const moreBox = document.getElementById('more-box');
 btnMore.addEventListener('click', () => {
     moreBox.style.display = 'flex';
     btnMore.style.display = 'none';
+});
+
+
+// Theme
+const onLight = document.getElementById('on-light');
+const onDark = document.getElementById('on-dark');
+
+onLight.addEventListener('click', () => {
+    onLight.style.display = 'none';
+    onDark.style.display = 'block';
 });
