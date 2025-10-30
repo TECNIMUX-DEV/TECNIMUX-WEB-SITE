@@ -86,6 +86,7 @@ p {
 
 a {
   color: #fff;
+  text-decoration: none;
   cursor: pointer;
 }
 
@@ -2364,6 +2365,10 @@ footer {
   }
 }
 
+.btn-business:hover {
+  color: #fff !important;
+}
+
 /* @keyframes pulsar {
   0%, 100% {
     background-color: #8926b5;
@@ -2396,7 +2401,6 @@ footer {
   cursor: pointer;
   
   &:hover {
-    color: gray;
     border: 1px solid var(--base);
   }
   
@@ -2502,14 +2506,14 @@ footer {
         border-radius: 10px;
         color: var(--black);
         font-size: .7rem;
-        opacity: 0;
+        opacity: 1;
         transition: .3s ease;
         display: inline-block;
         pointer-events: none;
       }
       
       &:hover::after {
-        opacity: 1;
+        opacity: .5;
       }
   }
 }
