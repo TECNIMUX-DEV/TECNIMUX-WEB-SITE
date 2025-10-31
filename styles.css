@@ -1455,9 +1455,11 @@ li:hover .container-items-nav-main {
   padding: 0;
 }
 
-#imagotipo img {
+#imagotipo svg {
   height: auto;
   width: 16px;
+  color: var(--whitetoBlack);
+  fill: var(--whitetoBlack);
 }
 
 #imagotipo h1 {
