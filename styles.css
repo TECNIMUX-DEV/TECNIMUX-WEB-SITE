@@ -1,12 +1,35 @@
-@charset "UTF-8";
-:root {
   /* --bg-color: linear-gradient(45deg, #050505, #141414, #000);  */
+
+/* 🎨 Modo oscuro (predeterminado) */
+:root {
   --bg-color: #000;
   --color-text: #fff;
   --black: #000;
   --white: #fff;
   --primary: #634092;
   --base: #8929ff;
+  --content: #0c0c0c91;
+  --border-content: #7a7a7a;
+  --blacktoWhite: #000;
+  --whitetoBlack: #fff;
+  --layer: #000000b9;
+  --navBarLi: gray;
+}
+
+/* 🌞 Modo claro */
+:root[data-theme="light"] {
+  --bg-color: #f6f6f9;
+  --color-text: #1a1a1a;
+  --black: #1a1a1a;
+  --white: #fff;
+  --primary: #9b6cd7;
+  --base: #8929ff;
+  --content: #0c0c0ce5;
+  --border-content: #a0a0a0;
+  --blacktoWhite: #fff;
+  --whitetoBlack: #000;
+  --layer: #000000c4;
+  --navBarLi: rgb(196, 196, 196);
 }
 
 * {
@@ -17,7 +40,7 @@
   }
 
 html {
-  font-family: "Chakra Petch", sans-serif;
+  font-family: "Chakra Petch", system-ui ,sans-serif;
   font-size: 1rem;
   margin: 0 auto;
   padding: 0;
@@ -54,20 +77,24 @@ body {
   max-width: 2700px;
   display: flex;
   flex-direction: column;
-  /* font-family: "Chakra Petch", sans-serif; */
   font-family: 'Inter Variable', system-ui, sans-serif;
   font-weight: 400;
-  color: var(--color-text);
   font-size: 1rem;
   margin: 0 auto;
   padding: 0;
-  background: #000;
+  background-color: var(--bg-color);
+  color: var(--color-text);
+  transition: background 0.3s, color 0.3s;
 }
 
 canvas {
   z-index: 999;
   display: block;
   pointer-events: none;
+}
+
+h1 {
+  color: var(--white);
 }
 
 h2 {
@@ -270,13 +297,11 @@ input[type=text]::-webkit-clear-button {
 }
 
 
-
-
-.theme-footer {
+/* .theme-footer {
   z-index: 10;
   position: absolute;
-  top: 30px;
-  right: 30px;
+  top: 40px;
+  right: 60px;
 }
 
 .container-ui-modes {
@@ -311,6 +336,7 @@ input[type=text]::-webkit-clear-button {
   & button {
     background-color: transparent;
     border: none;
+    opacity: .3;
   }
 }
 
@@ -332,9 +358,43 @@ input[type=text]::-webkit-clear-button {
   align-items: center;
   padding: 5px;
   border-radius: 8px;
-  /* border: 1px solid var(--base); */
+  /* border: 1px solid var(--base);
   cursor: pointer;
+} */
+
+
+/* Contenedor de los botones */
+.theme-footer {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
 }
+
+.container-ui-modes {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: var(--black);
+  padding: 10px 20px;
+  border-radius: 8px;
+}
+
+.two-modes button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  transition: transform 0.2s;
+}
+
+.two-modes button:hover {
+  transform: scale(1.1);
+}
+
+.mode-icon svg {
+  opacity: 0.8;
+}
+
 
 .version {
   z-index: 10;
@@ -476,18 +536,18 @@ input[type=text]::-webkit-clear-button {
     display: block;
     height: auto;
     width: 40px;
-    color: var(--white);
+    color: #41baff;
     margin: 0;
     padding: 0;
   }
 
   &:hover {
-    color: #00b7ff;
-    border: 1px solid #00b7ff;
+    color: #41baff;
+    border: 1px solid #41baff;
   }
 
   &:hover svg {
-    fill: #00b7ff;
+    fill: #41baff;
   }
 }
 
@@ -920,7 +980,7 @@ main {
   width: 100%;
   top: 0;
   left: 0;
-  background-color:rgba(0, 0, 0, 0.726);
+  background-color: var(--layer);
   mask: linear-gradient(to bottom, #000 80%, transparent 100%);
   backdrop-filter: blur(18px);
   } 
@@ -2061,7 +2121,7 @@ footer {
     right: 0;
     width: 16px;
     height: 110%;
-    background-color: rgb(0, 0, 0);
+    background-color: var(--blacktoWhite);
 }
 
 .footer-made {
@@ -2112,6 +2172,7 @@ footer {
   & svg {
     display: block;
     transition: all .2s linear;
+    color: var(--whitetoBlack);
   }
 
    &::after {
@@ -2122,9 +2183,7 @@ footer {
     transform: translateX(-50%);
     width: max-content;
     padding: .5rem;
-    /* border: 1px solid #0000005d;
-    border-radius: 10px; */
-    color: var(--black);
+    color: var(--whitetoBlack);
     font-size: .7rem;
     opacity: 0;
     transition: .3s ease;
@@ -2134,7 +2193,7 @@ footer {
 
   &:hover::after {
     opacity: 1;
-    color: #fff;
+    color: var(--whitetoBlack);
   }
 
   &:hover svg {
@@ -2142,7 +2201,7 @@ footer {
   }
 
   &:hover {
-      border: 1px solid rgba(255, 255, 255, 0.644);
+      border: 1px solid var(--whitetoBlack);
   }
 
   &:active {
@@ -2243,7 +2302,7 @@ footer {
   /* text-align: center; */
   animation: left-to-right 0s linear 1;
   font-family: "chakra petch", sans-serif;
-  color: gray;
+  color: var(--navBarLi);
   border-radius: 8px;
   font-size: 1rem;
   font-weight: 600;
@@ -3446,7 +3505,7 @@ form button {
         width: 100%;
         min-width: 300px;
         max-width: 300px;
-        /* background-color: var(--base); */
+        background-color: var(--content);
         border-radius: 10px;
         padding: 3rem 1rem 1rem 1rem;
         box-shadow: 0 0 1rem rgba(0, 0, 0, 0.87);
@@ -3544,23 +3603,12 @@ form button {
 
 
 .illustration-e {
-  z-index: -1;
-  position: relative;
-  height: 100%;
-  min-height: 300px;
-  width: 100%;
-  min-width: 300px;
-  display: flex;
   flex-direction: column;
   box-shadow: 0 0 10rem rgba(0, 0, 0, 0.87);
-  background-image: url(/img/Illustrations/10094423.jpg);
-  background: #0c0c0c91;
-  border: 1px solid #7a7a7a;
+  background: var(--content);
+  border: 1px solid var(--border-content);
   mix-blend-mode: screen;
-  backdrop-filter: blur(50px);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  backdrop-filter: blur(20px);
 
   & img {
     display: block;
@@ -3568,6 +3616,14 @@ form button {
     width: 96px;
   }
 }
+
+
+/* display: block;
+        height: auto;
+        width: 126px;
+        background: #d5d5d5;
+        padding: 0 1rem;
+        border-radius: 12px; */
 
 /* .vector {
   z-index: -1;
@@ -3601,7 +3657,7 @@ form button {
   align-items: center;
   flex-direction: column;
   height: 100vh; /* toda la altura visible */
-  background: #000; /* opcional, para contraste */
+  background: var(--bg-color); /* opcional, para contraste */
   padding: 1rem;
 
   & h2 {
@@ -3615,6 +3671,7 @@ form button {
   & p {
     padding: 1rem;
     width: 100%;
+    color: var(--color-text);
     font-size: 1.5rem;
     font-weight: 500;
     text-align: end;

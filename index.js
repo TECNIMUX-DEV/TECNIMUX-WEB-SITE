@@ -918,11 +918,51 @@ btnMore.addEventListener('click', () => {
 });
 
 
-// Theme
-const onLight = document.getElementById('on-light');
+// Theme Two Modes
 const onDark = document.getElementById('on-dark');
+const onLight = document.getElementById('on-light');
+const systemModeIcon = document.querySelector('.mode-icon');
 
-onLight.addEventListener('click', () => {
-    onLight.style.display = 'none';
-    onDark.style.display = 'block';
+const defaultTheme = 'dark';
+const savedTheme = localStorage.getItem('theme');
+
+// 🔧 Aplica el tema guardado o el predeterminado
+const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+const initialTheme = savedTheme || (prefersDark ? 'dark' : 'light');
+document.documentElement.setAttribute('data-theme', initialTheme);
+updateButtons(initialTheme);
+
+// 🖱️ Evento: Modo oscuro
+onDark.addEventListener('click', () => {
+  document.documentElement.setAttribute('data-theme', 'dark');
+  localStorage.setItem('theme', 'dark');
+  updateButtons('dark');
 });
+
+// 🖱️ Evento: Modo claro
+onLight.addEventListener('click', () => {
+  document.documentElement.setAttribute('data-theme', 'light');
+  localStorage.setItem('theme', 'light');
+  updateButtons('light');
+});
+
+// 🖥️ Evento: Modo del sistema
+systemModeIcon.addEventListener('click', () => {
+  localStorage.removeItem('theme'); // ❌ Elimina preferencia guardada
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const systemTheme = prefersDark ? 'dark' : 'light';
+  document.documentElement.setAttribute('data-theme', systemTheme);
+  updateButtons(systemTheme);
+  alert('Usando el modo del sistema 🖥️');
+});
+
+// 🎛️ Función para mostrar el botón activo
+function updateButtons(theme) {
+  if (theme === 'dark') {
+    onDark.style.display = 'none';
+    onLight.style.display = 'inline-block';
+  } else {
+    onDark.style.display = 'inline-block';
+    onLight.style.display = 'none';
+  }
+}
