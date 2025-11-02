@@ -24,8 +24,6 @@ btnMenu.addEventListener('click', () => {
 stateToggle =! stateToggle;
 })
 
-
-
 // Close Somos TX Home
 const who = document.getElementById('who');
 const somosTX = document.getElementById('somos-tx');
@@ -40,7 +38,6 @@ who.addEventListener('click', () => {
     somosTX.style.display = "flex";
     document.body.style.overflowY = 'hidden';
     })
-
 
 // Add header color when scrolling
 let lastScrollY = window.scrollY;
@@ -67,7 +64,6 @@ window.addEventListener('scroll', () => {
 //          });
 
 // });
-
 
 // Button back to top
 let backToTop = document.getElementById('back-to-top');
