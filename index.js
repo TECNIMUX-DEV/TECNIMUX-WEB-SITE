@@ -449,37 +449,49 @@ btnCloseLangs.addEventListener('click', closeAll);
 
 // Languages
 // Botones
-const l1 = document.getElementById('l1');
-const l2 = document.getElementById('l2');
+const l1 = document.getElementById('l1'); // Español
+const l2 = document.getElementById('l2'); // Inglés
 
-// Detecta si hay un idioma guardado en localStorage
-const currentLang = localStorage.getItem('lang') || 'es';
+// 🚀 Cargar idioma actual o usar español por defecto
+let currentLang = localStorage.getItem('lang') || 'es';
+setTranslateCookie(currentLang);
 
-// Aplica idioma guardado automáticamente
-applyLanguage(currentLang);
+// 🔁 Aplicar idioma guardado al cargar la página
+window.addEventListener('load', () => {
+  const select = document.querySelector('.goog-te-combo');
+  if (select) {
+    select.value = currentLang;
+    select.dispatchEvent(new Event('change'));
+  }
+});
 
-// --- Función principal ---
+// 🧩 Función para establecer cookie de Google Translate
+function setTranslateCookie(lang) {
+  document.cookie = `googtrans=/es/${lang};path=/;domain=${location.hostname}`;
+  document.cookie = `googtrans=/es/${lang};path=/;`; // fallback
+}
+
+// ⚙️ Función principal
 function applyLanguage(lang) {
-  // Guarda idioma en localStorage
+  // Si el idioma es el mismo, no hace nada
+  if (lang === currentLang) return;
+
+  // Actualiza almacenamiento y cookie
   localStorage.setItem('lang', lang);
+  setTranslateCookie(lang);
 
-  // Crea la cookie que usa Google Translate (formato: /origen/destino)
-  const cookieValue = `/es/${lang}`;
-  document.cookie = `googtrans=${cookieValue};path=/;domain=${location.hostname}`;
-
-  // Elimina la barra del traductor si aparece
+  // Elimina banner del traductor si aparece
   const banner = document.querySelector('.goog-te-banner-frame');
   if (banner) banner.remove();
 
-  // Recarga la página solo si el idioma cambia
-  if (lang !== currentLang) {
-    location.reload();
-  }
+  // Recarga página para que el cambio se aplique
+  location.reload();
 }
 
-// --- Eventos de los botones ---
+// 🖱️ Eventos
 l1.addEventListener('click', () => applyLanguage('es'));
 l2.addEventListener('click', () => applyLanguage('en'));
+
 
 
 // QR Code
@@ -908,7 +920,7 @@ close.addEventListener('click', () => {
 });
 
 
-// More
+// More Elements
 const btnMore = document.getElementById('btn-more');
 const moreBox = document.getElementById('more-box');
 

@@ -16,7 +16,8 @@
   --navBarLi: gray;
   --header: #000000cc;
   --headerShadow: rgba(0, 0, 0, 0.25) 0px 25px 50px 0px, rgba(0, 0, 0, 0.5) 0px 5px 25px 0px;
-  --headerBtns: #ffffff27;
+  --headerBtns: #ffffff;
+  --borderBtnsHeader: #ffffff27;
   --mainH1: #fff;
   --mainH1Shadow: #fff;
   --mainP: #a1a1aa82;
@@ -44,7 +45,8 @@
   --navBarLi: rgb(54, 54, 54);
   --header: #ffffff;
   --headerShadow:  rgba(0, 0, 0, 0.096) 0px 25px 50px 0px, rgba(0, 0, 0, 0.123) 0px 5px 25px 0px;
-  --headerBtns: #00000063;
+  --headerBtns: #1b1b1b;
+  --borderBtnsHeader: #00000063;
   --mainH1: #353535;
   --mainH1Shadow: #000000b8;
   --mainP: #1a1a1a;
@@ -317,7 +319,7 @@ input[type=text]::-webkit-clear-button {
   position: absolute;
   height: 100%;
   width: 100%;
-  background-color: var(--black);
+  background-color: var(--base);
 }
 
 /* Contenedor de los botones */
@@ -716,7 +718,7 @@ animation: show-nav-bar .01s ease-out;
   position: absolute;
   height: 55px;
   width: 100%;
-  bottom: 0;
+  bottom: 100px;
   display: flex;
   justify-content: end;
   align-items: end;
@@ -1697,7 +1699,7 @@ li:hover .container-items-nav-main {
   width: 40px;
   border-radius: 8px;
   padding: .5rem;
-  border: 1px solid var(--headerBtns);
+  border: 1px solid var(--borderBtnsHeader);
   cursor: pointer;
 
   &:hover {
@@ -2817,7 +2819,7 @@ form button {
 
     & svg {
       display: inline-block;
-      stroke: var(--whitetoBlack);
+      stroke: var(--headerBtns);
     }
   }
 }
@@ -3480,7 +3482,9 @@ form button {
         }
 
         & span {
+          position: absolute;
           color: var(--base);
+          bottom: 0;
         }
       }
 
@@ -3703,13 +3707,21 @@ form button {
         color: var(--base);
       }
 
+      & #i-porcentaje {
+        position: absolute;
+        height: auto !important;
+        width: 45px !important;
+        top: 80px !important;
+        left: 65% !important;
+      }
+
       & svg {
         z-index: 1;
         position: absolute;
         top: 30%;
         left: 50%;
         transform: translate(-50%, -50%);
-        filter: drop-shadow(0 0 5px rgba(24, 24, 24, 0.205));
+        filter: drop-shadow(0 0 5px var(--footer-border));
         height: auto;
         width: 140px;
         stroke: var(--wcSVG);
@@ -3762,6 +3774,10 @@ form button {
         max-height: 400px;
         font-size: 1rem;
 
+        & #i-porcentaje {
+          top: 90px !important;
+          left: 70% !important;
+        }
       }
     }
 

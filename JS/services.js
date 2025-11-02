@@ -3,15 +3,23 @@ document.addEventListener('DOMContentLoaded', () => {
 // Menu
 const menuMain = document.getElementById('menu-main');
 const btnMenu = document.getElementById('burger');
+const header = document.querySelector('header');
 
 let stateToggle = true;
 btnMenu.addEventListener('click', () => {
     if(stateToggle) {
         menuMain.style.display = "block";
         btnMenu.style.position = "fixed";
+        header.style.position = "fixed";
+        header.style.height = "100vh";
+        document.body.style.overflowY = 'hidden';
+
     } else {
         menuMain.style.display = "none";
         btnMenu.style.position = "fixed";
+        header.style.position = "absolute";
+        header.style.height = "auto";
+        document.body.style.overflowY = 'auto';
     }
 stateToggle =! stateToggle;
 })
