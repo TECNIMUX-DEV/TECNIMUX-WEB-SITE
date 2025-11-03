@@ -251,7 +251,7 @@ video {
   margin: .5rem auto;
   padding: 0 1rem;
   font-family: "Montserrat", sans-serif;
-  color: #000000;
+  color: var(--white);
   font-size: 1.5rem;
   font-weight: bold;
 }
