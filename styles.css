@@ -41,9 +41,9 @@
   --border-content: #a0a0a0;
   --blacktoWhite: #fff;
   --whitetoBlack: #000;
-  --layer: #8929ff17;
+  --layer: #fff;
   --navBarLi: rgb(54, 54, 54);
-  --header: #ffffff;
+  --header: #ffffff9e;
   --headerShadow:  rgba(0, 0, 0, 0.096) 0px 25px 50px 0px, rgba(0, 0, 0, 0.123) 0px 5px 25px 0px;
   --headerBtns: #1b1b1b;
   --borderBtnsHeader: #00000063;
@@ -768,6 +768,7 @@ header h1 {
 .header-color {
   /* backdrop-filter: blur(40px);
   -webkit-backdrop-filter: blur(40px); */
+  padding: 5px 60px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   animation: fade-in 0.4s ease-in-out both;
 }
@@ -818,6 +819,20 @@ header h1 {
     font-size: 1.2rem;
     font-weight: 500;
     color: var(--mainP);
+    padding-top: 15px;
+    padding: 15px 10px;
+  }
+
+  & span {
+    color: var(--base);
+  }
+
+  & #main-more {
+    cursor: pointer;
+
+    & a {
+      color: var(--base);
+    }
   }
 
   /* &::after {
@@ -877,6 +892,7 @@ header h1 {
 main {
   z-index: 20;
   position: relative;
+  max-width: 1000px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -918,6 +934,7 @@ main {
     }
   }
 }
+
 @keyframes slide-down {
   0% {
     opacity: 0;
@@ -1006,6 +1023,7 @@ section {
   }
 
 }
+
 #home-main #info-updates #btn-info svg {
   display: inline-flex;
   height: auto;
@@ -3409,14 +3427,14 @@ form button {
   z-index: 0;
   position: relative;
   height: 100%;
-  /* min-height: 100vh; */
+  min-height: 100vh;
   width: 100%;
   max-width: 1200px;
   display: flex;
   justify-content: start;
   align-items: start;
   flex-wrap: wrap;
-  padding: 100px 40px;
+  padding: 130px 40px 50px 40px;
 
   & .container-elements {
     position: relative;
@@ -3428,7 +3446,7 @@ form button {
     width: 100%;
     height: 100%;
     max-width: 1300px;
-    padding: 2rem;
+    padding: 0 2rem;
 
     & ul {
       display: flex;
@@ -3495,6 +3513,7 @@ form button {
     text-align: start;
     font-size: 3.5rem;
     font-weight: 700;
+    padding: 40px 0;
 
     & span {
       background: linear-gradient(to right, rgba(60, 45, 102, 0.062), rgba(119, 119, 119, 0.021)) ;
