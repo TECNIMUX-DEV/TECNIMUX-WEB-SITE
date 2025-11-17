@@ -901,7 +901,7 @@ header h1 {
 main {
   z-index: 20;
   position: relative;
-  max-width: 1000px;
+  max-width: 1100px;
   display: flex;
   justify-content: center;
   align-items: center;

@@ -11,21 +11,22 @@
     padding: 0;
 }
 
+@font-face {
+    font-family: Pixel;
+    src: url(/fonts/Pixelmax-vnR7A.otf);
+}
+
 body {
     position: relative;
     /* max-width: 1900px; */
     margin: 0 auto !important;
     width: 100%;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: "Inter", sans-serif;
     background-color: #141414; 
     color: var(--black);
     overflow-x: hidden;
     padding-top: 100px;
     /* cursor: url("/icons/CURSOR/CURSOR.png") 16 16 auto; */
-}
-@font-face {
-    font-family: Pixel;
-    src: url(/fonts/Pixelmax-vnR7A.otf);
 }
 
 li {
@@ -225,6 +226,7 @@ header {
             width: 280px;
             border-radius: 0%;
             object-fit: cover;
+            padding-bottom: .1rem;
         }
 
         & button {
@@ -401,15 +403,16 @@ header {
 
     & h1 {
         font-size: 2.5rem;
-        font-weight: 500;
-        font-family: fantasy, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-weight:bold;
+        font-family: "Inter", sans-serif;
         text-align: center;
         color: var(--black);
         padding: 5rem 0 2rem 0;
 
         & span {
             font-size: 1.5rem;
-            font-weight: 200;
+            font-style: italic;
+            font-weight: 400;
             color: var(--second);
             text-shadow: 0 0 1px rgba(31, 31, 31, 0.137);
         }
@@ -432,7 +435,7 @@ header {
 
 
     & h2 {
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-family: "Inter", sans-serif;
         font-size: 3rem;
         font-weight: 700;
     }
@@ -476,7 +479,9 @@ header {
         text-shadow: 0 0 3px var(--black);
 
         & span {
-            color: var(--second);
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--white);
             text-shadow: 0 0 3px var(--black);
         }
     }
@@ -488,22 +493,27 @@ header {
     
     & #btn-go-works {
         position: relative;
-        border: 1px solid var(--black);
-        border-radius: 8px;
-        padding: 1rem;
-        background-color: var(--second);
+        background-color: transparent;
+        color: var(--second);
+        font-weight: bold;
+        text-shadow: 0 0 4px #00000071;
+        border: none;
+        padding: 0 1rem;
 
         &:hover::after {
-            content: "Ver";
+            content: "¡Vamos!";
             position: absolute;
-            top: 50%;
+            top: 240%;
             left: 50%;
             width: 100%;
             height: auto;
             transform: translate(-50%, -50%);
+            font-size: 4rem;
+            color: #fff;
             font-weight: bold;
-            background-color: var(--second);
+            background-color: transparent;
         }
+
 
     }
 
@@ -763,8 +773,8 @@ footer {
         justify-content: start;
         align-items: start;
         width: 100%;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.384);
-        padding: 1rem 0;
+        padding: 3rem 0 1rem 0;
+        line-height: .5;
         text-shadow: 0 0 10px var(--black);
     }
 
@@ -793,6 +803,12 @@ footer {
         max-width: 100%;
         margin: auto;
     }
+    
+    & #logo-footer {
+        height: auto;
+        width: 50px;
+        border-radius: 50%;
+    }
 
     & .by {
         position: fixed;
@@ -811,8 +827,15 @@ footer {
         & p {
             font-size: 1rem;
             font-weight: bold;
-            color: rgb(163, 163, 163);
+            color: rgb(63, 63, 63);
             text-shadow: none;
+        }
+
+        & svg {
+            height: auto;
+            width: 40px;
+            padding: .2rem;
+            color: #fff;
         }
 
         & div {
@@ -836,15 +859,15 @@ footer {
 
         & h4 {
             font-size: 1.2rem;
-            color: var(--white);
+            color: rgba(255, 255, 255, 0.781);
+            padding: .4rem .2rem 0 .5rem
         }
 
         & img {
             display: block;
             height: 18px;
             width: 18px;
-            border: 1px solid #000;
-            border-radius: 50%;
+
             }
     }
 
@@ -862,7 +885,24 @@ footer {
             gap: 5px;
 
             & .net {
-                cursor: pointer;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 40px;
+                width: 40px;
+                padding: .5rem;
+                border-radius: 50%;
+                background-color: var(--second);
+                cursor: pointer; 
+
+                & img {
+                    height: auto;
+                    width: 20px;
+                }
+
+                &:hover {
+                    opacity: .5;
+                }
             }
         }
     }
@@ -1024,6 +1064,13 @@ footer {
 
     #menu-acc {
         width: 100%;
+    }
+
+    & .by {
+
+        & h4 {
+            display: none;
+        }
     }
 }
 
