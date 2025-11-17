@@ -294,11 +294,12 @@ input[type=text]::-webkit-clear-button {
 #hidden-list li {
   width: 100%;
   list-style: none;
-  font-size: 1rem;
+  font-size: 1.3rem;
   font-family: 'Inter Variable', system-ui, sans-serif;
   padding: 0.5rem;
   margin-top: 5px;
 }
+
 #hidden-list::after {
   content: "ABOVE FUTURE";
   z-index: -1;
@@ -319,7 +320,7 @@ input[type=text]::-webkit-clear-button {
   position: absolute;
   height: 100%;
   width: 100%;
-  background-color: var(--base);
+  background-color: #000;
 }
 
 /* Contenedor de los botones */
@@ -562,10 +563,10 @@ input[type=text]::-webkit-clear-button {
   display: flex;
   justify-content: space-between;
   align-items: end;
-  padding: .2rem 0.6rem;
+  padding: .8rem 0.6rem;
   border-bottom: 1px solid rgba(139, 139, 139, 0.0470588235);
   color: var(--white);
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 }
 .section-nav .active-menu-responsive svg {
   display: inline-flex;
@@ -790,6 +791,14 @@ header h1 {
   header {
     padding: 18px 0;
   }
+
+  .header-color {
+  /* backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(40px); */
+  padding: 10px 0px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  animation: fade-in 0.4s ease-in-out both;
+}
   
 }
 
@@ -1780,6 +1789,7 @@ li:hover .container-items-nav-main {
   align-items: flex-start;
   justify-content: center;
   gap: 5px;
+  padding-bottom: 1rem;
   transition-duration: 0.5s;
 }
 
@@ -2413,7 +2423,7 @@ footer {
     display: block;
     border: 1px solid var(--mainH1);
     border-radius: 8px;
-    padding: 0 14px;
+    padding: 4px;
     overflow: hidden;
     cursor: pointer;
 
@@ -3704,11 +3714,11 @@ form button {
       z-index: 1;
       position: relative;
       height: 100%;
-      min-height: 350px;
-      max-height: 350px;
+      min-height: 580px;
+      max-height: 580px;
       width: 100%;
-      min-width: 550px;
-      max-width: 450px;
+      min-width: 400px;
+      max-width: 400px;
       display: flex;
       justify-content: center;
       align-items: end;
@@ -3730,7 +3740,7 @@ form button {
         position: absolute;
         height: auto !important;
         width: 45px !important;
-        top: 80px !important;
+        top: 110px !important;
         left: 65% !important;
       }
 
@@ -3743,8 +3753,8 @@ form button {
         filter: drop-shadow(0 0 5px var(--footer-border));
         height: auto;
         width: 140px;
+        padding-top: 2rem;
         stroke: var(--wcSVG);
-        padding-top: .5rem;
       }
 
       /* &:nth-child(1) {
@@ -3789,12 +3799,11 @@ form button {
       & li {
         min-width: 400px;
         max-width: 400px;
-        min-height: 400px;
-        max-height: 400px;
+        min-height: 500px;
+        max-height: 500px;
         font-size: 1rem;
 
         & #i-porcentaje {
-          top: 90px !important;
           left: 70% !important;
         }
       }
@@ -3802,6 +3811,10 @@ form button {
 
     & p {
       font-size: 1.7rem !important;
+    }
+
+    & svg {
+      padding-bottom: 1rem;
     }
   }
 }
