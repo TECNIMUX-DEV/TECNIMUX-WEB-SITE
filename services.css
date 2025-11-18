@@ -50,10 +50,7 @@ a {
 }
 
 video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+
     min-width: 100%;
     min-height: 100%;
     width: auto;
@@ -538,7 +535,7 @@ header {
     align-items: center;
     margin: 0 auto;
     max-width: 70%;
-    padding: 1rem 2rem;
+    /* padding: 1rem 2rem; */
 
     & ul {
         display: flex;
@@ -554,15 +551,131 @@ header {
             backdrop-filter: blur(5px);
             padding: 5px 10px;
             transition: background 0.3s, border-color 0.3s;
-            border-radius: 4px;
             cursor: pointer;
 
             &:hover {
                 color: var(--second);
-                text-shadow: 0 0 10px var(--black);
+                text-shadow: 0 0 10px #00000033;
               }
         }
     }
+}
+
+
+/* Contenedor principal del nav */
+.logos-nav {
+  width: 100%;
+  overflow-x: auto;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch; /* 👈 Scroll suave y habilitado en iOS */
+  display: block;
+  padding: 10px 0;
+  overflow-y: hidden;
+  scrollbar-color: var(--second) transparent; /* thumb y track */
+  scrollbar-width: thin;
+}
+
+.logos-nav {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 5px; /* evita cortar círculos */
+}
+
+
+/* Ocultar scrollbar en WebKit (opcional) */
+.logos-nav::-webkit-scrollbar {
+  height: 8px;
+}
+.logos-nav::-webkit-scrollbar-track {
+  background: #222;
+}
+.logos-nav::-webkit-scrollbar-thumb {
+  background: #777;
+}
+
+.logos-list {
+  display: flex;
+  flex-wrap: nowrap !important;
+  gap: 25px;
+  padding: 0 25px;  /* 👈 espacio a ambos lados */
+}
+
+.logos-list:hover {
+  animation-play-state: paused;
+}
+
+
+#nav-more {
+    display: none;
+}
+
+@media screen and (max-width: 1000px ) {
+
+    .logos-list {
+        animation: scrollA 35s linear infinite;
+    }
+
+    #nav-more {
+        display: flex;
+        gap: 10px;
+    }
+}
+
+/* Cada ítem circular */
+.logo-item {
+  width: 70px;
+  height: 70px;
+  border: 2px solid var(--second);
+  border-radius: 50%;
+  flex-shrink: 0;          /* evita cortes en scroll */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;      /* necesario para el tooltip */
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+/* Tooltip */
+.logo-item::after {
+  content: attr(data-name);
+  position: absolute;
+  bottom: -35px;
+  background: white;
+  color: black;
+  padding: 4px 10px;
+  font-size: 12px;
+  border-radius: 6px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(5px);
+  transition: 0.2s;
+  white-space: nowrap;
+}
+
+/* Mostrar tooltip */
+.logo-item:hover::after {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Efecto hover del círculo */
+.logo-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+
+@keyframes scrollA {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.logos-slider:hover .logos-list {
+  animation-play-state: paused;
 }
 
 .hecho {
@@ -585,39 +698,32 @@ header {
 
         & img {
             z-index: 40;
-            position: relative;
             height: auto;
             width: 100%;
+            max-width: 250px;
+            position: relative;
             object-fit: cover;
         }
 
         & video {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            height: 100%;
-            width: 100%;
+            position: relative;
+            height: auto;
+            width: 250px;
+            max-width: 250px;
             object-fit: cover;
         }
 
-        &:hover img {
-            transform: scale(.9);
-            transition: .3s ease;
-        }
-
-        &:hover video {
-            transform: translate(-50%, -50%) scale(.9);
-            transition: .3s ease;
-        }
     }
     
     .preview {
         z-index: 2;
         position: relative;
-        height: 280px;
-        width: 280px;
-        background-color: var(--second);
+        height: auto;
+        width: fit-content;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #ff519f15;
         border-radius: 5px;
         overflow: hidden;
         cursor: pointer;
@@ -628,8 +734,9 @@ header {
         position: absolute;
         height: 100%;
         width: 100%;
-        background-color: #0000007c;
-        backdrop-filter: blur(8px);
+        background-color: #000000d3;
+        backdrop-filter: blur(12px);
+        cursor: pointer;
         display: none;
     }
 
@@ -860,7 +967,7 @@ footer {
         & h4 {
             font-size: 1.2rem;
             color: rgba(255, 255, 255, 0.781);
-            padding: .4rem .2rem 0 .5rem
+            padding: .4rem .6rem 0 .5rem
         }
 
         & img {
@@ -1006,7 +1113,6 @@ footer {
         max-width: 100%;
 
         & .preview {
-            height: 120px;
             width: 120px;
         }
     }
