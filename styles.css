@@ -27,6 +27,7 @@
   --footerSlogan: #bbbbbb;
   --footerLi: #ffffffab;
   --footer-border: #ffffff1c;
+  --studio: #ff519f;
 }
 
 /* 🌞 Modo claro */
@@ -56,6 +57,7 @@
   --footerSlogan: #414141;
   --footerLi: #444444ab;
   --footer-border: #00000021;
+  --studio: #ff519f;
 }
 
 * {
@@ -2384,7 +2386,7 @@ footer {
   margin: 30px auto;
   padding: 8px 16px;
   border-radius: 16px;
-  border: 1px solid rgb(255, 255, 255);
+  border: 1px solid var(--studio);
   line-height: 1em;
   transition: background-color 0.3s ease, transform 0.2s ease;
   animation: pulsar 1s ease-in-out infinite;
