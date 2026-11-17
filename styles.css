@@ -221,12 +221,14 @@ input[type=text]::-webkit-clear-button {
   display: flex;
   justify-content: center;
   align-items: center;
+  display: none !important;
 }
 .loading img {
   height: auto;
   width: 2vw;
   animation: loading 1s linear infinite;
   /* animation-delay: 0.5s;  */
+  display: none !important;
 }
 
 @keyframes loading {
@@ -255,6 +257,7 @@ input[type=text]::-webkit-clear-button {
   min-height: 100vh;
   width: 100%;
   overflow: hidden;
+  display: none !important;
 
     & video { 
     position: absolute;
@@ -266,6 +269,7 @@ input[type=text]::-webkit-clear-button {
     object-fit: cover;
     z-index: -1; /* Mantiene el video en el fondo */
     opacity: .2;
+    display: none !important;
   }
 }
 
