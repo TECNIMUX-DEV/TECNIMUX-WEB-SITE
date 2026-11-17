@@ -210,7 +210,7 @@ input[type=text]::-webkit-clear-button {
   display: none;
 
 }
-/* Loader */
+/* Loader 
 .loading {
   z-index: 50;
   position: fixed;
@@ -223,13 +223,15 @@ input[type=text]::-webkit-clear-button {
   align-items: center;
   display: none !important;
 }
+*/
+/*
 .loading img {
   height: auto;
   width: 2vw;
   animation: loading 1s linear infinite;
-  /* animation-delay: 0.5s;  */
-  display: none !important;
+  /* animation-delay: 0.5s;
 }
+*/
 
 @keyframes loading {
   from {
@@ -361,7 +363,6 @@ input[type=text]::-webkit-clear-button {
 .mode-icon svg {
   opacity: 0.8;
 }
-
 
 .version {
   z-index: 10;
@@ -3572,7 +3573,7 @@ form button {
     }
 }
 
-.animation-section {
+/*.animation-section {
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 1s ease-out, transform 1s ease-out;
@@ -3582,7 +3583,7 @@ form button {
   opacity: 1;
   transform: translateY(0);
 }
-
+*/
 
 .illustration-e {
   flex-direction: column;
