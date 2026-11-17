@@ -260,12 +260,12 @@ function activeDarkMode() {
 // })
 
 // loader
-const loading = document.getElementById('loading');
-document.body.style.overflow = 'hidden';
-    setTimeout(() => {
-        loading.style.display = 'none';
-        document.body.style.overflow = 'auto';
-    }, 1000);
+// const loading = document.getElementById('loading');
+// document.body.style.overflow = 'hidden';
+// setTimeout(() => {
+// loading.style.display = 'none';
+// document.body.style.overflow = 'auto';
+//}, 1000);
 
 
 // Obtener elementos
