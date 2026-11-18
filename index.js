@@ -414,7 +414,7 @@ btnCloseLangs.addEventListener('click', closeAll);
 //     line.style.opacity = Math.random() * 0.2 + 0.1;
 //     linesContainer.appendChild(line);
 // }
-});
+
 
 
 // Open social networks
@@ -978,3 +978,5 @@ function updateButtons(theme) {
     onLight.style.display = 'none';
   }
 }
+
+});
